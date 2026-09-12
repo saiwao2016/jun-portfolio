@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#fafaf8">
+  <title>JUN · 内容后台</title>
+  <link rel="icon" href="/assets/images/favicon.svg">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+
+  <!-- ===== 登录 ===== -->
+  <div class="login is-hidden" id="login">
+    <form class="login__card" id="loginForm">
+      <div class="login__mark">J</div>
+      <h1>内容后台</h1>
+      <p>JUN Portfolio · 作品与站点内容管理</p>
+      <div class="field">
+        <label class="field__label" for="pw">访问密码</label>
+        <input class="input" type="password" id="pw" autocomplete="current-password" placeholder="请输入后台密码">
+      </div>
+      <div class="login__msg" id="loginMsg" style="color:var(--danger);font-size:12px;min-height:18px;margin-top:8px"></div>
+      <button class="btn btn--primary btn--block" type="submit" id="loginBtn">进入后台</button>
+      <div class="field__hint" id="pwHint" style="margin-top:14px"></div>
+    </form>
+  </div>
+
+  <!-- ===== 主界面 ===== -->
+  <div class="app is-hidden" id="app">
+    <header class="topbar">
+      <div class="topbar__brand">
+        <span class="topbar__mark">J</span>
+        <span>JUN<span class="topbar__sub"> · 内容后台</span></span>
+      </div>
+      <div class="topbar__stats" id="stats"></div>
+      <div class="topbar__spacer"></div>
+      <div class="topbar__actions">
+        <button class="btn btn--sm" id="btnSync" title="按 content/*.json 重新生成站点数据文件">重新生成站点数据</button>
+        <a class="btn btn--sm" id="btnSite" href="/" target="_blank" rel="noopener">查看站点 ↗</a>
+        <button class="btn btn--sm btn--ghost" id="btnLogout">退出</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="side">
+        <div class="side__head">
+          <input class="input" id="search" type="search" placeholder="搜索标题 / id / 年份">
+          <div class="side__filters" id="filters"></div>
+          <button class="btn btn--primary btn--block" id="btnNew">+ 新建作品</button>
+        </div>
+        <div class="side__list" id="list"></div>
+        <div class="side__foot">
+          <button class="btn btn--ghost btn--block" id="btnSiteSettings" style="justify-content:flex-start">
+            站点设置 · 主页文案 / 社交链接
+          </button>
+        </div>
+      </aside>
+
+      <main class="main" id="pane"></main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <div id="modalHost"></div>
+
+  <script src="/admin/admin.js"></script>
+</body>
+</html>

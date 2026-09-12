@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#f4f3f0"/>
+  
+        <g transform="translate(120 180)" fill="#111111" font-family="Inter, sans-serif" font-weight="600">
+          <text x="0" y="0" font-size="180" letter-spacing="-8">边界</text>
+          <text x="0" y="200" font-size="180" letter-spacing="-8">BORDER</text>
+        </g>
+        <line x1="120" y1="780" x2="1080" y2="780" stroke="#111111" stroke-width="2"/>
+        <text x="120" y="820" font-family="Inter, sans-serif" font-size="20" letter-spacing="4" fill="#6b6b6b">A POSTER SERIES · 2023</text>
+        <text x="1080" y="820" text-anchor="end" font-family="Inter, sans-serif" font-size="20" letter-spacing="4" fill="#6b6b6b">N° 01</text>
+        
+</svg>

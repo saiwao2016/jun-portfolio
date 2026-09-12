@@ -1,0 +1,230 @@
+/* =========================================================
+   JUN Portfolio — Site settings（自动生成）
+   数据源：content/site.json · 由后台 /admin 保存时重写，请勿手改本文件。
+   window.SITE_DATA.copy   → 覆盖 i18n 中的主页 / 页脚文案
+   window.SITE_DATA.social → 社交入口（文案 + 链接）
+   window.SITE_DATA.bgm    → 站点背景音乐
+   window.SITE_DATA.source → 远端数据源配置（失败回退本地 data.js）
+   ========================================================= */
+
+window.SITE_DATA = {
+    "copy": {
+      "home.eyebrow": {
+        "zh": "品牌系统 · 信息设计 · 原创 IP",
+        "es": "Marca · Diseño de información · IP original",
+        "en": "Brand · Information design · Original IP"
+      },
+      "home.title.line1": {
+        "zh": "品牌与信息",
+        "es": "Marca e",
+        "en": "Brand &"
+      },
+      "home.title.line2": {
+        "zh": "IP 与出版",
+        "es": "información ·",
+        "en": "information ·"
+      },
+      "home.title.line3": {
+        "zh": "视觉设计",
+        "es": "diseño visual",
+        "en": "visual design"
+      },
+      "home.subtitle": {
+        "zh": "十余年视觉设计经验，覆盖品牌识别系统、心理测量报告与信息设计、原创 IP 形象开发、画册出版、包装与空间视觉 —— 从规范搭建到成品交付，独立完成闭环。",
+        "es": "Más de diez años de diseño visual abarcando sistemas de identidad de marca, informes de evaluación psicológica y diseño de información, desarrollo de IP original, publicaciones editoriales, packaging y gráfica espacial.",
+        "en": "Over ten years of visual design across brand identity systems, psychological assessment reports and information design, original IP character development, editorial publishing, packaging and spatial graphics."
+      },
+      "home.cta.works": {
+        "zh": "浏览全部作品",
+        "es": "Ver todos los proyectos",
+        "en": "View all works"
+      },
+      "home.cta.resume": {
+        "zh": "查看个人简历",
+        "es": "Ver currículum",
+        "en": "View résumé"
+      },
+      "home.cta.contact": {
+        "zh": "联系合作",
+        "es": "Contactar",
+        "en": "Get in touch"
+      },
+      "home.meta.location": {
+        "zh": "所在地",
+        "es": "Ubicación",
+        "en": "Based in"
+      },
+      "home.meta.location_v": {
+        "zh": "西班牙马德里",
+        "es": "Madrid, España",
+        "en": "Madrid, Spain"
+      },
+      "home.meta.lang": {
+        "zh": "语言",
+        "es": "Idiomas",
+        "en": "Languages"
+      },
+      "home.meta.lang_v": {
+        "zh": "中文 · Español · English",
+        "es": "中文 · Español · English",
+        "en": "中文 · Español · English"
+      },
+      "home.meta.status": {
+        "zh": "当前状态",
+        "es": "Disponibilidad",
+        "en": "Status"
+      },
+      "home.meta.status_v": {
+        "zh": "开放求职 · 可远程",
+        "es": "Búsqueda activa · Remoto",
+        "en": "Open to work · Remote"
+      },
+      "home.featured.eyebrow": {
+        "zh": "精选作品",
+        "es": "Selección",
+        "en": "Selected work"
+      },
+      "home.featured.title": {
+        "zh": "代表案例",
+        "es": "Caso destacado",
+        "en": "Featured case"
+      },
+      "home.featured.note": {
+        "zh": "完整交付 · 附界面样机与设计规范",
+        "es": "Entrega completa · con maquetas de interfaz y sistema de diseño",
+        "en": "Complete delivery · with interface mockups and a design system"
+      },
+      "home.advantages.eyebrow": {
+        "zh": "能力结构",
+        "es": "Cómo trabajo",
+        "en": "How I work"
+      },
+      "home.advantages.title": {
+        "zh": "一件事做完整，而不是做一半",
+        "es": "Terminar el trabajo, no solo empezarlo",
+        "en": "Finishing the job, not just starting it"
+      },
+      "home.advantages.lead": {
+        "zh": "从品牌底层规范、报告与表单版式系统，到 IP 形象开发、印刷出版、界面与包装 —— 六块能力彼此咬合，同一套视觉语言贯穿始终。",
+        "es": "Desde los cimientos de la marca y el sistema de maquetación de informes y formularios, hasta el desarrollo de personajes IP, la edición impresa, las interfaces y el packaging: seis áreas que encajan entre sí con un mismo lenguaje visual.",
+        "en": "From brand foundations and report/form layout systems, through IP character development, print publishing, interfaces and packaging — six areas that lock together under one visual language."
+      },
+      "home.advantages.1.title": {
+        "zh": "规范先于执行",
+        "es": "Primero el sistema",
+        "en": "System before execution"
+      },
+      "home.advantages.1.desc": {
+        "zh": "先建立可复用的版式与色彩体系，再批量落地 —— 206 份量表报告共用一套模板系统",
+        "es": "Se define una maqueta y un sistema de color reutilizables antes de producir en serie: 206 informes comparten una misma plantilla",
+        "en": "A reusable layout and colour system is defined first: 206 reports share one template"
+      },
+      "home.advantages.2.title": {
+        "zh": "原创能力自持",
+        "es": "Capacidad propia",
+        "en": "Original by default"
+      },
+      "home.advantages.2.desc": {
+        "zh": "IP 形象、插画、字体排版、图形语言全部原创，不依赖素材拼接",
+        "es": "Personajes, ilustración, tipografía y lenguaje gráfico 100 % originales, sin collage de recursos",
+        "en": "Characters, illustration, typography and graphic language all made from scratch"
+      },
+      "home.advantages.3.title": {
+        "zh": "印刷到屏幕全覆盖",
+        "es": "De la imprenta a la pantalla",
+        "en": "Press to screen"
+      },
+      "home.advantages.3.desc": {
+        "zh": "懂工艺、懂纸张、懂出血与专色，也懂屏幕栅格与组件复用",
+        "es": "Conocimiento de papeles, tintas directas y sangrados, y también de retículas y componentes en pantalla",
+        "en": "Papers, spot colours and bleed — and also grids, components and reuse"
+      },
+      "home.social.eyebrow": {
+        "zh": "社交入口",
+        "es": "Enlaces",
+        "en": "Elsewhere"
+      },
+      "home.social.title": {
+        "zh": "保持联系",
+        "es": "Mantengamos el contacto",
+        "en": "Stay in touch"
+      },
+      "footer.copy": {
+        "zh": "© 2026 周骏 JUN · 视觉设计师",
+        "es": "© 2026 Jun Zhou (JUN) · Diseñador visual",
+        "en": "© 2026 Jun Zhou (JUN) · Visual designer"
+      },
+      "footer.note": {
+        "zh": "品牌系统 · 信息设计 · 原创 IP · 马德里",
+        "es": "Marca · Información · IP original · Madrid",
+        "en": "Brand · Information · Original IP · Madrid"
+      },
+      "footer.link.behance": {
+        "zh": "Behance",
+        "es": "Behance",
+        "en": "Behance"
+      },
+      "footer.link.xhs": {
+        "zh": "小红书",
+        "es": "Xiaohongshu",
+        "en": "Xiaohongshu"
+      },
+      "footer.link.email": {
+        "zh": "邮箱",
+        "es": "Correo",
+        "en": "Email"
+      }
+    },
+    "social": [
+      {
+        "id": "behance",
+        "url": "",
+        "label": {
+          "zh": "Behance",
+          "es": "Behance",
+          "en": "Behance"
+        },
+        "i18nKey": ""
+      },
+      {
+        "id": "xhs",
+        "url": "",
+        "label": {
+          "zh": "小红书",
+          "es": "Xiaohongshu",
+          "en": "Xiaohongshu"
+        },
+        "i18nKey": "footer.link.xhs"
+      },
+      {
+        "id": "email",
+        "url": "mailto:saiwao@qq.com",
+        "label": {
+          "zh": "邮箱",
+          "es": "Correo",
+          "en": "Email"
+        },
+        "i18nKey": "footer.link.email"
+      }
+    ],
+    "bgm": {
+      "enabled": false,
+      "src": "",
+      "title": {
+        "zh": "",
+        "es": "",
+        "en": ""
+      },
+      "autoplay": false,
+      "loop": true
+    },
+    "source": {
+      "mode": "local",
+      "apiBase": "",
+      "sanity": {
+        "projectId": "",
+        "dataset": "production",
+        "apiVersion": "2024-01-01"
+      }
+    }
+  };

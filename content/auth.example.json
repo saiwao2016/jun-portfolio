@@ -1,0 +1,4 @@
+{
+  "_note": "后台口令文件。真实文件为 content/auth.json，已被 .gitignore 排除，不会入库。server.js 首次启动时若发现该文件不存在，会自动生成随机口令并打印在控制台。如需自定义，直接编辑 content/auth.json 即可。",
+  "password": "改成你自己的口令"
+}

@@ -1,0 +1,2421 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-12T16:11:23.542Z",
+  "works": [
+    {
+      "id": "asq-system",
+      "category": "digital",
+      "status": "published",
+      "sortOrder": 2,
+      "year": "2016 — 至今",
+      "mediaType": "image",
+      "cover": "assets/works/asq-system/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/06.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/07.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/08.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/09.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/10.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/11.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/12.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/13.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/14.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/15.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/16.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/17.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/18.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/19.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/20.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/21.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/22.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/23.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/24.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/asq-system/25.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "海扬科技 · ASQ 儿童发育筛查系统",
+        "es": "Oceanzh · Sistema ASQ de cribado del desarrollo infantil",
+        "en": "Oceanzh · ASQ child development screening system"
+      },
+      "type": {
+        "zh": "数字产品 / 机构端控制台 + 家长端答题",
+        "es": "Producto digital / Consola del centro + cuestionario familiar",
+        "en": "Digital product / Institution console + parent questionnaire"
+      },
+      "scope": {
+        "zh": "信息架构 · 桌面端 22 屏 · 移动端 6 屏 · 登录注册 · 档案管理 · 组件规范",
+        "es": "Arquitectura de información · 22 pantallas de escritorio · 6 móviles · Acceso y registro · Gestión de expedientes · Componentes",
+        "en": "Information architecture · 22 desktop screens · 6 mobile screens · Sign-in & sign-up · Record management · Component system"
+      },
+      "blurb": {
+        "zh": "面向 0–6 岁儿童的发育筛查评估平台：机构端在控制台创建报告、发放量表、查询与归档结果，家长在手机端完成 ASQ-3 / ASQ:SE 问卷。桌面端 22 屏 + 移动端 6 屏，共用一套组件规范。",
+        "es": "Plataforma de cribado del desarrollo para niños de 0 a 6 años: el centro crea informes, asigna escalas, consulta y archiva resultados desde la consola, y las familias responden los cuestionarios ASQ-3 / ASQ:SE en el móvil. 22 pantallas de escritorio y 6 móviles sobre un mismo sistema de componentes.",
+        "en": "A developmental screening platform for children aged 0–6: institutions create reports, issue scales, search and archive results from the console, while parents complete ASQ-3 / ASQ:SE questionnaires on mobile. 22 desktop screens and 6 mobile screens sharing one component system."
+      }
+    },
+    {
+      "id": "mind-web",
+      "category": "digital",
+      "status": "published",
+      "sortOrder": 3,
+      "year": "2016 — 至今",
+      "mediaType": "image",
+      "cover": "assets/works/mind-web/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/mind-web/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mind-web/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mind-web/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mind-web/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mind-web/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mind-web/06.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "心智心理测量 · 品牌官网与心智网校",
+        "es": "Xinzhi Psicometría · Web corporativa y campus online",
+        "en": "Xinzhi Psychometrics · Corporate site and online campus"
+      },
+      "type": {
+        "zh": "数字产品 / 响应式官网 + 在线课堂",
+        "es": "Producto digital / Web responsive + aula online",
+        "en": "Digital product / Responsive site + online classroom"
+      },
+      "scope": {
+        "zh": "信息架构 · 桌面端 4 大板块 · 移动端 6 屏 · 设计系统",
+        "es": "Arquitectura de información · 4 secciones de escritorio · 6 pantallas móviles · Sistema de diseño",
+        "en": "Information architecture · 4 desktop sections · 6 mobile screens · Design system"
+      },
+      "blurb": {
+        "zh": "深圳心智心理测量技术研究所的品牌官网：首页、产品中心（孤独症量表系列）、心智网校在线考试与个人中心四大板块，配套移动端适配与一套青绿主色的设计系统。",
+        "es": "La web corporativa del Instituto de Psicometría Xinzhi: inicio, centro de productos (escalas de autismo), examen online del campus y área personal, con adaptación móvil y un sistema de diseño en verde azulado.",
+        "en": "The corporate site of Xinzhi Psychometrics Institute: Home, Product centre (autism scale series), online exams on the campus and personal area, with mobile adaptation and a teal-based design system."
+      }
+    },
+    {
+      "id": "mind-platform",
+      "category": "digital",
+      "status": "published",
+      "sortOrder": 4,
+      "year": "2016 — 至今",
+      "mediaType": "image",
+      "cover": "assets/works/mind-platform/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/mind-platform/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mind-platform/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mind-platform/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mind-platform/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mind-platform/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mind-platform/06.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "心智 · 测评机构中台管理系统",
+        "es": "Xinzhi · Panel de gestión para centros de evaluación",
+        "en": "Xinzhi · Management console for assessment centres"
+      },
+      "type": {
+        "zh": "数字产品 / B 端中台 · 桌面端",
+        "es": "Producto digital / Panel B2B · Escritorio",
+        "en": "Digital product / B2B console · Desktop"
+      },
+      "scope": {
+        "zh": "信息架构 · 工作台 · 档案明细 · 测评流程 · 数据统计 · 组件规范（含 6 量表标识色）",
+        "es": "Arquitectura de información · Área de trabajo · Detalle de expedientes · Flujo de evaluación · Estadísticas · Componentes (6 colores de escala)",
+        "en": "Information architecture · Workspace · Record details · Assessment flow · Statistics · Component system (6 scale colours)"
+      },
+      "blurb": {
+        "zh": "面向测评机构的 B 端中台：从登录、工作台、儿童档案明细到施测流程与数据统计的完整后台，六套量表各配专属标识色，组件规范覆盖 40 余件控件。",
+        "es": "Panel B2B para centros de evaluación: desde el acceso y el área de trabajo hasta los expedientes infantiles, el flujo de aplicación y las estadísticas; seis escalas con color propio y una librería de más de 40 componentes.",
+        "en": "A B2B console for assessment centres: from sign-in and workspace to child records, assessment flow and statistics — six scales each with an identity colour and a library of 40+ components."
+      }
+    },
+    {
+      "id": "ruizhi-cloud",
+      "category": "digital",
+      "status": "published",
+      "sortOrder": 5,
+      "year": "2019 — 至今",
+      "mediaType": "image",
+      "cover": "assets/works/ruizhi-cloud/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-cloud/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-cloud/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-cloud/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-cloud/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-cloud/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-cloud/06.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "睿智云 · 儿童发育评估平台（管理员端 + 医生端）",
+        "es": "Ruizhi Cloud · Plataforma de evaluación infantil (administración y médicos)",
+        "en": "Ruizhi Cloud · Child development assessment platform (admin + clinicians)"
+      },
+      "type": {
+        "zh": "数字产品 / 双端 SaaS · 管理后台 + 医生工作流",
+        "es": "Producto digital / SaaS de dos lados · Administración y flujo clínico",
+        "en": "Digital product / Two-sided SaaS · Admin console + clinician workflow"
+      },
+      "scope": {
+        "zh": "信息架构 · 管理员端 4 屏 · 医生端 6 屏 · 报告归档 · 组件规范",
+        "es": "Arquitectura de información · 4 pantallas de administración · 6 del flujo médico · Archivo de informes · Componentes",
+        "en": "Information architecture · 4 admin screens · 6 clinician screens · Report archiving · Component system"
+      },
+      "blurb": {
+        "zh": "广东省睿智云智慧科技的儿童发育评估 SaaS：管理员端负责量表大全、数据统计与报告查询，医生端覆盖创建档案、量表作答到报告归档的完整工作流，共 10 个核心页面与一套双端组件规范。",
+        "es": "El SaaS de evaluación infantil de Ruizhi Cloud (Guangdong): la administración gestiona escalas, estadísticas y consulta de informes; el flujo médico cubre desde crear expedientes hasta archivar resultados, con 10 páginas clave y componentes para ambos lados.",
+        "en": "A child development assessment SaaS by Guangdong Ruizhi Cloud: the admin side handles scale catalogue, statistics and report search, while the clinician flow covers record creation to report archiving — 10 key pages and one component system for both sides."
+      }
+    },
+    {
+      "id": "parent-app",
+      "category": "digital",
+      "status": "published",
+      "sortOrder": 6,
+      "year": "2016 — 至今",
+      "mediaType": "image",
+      "cover": "assets/works/parent-app/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/parent-app/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/parent-app/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/parent-app/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/parent-app/04.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "心智 · 家长端测评小程序",
+        "es": "Xinzhi · Miniprograma de evaluación para familias",
+        "en": "Xinzhi · Parent-side assessment mini program"
+      },
+      "type": {
+        "zh": "数字产品 / 微信小程序 · 家长端",
+        "es": "Producto digital / Miniprograma WeChat · Familias",
+        "en": "Digital product / WeChat mini program · Parent side"
+      },
+      "scope": {
+        "zh": "信息架构 · 12 个核心页面 · 登录建档 · 量表作答 · 报告查询与购买",
+        "es": "Arquitectura de información · 12 páginas clave · Acceso y expedientes · Respuesta de escalas · Consulta y compra de informes",
+        "en": "Information architecture · 12 key pages · Sign-in and records · Scale completion · Report search and purchase"
+      },
+      "blurb": {
+        "zh": "家长在微信里为孩子完成发育测评的小程序：从手机登录、添加儿童档案、逐题作答，到付款、查看 M-CHAT 等量表报告与历史记录，空状态与已购记录一应俱全。",
+        "es": "Miniprograma para que las familias evalúen el desarrollo de sus hijos en WeChat: acceso, alta del niño, respuesta ítem a ítem, pago, informes tipo M-CHAT e historial, con estados vacíos y registro de compras.",
+        "en": "A WeChat mini program for parents to assess their child’s development: sign-in, adding a child record, question-by-question answering, payment, M-CHAT-style reports and history — empty states and purchase records included."
+      }
+    },
+    {
+      "id": "tuoyou",
+      "category": "digital",
+      "status": "published",
+      "sortOrder": 7,
+      "year": "2025 — 至今",
+      "mediaType": "image",
+      "cover": "assets/works/tuoyou/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/tuoyou/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tuoyou/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tuoyou/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tuoyou/04.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "托幼 · 园所儿童健康测评后台",
+        "es": "Tuoyou · Panel sanitario para centros infantiles",
+        "en": "Tuoyou · Health assessment console for kindergartens"
+      },
+      "type": {
+        "zh": "数字产品 / B 端桌面后台",
+        "es": "Producto digital / Panel B2B de escritorio",
+        "en": "Digital product / B2B desktop console"
+      },
+      "scope": {
+        "zh": "信息架构 · 首页 · 儿童档案 · 测评答题 · 家园联系 · 学期小结 · 科普知识",
+        "es": "Arquitectura de información · Inicio · Expedientes · Evaluación · Contacto con familias · Resumen de semestre · Divulgación",
+        "en": "Information architecture · Home · Child records · Assessment · Family messaging · Term summary · Educational content"
+      },
+      "blurb": {
+        "zh": "幼儿园侧的儿童健康测评后台：老师为儿童建档、发起并代答量表、与家长保持家园联系，学期末生成小结；首页聚合各班测评进度与待办。",
+        "es": "Panel sanitario para el lado del jardín de infancia: los docentes crean expedientes, aplican escalas y responden en nombre del niño, mantienen el contacto con las familias y generan el resumen de semestre; el inicio agrega progreso y pendientes por aula.",
+        "en": "A kindergarten-side health assessment console: teachers create child records, assign and complete scales on behalf of families, keep messaging open with parents and produce term summaries — the home page aggregates per-class progress and to-dos."
+      }
+    },
+    {
+      "id": "xiaoe-course",
+      "category": "digital",
+      "status": "published",
+      "sortOrder": 8,
+      "year": "2025 — 至今",
+      "mediaType": "image",
+      "cover": "assets/works/xiaoe-course/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/xiaoe-course/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/xiaoe-course/02.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "心智课程 · 小鹅通线上店铺首页",
+        "es": "Cursos Xinzhi · Portada de tienda en Xiaoetong",
+        "en": "Xinzhi Courses · Xiaoetong storefront home"
+      },
+      "type": {
+        "zh": "数字产品 / H5 电商店铺 · 移动端",
+        "es": "Producto digital / Tienda H5 · Móvil",
+        "en": "Digital product / H5 storefront · Mobile"
+      },
+      "scope": {
+        "zh": "信息架构 · 店铺首页 · 量表课程入口墙 · 专家寄语 · 心理测量专栏 · 知识书架",
+        "es": "Arquitectura de información · Portada · Muro de cursos de escalas · Mensajes de expertos · Columna de psicometría · Estantería de conocimiento",
+        "en": "Information architecture · Storefront home · Scale-course entry wall · Expert quotes · Psychometry column · Knowledge shelf"
+      },
+      "blurb": {
+        "zh": "基于小鹅通搭建的「心智课程」线上店铺首页：量表系列课程的 12 色块入口墙、国际专家寄语、最新课程与心理测量专栏，再到补考指引与知识书架，单页承载完整的浏览到购买动线。",
+        "es": "Portada de la tienda «Cursos Xinzhi» sobre Xiaoetong: un muro de 12 bloques para los cursos de escalas, mensajes de expertos internacionales, novedades y la columna de psicometría, hasta la guía de recuperación y la estantería: una sola página cubre todo el recorrido hasta la compra.",
+        "en": "The “Xinzhi Courses” storefront home built on Xiaoetong: a 12-block entry wall for scale courses, international expert quotes, latest courses and a psychometry column, down to retake guides and a knowledge shelf — one page carrying the full browse-to-purchase journey."
+      }
+    },
+    {
+      "id": "ui-showcase",
+      "category": "digital",
+      "status": "published",
+      "sortOrder": 9,
+      "year": "2019",
+      "mediaType": "image",
+      "cover": "assets/works/ui-showcase/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ui-showcase/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ui-showcase/02.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "移动端界面合集 · 六组概念设计",
+        "es": "Colección de interfaces móviles · seis conceptos",
+        "en": "Mobile UI collection · six concept sets"
+      },
+      "type": {
+        "zh": "数字产品 / 移动端 UI · 概念设计",
+        "es": "Producto digital / UI móvil · Diseño conceptual",
+        "en": "Digital product / Mobile UI · Concept design"
+      },
+      "scope": {
+        "zh": "九屏合集 · 美妆电商 · 旅行 · 打卡社区 · 会员商城 · 在线课程 · 电影票",
+        "es": "Nueve pantallas · E-commerce de belleza · Viajes · Comunidad · Club de compras · Cursos online · Cine",
+        "en": "Nine screens · Beauty e-commerce · Travel · Check-in community · Membership mall · Online courses · Movie tickets"
+      },
+      "blurb": {
+        "zh": "六组移动端概念界面合集：美宝莲美妆商城、圣托里尼旅行首页、深色打卡社区（发现与课程详情）、积分会员商城、钜惠网在线课堂与电影票 App（热映 / 待映 / 影片详情），九屏一图集中展示。",
+        "es": "Seis conjuntos de interfaces móviles conceptuales: tienda de belleza Maybelline, inicio de viajes en Santorini, comunidad oscura de check-in, mall de membresías, cursos online de Juhuiwang y app de cine, nueve pantallas en una sola lámina.",
+        "en": "Six sets of mobile concept screens: Maybelline beauty store, Santorini travel home, dark check-in community, points membership mall, Juhui online courses and a movie-ticket app — nine screens shown on a single sheet."
+      }
+    },
+    {
+      "id": "vis-guonin",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 10,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/vis-guonin/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/vis-guonin/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/vis-guonin/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/vis-guonin/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/vis-guonin/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/vis-guonin/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "果您 Guonin · 品牌视觉识别手册",
+        "es": "Guonin · Manual de identidad visual",
+        "en": "Guonin · Visual identity manual"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌 VIS · 46 页手册",
+        "es": "Diseño gráfico / VIS de marca · 46 páginas",
+        "en": "Graphic design / Brand VIS · 46-page manual"
+      },
+      "scope": {
+        "zh": "标志规范 · 标准色与辅助色 · 字体规范 · 指纹环辅助图形 · 名片信纸纸杯 · 文化衫手提袋 · 空间墙面",
+        "es": "Normativa de logotipo · Color · Tipografía · Gráfico auxiliar · Papelería · Textil · Espacio",
+        "en": "Logo guidelines · Colour system · Typography · Auxiliary graphic · Stationery · Apparel · Spatial"
+      },
+      "blurb": {
+        "zh": "为果您（Guonin）搭建的 46 页品牌视觉识别手册：基础系统从标志规范、标准色与辅助色、中英文字体到「指纹环」辅助图形；应用系统覆盖信纸、名片、徽章、纸杯、文化衫、手提袋与空间墙面。此处精选 12 页重新编排展示。",
+        "es": "Manual de identidad visual de 46 páginas para Guonin: normativa de logotipo, color, tipografía y el gráfico auxiliar «anillo dactilar»; la parte de aplicaciones cubre papelería, insignias, vasos, camisetas, bolsas y muros. Aquí se recompusieron 12 páginas seleccionadas.",
+        "en": "A 46-page visual identity manual for Guonin: logo guidelines, primary and auxiliary colours, Chinese/English typography and the “fingerprint ring” auxiliary graphic; applications cover letterhead, cards, badges, cups, tees, bags and walls. 12 selected pages recomposed here."
+      }
+    },
+    {
+      "id": "vis-xinzhi",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 11,
+      "year": "2017",
+      "mediaType": "image",
+      "cover": "assets/works/vis-xinzhi/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/vis-xinzhi/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/vis-xinzhi/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/vis-xinzhi/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/vis-xinzhi/04.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "深圳心智 · 视觉形象识别系统（第三版）",
+        "es": "Xinzhi · Sistema de identidad visual (3.ª edición)",
+        "en": "Xinzhi · Visual identity system (3rd edition)"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌 VIS · 第三版 · 46 页手册",
+        "es": "Diseño gráfico / VIS de marca · 3.ª edición · 46 páginas",
+        "en": "Graphic design / Brand VIS · 3rd edition · 46-page manual"
+      },
+      "scope": {
+        "zh": "标志演绎与制图 · 标准色 · 图标色彩体系 · 中英文全称与组合规范 · 名片工牌 · 画册折页 · 户外广告 · 展厅",
+        "es": "Logotipo y construcción · Color · Iconografía · Normativa de composición · Tarjetas · Publicaciones · Valla publicitaria · Showroom",
+        "en": "Logo and construction · Colour · Icon system · Lock-up guidelines · Cards · Publications · Billboard · Showroom"
+      },
+      "blurb": {
+        "zh": "深圳市心智心理测量技术研究所有限公司的视觉形象识别系统第三版（2017.04）：青绿主视觉与同心圆标志贯穿基础规范与全部应用触点——名片、工牌、画册、折页、网站、户外广告与展厅。此处精选 12 页重新编排展示。",
+        "es": "Tercera edición (2017.04) del sistema de identidad visual del Instituto Xinzhi de Psicometría: el verde azulado y la marca concéntrica guían la normativa base y todas las aplicaciones —tarjetas, publicaciones, web, vallas y showroom—. 12 páginas seleccionadas recompuertas aquí.",
+        "en": "The 3rd edition (2017.04) visual identity system for Shenzhen Xinzhi Institute of Psychometrics: the teal visual and concentric-ring logo run through base guidelines and every touchpoint — cards, badges, publications, website, billboard and showroom. 12 selected pages recomposed here."
+      }
+    },
+    {
+      "id": "logo-weixiaoxin",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 12,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/logo-weixiaoxin/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/logo-weixiaoxin/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-weixiaoxin/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-weixiaoxin/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-weixiaoxin/04.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "卫小新 · 品牌标志规范",
+        "es": "Weixiaoxin · Normativa de logotipo de marca",
+        "en": "Weixiaoxin · Brand logo guidelines"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌标志 VI 规范",
+        "es": "Diseño gráfico / Normativa VI de logotipo",
+        "en": "Graphic design / Brand logo VI guidelines"
+      },
+      "scope": {
+        "zh": "标准品牌标志 · 完整标志组合形式 · 竖式组合与反白 · 图形规范制图 · 标准色红黄 · 灰阶标准 · 背景色可用与禁用",
+        "es": "Logotipo estándar · Composiciones · Versión vertical y usos · Construcción · Colores rojo/amarillo · Escala de grises · Fondos",
+        "en": "Standard emblem · Lock-ups · Vertical & reverse uses · Construction · Red/yellow colours · Greyscale · Background usage"
+      },
+      "blurb": {
+        "zh": "为「卫小新」品牌设计的标志规范：以盾牌与人的组合图形为核心，规定标准与完整标志的横竖组合、反白与灰度应用及图形制图；色彩部分界定标志标准色（红 / 黄）、灰阶标准与标准背景色的可用与禁用示例。",
+        "es": "Normativa de logotipo para la marca Weixiaoxin: sobre un escudo con figuras humanas, define composiciones horizontales y verticales, usos en negativo y gris, y construcción; la parte cromática cubre rojo/amarillo, escala de grises y fondos permitidos o prohibidos.",
+        "en": "Logo guidelines for the Weixiaoxin brand: built on a shield-and-figures emblem, covering horizontal/vertical lock-ups, reverse and greyscale uses and construction; the colour part defines red/yellow standards, greyscale and allowed/prohibited backgrounds."
+      }
+    },
+    {
+      "id": "logo-liuxin",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 13,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/logo-liuxin/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/logo-liuxin/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-liuxin/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-liuxin/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-liuxin/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-liuxin/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "榴心社工 · 标志升级设计",
+        "es": "Liuxin · Rediseño de logotipo",
+        "en": "Liuxin · Logo redesign"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌标志 · 标志升级",
+        "es": "Diseño gráfico / Logotipo · Rediseño",
+        "en": "Graphic design / Logo · Redesign"
+      },
+      "scope": {
+        "zh": "石榴 × 心 × 手 · 栅栏式字体 · 标准组合 · 红黄渐变 · 多色延展",
+        "es": "Granada × corazón × mano · Tipografía · Composición · Degradado rojo-amarillo",
+        "en": "Pomegranate × heart × hand · Custom type · Lock-ups · Red-yellow gradient"
+      },
+      "blurb": {
+        "zh": "为榴心社工服务中心做的标志升级：将具象石榴简化，以「掰开的石榴露出心」的形式切分图形，双手托心呼应「众人齐心助留守」的寓意；字体取「栅栏」思路，粗横竖组合寓意呵护成长，红黄渐变流露石榴的青涩与社工团队的朝气。",
+        "es": "Rediseño del logotipo del Centro de Trabajo Social Liuxin: la granada se simplifica y se parte para revelar un corazón sostenido por manos, con tipografía de «vallas» y un degradado rojo-amarillo que transmite frescura y juventud.",
+        "en": "A logo redesign for Liuxia Social Work Center: the pomegranate is simplified and split to reveal a heart held by hands, with fence-inspired custom type and a red-yellow gradient conveying freshness and the team’s youthful energy."
+      }
+    },
+    {
+      "id": "logo-yan",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 14,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/logo-yan/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/logo-yan/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-yan/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-yan/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-yan/04.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "我以我言做你眼 · 助盲行动标志",
+        "es": "«Mis palabras son tus ojos» · Logotipo",
+        "en": "Be Your Eyes · Campaign logo"
+      },
+      "type": {
+        "zh": "平面设计 / 公益行动标志",
+        "es": "Diseño gráfico / Logotipo de acción social",
+        "en": "Graphic design / Social campaign logo"
+      },
+      "scope": {
+        "zh": "言 · 盲文点 · 对话框 · 眼睛 · 湖蓝标准色 · 多色延展",
+        "es": "Puntos braille · Globo de diálogo · Ojo · Azul lago · Extensiones de color",
+        "en": "Braille dots · Speech bubble · Eye · Lake blue · Colour extensions"
+      },
+      "blurb": {
+        "zh": "助盲公益行动标志：以标语「我以我言做你眼」为着手点，用盲文的字点作眼睛的点睛部分，加上眼睛图形与对话框外轮廓结合而成；深邃的湖蓝色给人深沉且有力量的使命感，将围绕盲人朋友服务的初心贯彻到图标之中。",
+        "es": "Logotipo de la acción de apoyo a invidentes: puntos braille como pupila, ojo y globo de diálogo en un azul lago profundo que transmite una misión serena y poderosa al servicio de personas ciegas.",
+        "en": "A logo for the guiding-eye campaign: braille dots as the pupil, an eye graphic within a speech bubble, in deep lake blue — a calm, powerful sense of mission serving blind friends."
+      }
+    },
+    {
+      "id": "logo-umbrella",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 15,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/logo-umbrella/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/logo-umbrella/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-umbrella/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-umbrella/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-umbrella/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-umbrella/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "安全健康保护伞 · 项目标志",
+        "es": "Paraguas de Protección · Logotipo",
+        "en": "Safety & Health Umbrella · Project logo"
+      },
+      "type": {
+        "zh": "平面设计 / 公益项目标志",
+        "es": "Diseño gráfico / Logotipo de proyecto social",
+        "en": "Graphic design / Social project logo"
+      },
+      "scope": {
+        "zh": "伞 × 盾牌 · 红蓝绿渐变 · 圆润转角 · 灰度与反白",
+        "es": "Paraguas × escudo · Degradado rojo-azul-verde · Esquinas redondeadas",
+        "en": "Umbrella × shield · Red-blue-green gradient · Rounded corners · Greyscale uses"
+      },
+      "blurb": {
+        "zh": "为流动儿童保护项目设计的标志：用盾牌表达「保护」，结合「伞」这一基本视觉元素；红、蓝、绿三色渐变分别体现警示与安全、理性与教育、生命力与健康；图形与文字均采用圆润转角，简洁中带着童趣，贴合「流动儿童」的服务人群。",
+        "es": "Logotipo para un proyecto de protección de niños migrantes: escudo y paraguas con un degradado rojo-azul-verde (seguridad, educación, salud) y esquinas redondeadas que aportan ternura e inocencia.",
+        "en": "A logo for a migrant-children protection project: a shield expressing protection combined with an umbrella, in a red-blue-green gradient (safety, education, vitality) with rounded corners full of childlike warmth."
+      }
+    },
+    {
+      "id": "logo-hexiang",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 16,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/logo-hexiang/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/logo-hexiang/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-hexiang/02.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "和美乡村 · 人居环境改造标志",
+        "es": "Aldea Hermosa · Logotipo",
+        "en": "Beautiful Village · Project logo"
+      },
+      "type": {
+        "zh": "平面设计 / 公益项目标志",
+        "es": "Diseño gráfico / Logotipo de proyecto social",
+        "en": "Graphic design / Social project logo"
+      },
+      "scope": {
+        "zh": "手托人与房子 · 道路弧线 · 树苗向上 · 红橙绿",
+        "es": "Mano sosteniendo casa y persona · Arco de camino · Brote · Rojo-naranja-verde",
+        "en": "Hand holding house & person · Road curve · Sprouting figure · Warm green"
+      },
+      "blurb": {
+        "zh": "乡村人居环境改造项目标志：手的形象代表关怀与支持，抱住人和房子，手臂的弧度像道路一样把房子和人稳稳托起；人以树苗的形式向上伸展，象征对美好生活的向往与生机希望，手与房子上下呼应，表达乡村环境与人的和谐共生。",
+        "es": "Logotipo del proyecto de renovación rural: una mano sostiene la casa y la persona como un camino, mientras la figura brota como un árbol — armonía entre el entorno rural y sus habitantes.",
+        "en": "A logo for the rural renovation project: a hand holds house and person like a steady road, while the figure sprouts upward like a sapling — harmony between village environment and its people."
+      }
+    },
+    {
+      "id": "logo-shiguang",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 17,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/logo-shiguang/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/logo-shiguang/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-shiguang/02.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "幸福食光 · 老人助餐标志",
+        "es": "Comida Feliz · Logotipo",
+        "en": "Happy Meal Time · Project logo"
+      },
+      "type": {
+        "zh": "平面设计 / 公益项目标志",
+        "es": "Diseño gráfico / Logotipo de proyecto social",
+        "en": "Graphic design / Social project logo"
+      },
+      "scope": {
+        "zh": "老人 · 米饭 · 碗 · 房子 · 金黄渐变",
+        "es": "Anciano · Arroz · Cuenco · Casa · Degradado dorado",
+        "en": "Elder · Rice · Bowl · House · Golden gradient"
+      },
+      "blurb": {
+        "zh": "农村留守老年人供餐项目标志：融合老人、米饭、碗和房子四个元素——老人是服务对象，米饭强调供餐的重要性，碗体现供餐的意义，房子寓意稳定的供餐场所与安全感，金黄的暖色调传达项目的温暖与关怀。",
+        "es": "Logotipo del comedor para mayores: anciano, arroz, cuenco y casa en tonos dorados, transmitiendo calidez y la seguridad de un lugar estable para comer.",
+        "en": "A logo for the senior meal program: elder, rice, bowl and house merged in warm golden tones, conveying care and the security of a stable dining place."
+      }
+    },
+    {
+      "id": "logo-pingyuan",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 18,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/logo-pingyuan/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/logo-pingyuan/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-pingyuan/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-pingyuan/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-pingyuan/04.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "平原来喜 · 品牌标志升级",
+        "es": "Pingyuanlaixi · Rediseño de marca",
+        "en": "Pingyuanlaixi · Brand logo upgrade"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌标志 · 全案应用",
+        "es": "Diseño gráfico / Marca · Aplicaciones",
+        "en": "Graphic design / Brand logo · Full applications"
+      },
+      "scope": {
+        "zh": "P × Y 组合 · 圆与方 · 宋体神韵 · 名片包装吊牌杯贴门头",
+        "es": "Combinación P × Y · Círculo y cuadrado · Songti · Tarjetas y packaging",
+        "en": "P × Y combination · Circle & square · Songti spirit · Cards, packaging, signage"
+      },
+      "blurb": {
+        "zh": "餐饮品牌标志升级：原标志沿用 60 年、认知已深入人心，故延续标志性图形并优化简化——字母 P 与 Y 圆钝组合、以圆与方为思路，中文以宋体「神韵」保留年代感又做干练处理；标志落到名片、包装盒、吊牌、杯贴与门店门头，标志红贯穿全部触点。",
+        "es": "Actualización de la marca gastronómica Pingyuanlaixi: se conserva el símbolo con 60 años de reconocimiento, simplificado con la combinación P × Y y el espíritu Songti, aplicado a tarjetas, packaging, etiquetas y rótulos.",
+        "en": "A restaurant brand upgrade: keeping a 60-year-recognised symbol, simplified through the rounded P × Y combination and Songti spirit, applied across cards, boxes, tags, cup sleeves and storefront signage."
+      }
+    },
+    {
+      "id": "logo-aline",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 19,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/logo-aline/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/logo-aline/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-aline/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-aline/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-aline/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-aline/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-aline/06.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-aline/07.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-aline/08.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "一根线条 · 品牌标志规范",
+        "es": "Una Línea · Normativa de logotipo de marca",
+        "en": "A Line · Brand logo guidelines"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌标志 VI 规范",
+        "es": "Diseño gráfico / Normativa VI de logotipo",
+        "en": "Graphic design / Brand logo VI guidelines"
+      },
+      "scope": {
+        "zh": "标准品牌标志 · 完整标志版本 · 组合形式 · 图形规范制图 · 标志标准色 · 灰阶标准 · 标准背景色 · 延展应用",
+        "es": "Logotipo estándar · Versiones del emblema · Composiciones · Construcción · Colores · Escala de grises · Fondos · Aplicaciones",
+        "en": "Standard emblem · Emblem versions · Lock-ups · Construction · Standard colours · Greyscale · Background usage · Applications"
+      },
+      "blurb": {
+        "zh": "为护肤品牌「一根线条 A LINE」设计的标志规范：以一笔折成的纸飞机为标志主体，呼应「做对美育这件事」的品牌主张。规范涵盖标准与完整标志的横竖组合、图形制图网格、标志标准色与灰阶、标准背景色的可用与禁用，以及延展应用示例。",
+        "es": "Normativa de logotipo para la marca cosmética «Una Línea / A LINE»: un avión de papel trazado de un solo gesto, en sintonía con su lema. Cubre composiciones horizontales y verticales, construcción del símbolo, colores y escala de grises, fondos permitidos y prohibidos, y ejemplos de aplicación.",
+        "en": "Logo guidelines for the skincare brand A LINE: a paper plane drawn in a single stroke, echoing the brand claim. The system covers horizontal/vertical lock-ups, symbol construction, standard colours and greyscale, allowed and prohibited backgrounds, and application examples."
+      }
+    },
+    {
+      "id": "liuxin-book",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 20,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/liuxin-book/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/liuxin-book/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/liuxin-book/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/liuxin-book/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/liuxin-book/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/liuxin-book/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "榴心 · 护苗成长计划画册",
+        "es": "Liuxin · Catálogo Programa de Protección Infantil",
+        "en": "Liuxin · Growing Protection Programme booklet"
+      },
+      "type": {
+        "zh": "平面设计 / 画册 · 印刷设计",
+        "es": "Diseño gráfico / Catálogo · Diseño editorial",
+        "en": "Graphic design / Booklet · Print design"
+      },
+      "scope": {
+        "zh": "封面插画 · 目录与章节规划 · 绘本式故事跨页 · 安全知识图解 · 印刷排版",
+        "es": "Portada ilustrada · Índice y capítulos · Doble páginas ilustradas · Infografías · Maquetación",
+        "en": "Illustrated cover · Contents & chapters · Picture-book spreads · Safety infographics · Layout"
+      },
+      "blurb": {
+        "zh": "为榴心社工设计的《护苗成长计划》儿童安全画册：以「护苗」小女孩IP贯穿全册，封面以石榴与幼苗构成守护意象；内页将防性侵、防拐等安全知识转译为绘本故事跨页与图解，插画、色彩与排版兼顾儿童的亲和力与印刷的可读性。",
+        "es": "Catálogo de seguridad infantil «Programa de Protección» para Liuxin: la pequeña IP «huardía» recorre todo el volumen; la portada une granada y brote como símbolo de protección, y las páginas convierten la prevención en cuentos ilustrados e infografías.",
+        "en": "A child-safety booklet for Liuxin Social Work: the little \"sprout-guard\" IP runs through the whole volume; the cover joins pomegranate and seedling as a protection motif, and safety knowledge becomes picture-book spreads and friendly infographics."
+      }
+    },
+    {
+      "id": "bjjz-book",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 21,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/bjjz-book/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/bjjz-book/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/bjjz-book/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/bjjz-book/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/bjjz-book/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/bjjz-book/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "北京建筑北方集团 · 企业画册",
+        "es": "Beijing Construction Northern Group · Catálogo corporativo",
+        "en": "Beijing Construction Northern Group · Corporate brochure"
+      },
+      "type": {
+        "zh": "平面设计 / 画册 · 印刷设计",
+        "es": "Diseño gráfico / Catálogo · Diseño editorial",
+        "en": "Graphic design / Brochure · Print design"
+      },
+      "scope": {
+        "zh": "封面设计 · 企业愿景 · 集团总部 · 金色辅助线系统 · 印刷排版与工艺",
+        "es": "Portada · Visión corporativa · Sede del grupo · Sistema de líneas doradas · Maquetación e impresión",
+        "en": "Cover design · Corporate vision · Group headquarters · Gold line system · Layout & print"
+      },
+      "blurb": {
+        "zh": "为北京建筑北方集团设计的企业画册：以「人文 · 创新 · 科技 · 建筑」为主线，深蓝与金构建沉稳而有分量的国企气质；金色辅助线取自建筑结构，贯穿封面、章节页与版式网格，总部建筑与项目影像配合克制留白，呈现大型建筑企业的专业与可靠。",
+        "es": "Catálogo corporativo para Beijing Construction Northern Group: azul profundo y dorado construyen una imagen sólida; las líneas doradas, tomadas de la estructura arquitectónica, recorren portada, capítulos y retícula, con fotografía de la sede y espacios blancos contenidos.",
+        "en": "A corporate brochure for Beijing Construction Northern Group: deep blue and gold convey institutional solidity; gold lines drawn from building structure run through cover, chapters and grid, paired with restrained white space and headquarters photography."
+      }
+    },
+    {
+      "id": "logo-zhuhai-orchestra",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 22,
+      "year": "2020 — 2021",
+      "mediaType": "image",
+      "cover": "assets/works/logo-zhuhai-orchestra/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/logo-zhuhai-orchestra/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-zhuhai-orchestra/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-zhuhai-orchestra/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/logo-zhuhai-orchestra/04.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "珠海少年管弦乐团 · 标志设计",
+        "es": "ZhuHai Youth Orchestra · Diseño de logotipo",
+        "en": "ZhuHai Youth Orchestra · Logo design"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌标志 · 文化团体",
+        "es": "Diseño gráfico / Logotipo de marca · Agrupación cultural",
+        "en": "Graphic design / Brand logo · Cultural ensemble"
+      },
+      "scope": {
+        "zh": "标志图形 · 标准组合 · 辅助图形 · 杯子 / 帽子 / T恤 / 车体 / 户外广告",
+        "es": "Símbolo · Composición estándar · Gráfica auxiliar · Taza / gorra / camiseta / vehículo / valla",
+        "en": "Emblem · Standard lock-up · Auxiliary graphic · Cup / cap / T-shirt / vehicle / billboard"
+      },
+      "blurb": {
+        "zh": "为珠海少年管弦乐团设计的品牌标志：以音符与水滴融合为图形主体，橙色水滴轮廓包裹跳动的音符，象征少年乐手如活水般的朝气；规范涵盖标准组合、辅助图形与周边应用。",
+        "es": "Logotipo para la Orquesta Juvenil de Zhuhai: una nota musical envuelta en una gota naranja, símbolo de la energía juvenil; el sistema cubre composición estándar, gráfica auxiliar y aplicaciones.",
+        "en": "A brand logo for Zhuhai Youth Orchestra: a musical note wrapped in an orange water drop, symbolising youthful energy; the system covers standard lock-up, auxiliary graphics and applications."
+      }
+    },
+    {
+      "id": "liangbiao-book",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 23,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/liangbiao-book/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/liangbiao-book/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/liangbiao-book/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/liangbiao-book/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/liangbiao-book/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/liangbiao-book/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "心智 · 量表介绍手册",
+        "es": "Xinzhi · Manual de introducción de escalas",
+        "en": "Xinzhi · Scale introduction manual"
+      },
+      "type": {
+        "zh": "平面设计 / 画册 · 印刷设计",
+        "es": "Diseño gráfico / Catálogo · Diseño editorial",
+        "en": "Graphic design / Booklet · Print design"
+      },
+      "scope": {
+        "zh": "封面设计 · 量表目录系统 · 量表详情页 · 专家团队 · 印刷排版",
+        "es": "Portada · Sistema de catálogo de escalas · Fichas técnicas · Equipo de expertos · Maquetación",
+        "en": "Cover design · Scale catalogue system · Scale detail pages · Expert team · Layout"
+      },
+      "blurb": {
+        "zh": "为深圳市心智心理测量技术研究所设计的量表介绍手册：以品牌青绿为主调，系统呈现 20 余套儿童与青少年心理测评量表；手册涵盖量表目录、适用年龄、专家团队与单项量表详解，封面与内页版式统一、信息层级清晰，便于临床与推广场景使用。",
+        "es": "Manual de introducción de escalas para Xinzhi: en tono verde azulado de marca, presenta más de 20 escalas de evaluación infantil y adolescente; incluye catálogo, edades aplicables, equipo de expertos y fichas técnicas con una maquetación clara y consistente.",
+        "en": "A scale introduction manual for Xinzhi Institute: in the brand teal, it presents more than 20 child and adolescent psychological assessment scales; covering catalogue, age ranges, expert team and detailed scale pages with a clear, consistent layout."
+      }
+    },
+    {
+      "id": "timp-32p",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 24,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/timp-32p/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/timp-32p/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/timp-32p/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/timp-32p/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/timp-32p/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/timp-32p/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "TIMP · 32页使用手册",
+        "es": "TIMP · Manual de usuario de 32 páginas",
+        "en": "TIMP · 32-page user manual"
+      },
+      "type": {
+        "zh": "平面设计 / 画册 · 印刷设计",
+        "es": "Diseño gráfico / Catálogo · Diseño editorial",
+        "en": "Graphic design / Booklet · Print design"
+      },
+      "scope": {
+        "zh": "封面设计 · 使用说明 · 测试条目图解 · 评分标准 · 印刷排版",
+        "es": "Portada · Instrucciones de uso · Ilustraciones de ítems · Criterios de puntuación · Maquetación",
+        "en": "Cover design · Usage instructions · Illustrated test items · Scoring criteria · Layout"
+      },
+      "blurb": {
+        "zh": "为 TIMP 婴儿运动表现测试中文版设计的 32 页使用手册：以温和的青绿色与婴儿摄影构建专业而亲切的调性；内页通过分步骤图解、评分示例与操作说明，帮助医护人员快速掌握测试流程与评分标准。",
+        "es": "Manual de usuario de 32 páginas para la versión china de TIMP: en suave verde azulado con fotografía de bebés, transmite profesionalidad y cercanía; las páginas interiores ilustran paso a paso los ítems, ejemplos de puntuación e instrucciones de aplicación.",
+        "en": "A 32-page user manual for the Chinese version of the TIMP infant motor performance test: soft teal and baby photography create a professional yet friendly tone; interior pages illustrate items, scoring examples and operating instructions for clinical staff."
+      }
+    },
+    {
+      "id": "timp-84p",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 25,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/timp-84p/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/timp-84p/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/timp-84p/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/timp-84p/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/timp-84p/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/timp-84p/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "TIMP · 84页核对手册",
+        "es": "TIMP · Manual de verificación de 84 páginas",
+        "en": "TIMP · 84-page verification manual"
+      },
+      "type": {
+        "zh": "平面设计 / 画册 · 印刷设计",
+        "es": "Diseño gráfico / Catálogo · Diseño editorial",
+        "en": "Graphic design / Booklet · Print design"
+      },
+      "scope": {
+        "zh": "封面设计 · 研究背景 · 内容效度 · 条目分析 · 印刷排版",
+        "es": "Portada · Antecedentes · Validez de contenido · Análisis de ítems · Maquetación",
+        "en": "Cover design · Research background · Content validity · Item analysis · Layout"
+      },
+      "blurb": {
+        "zh": "为 TIMP 婴儿运动表现测试中文版整理的 84 页核对手册：系统收录研究背景、内容效度、条目分析、信度研究与家长教育等章节；版式以深蓝青为主，图文混排兼顾学术严谨性与印刷可读性。",
+        "es": "Manual de verificación de 84 páginas para TIMP en chino: recoge antecedentes de investigación, validez de contenido, análisis de ítems, fiabilidad y educación parental; la maquetación en azul verdoso oscuro equilibra rigor académico y legibilidad impresa.",
+        "en": "An 84-page verification manual for the Chinese TIMP test: collecting research background, content validity, item analysis, reliability studies and parent education; the dark teal layout balances academic rigour with print readability."
+      }
+    },
+    {
+      "id": "yuangong-book",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 26,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/yuangong-book/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/yuangong-book/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/yuangong-book/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/yuangong-book/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/yuangong-book/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/yuangong-book/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "心智 · 企业员工手册",
+        "es": "Xinzhi · Manual del empleado",
+        "en": "Xinzhi · Employee handbook"
+      },
+      "type": {
+        "zh": "平面设计 / 画册 · 印刷设计",
+        "es": "Diseño gráfico / Catálogo · Diseño editorial",
+        "en": "Graphic design / Booklet · Print design"
+      },
+      "scope": {
+        "zh": "封面设计 · 目录 · 企业文化 · 劳动关系 · 规章制度 · 知识产权与保密",
+        "es": "Portada · Índice · Cultura corporativa · Relaciones laborales · Normativas · Propiedad intelectual",
+        "en": "Cover design · Contents · Corporate culture · Labour relations · Regulations · Intellectual property"
+      },
+      "blurb": {
+        "zh": "为深圳市心智心理测量技术研究所设计的企业员工手册：以品牌青绿与白色为基调，系统梳理企业介绍、招聘与劳动关系、员工行为规范、薪酬绩效、知识产权与保密义务等制度；版式简洁、层级清晰，便于员工查阅与内部培训使用。",
+        "es": "Manual del empleado para Xinzhi: en verde azulado y blanco de marca, organiza introducción corporativa, contratación, relaciones laborales, conducta, compensaciones, propiedad intelectual y confidencialidad; maquetación limpia y jerárquica para consulta interna.",
+        "en": "An employee handbook for Xinzhi Institute: in brand teal and white, it organises corporate introduction, recruitment, labour relations, conduct, compensation, intellectual property and confidentiality; clean, hierarchical layout for internal reference and training."
+      }
+    },
+    {
+      "id": "ruizhi-book",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 27,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ruizhi-book/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-book/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-book/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-book/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-book/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ruizhi-book/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "睿智云 · 产品手册",
+        "es": "Ruizhi Cloud · Manual de producto",
+        "en": "Ruizhi Cloud · Product manual"
+      },
+      "type": {
+        "zh": "平面设计 / 画册 · 印刷设计",
+        "es": "Diseño gráfico / Catálogo · Diseño editorial",
+        "en": "Graphic design / Booklet · Print design"
+      },
+      "scope": {
+        "zh": "封面设计 · 品牌理念 · 解决方案 · 应用场景 · 报告体系 · 产品服务",
+        "es": "Portada · Visión de marca · Soluciones · Escenarios · Sistema de informes · Servicios",
+        "en": "Cover design · Brand vision · Solutions · Application scenarios · Report system · Product services"
+      },
+      "blurb": {
+        "zh": "为广东省睿智云智慧科技设计的产品手册：以城市天际线与海浪曲线为封面视觉，深蓝主色贯穿全书；内容涵盖品牌理念、健康评测智能化解决方案、应用场景与报告体系，配合产品界面与实景摄影，呈现儿童发育评估 SaaS 的专业与可落地性。",
+        "es": "Manual de producto para Ruizhi Cloud Intelligence: portada con horizonte urbano y ondas, azul profundo como hilo conductor; recoge visión de marca, soluciones de evaluación inteligente, escenarios de aplicación y sistema de informes, con interfaces y fotografía real.",
+        "en": "A product manual for Guangdong Ruizhi Cloud Intelligence: city skyline and wave curves on the cover, deep blue throughout; covers brand vision, intelligent health assessment solutions, application scenarios and report system, with product UI and real photography."
+      }
+    },
+    {
+      "id": "ip-nino",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 28,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-nino/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-nino/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-nino/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-nino/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-nino/04.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "泡泡玛特潮玩设计大赛 · NIÑO 小男孩",
+        "es": "POP TOY AWARD · NIÑO",
+        "en": "POP TOY AWARD · NIÑO"
+      },
+      "type": {
+        "zh": "原创 IP / 潮玩角色设计",
+        "es": "IP original / Diseño de personaje",
+        "en": "Original IP / Character design"
+      },
+      "scope": {
+        "zh": "角色命名 · 草图设计 · 色彩规划 · 三视图 / 四视图 · 参赛展板",
+        "es": "Naming · Sketch · Color system · Turnaround views · Entry board",
+        "en": "Naming · Sketch · Color system · Turnaround views · Entry board"
+      },
+      "blurb": {
+        "zh": "为泡泡玛特潮玩设计大赛创作的原创角色 NIÑO：以西班牙语「小男孩」命名，卷头发、小虎牙、椭圆眼与小眉毛构成识别元素；从草图、色彩规范到四视图完整体现角色从概念到落地的完整设定。",
+        "es": "Personaje original NIÑO para el concurso POP TOY AWARD: un niño con rizos, colmillito, ojos ovalados y cejas finas; desde boceto, sistema de color hasta cuatro vistas para producción.",
+        "en": "An original character NIÑO for the POP TOY AWARD: a little boy with curly hair, tiny fangs, oval eyes and small brows; from sketch and colour system to four-view turnaround."
+      }
+    },
+    {
+      "id": "ip-pingyuan-v1",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 29,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-pingyuan-v1/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v1/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v1/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v1/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v1/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v1/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v1/06.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "平原来喜 · 平平 IP 形象 1.0",
+        "es": "Ping Yuan Lai Xi · Ping Ping IP v1.0",
+        "en": "Ping Yuan Lai Xi · Ping Ping IP v1.0"
+      },
+      "type": {
+        "zh": "原创 IP / 角色形象设计 · 商业美陈",
+        "es": "IP original / Diseño de personaje · Aplicaciones comerciales",
+        "en": "Original IP / Character design · Commercial applications"
+      },
+      "scope": {
+        "zh": "角色命名 · 概念阐述 · 三视图 · 色彩规范 · 表情动作 · 周边应用（T恤 / 纸杯 / 会员卡 / 胶带 / 纸箱）",
+        "es": "Naming · Concepto · Tres vistas · Sistema de color · Expresiones y poses · Aplicaciones (camiseta / vaso / tarjeta / cinta / caja)",
+        "en": "Naming · Concept · Three views · Colour system · Expressions & poses · Merchandise (T-shirt / cup / membership card / tape / carton)"
+      },
+      "blurb": {
+        "zh": "为「平原来喜」商业品牌创作的初代 IP 形象「平平」：以红苹果为原型，融入龙角与圆润五官，象征喜庆、团结与平原文化；手册涵盖角色释义、标准造型、色彩比例、表情动作与周边应用。",
+        "es": "IP original \"Ping Ping\" v1.0 para la marca comercial Ping Yuan Lai Xi: inspirado en una manzana roja con cuernos de dragón y formas redondeadas; el manual incluye concepto, modelos, color, expresiones y aplicaciones.",
+        "en": "Original IP \"Ping Ping\" v1.0 for Ping Yuan Lai Xi commercial brand: a red apple-inspired character with dragon horns and rounded features; the manual covers concept, standard poses, colour, expressions and merchandise."
+      }
+    },
+    {
+      "id": "ip-pingyuan-v2",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 30,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-pingyuan-v2/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v2/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v2/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v2/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v2/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v2/05.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "平原来喜 · 平平 IP 形象 2.0",
+        "es": "Ping Yuan Lai Xi · Ping Ping IP v2.0",
+        "en": "Ping Yuan Lai Xi · Ping Ping IP v2.0"
+      },
+      "type": {
+        "zh": "原创 IP / 角色形象升级设计",
+        "es": "IP original / Rediseño de personaje",
+        "en": "Original IP / Character redesign"
+      },
+      "scope": {
+        "zh": "角色升级 · 三维质感 · 色彩优化 · 表情动作 · 周边应用延展",
+        "es": "Rediseño del personaje · Volumetría · Optimización de color · Expresiones · Extensiones de aplicación",
+        "en": "Character redesign · 3D feel · Colour optimisation · Expressions · Application extensions"
+      },
+      "blurb": {
+        "zh": "为「平原来喜」升级迭代的二代 IP 形象「平平」：保留红苹果与龙角核心识别，角色造型更圆润、表情更丰富，融入三维质感与潮流元素；手册呈现升级概念、新造型规范与应用延展。",
+        "es": "IP \"Ping Ping\" v2.0 para Ping Yuan Lai Xi: conserva la manzana roja y los cuernos de dragón como identidad, con formas más redondeadas, expresiones más ricas y un toque tridimensional y trendy; el manual muestra el concepto de upgrade, nuevas normas y aplicaciones.",
+        "en": "Ping Ping IP v2.0 for Ping Yuan Lai Xi: keeps the red apple and dragon horns as core identity, with rounder shapes, richer expressions and a 3D trendy feel; the manual presents the upgrade concept, new standards and extended applications."
+      }
+    },
+    {
+      "id": "ip-pingyuan-v3",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 31,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-pingyuan-v3/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v3/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v3/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v3/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v3/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v3/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v3/06.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-pingyuan-v3/07.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "平原来喜 · 平平 IP 形象 3.0",
+        "es": "Ping Yuan Lai Xi · Ping Ping IP v3.0",
+        "en": "Ping Yuan Lai Xi · Ping Ping IP v3.0"
+      },
+      "type": {
+        "zh": "原创 IP / 国风角色升级设计",
+        "es": "IP original / Rediseño de personaje estilo chino",
+        "en": "Original IP / Chinese-style character redesign"
+      },
+      "scope": {
+        "zh": "角色升级 · 国风造型 · 双人设定 · 服饰纹样 · 色彩体系 · 延展应用",
+        "es": "Rediseño del personaje · Estilo chino · Pareja de personajes · Patrones de vestimenta · Sistema de color · Aplicaciones",
+        "en": "Character redesign · Chinese style · Duo character set · Costume patterns · Colour system · Applications"
+      },
+      "blurb": {
+        "zh": "为「平原来喜」升级的三代 IP 形象「平平」：在保留红苹果与龙角核心元素的基础上，角色造型转向国风美学，以双人组合呈现，服饰纹样与配色更具东方文化叙事；手册涵盖升级理念、角色设定、标准造型与应用延展。",
+        "es": "IP \"Ping Ping\" v3.0 para Ping Yuan Lai Xi: conserva la manzana roja y los cuernos de dragón como elementos centrales, evolucionando hacia una estética tradicional china con una pareja de personajes, vestimenta y patrones con narrativa oriental; el manual incluye concepto, diseño de personajes, modelos y aplicaciones.",
+        "en": "Ping Ping IP v3.0 for Ping Yuan Lai Xi: keeps the red apple and dragon horns as core elements while evolving into a Chinese-style aesthetic with a duo character set, costumes and patterns carrying oriental narrative; the manual covers the upgrade concept, character design, standard poses and applications."
+      }
+    },
+    {
+      "id": "ip-mengjiacun-1",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 32,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-mengjiacun-1/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-1/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-1/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-1/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-1/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-1/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-1/06.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "河北省孟家村 · 乌斯豚 IP 形象",
+        "es": "Hebei Mengjiacun · IP Wusitun",
+        "en": "Hebei Mengjiacun · Wusitun IP"
+      },
+      "type": {
+        "zh": "原创 IP / 乡村文旅角色",
+        "es": "IP original / Personaje rural",
+        "en": "Original IP / Rural character"
+      },
+      "scope": {
+        "zh": "形象设定 · 三视图 · 色彩系统 · 表情动作 · 延展应用",
+        "es": "Concepto · Tres vistas · Sistema de color · Expresiones · Aplicaciones",
+        "en": "Concept · Three views · Colour system · Expressions · Applications"
+      },
+      "blurb": {
+        "zh": "河北省孟家村乡村文旅 IP 角色之一「乌斯豚」：以蓝色江豚为原型的精灵形象，圆润亲和，承载当地水域生态与渔乡记忆；手册涵盖形象释义、标准造型、三视图、表情动作与周边延展。",
+        "es": "Uno de los personajes IP de turismo rural de Mengjiacun, Hebei: \"Wusitun\", un espíritu inspirado en el delfín azul, redondo y cercano, que evoca el ecosistema acuático y la memoria pesquera local; el manual incluye concepto, modelo, tres vistas, expresiones y aplicaciones.",
+        "en": "One of the rural cultural-tourism IP characters for Mengjiacun, Hebei: \"Wusitun\", a blue-river-dolphin spirit with a rounded, friendly look carrying the local aquatic ecology and fishing heritage; the manual covers concept, standard pose, three views, expressions and merchandise."
+      }
+    },
+    {
+      "id": "ip-mengjiacun-2",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 33,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-mengjiacun-2/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-2/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-2/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-2/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-2/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-2/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-2/06.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "河北省孟家村 · 金翼使 IP 形象",
+        "es": "Hebei Mengjiacun · IP Jinyishi",
+        "en": "Hebei Mengjiacun · Jinyishi IP"
+      },
+      "type": {
+        "zh": "原创 IP / 乡村文旅角色",
+        "es": "IP original / Personaje rural",
+        "en": "Original IP / Rural character"
+      },
+      "scope": {
+        "zh": "形象设定 · 三视图 · 色彩系统 · 表情动作 · 延展应用",
+        "es": "Concepto · Tres vistas · Sistema de color · Expresiones · Aplicaciones",
+        "en": "Concept · Three views · Colour system · Expressions · Applications"
+      },
+      "blurb": {
+        "zh": "河北省孟家村乡村文旅 IP 角色之一「金翼使」：以蜜蜂为原型的金黄使者形象，象征勤勉与丰收，呼应当地花田与蜜源产业；手册涵盖形象释义、标准造型、三视图、表情动作与周边延展。",
+        "es": "Personaje IP de Mengjiacun, Hebei: \"Jinyishi\", un mensajero dorado inspirado en la abeja que simboliza el trabajo y la cosecha, evocando los campos de flores y la miel local; el manual incluye concepto, modelo, tres vistas, expresiones y aplicaciones.",
+        "en": "An IP character for Mengjiacun, Hebei: \"Jinyishi\", a golden bee-messenger symbolising diligence and harvest, echoing local flower fields and honey production; the manual covers concept, standard pose, three views, expressions and applications."
+      }
+    },
+    {
+      "id": "ip-mengjiacun-3",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 34,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-mengjiacun-3/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-3/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-3/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-3/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-3/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-3/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-3/06.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "河北省孟家村 · 梦芳 IP 形象",
+        "es": "Hebei Mengjiacun · IP Mengfang",
+        "en": "Hebei Mengjiacun · Mengfang IP"
+      },
+      "type": {
+        "zh": "原创 IP / 乡村文旅角色",
+        "es": "IP original / Personaje rural",
+        "en": "Original IP / Rural character"
+      },
+      "scope": {
+        "zh": "形象设定 · 三视图 · 色彩系统 · 表情动作 · 延展应用",
+        "es": "Concepto · Tres vistas · Sistema de color · Expresiones · Aplicaciones",
+        "en": "Concept · Three views · Colour system · Expressions · Applications"
+      },
+      "blurb": {
+        "zh": "河北省孟家村乡村文旅 IP 角色之一「梦芳」：以菌菇为原型的少女形象，柔美灵动，呼应乡村菌类种植与生态农业；手册涵盖形象释义、标准造型、三视图、表情动作与周边延展。",
+        "es": "Personaje IP de Mengjiacun, Hebei: \"Mengfang\", una joven inspirada en los hongos, delicada y vivaz, que evoca el cultivo de setas y la agricultura ecológica local; el manual incluye concepto, modelo, tres vistas, expresiones y aplicaciones.",
+        "en": "An IP character for Mengjiacun, Hebei: \"Mengfang\", a mushroom-inspired girl, gentle and lively, echoing local mushroom farming and eco-agriculture; the manual covers concept, standard pose, three views, expressions and applications."
+      }
+    },
+    {
+      "id": "ip-mengjiacun-4",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 35,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-mengjiacun-4/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-4/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-4/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-4/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-4/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-4/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-4/06.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "河北省孟家村 · 勇安 IP 形象",
+        "es": "Hebei Mengjiacun · IP Yong'an",
+        "en": "Hebei Mengjiacun · Yong'an IP"
+      },
+      "type": {
+        "zh": "原创 IP / 乡村文旅角色",
+        "es": "IP original / Personaje rural",
+        "en": "Original IP / Rural character"
+      },
+      "scope": {
+        "zh": "形象设定 · 三视图 · 色彩系统 · 表情动作 · 延展应用",
+        "es": "Concepto · Tres vistas · Sistema de color · Expresiones · Aplicaciones",
+        "en": "Concept · Three views · Colour system · Expressions · Applications"
+      },
+      "blurb": {
+        "zh": "河北省孟家村乡村文旅 IP 角色之一「勇安」：以智慧长者原型的稳重形象，象征守护与安宁，承载村落历史与敬老文化；手册涵盖形象释义、标准造型、三视图、表情动作与周边延展。",
+        "es": "Personaje IP de Mengjiacun, Hebei: \"Yong'an\", un anciano sabio y sereno que simboliza la protección y la tranquilidad, llevando la historia del pueblo y el respeto a los mayores; el manual incluye concepto, modelo, tres vistas, expresiones y aplicaciones.",
+        "en": "An IP character for Mengjiacun, Hebei: \"Yong'an\", a wise elder, steady and calm, symbolising guardianship and peace, carrying the village history and elder-respect culture; the manual covers concept, standard pose, three views, expressions and applications."
+      }
+    },
+    {
+      "id": "ip-mengjiacun-5",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 36,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-mengjiacun-5/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-5/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-5/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-5/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-5/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-5/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-mengjiacun-5/06.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "河北省孟家村 · 龙吉 IP 形象",
+        "es": "Hebei Mengjiacun · IP Longji",
+        "en": "Hebei Mengjiacun · Longji IP"
+      },
+      "type": {
+        "zh": "原创 IP / 乡村文旅角色",
+        "es": "IP original / Personaje rural",
+        "en": "Original IP / Rural character"
+      },
+      "scope": {
+        "zh": "形象设定 · 三视图 · 色彩系统 · 表情动作 · 延展应用",
+        "es": "Concepto · Tres vistas · Sistema de color · Expresiones · Aplicaciones",
+        "en": "Concept · Three views · Colour system · Expressions · Applications"
+      },
+      "blurb": {
+        "zh": "河北省孟家村乡村文旅 IP 角色之一「龙吉」：以龙角少年为原型的吉祥形象，象征祥瑞与活力，呼应传统龙文化与节庆民俗；手册涵盖形象释义、标准造型、三视图、表情动作与周边延展。",
+        "es": "Personaje IP de Mengjiacun, Hebei: \"Longji\", un joven con cuernos de dragón, símbolo de buena fortuna y vitalidad, evocando la cultura del dragón y las fiestas tradicionales; el manual incluye concepto, modelo, tres vistas, expresiones y aplicaciones.",
+        "en": "An IP character for Mengjiacun, Hebei: \"Longji\", a dragon-horn boy, an auspicious and energetic figure echoing traditional dragon culture and festive folklore; the manual covers concept, standard pose, three views, expressions and applications."
+      }
+    },
+    {
+      "id": "ip-houcang",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 37,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-houcang/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-houcang/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-houcang/02.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "厚仓美育 · 品牌 IP 与 LOGO 设计",
+        "es": "Houcang Art Education · IP y logotipo",
+        "en": "Houcang Art Education · IP & logo design"
+      },
+      "type": {
+        "zh": "原创 IP / 品牌标志与形象设计",
+        "es": "IP original / Logotipo y personaje de marca",
+        "en": "Original IP / Brand logo & character"
+      },
+      "scope": {
+        "zh": "IP 形象 · 标志设计 · 色彩系统 · 辅助图形 · 延展应用",
+        "es": "Personaje IP · Logotipo · Color · Gráfica auxiliar · Aplicaciones",
+        "en": "IP character · Logo · Colour · Auxiliary graphics · Applications"
+      },
+      "blurb": {
+        "zh": "为「厚仓美育」少儿美术教育品牌创作的 IP 形象与标志设计：以金黄仓鼠为原型的萌系吉祥物，配合多彩手写中英文标准字与立体圆章，衍生出波普风格的辅助图形系统与插画延展应用。",
+        "es": "Diseño de IP y logotipo para \"Houcang Art Education\", marca de educación artística infantil: una mascota de hámster dorado junto a un logotipo manuscrito multicolor y un emblema circular, que da lugar a un sistema gráfico auxiliar de estilo pop y aplicaciones ilustradas.",
+        "en": "IP and logo design for \"Houcang Art Education\", a children's art school: a golden hamster mascot with a multicolour hand-drawn wordmark and a circular badge, extended into a pop-style auxiliary graphics system and illustrated applications."
+      }
+    },
+    {
+      "id": "ip-shiliu",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 38,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-shiliu/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-shiliu/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-shiliu/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-shiliu/03.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-shiliu/04.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-shiliu/05.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-shiliu/06.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-shiliu/07.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-shiliu/08.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "石榴妹萌萌 · 公益 IP 形象设计",
+        "es": "Shiliu Mei Mengmeng · IP benéfico",
+        "en": "Shiliu Mei Mengmeng · Charity IP"
+      },
+      "type": {
+        "zh": "原创 IP / 公益品牌形象",
+        "es": "IP original / Imagen de marca solidaria",
+        "en": "Original IP / Charity brand mascot"
+      },
+      "scope": {
+        "zh": "形象设定 · 三视图 · 表情包 · 公益海报 · 插画延展",
+        "es": "Diseño de personaje · Tres vistas · Emoticonos · Carteles · Aplicaciones",
+        "en": "Character design · Three views · Stickers · Posters · Applications"
+      },
+      "blurb": {
+        "zh": "为「榴心社工」留守儿童公益项目创作的 IP 形象「石榴妹萌萌」。形象由留守儿童、石榴与红领巾三种元素构成，对应项目、地区与实施团队三重含义。帽子取自石榴花萼与切瓣造型，寓意众人手牵手、齐心守护；红领巾代表社工志愿者的陪伴，传递成长、学习、快乐与阳光。八字眉与张开的小手表现留守儿童渴望关爱、需要保护的心理；红扑扑的脸蛋呼应山区孩子冬日的冻红，倔强的小嘴则透出他们缺少关爱却内心坚强的气质。蓝底白花衫与微皱的裤子还原山区孩童的质朴衣着，大号帆布鞋留住时代记忆。作品涵盖形象设定、三视图、微信表情包、公益海报与插画延展。",
+        "es": "IP \"Shiliu Mei Mengmeng\" creada para el proyecto solidario de niños de zonas rurales de \"Liuxin Social Work\". El personaje combina tres elementos —los niños que quedan atrás, la granada y el pañuelo rojo— que corresponden al proyecto, la región y el equipo. El gorro, inspirado en el cáliz y los gajos de la granada, simboliza manos entrelazadas que protegen unidos; el pañuelo rojo representa el acompañamiento de los voluntarios y transmite crecimiento, aprendizaje, alegría y luz. Las cejas y las manos abiertas expresan el anhelo de cuidado y protección; las mejillas sonrosadas evocan el frío del invierno en la montaña y la boca firme revela un carácter fuerte pese a la falta de afecto. La chaqueta azul con flores blancas y el pantalón arremangado retratan la ropa sencilla de los niños de montaña, y las zapatillas grandes conservan la memoria de una época. Incluye diseño de personaje, tres vistas, stickers de WeChat, carteles benéficos y aplicaciones ilustradas.",
+        "en": "Shiliu Mei Mengmeng, a charity IP created for \"Liuxin Social Work\"'s rural left-behind children programme. The character combines three elements — left-behind children, the pomegranate and the red scarf — mapping to the project, the region and the implementing team. The hat draws on the pomegranate's calyx and segment shapes, symbolising hands joined in protection; the red scarf stands for the company of social-work volunteers, conveying growth, learning, joy and sunshine. The slanted brows and open little hands express a child's longing for care and protection; rosy cheeks echo winter's cold in the mountains, and the determined mouth reveals inner strength despite the lack of affection. The blue jacket with white flowers and the slightly rolled-up trousers capture the simple clothing of mountain children, while oversized canvas shoes keep a mark of the era. The work covers character design, three views, WeChat sticker packs, charity posters and illustrated applications."
+      }
+    },
+    {
+      "id": "app-shortcut-key",
+      "category": "digital",
+      "status": "published",
+      "sortOrder": 39,
+      "year": "2018",
+      "mediaType": "image",
+      "cover": "assets/works/app-shortcut-key/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": true,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/01.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/02.gif",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/03.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/04.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/05.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/06.gif",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/07.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/08.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/09.gif",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/10.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/11.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/12.gif",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/13.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/14.gif",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/15.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/16.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/17.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/app-shortcut-key/18.gif",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "Shortcut Key · 快捷键 App 概念设计",
+        "es": "Shortcut Key · App de atajos, diseño conceptual",
+        "en": "Shortcut Key · Shortcut-key app concept design"
+      },
+      "type": {
+        "zh": "数字界面 / 移动应用概念设计",
+        "es": "Interfaz digital / Concepto de app móvil",
+        "en": "Digital interface / Mobile app concept"
+      },
+      "scope": {
+        "zh": "标志设计 · 首页 · 引导页 · 核心功能 · 动效演示 · 整体视觉",
+        "es": "Logotipo · Inicio · Onboarding · Funciones clave · Animaciones · Sistema visual",
+        "en": "Logo · Home · Onboarding · Core features · Motion · Visual system"
+      },
+      "blurb": {
+        "zh": "「Shortcut Key」是一款以提高软件使用效率为目标的 App 概念设计（Circle Creative Studio，2018）。\n\n设计初衷：在多年的工作过程中我们发现，团队成员的软件使用能力很大程度上影响着工作的质量与效率，而这类能力却始终没有一个可以量化的评价标准；同时，工作中遇到软件使用问题时，查询与学习都非常不方便，极大的影响了个人能力的提升。出于对这些问题的考虑，我们希望做出一款帮助人们提高软件使用效率的 App —— 而不论是评价一个人的软件使用能力，还是提高他的工作效率，都有一个共同的切入点，那就是软件的「快捷键」。于是我们决定从「快捷键」这一个点出发：一方面帮助用户便捷地搜索快捷键并有效地将其掌握，另一方面帮助用户系统地学习新的软件，同时建立起可靠的软件能力评价体系。\n\n视觉上，标志由「Key」与键盘形态提炼，圆角键帽与彩色立体方块构成核心识别；页面覆盖引导页、首页、搜索、学习、测评、夜间模式等完整链路，并配以动效演示，呈现从概念到交互的完整体验。",
+        "es": "\"Shortcut Key\" es un diseño conceptual de app móvil orientado a mejorar la eficiencia en el uso del software (Circle Creative Studio, 2018).\n\nMotivación: a lo largo de años de trabajo observamos que la capacidad de manejo de software de los miembros del equipo influye en gran medida en la calidad y la eficiencia del trabajo, y sin embargo esa capacidad nunca ha contado con un estándar de evaluación cuantificable; además, ante un problema de uso de software, consultar y aprender resulta muy poco práctico, lo que limita seriamente la mejora personal. Partiendo de estas cuestiones, quisimos crear una app que ayude a las personas a mejorar su eficiencia con el software; y tanto para evaluar la capacidad de uso como para elevar la eficiencia existe un punto de entrada común: los atajos de teclado. Decidimos pues partir de ese único punto: por un lado, ayudar al usuario a buscar atajos con facilidad y a dominarlos de forma efectiva; por otro, ayudarle a aprender sistemáticamente nuevos programas, estableciendo al mismo tiempo un sistema fiable de evaluación de competencias.\n\nEn lo visual, el logotipo se extrae de la \"Key\" y de la forma del teclado, con teclas redondeadas y cubos tridimensionales de color como núcleo de identidad; la obra cubre onboarding, inicio, búsqueda, aprendizaje, evaluación y modo nocturno, acompañada de demostraciones en movimiento que presentan la experiencia completa del concepto a la interacción.",
+        "en": "\"Shortcut Key\" is a mobile app concept design aimed at improving software efficiency (Circle Creative Studio, 2018).\n\nMotivation: over years of work we found that team members' software proficiency strongly affects the quality and efficiency of their work, yet there has never been a quantifiable standard for evaluating that ability; and when software problems arise, looking things up and learning are both very inconvenient, which seriously holds back personal growth. With these issues in mind, we wanted to build an app that helps people work more efficiently with software — and whether it is assessing someone's software proficiency or raising their working efficiency, there is one shared entry point: software shortcuts. So we decided to start from that single point: on one hand, help users search shortcuts conveniently and truly master them; on the other, help them learn new software systematically, while establishing a reliable system for evaluating software proficiency.\n\nVisually, the logo is distilled from \"Key\" and the keyboard form, with rounded keycaps and colourful 3D cubes as the core identity; the work covers onboarding, home, search, learning, assessment and night mode, with motion demos presenting the full concept-to-interaction experience."
+      }
+    }
+  ]
+}

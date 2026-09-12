@@ -1,0 +1,12 @@
+# 本地临时产物（渲染中间图、调试截图等）
+_tmp/
+*.log
+
+# 后台口令（含明文密码，绝不入库）
+# server.js 首次启动会自动随机生成并打印在控制台
+content/auth.json
+
+# 依赖与系统文件
+node_modules/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#f4f3f0"/>
+  
+        <g transform="translate(600 460)">
+          <circle r="200" fill="#111111"/>
+          <ellipse cx="0" cy="220" rx="220" ry="20" fill="#e8e6e1"/>
+          <rect x="-200" y="220" width="400" height="20" fill="#e8e6e1"/>
+        </g>
+        <g stroke="#e8e6e1" stroke-width="1" fill="none" opacity="0.4">
+          <line x1="0" y1="460" x2="1200" y2="460"/>
+          <line x1="0" y1="660" x2="1200" y2="660"/>
+        </g>
+        <text x="600" y="800" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="36" fill="#111111">TERRA</text>
+        
+</svg>

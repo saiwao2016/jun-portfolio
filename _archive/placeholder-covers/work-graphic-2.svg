@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#f4f3f0"/>
+  
+        <g transform="translate(600 450)">
+          <rect x="-300" y="-280" width="600" height="560" fill="#ffffff" stroke="#111111" stroke-width="1"/>
+          <rect x="-260" y="160" width="520" height="80" fill="#111111"/>
+          <text x="0" y="-100" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="56" fill="#111111">Issue 12</text>
+          <text x="0" y="0" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" letter-spacing="6" fill="#6b6b6b">QUIET ROOMS</text>
+          <text x="0" y="210" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" letter-spacing="4" fill="#ffffff">BOOKSTORE MONTHLY</text>
+        </g>
+        
+</svg>

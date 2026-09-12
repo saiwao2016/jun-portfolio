@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#f4f3f0"/>
+  
+        <g transform="translate(600 460)">
+          <ellipse cx="0" cy="0" rx="180" ry="60" fill="#b08560"/>
+          <rect x="-30" y="0" width="60" height="120" rx="30" fill="#111111"/>
+          <circle cx="-60" cy="-20" r="14" fill="#ffffff"/>
+          <circle cx="60" cy="-20" r="14" fill="#ffffff"/>
+          <circle cx="-60" cy="-20" r="6" fill="#111111"/>
+          <circle cx="60" cy="-20" r="6" fill="#111111"/>
+        </g>
+        <text x="600" y="720" text-anchor="middle" font-family="Inter, sans-serif" font-size="40" letter-spacing="6" fill="#111111">MOSSY</text>
+        
+</svg>

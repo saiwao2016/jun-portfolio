@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <script>document.documentElement.className += " js";</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fafaf8">
+  <meta name="description" content="JUN · 联系方式 — 求职、商业接单、跨境 IP 合作">
+  <title>JUN · 联系方式</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/main.css?v20260927">
+</head>
+<body data-lang="zh">
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html?v20260927" class="nav__brand">
+        <span class="nav__brand-mark">J</span>
+        <span class="nav__brand-text" data-i18n="nav.brand">JUN</span>
+      </a>
+      <div class="nav__menu">
+        <a href="index.html?v20260927" class="nav__link" data-i18n="nav.home">首页</a>
+        <a href="works.html?v20260927" class="nav__link" data-i18n="nav.works">作品集</a>
+        <a href="about.html?v20260927" class="nav__link" data-i18n="nav.about">关于我</a>
+        <a href="services.html?v20260927" class="nav__link" data-i18n="nav.services">服务范围</a>
+        <a href="skills.html?v20260927" class="nav__link" data-i18n="nav.skills">技能体系</a>
+        <a href="contact.html?v20260927" class="nav__link" data-i18n="nav.contact">联系方式</a>
+        <a href="resume.html?v20260927" class="nav__link" data-i18n="nav.resume">简历</a>
+      </div>
+      <div class="nav__actions">
+        <button class="lang-switch" aria-label="语言 / Idioma / Language">
+          <span class="lang-switch__opt is-active" data-lang="zh">中</span>
+          <span class="lang-switch__sep">/</span>
+          <span class="lang-switch__opt" data-lang="es">ES</span>
+          <span class="lang-switch__sep">/</span>
+          <span class="lang-switch__opt" data-lang="en">EN</span>
+        </button>
+        <button class="nav__toggle" aria-label="Menu"><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:calc(72px + 96px)">
+    <div class="container">
+      <span class="eyebrow reveal" data-i18n="contact.eyebrow">联系方式</span>
+      <h1 class="h-section reveal" data-i18n="contact.title">欢迎洽谈</h1>
+      <p class="lead reveal mt-5" data-i18n="contact.lead" style="white-space:pre-line">求职、商业接单、跨境 IP 周边合作 —— 任何形式的合作都欢迎。
+支持海内外远程协作。</p>
+
+      <div class="contact-grid mt-9">
+        <aside class="contact-info reveal">
+          <dl>
+            <dt data-i18n="contact.email.l">邮箱</dt>
+            <dd><a data-social="email" href="mailto:saiwao@qq.com" data-i18n="contact.email.v">saiwao@qq.com</a></dd>
+
+            <dt data-i18n="contact.location.l">所在地</dt>
+            <dd data-i18n="contact.location.v">西班牙马德里 · CET / CEST</dd>
+
+            <dt data-i18n="contact.availability.l">合作方式</dt>
+            <dd data-i18n="contact.availability.v">远程 / 项目制</dd>
+
+            <dt style="margin-top:32px" data-i18n="home.social.title">社交入口</dt>
+            <dd style="display:flex; gap:16px; font-family:var(--font-mono); font-size:14px; letter-spacing:0.08em; text-transform:uppercase">
+              <a data-social="behance" href="#" data-i18n="footer.link.behance">Behance</a>
+              <a data-social="xhs" href="#" data-i18n="footer.link.xhs">小红书</a>
+              <a data-social="email" href="mailto:saiwao@qq.com" data-i18n="footer.link.email">邮箱</a>
+            </dd>
+          </dl>
+        </aside>
+
+        <form class="form reveal" data-form novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="f-name" data-i18n="contact.form.name">您的称呼</label>
+              <input type="text" id="f-name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="f-email" data-i18n="contact.form.email">电子邮箱</label>
+              <input type="email" id="f-email" name="email" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="f-type" data-i18n="contact.form.type">合作类型</label>
+            <select id="f-type" name="type">
+              <option data-i18n="contact.form.type.o1">品牌项目</option>
+              <option data-i18n="contact.form.type.o2">IP 全案</option>
+              <option data-i18n="contact.form.type.o3">UI / UX</option>
+              <option data-i18n="contact.form.type.o4">动态 / 3D</option>
+              <option data-i18n="contact.form.type.o5">求职接洽</option>
+              <option data-i18n="contact.form.type.o6">其他</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="f-msg" data-i18n="contact.form.msg">留言内容</label>
+            <textarea id="f-msg" name="message" rows="5" required data-i18n-placeholder="contact.form.msg.ph" placeholder="简单介绍项目背景、目标与时间窗口……"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--accent btn--lg" style="align-self:flex-start">
+            <span data-i18n="contact.form.submit">发送留言</span>
+            <span class="btn__arrow">→</span>
+          </button>
+
+          <div class="form-msg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <span data-i18n="footer.copy">© 2026 JUN · 全域全媒介全栈创意设计师</span>
+        <span style="margin-left:16px; color:var(--border-2)">·</span>
+        <span style="margin-left:16px" data-i18n="footer.note">独立 0-1 全链路设计 · 马德里</span>
+      </div>
+      <div class="footer__links">
+        <a data-social="behance" href="#" data-i18n="footer.link.behance">Behance</a>
+        <a data-social="xhs" href="#" data-i18n="footer.link.xhs">小红书</a>
+        <a data-social="email" href="mailto:saiwao@qq.com" data-i18n="footer.link.email">邮箱</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js?v20260927"></script>
+  <script src="assets/js/site-data.js?h=6bc0b736"></script>
+  <script src="assets/js/main.js?v20260927"></script>
+</body>
+</html>

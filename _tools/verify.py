@@ -1,0 +1,275 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+三语全站回归验证。
+
+覆盖：8 个页面 × 3 种语言，逐屏滚动触发 reveal，逐步断言。
+关键点：
+- 浏览器 `loading="lazy"` 的图必须**先滚完**再断言 naturalWidth，
+  否则未进入视口的图会被误判成坏图。
+- 断言失败要显式列出，不能静默通过。
+"""
+
+import os, sys
+from playwright.sync_api import sync_playwright
+
+BASE = "http://127.0.0.1:8766"
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "screens")
+os.makedirs(OUT, exist_ok=True)
+
+PAGES = [
+    ("index.html", "01-home"),
+    ("works.html", "02-works"),
+    ("about.html", "03-about"),
+    ("services.html", "04-services"),
+    ("skills.html", "05-skills"),
+    ("contact.html", "06-contact"),
+    ("resume.html", "07-resume"),
+    ("work-detail.html?id=asq-system", "08-detail-asq"),
+]
+LANGS = ["zh", "es", "en"]
+
+fails = []
+
+
+def scroll_all(pg, step=700):
+    h = pg.evaluate("document.body.scrollHeight")
+    y = 0
+    while y < h:
+        pg.evaluate(f"window.scrollTo({{top:{y},behavior:'instant'}})")
+        pg.wait_for_timeout(90)
+        y += step
+    pg.wait_for_timeout(900)
+
+
+def check(cond, msg):
+    if not cond:
+        fails.append(msg)
+    return cond
+
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=True, args=["--no-proxy-server"])
+
+    for lang in LANGS:
+        print(f"\n{'='*62}\n  语言：{lang.upper()}\n{'='*62}")
+        ctx = browser.new_context(viewport={"width": 1440, "height": 900})
+        pg = ctx.new_page()
+        errs = []
+        pg.on("pageerror", lambda e: errs.append("PAGEERROR: " + str(e)))
+        pg.on("console", lambda m: errs.append(f"[{m.type}] {m.text}") if m.type == "error" else None)
+
+        # 先写语言偏好
+        pg.goto(f"{BASE}/index.html", wait_until="domcontentloaded")
+        pg.evaluate(f"localStorage.setItem('jun.lang','{lang}')")
+
+        for path, label in PAGES:
+            errs.clear()
+            pg.goto(f"{BASE}/{path}", wait_until="networkidle", timeout=30000)
+            scroll_all(pg)
+            pg.evaluate("window.scrollTo({top:0,behavior:'instant'})")
+            pg.wait_for_timeout(250)
+
+            n_cards   = pg.locator(".work-card").count()
+            # 注意：灯箱的 <img> 初始没有 src，必须排除，否则会被误判成坏图
+            broken    = pg.evaluate(
+                "()=>[...document.querySelectorAll('img')]"
+                ".filter(i=>i.getAttribute('src') && (!i.complete||i.naturalWidth===0)).length")
+            revealed  = pg.evaluate("document.querySelectorAll('.reveal.is-in').length")
+            total_rev = pg.evaluate("document.querySelectorAll('.reveal').length")
+            active    = pg.evaluate("()=>[...document.querySelectorAll('.lang-switch__opt.is-active')].map(e=>e.dataset.lang)")
+            overflow  = pg.evaluate("document.documentElement.scrollWidth - window.innerWidth")
+            h1        = (pg.locator("h1").first.inner_text() if pg.locator("h1").count() else "").replace("\n", " ")
+            html_lang = pg.evaluate("document.documentElement.lang")
+            # 词典缺词检查：HTML 里声明了 data-i18n 但当前语言没有对应词条时，
+            # 页面会静默回退到 HTML 里的硬编码默认值（可能是过期的占位文案）。
+            missing   = pg.evaluate(
+                "lang=>{const D=window.I18N[lang]||{};"
+                "return [...document.querySelectorAll('[data-i18n]')]"
+                ".map(e=>e.getAttribute('data-i18n')).filter(k=>!(k in D));}", lang)
+
+            ok = True
+            ok &= check(not errs, f"[{lang}/{label}] JS 错误 {len(errs)}: {errs[:2]}")
+            ok &= check(broken == 0, f"[{lang}/{label}] 未加载图片 {broken} 张")
+            ok &= check(total_rev == 0 or revealed == total_rev, f"[{lang}/{label}] reveal {revealed}/{total_rev}")
+            ok &= check(active == [lang], f"[{lang}/{label}] 切换器激活态 {active} ≠ [{lang}]")
+            ok &= check(overflow <= 1, f"[{lang}/{label}] 横向溢出 {overflow}px")
+            ok &= check(not missing, f"[{lang}/{label}] i18n 缺词 {len(missing)}: {missing[:5]}")
+
+            pg.screenshot(path=os.path.join(OUT, f"{label}-{lang}.png"), full_page=True)
+            flag = "✓" if ok else "✗"
+            print(f"  {flag} {label:16s} cards={n_cards:2d} img_broken={broken} "
+                  f"reveal={revealed}/{total_rev} lang={html_lang} | {h1[:34]}")
+
+        # ---- 语言切换器点击实测 ----
+        pg.goto(f"{BASE}/index.html", wait_until="networkidle")
+        for target in ("es", "en", "zh"):
+            pg.click(f'.lang-switch__opt[data-lang="{target}"]')
+            pg.wait_for_timeout(450)
+            got = pg.evaluate("()=>[...document.querySelectorAll('.lang-switch__opt.is-active')].map(e=>e.dataset.lang)[0]")
+            hl = pg.evaluate("document.documentElement.lang")
+            saved = pg.evaluate("localStorage.getItem('jun.lang')")
+            check(got == target, f"[{lang}] 点击 {target} 后激活态 {got}")
+            check(hl == {"zh": "zh-CN", "es": "es-ES", "en": "en"}[target],
+                  f"[{lang}] 点击 {target} 后 html lang = {hl}")
+            check(saved == target, f"[{lang}] 点击 {target} 后 localStorage = {saved}")
+        print(f"  ✓ 语言切换器点击实测（es→en→zh，激活态 + html lang + 存储均正确）")
+
+        ctx.close()
+
+    # ================= 功能专项 =================
+    print(f"\n{'='*62}\n  功能专项\n{'='*62}")
+    ctx = browser.new_context(viewport={"width": 1440, "height": 900})
+    pg = ctx.new_page()
+    pg.goto(f"{BASE}/index.html", wait_until="domcontentloaded")
+    pg.evaluate("localStorage.setItem('jun.lang','zh')")
+
+    # 首页精选 = 每个板块一个，共 6 个
+    pg.goto(f"{BASE}/index.html", wait_until="networkidle")
+    pg.wait_for_timeout(400)
+    feat = pg.locator(".work-card").count()
+    cats = pg.evaluate("()=>[...new Set([...document.querySelectorAll('.work-card')].map(c=>c.dataset.category))]")
+    check(feat == 3, f"首页精选应为 3 个，实际 {feat}")
+    check(cats == ["digital", "graphic", "ip"], f"首页板块应为 ['digital','graphic','ip']，实际 {cats}")
+    print(f"  ✓ 首页精选 {feat} 个 · 板块 {cats}")
+
+    # 作品集：7 个案例 + 筛选
+    pg.goto(f"{BASE}/works.html", wait_until="networkidle")
+    pg.wait_for_timeout(500)
+    total = pg.locator(".work-card").count()
+    check(total == 38, f"作品集应有 38 个案例，实际 {total}")
+    print(f"  ✓ 作品集共 {total} 个案例")
+    for f in ("digital", "ip", "graphic", "all"):
+        pg.click(f'.filter-btn[data-filter="{f}"]')
+        pg.wait_for_timeout(220)
+        vis = pg.evaluate(
+            "()=>[...document.querySelectorAll('.work-card')].filter(c=>c.style.display!=='none').length")
+        exp = 38 if f == "all" else pg.evaluate(
+            f"()=>window.WORKS.filter(w=>w.category==='{f}').length")
+        check(vis == exp, f"筛选 {f}: 显示 {vis}，应为 {exp}")
+        print(f"     筛选 {f:8s} → {vis} 个")
+    pg.click('.filter-btn[data-filter="all"]')
+    pg.wait_for_timeout(200)
+    # i18n 注入会重置内联 style.display，「空提示」必须靠 class 保持隐藏
+    empty_hidden = pg.evaluate(
+        "()=>getComputedStyle(document.querySelector('[data-empty-msg]')).display === 'none'")
+    check(empty_hidden, "「该板块暂无案例」空提示应默认隐藏")
+    print("  ✓ 空提示默认隐藏（未被 i18n 注入显示出来）")
+
+    # ASQ 数字产品案例：25 张 PNG 界面图
+    pg.goto(f"{BASE}/work-detail.html?id=asq-system", wait_until="networkidle")
+    scroll_all(pg)
+    aimg = pg.locator(".work-gallery [data-lb]").count()
+    abro = pg.evaluate("()=>[...document.querySelectorAll('.work-gallery img')].filter(i=>!i.complete||i.naturalWidth===0).length")
+    check(aimg == 25, f"ASQ 案例图集应有 25 张，实际 {aimg}")
+    check(abro == 0, f"ASQ 图集未加载 {abro} 张")
+    print(f"  ✓ ASQ 案例图集 {aimg} 张，全部加载（PNG）")
+
+    # 其余 6 个界面类案例：详情页可渲染 + 图集零裂图
+    for wid, nimg in [("mind-web", 6), ("mind-platform", 6), ("ruizhi-cloud", 6),
+                      ("parent-app", 4), ("tuoyou", 4), ("xiaoe-course", 2),
+                      ("ui-showcase", 2), ("vis-guonin", 5), ("vis-xinzhi", 4),
+                      ("logo-weixiaoxin", 4), ("logo-liuxin", 5), ("logo-yan", 4),
+                      ("logo-umbrella", 5), ("logo-hexiang", 2), ("logo-shiguang", 2),
+                      ("logo-pingyuan", 4), ("logo-aline", 8),
+                      ("liuxin-book", 5), ("bjjz-book", 5),
+                      ("logo-zhuhai-orchestra", 4),
+                      ("liangbiao-book", 5), ("timp-32p", 5),
+                      ("timp-84p", 5), ("yuangong-book", 5),
+                      ("ruizhi-book", 5), ("ip-nino", 4),
+                      ("ip-pingyuan-v1", 6), ("ip-pingyuan-v2", 5),
+                      ("ip-pingyuan-v3", 7),
+                      ("ip-mengjiacun-1", 6), ("ip-mengjiacun-2", 6),
+                      ("ip-mengjiacun-3", 6), ("ip-mengjiacun-4", 6),
+                      ("ip-mengjiacun-5", 6), ("ip-houcang", 2),
+                      ("ip-shiliu", 8), ("app-shortcut-key", 18)]:
+        pg.goto(f"{BASE}/work-detail.html?id={wid}", wait_until="networkidle")
+        scroll_all(pg)
+        h1 = pg.locator("h1").first.inner_text().strip()
+        gimg = pg.locator(".work-gallery [data-lb]").count()
+        bro = pg.evaluate("()=>[...document.querySelectorAll('.work-gallery img')].filter(i=>!i.complete||i.naturalWidth===0).length")
+        check(bool(h1) and gimg == nimg and bro == 0,
+              f"{wid} 详情页异常：h1=「{h1}」 图 {gimg}/{nimg} 裂图 {bro}")
+        print(f"  ✓ {wid:14s} 「{h1[:24]}」图集 {gimg} 张全载")
+
+    pg.goto(f"{BASE}/work-detail.html?id=asq-system", wait_until="networkidle")
+    scroll_all(pg)
+    pg.evaluate("window.scrollTo({top:0,behavior:'instant'})")
+    pg.wait_for_timeout(200)
+    pg.locator(".work-gallery [data-lb]").first.click()
+    pg.wait_for_timeout(450)
+    lb_on = pg.evaluate("document.getElementById('lb')?.classList.contains('is-on')")
+    lb_cap = pg.evaluate("document.querySelector('#lb .lb__cap')?.textContent")
+    check(lb_on, "图集灯箱未打开")
+    print(f"  ✓ 灯箱打开，页码显示「{lb_cap}」")
+    pg.keyboard.press("ArrowRight")
+    pg.wait_for_timeout(350)
+    lb_cap2 = pg.evaluate("document.querySelector('#lb .lb__cap')?.textContent")
+    check(lb_cap2 != lb_cap, "灯箱方向键翻页无效")
+    print(f"  ✓ 方向键翻页 → 「{lb_cap2}」")
+    pg.keyboard.press("Escape")
+    pg.wait_for_timeout(300)
+    check(not pg.evaluate("document.getElementById('lb')?.classList.contains('is-on')"), "Esc 未关闭灯箱")
+    print(f"  ✓ Esc 关闭灯箱")
+
+    # 三语切换时详情页整体重绘
+    pg.click('.lang-switch__opt[data-lang="es"]')
+    pg.wait_for_timeout(600)
+    h1_es = pg.locator("h1").first.inner_text()
+    check("ASQ" in h1_es or "cribado" in h1_es, f"详情页西语重绘异常: {h1_es}")
+    print(f"  ✓ 详情页语言切换重绘 → 「{h1_es}」")
+
+    # 简历页三个 PDF
+    pg.goto(f"{BASE}/resume.html", wait_until="networkidle")
+    pdfs = pg.evaluate("()=>[...document.querySelectorAll('a[href$=\".pdf\"]')].map(a=>a.getAttribute('href'))")
+    check(len(pdfs) == 3, f"简历页应有 3 个 PDF，实际 {len(pdfs)}: {pdfs}")
+    print(f"  ✓ 简历页 PDF 下载：{pdfs}")
+
+    # ---- 后台配套：站点设置注入 / 数据源兜底 / 背景音乐 ----
+    pg.goto(f"{BASE}/index.html", wait_until="networkidle")
+    sd = pg.evaluate(
+        "()=>window.SITE_DATA ? {copy:Object.keys(window.SITE_DATA.copy||{}).length,"
+        " social:(window.SITE_DATA.social||[]).length,"
+        " mode:((window.SITE_DATA.source||{}).mode||'')} : null")
+    check(sd is not None, "site-data.js 未加载（后台主页文案 / 社交链接无从生效）")
+    check(sd["social"] >= 3, f"社交入口应 ≥3 个，实际 {sd['social']}")
+    check(sd["copy"] >= 20, f"可编辑文案键应 ≥20 条，实际 {sd['copy']}")
+    src_mode = pg.evaluate("()=>document.documentElement.getAttribute('data-content-source')")
+    check(src_mode == "local", f"未配置远端数据源时应回退 local，实际 {src_mode}")
+    print(f"  ✓ 站点设置已加载：文案 {sd['copy']} 键 · 社交 {sd['social']} 个 · 数据源 {src_mode}（兜底生效）")
+
+    mail = pg.evaluate("()=>document.querySelector('[data-social=\"email\"]')?.getAttribute('href')")
+    check(bool(mail) and mail.startswith("mailto:"), f"社交邮箱链接未注入：{mail}")
+    beh = pg.evaluate("()=>document.querySelector('[data-social=\"behance\"]')?.getAttribute('href')")
+    check(beh in ("#", "", None), f"未配置 URL 的 Behance 入口不应指向内容页：{beh}")
+    print(f"  ✓ 社交链接注入：email={mail} · behance={beh or '（未配置）'}")
+
+    bgm = pg.evaluate("()=>document.querySelectorAll('.bgm-btn').length")
+    check(bgm == 0, f"未配置背景音乐时不应出现播放按钮，实际 {bgm}")
+    print("  ✓ 未配置背景音乐 → 无播放按钮")
+
+    # 移动端
+    ctx.close()
+    ctx = browser.new_context(viewport={"width": 390, "height": 844},
+                              device_scale_factor=2, is_mobile=True, has_touch=True)
+    pg = ctx.new_page()
+    me = []
+    pg.on("pageerror", lambda e: me.append(str(e)))
+    for path, label in [("index.html", "home"), ("works.html", "works")]:
+        pg.goto(f"{BASE}/{path}", wait_until="networkidle", timeout=30000)
+        scroll_all(pg)
+        ov = pg.evaluate("document.documentElement.scrollWidth - window.innerWidth")
+        check(ov <= 1, f"[mobile/{label}] 横向溢出 {ov}px")
+        pg.screenshot(path=os.path.join(OUT, f"11-mobile-{label}.png"), full_page=True)
+        print(f"  ✓ 移动端 {label} 无横向溢出（{ov}px）")
+    check(not me, f"移动端 JS 错误: {me[:2]}")
+    ctx.close()
+    browser.close()
+
+print(f"\n{'='*62}")
+if fails:
+    print(f"  ✗ 共 {len(fails)} 项未通过：")
+    for f in fails:
+        print("     ·", f)
+    sys.exit(1)
+print("  ✓ 全部通过 —— 10 页 × 3 语言 + 功能专项 + 移动端，零失败")

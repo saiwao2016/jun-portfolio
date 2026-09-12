@@ -1,0 +1,606 @@
+/* =========================================================
+   JUN Portfolio — Main script
+   i18n · nav · works grid · filter · form · reveal · active link
+   ========================================================= */
+
+(function () {
+  'use strict';
+
+  const root = document.documentElement;
+  const STORAGE_KEY = 'jun.lang';
+  const FALLBACK_LANG = 'zh';
+
+  /* 资源版本号：每次发布若有同名文件被覆盖，需递增，避免 CDN/浏览器缓存旧资源 */
+  const ASSET_V = 'v20260927';
+  function vUrl(u) {
+    if (!u) return u;
+    return u + (u.indexOf('?') >= 0 ? '&' : '?') + ASSET_V;
+  }
+
+  /* ---------- 站点设置（assets/js/site-data.js，由后台 /admin 生成） ---------- */
+  const SITE = (window.SITE_DATA && typeof window.SITE_DATA === 'object') ? window.SITE_DATA : {};
+
+  /** 后台保存的主页 / 页脚文案覆盖 i18n；某语种留空则保留 i18n 原值 */
+  function applySiteCopy() {
+    const copy = SITE.copy || {};
+    Object.keys(copy).forEach((key) => {
+      ['zh', 'es', 'en'].forEach((lang) => {
+        const v = copy[key] && copy[key][lang];
+        if (v === undefined || v === null || v === '') return;
+        if (!window.I18N[lang]) return;
+        window.I18N[lang][key] = v;
+      });
+    });
+  }
+
+  /** 社交入口：把后台配置的链接与文案写到带 data-social 的锚点上 */
+  function applySocial() {
+    const social = Array.isArray(SITE.social) ? SITE.social : [];
+    if (!social.length) return;
+    const byId = {};
+    social.forEach((it) => { byId[it.id] = it; });
+
+    const sync = () => {
+      const lang = getLang();
+      document.querySelectorAll('[data-social]').forEach((a) => {
+        const it = byId[a.getAttribute('data-social')];
+        if (!it) return;
+        if (it.url) a.setAttribute('href', it.url);
+        // 带 data-i18n 的锚点文字由 i18n（已被 copy 覆盖）负责，其余在此写入
+        if (!a.hasAttribute('data-i18n')) {
+          const label = it.label && it.label[lang];
+          if (label) a.textContent = label;
+        }
+      });
+    };
+    sync();
+    onLangChange(sync);
+  }
+
+  /* ---------- 内容源：远端优先，失败或未配置一律回退本地 data.js ---------- */
+  const isVideoPath = (p) => /\.(mp4|webm|mov|m4v)$/i.test(p || '');
+
+  function fetchWithTimeout(url, ms) {
+    if (typeof AbortController === 'undefined') return fetch(url);
+    const ac = new AbortController();
+    const t = setTimeout(() => ac.abort(), ms);
+    return fetch(url, { signal: ac.signal }).finally(() => clearTimeout(t));
+  }
+
+  function normalizeGallery(list) {
+    return (list || [])
+      .map((it) => (typeof it === 'string'
+        ? { type: isVideoPath(it) ? 'video' : 'image', src: it, poster: '' }
+        : { type: (it && it.type) || 'image', src: it && it.src, poster: (it && it.poster) || '' }))
+      .filter((it) => !!it.src);
+  }
+
+  /** 草稿过滤 + sortOrder 排序 + 字段补全 */
+  function normalizeWorks(list) {
+    const arr = (list || []).filter((w) => w && w.id && w.status !== 'draft');
+    if (arr.some((w) => w.sortOrder !== undefined && w.sortOrder !== null)) {
+      arr.sort((a, b) => (Number(a.sortOrder) || 0) - (Number(b.sortOrder) || 0));
+    }
+    return arr.map((w) => ({
+      ...w,
+      title: w.title || {},
+      type: w.type || {},
+      scope: w.scope || {},
+      blurb: w.blurb || {},
+      gallery: normalizeGallery(w.gallery),
+    }));
+  }
+
+  /** Sanity 文档 → 站点作品结构 */
+  function fromSanity(d) {
+    return {
+      id: d.id || String(d._id || '').replace(/^drafts\./, ''),
+      category: d.category, year: d.year, cover: d.cover,
+      gallery: d.gallery || [], mediaType: d.mediaType, video: d.video,
+      videoPoster: d.videoPoster, bgm: d.bgm, single: d.single,
+      sortOrder: d.sortOrder, status: d.status,
+      title: d.title, type: d.type, scope: d.scope, blurb: d.blurb,
+    };
+  }
+
+  async function loadContent() {
+    const src = SITE.source || { mode: 'local' };
+    let remote = null;
+    try {
+      if (src.mode === 'sanity' && src.sanity && src.sanity.projectId) {
+        const ds = src.sanity.dataset || 'production';
+        const av = src.sanity.apiVersion || '2024-01-01';
+        const q = encodeURIComponent('*[_type=="work"]|order(sortOrder asc)');
+        const r = await fetchWithTimeout(
+          `https://${src.sanity.projectId}.api.sanity.io/v${av}/data/query/${ds}?query=${q}`, 6000);
+        const j = await r.json();
+        remote = (j.result || []).map(fromSanity);
+      } else if (src.mode === 'api' && src.apiBase) {
+        const r = await fetchWithTimeout(src.apiBase, 6000);
+        const j = await r.json();
+        remote = Array.isArray(j) ? j : (j.works || []);
+      }
+    } catch (err) {
+      // 兜底：远端失败静默回退本地 data.js，站点照常渲染
+      console.warn('[content] 远端数据源不可用，已回退本地 data.js：', err && err.message);
+      remote = null;
+    }
+    const list = (remote && remote.length) ? remote : (window.WORKS || []);
+    window.WORKS = normalizeWorks(list);
+    document.documentElement.setAttribute('data-content-source', remote ? src.mode : 'local');
+  }
+
+  /* ---------- 背景音乐 ---------- */
+  function mountBgm(src, opts) {
+    if (!src) return;
+    const o = opts || {};
+    const audio = document.createElement('audio');
+    audio.src = decodeURI(src);
+    audio.loop = o.loop !== false;
+    audio.preload = 'none';
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'bgm-btn';
+    btn.setAttribute('aria-label', o.label || '背景音乐');
+    btn.innerHTML = '<span class="bgm-btn__ico">♪</span><span class="bgm-btn__txt"></span>';
+    const txt = btn.querySelector('.bgm-btn__txt');
+
+    document.body.appendChild(audio);
+    document.body.appendChild(btn);
+
+    let on = false;
+    const sync = () => {
+      btn.classList.toggle('is-on', on);
+      txt.textContent = on ? (o.onText || '播放中') : (o.offText || '背景音乐');
+    };
+    sync();
+
+    btn.addEventListener('click', () => {
+      if (on) { audio.pause(); on = false; sync(); return; }
+      audio.play().then(() => { on = true; sync(); }).catch(() => { on = false; sync(); });
+    });
+    if (o.autoplay) audio.play().then(() => { on = true; sync(); }).catch(() => {});
+  }
+
+  /** 详情页优先用作品音乐，其余页面用站点音乐 */
+  function bindBgm() {
+    const site = SITE.bgm || {};
+    const host = document.querySelector('[data-work-detail]');
+    let workBgm = '';
+    if (host && window.WORKS && window.WORKS.length) {
+      const id = new URLSearchParams(location.search).get('id');
+      // 与详情页渲染保持一致：找不到 id 时回退第一个案例
+      const w = window.WORKS.find((x) => x.id === id) || window.WORKS[0];
+      workBgm = (w && w.bgm) || '';
+    }
+    if (workBgm) return mountBgm(workBgm, { label: '作品背景音乐' });
+    if (site.enabled && site.src) {
+      return mountBgm(site.src, { autoplay: !!site.autoplay, loop: site.loop !== false });
+    }
+  }
+
+  /* ---------- Language ---------- */
+  const langSubs = [];
+
+  function getLang() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved && window.I18N[saved]) return saved;
+    return FALLBACK_LANG;
+  }
+
+  function onLangChange(fn) { langSubs.push(fn); }
+
+  const HTML_LANG = { zh: 'zh-CN', es: 'es-ES', en: 'en' };
+
+  function setLang(lang) {
+    if (!window.I18N[lang]) return;
+    localStorage.setItem(STORAGE_KEY, lang);
+    root.setAttribute('lang', HTML_LANG[lang] || 'en');
+    document.body.setAttribute('data-lang', lang);
+    applyI18N(lang);
+    syncLangSwitch(lang);
+    if (typeof window.onLangChange === 'function') window.onLangChange(lang);
+    langSubs.forEach((fn) => fn(lang));
+  }
+
+  function applyI18N(lang) {
+    const dict = window.I18N[lang];
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      const val = dict[key];
+      if (val === undefined) return;
+      // 空值代表该项不适用（如未提供的年份）—— 整块隐藏，不留空行
+      el.style.display = val === '' ? 'none' : '';
+      if (val === '') return;
+      // 多行内容：保留 \n
+      if (val.indexOf('\n') !== -1) {
+        el.innerHTML = val.split('\n').map(escapeHtml).join('<br>');
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const val = dict[key];
+      if (val !== undefined) el.setAttribute('placeholder', val);
+    });
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  }
+
+  function syncLangSwitch(lang) {
+    document.querySelectorAll('.lang-switch').forEach((el) => {
+      el.querySelectorAll('.lang-switch__opt').forEach((o) => {
+        o.classList.toggle('is-active', o.dataset.lang === lang);
+      });
+    });
+  }
+
+  function bindLangSwitch() {
+    document.querySelectorAll('.lang-switch').forEach((el) => {
+      el.addEventListener('click', (e) => {
+        const opt = e.target.closest('.lang-switch__opt');
+        if (!opt) return;
+        setLang(opt.dataset.lang);
+      });
+    });
+  }
+
+  /* ---------- Nav scroll state & mobile toggle ---------- */
+  function bindNav() {
+    const nav = document.querySelector('.nav');
+    if (!nav) return;
+
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const toggle = nav.querySelector('.nav__toggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => nav.classList.toggle('is-open'));
+    }
+
+    nav.querySelectorAll('.nav__link').forEach((link) => {
+      link.addEventListener('click', () => nav.classList.remove('is-open'));
+    });
+  }
+
+  /* ---------- Active nav link ---------- */
+  function bindActiveLink() {
+    const path = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav__link').forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      if (href === path || (path === '' && href === 'index.html')) {
+        link.classList.add('is-active');
+      }
+    });
+  }
+
+  /* ---------- Works grid render & filter ---------- */
+  function renderWorks() {
+    const grid = document.querySelector('[data-works-grid]');
+    if (!grid || !window.WORKS) return;
+
+    const lang = getLang();
+    // 首页使用 data-works-featured：每个能力分类只取一个代表，共 6 个
+    const featured = grid.hasAttribute('data-works-featured');
+    let list = window.WORKS;
+    if (featured) {
+      const seen = new Set();
+      list = window.WORKS.filter((w) => {
+        if (seen.has(w.category)) return false;
+        seen.add(w.category);
+        return true;
+      });
+    }
+
+    const frag = document.createDocumentFragment();
+
+    list.forEach((w) => {
+      const tagKey = 'works.tag.' + w.category;
+      const tagText = window.I18N[lang][tagKey] || w.category;
+
+      const card = document.createElement('a');
+      card.className = 'work-card reveal';
+      card.href = `work-detail.html?id=${encodeURIComponent(w.id)}&v20260927`;
+      card.dataset.category = w.category;
+
+      card.innerHTML = `
+        <div class="work-card__media">
+          <span class="work-card__tag">${escapeHtml(tagText)}</span>
+          <img src="${escapeHtml(vUrl(w.cover))}" alt="${escapeHtml(w.title[lang])}" loading="lazy">
+        </div>
+        <div class="work-card__title" data-i18n-dyn="${w.id}__title">${escapeHtml(w.title[lang])}</div>
+        <div class="work-card__meta">
+          <span data-i18n-dyn="${w.id}__type">${escapeHtml(w.type[lang])}</span>
+          <span> · ${w.year}</span>
+        </div>
+      `;
+      frag.appendChild(card);
+    });
+
+    grid.appendChild(frag);
+    onLangChange((lang) => {
+      grid.querySelectorAll('.work-card').forEach((card) => {
+        const w = window.WORKS.find((x) => card.href.includes(encodeURIComponent(x.id)));
+        if (!w) return;
+        const tEl = card.querySelector(`[data-i18n-dyn$="__title"]`);
+        const tyEl = card.querySelector(`[data-i18n-dyn$="__type"]`);
+        if (tEl) tEl.textContent = w.title[lang];
+        if (tyEl) tyEl.textContent = w.type[lang];
+      });
+    });
+  }
+
+  function bindFilter() {
+    const bar = document.querySelector('.filter-bar');
+    const grid = document.querySelector('[data-works-grid]');
+    if (!bar || !grid) return;
+
+    bar.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      bar.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      const cat = btn.dataset.filter;
+      grid.querySelectorAll('.work-card').forEach((card) => {
+        const show = cat === 'all' || card.dataset.category === cat;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  }
+
+  /* ---------- Contact form ---------- */
+  function bindForm() {
+    const form = document.querySelector('[data-form]');
+    if (!form) return;
+    const msg = form.querySelector('.form-msg');
+    const lang = getLang();
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (!data.name || !data.email || !data.message) return;
+
+      // 占位：真实环境请 POST 到后端或邮件服务
+      console.log('[JUN Portfolio] contact submit', data);
+      if (msg) {
+        msg.textContent = window.I18N[lang]['contact.form.success'];
+        msg.classList.add('is-show');
+      }
+      form.reset();
+      setTimeout(() => msg && msg.classList.remove('is-show'), 4500);
+    });
+
+    onLangChange((l) => {
+      if (msg && msg.classList.contains('is-show')) {
+        msg.textContent = window.I18N[l]['contact.form.success'];
+      }
+    });
+  }
+
+  /* ---------- Reveal on scroll （可重入：支持动态新增节点） ---------- */
+  let revealObserver = null;
+
+  function getRevealObserver() {
+    if (revealObserver) return revealObserver;
+    if (!('IntersectionObserver' in window)) return null;
+    revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    return revealObserver;
+  }
+
+  function bindReveal(scope) {
+    const ctx = scope || document;
+    const els = ctx.querySelectorAll('.reveal:not(.is-in)');
+    const io = getRevealObserver();
+    if (!io) {
+      els.forEach((el) => el.classList.add('is-in'));
+      return;
+    }
+    els.forEach((el) => io.observe(el));
+  }
+
+  /* ---------- Work detail page ---------- */
+  const SECTIONS = ['bg', 'process', 'system', 'summary'];
+
+  function renderWorkDetail() {
+    const host = document.querySelector('[data-work-detail]');
+    if (!host || !window.WORKS) return;
+
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
+    const w = window.WORKS.find((x) => x.id === id) || window.WORKS[0];
+
+    const idx = window.WORKS.indexOf(w);
+    const nextW = window.WORKS[(idx + 1) % window.WORKS.length];
+    const prevW = window.WORKS[(idx - 1 + window.WORKS.length) % window.WORKS.length];
+
+    // data.js 里写了的段落用真实内容，没写的用 i18n 模板兜底
+    const real = {};
+    (w.body || []).forEach((s) => { real[s.k] = s.p; });
+
+    function para(lang, k) {
+      const D = window.I18N[lang];
+      if (real[k]) return real[k][lang];
+      const key = k === 'bg' ? 'work.ph.bg2' : 'work.ph.' + k;
+      return (D[key] || '').replace(/\{title\}/g, w.title[lang]);
+    }
+
+    function draw(lang) {
+      const D = window.I18N[lang];
+      const tag = D['works.tag.' + w.category] || w.category;
+      document.title = 'JUN · ' + w.title[lang];
+
+      const blocks = SECTIONS.map((k) => `
+        <div class="work-body split">
+          <aside><span class="eyebrow">${escapeHtml(D['work.section.' + k])}</span></aside>
+          <div><p>${escapeHtml(para(lang, k))}</p></div>
+        </div>`).join('');
+
+      const media = w.gallery || [];
+      const gallery = media.map((it, i) => (it.type === 'video'
+        ? `<video src="${escapeHtml(vUrl(it.src))}"${it.poster ? ` poster="${escapeHtml(vUrl(it.poster))}"` : ''}
+             controls playsinline preload="metadata" data-lb="${i}"></video>`
+        : `<img src="${escapeHtml(vUrl(it.src))}" alt="${escapeHtml(w.title[lang])} ${i + 1}"
+             loading="lazy" data-lb="${i}">`)).join('');
+
+      // 说明文案允许用空行分段（\n\n → 多个段落），单段时保持原样
+      const paras = String(w.blurb[lang] || '').split(/\n{2,}/)
+        .map((s) => s.trim()).filter(Boolean);
+      const blurbHtml = paras.map((p) => `<span class="blk">${escapeHtml(p)}</span>`).join('');
+      const blurbCls = paras.length > 1 ? 'lead lead--multi' : 'lead';
+
+      host.innerHTML = `
+      <header class="work-hero container">
+        <span class="eyebrow">${escapeHtml(tag)}</span>
+        <h1 class="h-section" style="margin-top:8px;max-width:26ch">${escapeHtml(w.title[lang])}</h1>
+        <p class="${blurbCls}" style="margin-top:24px">${blurbHtml}</p>
+        <dl class="work-hero__meta">
+          <div><dt>${escapeHtml(D['work.meta.type'])}</dt><dd>${escapeHtml(w.type[lang])}</dd></div>
+          <div><dt>${escapeHtml(D['work.meta.year'])}</dt><dd>${escapeHtml(w.year)}</dd></div>
+          <div><dt>${escapeHtml(D['work.meta.role'])}</dt><dd>${escapeHtml(D['work.meta.role.v'])}</dd></div>
+        </dl>
+      </header>
+
+      <div class="container">
+        <div class="work-cover${w.mediaType === 'video' && w.video ? ' is-video' : ''}">
+          ${w.mediaType === 'video' && w.video
+            ? `<video src="${escapeHtml(vUrl(w.video))}"${(w.videoPoster || w.cover) ? ` poster="${escapeHtml(vUrl(w.videoPoster || w.cover))}"` : ''}
+                 controls playsinline preload="metadata"></video>`
+            : (w.cover ? `<img src="${escapeHtml(vUrl(w.cover))}" alt="${escapeHtml(w.title[lang])}">` : '')}
+        </div>
+
+        <div class="work-scope">
+          <span class="eyebrow">${escapeHtml(D['work.meta.scope'])}</span>
+          <p>${escapeHtml(w.scope[lang])}</p>
+        </div>
+
+        ${blocks}
+
+        <div class="work-body split">
+          <aside>
+            <span class="eyebrow">${escapeHtml(D['work.section.gallery'])}</span>
+            <p class="muted" style="font-size:12px;margin-top:6px">
+              ${escapeHtml((D['work.gallery.note'] || '').replace('{n}', String((w.gallery || []).length)))}
+            </p>
+          </aside>
+          <div>
+            <div class="work-gallery${w.single ? ' is-single' : ''}">${gallery}</div>
+          </div>
+        </div>
+
+        <nav class="work-nav">
+          <a href="work-detail.html?id=${encodeURIComponent(prevW.id)}&v20260927">← ${escapeHtml(prevW.title[lang])}</a>
+          <a href="works.html?v20260927">${escapeHtml(D['work.nav.back'])}</a>
+          <a href="work-detail.html?id=${encodeURIComponent(nextW.id)}&v20260927">${escapeHtml(nextW.title[lang])} →</a>
+        </nav>
+      </div>
+    `;
+
+      bindLightbox(w.gallery || []);
+    }
+
+    draw(getLang());
+    onLangChange(draw);   // 语言切换时整页重绘
+  }
+
+  /* ---------- Gallery lightbox（图片 + 视频） ---------- */
+  function bindLightbox(list) {
+    const nodes = Array.from(document.querySelectorAll('.work-gallery [data-lb]'));
+    const items = (list || []).map((it) => (typeof it === 'string'
+      ? { type: isVideoPath(it) ? 'video' : 'image', src: it, poster: '' }
+      : it));
+    if (!nodes.length || !items.length) return;
+
+    let lb = document.getElementById('lb');
+    if (!lb) {
+      lb = document.createElement('div');
+      lb.id = 'lb';
+      lb.className = 'lb';
+      document.body.appendChild(lb);
+    }
+    lb.innerHTML = '<img alt=""><video controls playsinline></video><span class="lb__cap"></span>';
+    const lbImg = lb.querySelector('img');
+    const lbVid = lb.querySelector('video');
+    const lbCap = lb.querySelector('.lb__cap');
+    const close = () => {
+      lb.classList.remove('is-on');
+      lbVid.pause();
+      lbVid.removeAttribute('src');
+    };
+    // 只有点击背景或图片才关闭，避免误关视频控件
+    lb.onclick = (e) => { if (e.target === lb || e.target === lbImg) close(); };
+
+    let cur = 0;
+    function show(i) {
+      cur = (i + items.length) % items.length;
+      const it = items[cur];
+      const vid = it.type === 'video';
+      lbImg.classList.toggle('is-hidden', vid);
+      lbVid.classList.toggle('is-hidden', !vid);
+      if (vid) {
+        lbVid.src = vUrl(it.src);
+        if (it.poster) lbVid.setAttribute('poster', vUrl(it.poster));
+        else lbVid.removeAttribute('poster');
+        lbVid.play().catch(() => {});
+      } else {
+        lbVid.pause();
+        lbVid.removeAttribute('src');
+        lbImg.src = vUrl(it.src);
+      }
+      lbCap.textContent = (cur + 1) + ' / ' + items.length;
+    }
+
+    nodes.forEach((im) => {
+      im.addEventListener('click', () => {
+        show(parseInt(im.dataset.lb, 10) || 0);
+        lb.classList.add('is-on');
+      });
+    });
+
+    document.onkeydown = (e) => {
+      if (!lb.classList.contains('is-on')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(cur - 1);
+      if (e.key === 'ArrowRight') show(cur + 1);
+    };
+  }
+
+  /* ---------- Boot ---------- */
+  document.addEventListener('DOMContentLoaded', async () => {
+    applySiteCopy();      // 后台主页 / 页脚文案覆盖 i18n
+
+    bindLangSwitch();
+    bindNav();
+    bindActiveLink();
+    bindFilter();
+    bindForm();
+
+    await loadContent();  // 远端数据源优先，失败回退本地 data.js
+    applySocial();
+
+    // 先渲染动态内容，再统一挂 reveal 观察器，
+    // 否则 JS 生成的卡片不会被 IntersectionObserver 观察到而永远 opacity:0
+    renderWorks();
+    renderWorkDetail();
+    bindBgm();
+    bindReveal();
+
+    setLang(getLang());   // 最后一步，触发注入
+  });
+})();
