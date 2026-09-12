@@ -235,8 +235,11 @@ portfolio-site/
 ## 十、部署
 
 纯静态，把整个 `portfolio-site/` 目录上传到任意静态托管即可（Vercel / Netlify / GitHub Pages / 对象存储 / 虚拟主机）。
-
 无需构建步骤，无需 Node 环境。记得一起传：
+
+- 仓库：**https://github.com/saiwao2016/jun-portfolio**
+- 线上（GitHub Pages）：**https://saiwao2016.github.io/jun-portfolio/**
+- 改完内容后的一键上线流程见第十二节「发布到线上」
 - `assets/works/`（约 19MB）
 - `assets/docs/`（三份 PDF）
 
@@ -336,6 +339,26 @@ node server.js        # 监听 $PORT，绑定 0.0.0.0
 ```
 
 纯静态托管（GitHub Pages / 对象存储等）跑不了 `/api` 与 `/admin`，只能承载站点部分。
+
+### 发布到线上（GitHub Pages 一键发布）
+
+本仓库已推送到 GitHub 并开启 Pages：**https://saiwao2016.github.io/jun-portfolio/**
+
+静态托管下后台写不了盘，所以把「改内容」和「上线」拆成两步：
+
+1. 本机起后台 `node server.js` → 在 `/admin` 里改内容 → **保存**（写的是本地 `content/*.json` 与 `assets/works/`）；
+2. 点右上角 **「发布到线上」** → 服务端自动 `git add -A` → `commit` → `push`，Pages 约 1 分钟后重建。
+
+顶栏按钮上的数字就是当前待发布的改动数；数字为 0 时按钮变成「线上已是最新 ↗」的链接。
+
+```bash
+git remote -v     # 需要有一个可推送的 origin（远端 URL 里带 GitHub Token）
+GIT_REMOTE=origin GIT_BRANCH=main node server.js   # 也可用环境变量覆盖
+```
+
+配置在 `content/publish.json`（`remote` / `branch` / `siteUrl` / 提交身份）。
+推送失败且提示凭据无效，说明远端 URL 里的 GitHub Token 过期（Token 通常 30–90 天），
+重新签发后执行 `git remote set-url origin https://<用户>:<新Token>@github.com/<用户>/<仓库>.git` 即可。
 
 ---
 
