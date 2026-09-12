@@ -70,6 +70,8 @@ html, body {
 }
 .topbar__sub { color: var(--muted-2); font-weight: 400; font-size: 12px; }
 .topbar__stats { margin-left: 8px; display: flex; gap: 6px; }
+.topbar__pub { display: flex; align-items: center; gap: 6px; margin-right: 2px; }
+.topbar__pub a.badge { text-decoration: none; cursor: pointer; }
 .topbar__spacer { flex: 1; }
 .topbar__actions { display: flex; gap: 8px; align-items: center; }
 

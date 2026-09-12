@@ -102,6 +102,7 @@
     filter: 'all',
     dirty: false,
     pwGenerated: false,
+    publish: null,
   };
 
   const work = () => S.works.find((w) => w.id === S.sel) || null;
@@ -227,6 +228,7 @@
       $('#app').classList.remove('is-hidden');
       if (!S.sel && S.works.length) { S.sel = sorted()[0].id; S.origId = S.sel; }
       renderAll();
+      loadPublish();
       if (S.pwGenerated) {
         toast('当前使用首次启动自动生成的密码，建议修改 content/auth.json 后重启服务', true);
       }
@@ -304,7 +306,10 @@
     }).join('');
   }
 
-  function renderAll() { renderStats(); renderFilters(); renderList(); renderPane(); }
+  function renderAll() {
+    renderStats(); renderFilters(); renderList(); renderPane();
+    renderPub(); schedulePublishRefresh();
+  }
 
   /* ---------------- 渲染：右侧面板 ---------------- */
 
@@ -1122,6 +1127,72 @@
       } catch (e) { toast(e.message, true); }
     }, '确认删除');
   }
+
+  /* ---------------- 发布到线上 ---------------- */
+
+  let pubTimer = null;
+
+  async function loadPublish() {
+    try { S.publish = await api('GET', '/api/publish'); } catch { S.publish = null; }
+    renderPub();
+  }
+
+  /** 内容有变动后延迟刷新一次发布状态（避免连续请求） */
+  function schedulePublishRefresh() {
+    if (pubTimer) clearTimeout(pubTimer);
+    pubTimer = setTimeout(() => { pubTimer = null; loadPublish(); }, 400);
+  }
+
+  function renderPub() {
+    const el = $('#pubState');
+    const btn = $('#btnPublish');
+    if (!el || !btn) return;
+    const p = S.publish;
+    if (!p || !p.repo) {
+      el.textContent = '';
+      btn.disabled = true;
+      btn.classList.remove('btn--primary');
+      btn.textContent = '发布到线上';
+      btn.title = (p && p.error) || '发布状态加载中';
+      return;
+    }
+    btn.disabled = false;
+    const n = p.dirtyCount || 0;
+    btn.textContent = n ? `发布到线上 · ${n}` : '发布到线上';
+    btn.classList.toggle('btn--primary', n > 0);
+    btn.title = n
+      ? `提交并推送 ${n} 项改动到 ${p.remote}/${p.branch}`
+      : '没有待发布的改动（点击打开线上站点）';
+    el.innerHTML = n
+      ? `<span class="badge badge--draft">${n} 处改动待发布</span>`
+      : (p.siteUrl
+        ? `<a class="badge badge--ok" href="${esc(p.siteUrl)}" target="_blank" rel="noopener">线上已是最新 ↗</a>`
+        : '<span class="badge badge--ok">已是最新</span>');
+    el.title = p.lastCommit ? `最近提交 ${p.lastCommit.hash} · ${p.lastCommit.subject}` : '';
+  }
+
+  $('#btnPublish').addEventListener('click', async () => {
+    const p = S.publish;
+    if (!p) return;
+    if (!p.dirtyCount) {
+      if (p.siteUrl) window.open(p.siteUrl, '_blank');
+      else toast('没有需要发布的改动');
+      return;
+    }
+    if (S.dirty && !confirm('当前作品有未保存的修改，要先保存再发布。仍要继续发布吗？')) return;
+    if (!confirm(`将提交 ${p.dirtyCount} 项改动并推送到 ${p.remote}/${p.branch}，线上约 1 分钟后更新。继续？`)) return;
+    const btn = $('#btnPublish');
+    btn.disabled = true;
+    btn.textContent = '正在发布…';
+    try {
+      const r = await api('POST', '/api/publish', {});
+      toast(r.message || '已发布');
+    } catch (e) {
+      toast(e.message, true);
+    } finally {
+      await loadPublish();
+    }
+  });
 
   /* ---------------- 顶栏 ---------------- */
 

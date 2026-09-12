@@ -1,0 +1,8 @@
+{
+  "remote": "origin",
+  "branch": "main",
+  "siteUrl": "https://saiwao2016.github.io/jun-portfolio/",
+  "authorName": "JUN",
+  "authorEmail": "saiwao@qq.com",
+  "_note": "后台「发布到线上」= git add -A → commit → push 到 remote/branch，GitHub Pages 约 1 分钟后更新。可用环境变量 GIT_REMOTE / GIT_BRANCH 覆盖这里的配置。"
+}

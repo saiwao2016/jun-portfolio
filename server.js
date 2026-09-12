@@ -19,6 +19,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const { syncAll } = require('./_tools/build_content.js');
+const { spawnSync } = require('node:child_process');
 
 const ROOT = __dirname;
 const CONTENT_DIR = path.join(ROOT, 'content');
@@ -217,6 +218,102 @@ function refreshAssetHashes() {
     if (t !== before) { fs.writeFileSync(p, t); changed++; }
   });
   return { hashes, changed };
+}
+
+/* ---------------- 发布：提交并推送到远端（触发 Pages 重建） ---------------- */
+
+const PUBLISH_FILE = path.join(CONTENT_DIR, 'publish.json');
+const DEFAULT_PUBLISH = {
+  remote: 'origin',
+  branch: 'main',
+  siteUrl: '',
+  authorName: 'JUN',
+  authorEmail: 'saiwao@qq.com',
+};
+
+function loadPublishCfg() {
+  const doc = readJsonFile(PUBLISH_FILE, {}) || {};
+  return {
+    ...DEFAULT_PUBLISH,
+    ...doc,
+    remote: process.env.GIT_REMOTE || doc.remote || DEFAULT_PUBLISH.remote,
+    branch: process.env.GIT_BRANCH || doc.branch || DEFAULT_PUBLISH.branch,
+  };
+}
+
+/** 同步执行 git；返回 { ok, code, out } */
+function git(args) {
+  const r = spawnSync('git', args, {
+    cwd: ROOT,
+    encoding: 'utf8',
+    env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
+    maxBuffer: 32 * 1024 * 1024,
+  });
+  if (r.error) return { ok: false, code: -1, out: String(r.error.message || r.error) };
+  return { ok: r.status === 0, code: r.status, out: ((r.stdout || '') + (r.stderr || '')).trim() };
+}
+
+/** 提交身份：优先用仓库/全局配置，没有则临时指定 */
+function gitIdentity(cfg) {
+  return ['-c', `user.name=${cfg.authorName}`, '-c', `user.email=${cfg.authorEmail}`];
+}
+
+function publishStatus(cfg) {
+  if (git(['rev-parse', '--is-inside-work-tree']).out !== 'true') {
+    return { repo: false, error: '当前目录不是 Git 仓库' };
+  }
+  const branch = git(['rev-parse', '--abbrev-ref', 'HEAD']).out || cfg.branch;
+  const ru = git(['remote', 'get-url', cfg.remote]);
+  const porcelain = git(['status', '--porcelain']).out;
+  const dirty = porcelain ? porcelain.split('\n').filter(Boolean) : [];
+  const [hash = '', subject = '', date = ''] = git(['log', '-1', '--format=%h|%s|%ci']).out.split('|');
+  const ahead = Number(git(['rev-list', '--count', `${cfg.remote}/${branch}..HEAD`]).out) || 0;
+  return {
+    repo: true,
+    branch,
+    remote: cfg.remote,
+    remoteUrl: ru.ok ? ru.out.replace(/\/\/[^@/]+@/, '//') : '',
+    dirty: dirty.slice(0, 300),
+    dirtyCount: dirty.length,
+    ahead,
+    lastCommit: hash ? { hash, subject, date } : null,
+    siteUrl: cfg.siteUrl,
+  };
+}
+
+function doPublish(cfg, message) {
+  if (git(['rev-parse', '--is-inside-work-tree']).out !== 'true') {
+    throw new Error('当前目录不是 Git 仓库，无法发布');
+  }
+  // 先按最新 content/*.json 重写 data.js / site-data.js，保证线上与后台一致
+  try { syncAll(ROOT); refreshAssetHashes(); } catch (e) { throw new Error('生成站点数据失败：' + e.message); }
+
+  const add = git(['add', '-A']);
+  if (!add.ok) throw new Error('git add 失败：' + add.out);
+
+  const changed = (git(['status', '--porcelain']).out || '').split('\n').filter(Boolean);
+  if (!changed.length) {
+    return { ok: true, committed: false, pushed: false, changed: 0,
+      message: '没有需要发布的改动', status: publishStatus(cfg) };
+  }
+
+  const msg = message || `内容更新 · ${new Date().toLocaleString('zh-CN', { hour12: false })}`;
+  const cm = git([...gitIdentity(cfg), 'commit', '-m', msg]);
+  if (!cm.ok) throw new Error('git commit 失败：' + cm.out);
+
+  const push = git(['push', cfg.remote, `HEAD:${cfg.branch}`]);
+  if (!push.ok) {
+    const bad = /Authentication failed|could not read Username|Invalid username|403|401|Permission denied/i.test(push.out);
+    throw new Error((bad
+      ? '推送失败：远端凭据无效或已过期（GitHub Token 通常 30–90 天到期），请更新后重试。\n'
+      : 'git push 失败：') + push.out);
+  }
+  return {
+    ok: true, committed: true, pushed: true, changed: changed.length,
+    commit: git(['log', '-1', '--format=%h %s']).out,
+    message: `已推送 ${changed.length} 项改动到 ${cfg.remote}/${cfg.branch}，线上约 1 分钟后更新`,
+    status: publishStatus(cfg),
+  };
 }
 
 /* ---------------- 静态文件 ---------------- */
@@ -479,6 +576,24 @@ async function handleApi(req, res, seg, query) {
     const stats = syncAll(ROOT);
     const hash = refreshAssetHashes();
     return json(res, 200, { stats, hash });
+  }
+
+  /* --- 发布到线上（git commit + push，触发 Pages 重建） --- */
+  if (route === 'publish') {
+    const cfg = loadPublishCfg();
+    if (method === 'GET') return json(res, 200, publishStatus(cfg));
+    if (method === 'POST') {
+      let message = '';
+      try {
+        const body = await readJsonBody(req);
+        message = String((body && body.message) || '').trim();
+      } catch { /* 允许空 body */ }
+      try {
+        return json(res, 200, doPublish(cfg, message));
+      } catch (e) {
+        return json(res, 500, { error: e.message || '发布失败', status: publishStatus(cfg) });
+      }
+    }
   }
 
   return json(res, 404, { error: `未知接口 ${method} /api/${route}` });
