@@ -11,6 +11,53 @@
 
   window.WORKS = [
     {
+      "id": "app-shortcut-key",
+      "category": "digital",
+      "year": "2018",
+      "cover": "assets/works/app-shortcut-key/cover.png",
+      "gallery": [
+        "assets/works/app-shortcut-key/01.jpg",
+        "assets/works/app-shortcut-key/02.gif",
+        "assets/works/app-shortcut-key/03.jpg",
+        "assets/works/app-shortcut-key/04.jpg",
+        "assets/works/app-shortcut-key/05.jpg",
+        "assets/works/app-shortcut-key/06.gif",
+        "assets/works/app-shortcut-key/07.jpg",
+        "assets/works/app-shortcut-key/08.jpg",
+        "assets/works/app-shortcut-key/09.gif",
+        "assets/works/app-shortcut-key/10.jpg",
+        "assets/works/app-shortcut-key/11.jpg",
+        "assets/works/app-shortcut-key/12.gif",
+        "assets/works/app-shortcut-key/13.jpg",
+        "assets/works/app-shortcut-key/14.gif",
+        "assets/works/app-shortcut-key/15.jpg",
+        "assets/works/app-shortcut-key/16.jpg",
+        "assets/works/app-shortcut-key/17.jpg",
+        "assets/works/app-shortcut-key/18.gif"
+      ],
+      "title": {
+        "zh": "Shortcut Key · 快捷键 App 概念设计",
+        "es": "Shortcut Key · App de atajos, diseño conceptual",
+        "en": "Shortcut Key · Shortcut-key app concept design"
+      },
+      "type": {
+        "zh": "数字界面 / 移动应用概念设计",
+        "es": "Interfaz digital / Concepto de app móvil",
+        "en": "Digital interface / Mobile app concept"
+      },
+      "scope": {
+        "zh": "标志设计 · 首页 · 引导页 · 核心功能 · 动效演示 · 整体视觉",
+        "es": "Logotipo · Inicio · Onboarding · Funciones clave · Animaciones · Sistema visual",
+        "en": "Logo · Home · Onboarding · Core features · Motion · Visual system"
+      },
+      "blurb": {
+        "zh": "「Shortcut Key」是一款以提高软件使用效率为目标的 App 概念设计（Circle Creative Studio，2018）。\n\n设计初衷：在多年的工作过程中我们发现，团队成员的软件使用能力很大程度上影响着工作的质量与效率，而这类能力却始终没有一个可以量化的评价标准；同时，工作中遇到软件使用问题时，查询与学习都非常不方便，极大的影响了个人能力的提升。出于对这些问题的考虑，我们希望做出一款帮助人们提高软件使用效率的 App —— 而不论是评价一个人的软件使用能力，还是提高他的工作效率，都有一个共同的切入点，那就是软件的「快捷键」。于是我们决定从「快捷键」这一个点出发：一方面帮助用户便捷地搜索快捷键并有效地将其掌握，另一方面帮助用户系统地学习新的软件，同时建立起可靠的软件能力评价体系。\n\n视觉上，标志由「Key」与键盘形态提炼，圆角键帽与彩色立体方块构成核心识别；页面覆盖引导页、首页、搜索、学习、测评、夜间模式等完整链路，并配以动效演示，呈现从概念到交互的完整体验。",
+        "es": "\"Shortcut Key\" es un diseño conceptual de app móvil orientado a mejorar la eficiencia en el uso del software (Circle Creative Studio, 2018).\n\nMotivación: a lo largo de años de trabajo observamos que la capacidad de manejo de software de los miembros del equipo influye en gran medida en la calidad y la eficiencia del trabajo, y sin embargo esa capacidad nunca ha contado con un estándar de evaluación cuantificable; además, ante un problema de uso de software, consultar y aprender resulta muy poco práctico, lo que limita seriamente la mejora personal. Partiendo de estas cuestiones, quisimos crear una app que ayude a las personas a mejorar su eficiencia con el software; y tanto para evaluar la capacidad de uso como para elevar la eficiencia existe un punto de entrada común: los atajos de teclado. Decidimos pues partir de ese único punto: por un lado, ayudar al usuario a buscar atajos con facilidad y a dominarlos de forma efectiva; por otro, ayudarle a aprender sistemáticamente nuevos programas, estableciendo al mismo tiempo un sistema fiable de evaluación de competencias.\n\nEn lo visual, el logotipo se extrae de la \"Key\" y de la forma del teclado, con teclas redondeadas y cubos tridimensionales de color como núcleo de identidad; la obra cubre onboarding, inicio, búsqueda, aprendizaje, evaluación y modo nocturno, acompañada de demostraciones en movimiento que presentan la experiencia completa del concepto a la interacción.",
+        "en": "\"Shortcut Key\" is a mobile app concept design aimed at improving software efficiency (Circle Creative Studio, 2018).\n\nMotivation: over years of work we found that team members' software proficiency strongly affects the quality and efficiency of their work, yet there has never been a quantifiable standard for evaluating that ability; and when software problems arise, looking things up and learning are both very inconvenient, which seriously holds back personal growth. With these issues in mind, we wanted to build an app that helps people work more efficiently with software — and whether it is assessing someone's software proficiency or raising their working efficiency, there is one shared entry point: software shortcuts. So we decided to start from that single point: on one hand, help users search shortcuts conveniently and truly master them; on the other, help them learn new software systematically, while establishing a reliable system for evaluating software proficiency.\n\nVisually, the logo is distilled from \"Key\" and the keyboard form, with rounded keycaps and colourful 3D cubes as the core identity; the work covers onboarding, home, search, learning, assessment and night mode, with motion demos presenting the full concept-to-interaction experience."
+      },
+      "single": true
+    },
+    {
       "id": "asq-system",
       "category": "digital",
       "year": "2016 — 至今",
@@ -198,6 +245,36 @@
       }
     },
     {
+      "id": "xiaoe-course",
+      "category": "digital",
+      "year": "2025 — 至今",
+      "cover": "assets/works/xiaoe-course/cover.png",
+      "gallery": [
+        "assets/works/xiaoe-course/01.png",
+        "assets/works/xiaoe-course/02.png"
+      ],
+      "title": {
+        "zh": "心智课程 · 小鹅通线上店铺首页",
+        "es": "Cursos Xinzhi · Portada de tienda en Xiaoetong",
+        "en": "Xinzhi Courses · Xiaoetong storefront home"
+      },
+      "type": {
+        "zh": "数字产品 / H5 电商店铺 · 移动端",
+        "es": "Producto digital / Tienda H5 · Móvil",
+        "en": "Digital product / H5 storefront · Mobile"
+      },
+      "scope": {
+        "zh": "信息架构 · 店铺首页 · 量表课程入口墙 · 专家寄语 · 心理测量专栏 · 知识书架",
+        "es": "Arquitectura de información · Portada · Muro de cursos de escalas · Mensajes de expertos · Columna de psicometría · Estantería de conocimiento",
+        "en": "Information architecture · Storefront home · Scale-course entry wall · Expert quotes · Psychometry column · Knowledge shelf"
+      },
+      "blurb": {
+        "zh": "基于小鹅通搭建的「心智课程」线上店铺首页：量表系列课程的 12 色块入口墙、国际专家寄语、最新课程与心理测量专栏，再到补考指引与知识书架，单页承载完整的浏览到购买动线。",
+        "es": "Portada de la tienda «Cursos Xinzhi» sobre Xiaoetong: un muro de 12 bloques para los cursos de escalas, mensajes de expertos internacionales, novedades y la columna de psicometría, hasta la guía de recuperación y la estantería: una sola página cubre todo el recorrido hasta la compra.",
+        "en": "The “Xinzhi Courses” storefront home built on Xiaoetong: a 12-block entry wall for scale courses, international expert quotes, latest courses and a psychometry column, down to retake guides and a knowledge shelf — one page carrying the full browse-to-purchase journey."
+      }
+    },
+    {
       "id": "tuoyou",
       "category": "digital",
       "year": "2025 — 至今",
@@ -230,36 +307,6 @@
       }
     },
     {
-      "id": "xiaoe-course",
-      "category": "digital",
-      "year": "2025 — 至今",
-      "cover": "assets/works/xiaoe-course/cover.png",
-      "gallery": [
-        "assets/works/xiaoe-course/01.png",
-        "assets/works/xiaoe-course/02.png"
-      ],
-      "title": {
-        "zh": "心智课程 · 小鹅通线上店铺首页",
-        "es": "Cursos Xinzhi · Portada de tienda en Xiaoetong",
-        "en": "Xinzhi Courses · Xiaoetong storefront home"
-      },
-      "type": {
-        "zh": "数字产品 / H5 电商店铺 · 移动端",
-        "es": "Producto digital / Tienda H5 · Móvil",
-        "en": "Digital product / H5 storefront · Mobile"
-      },
-      "scope": {
-        "zh": "信息架构 · 店铺首页 · 量表课程入口墙 · 专家寄语 · 心理测量专栏 · 知识书架",
-        "es": "Arquitectura de información · Portada · Muro de cursos de escalas · Mensajes de expertos · Columna de psicometría · Estantería de conocimiento",
-        "en": "Information architecture · Storefront home · Scale-course entry wall · Expert quotes · Psychometry column · Knowledge shelf"
-      },
-      "blurb": {
-        "zh": "基于小鹅通搭建的「心智课程」线上店铺首页：量表系列课程的 12 色块入口墙、国际专家寄语、最新课程与心理测量专栏，再到补考指引与知识书架，单页承载完整的浏览到购买动线。",
-        "es": "Portada de la tienda «Cursos Xinzhi» sobre Xiaoetong: un muro de 12 bloques para los cursos de escalas, mensajes de expertos internacionales, novedades y la columna de psicometría, hasta la guía de recuperación y la estantería: una sola página cubre todo el recorrido hasta la compra.",
-        "en": "The “Xinzhi Courses” storefront home built on Xiaoetong: a 12-block entry wall for scale courses, international expert quotes, latest courses and a psychometry column, down to retake guides and a knowledge shelf — one page carrying the full browse-to-purchase journey."
-      }
-    },
-    {
       "id": "ui-showcase",
       "category": "digital",
       "year": "2019",
@@ -287,6 +334,71 @@
         "zh": "六组移动端概念界面合集：美宝莲美妆商城、圣托里尼旅行首页、深色打卡社区（发现与课程详情）、积分会员商城、钜惠网在线课堂与电影票 App（热映 / 待映 / 影片详情），九屏一图集中展示。",
         "es": "Seis conjuntos de interfaces móviles conceptuales: tienda de belleza Maybelline, inicio de viajes en Santorini, comunidad oscura de check-in, mall de membresías, cursos online de Juhuiwang y app de cine, nueve pantallas en una sola lámina.",
         "en": "Six sets of mobile concept screens: Maybelline beauty store, Santorini travel home, dark check-in community, points membership mall, Juhui online courses and a movie-ticket app — nine screens shown on a single sheet."
+      }
+    },
+    {
+      "id": "vis-xinzhi",
+      "category": "graphic",
+      "year": "2017",
+      "cover": "assets/works/vis-xinzhi/cover.png",
+      "gallery": [
+        "assets/works/vis-xinzhi/01.png",
+        "assets/works/vis-xinzhi/02.png",
+        "assets/works/vis-xinzhi/03.png",
+        "assets/works/vis-xinzhi/04.png"
+      ],
+      "title": {
+        "zh": "深圳心智 · 视觉形象识别系统（第三版）",
+        "es": "Xinzhi · Sistema de identidad visual (3.ª edición)",
+        "en": "Xinzhi · Visual identity system (3rd edition)"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌 VIS · 第三版 · 46 页手册",
+        "es": "Diseño gráfico / VIS de marca · 3.ª edición · 46 páginas",
+        "en": "Graphic design / Brand VIS · 3rd edition · 46-page manual"
+      },
+      "scope": {
+        "zh": "标志演绎与制图 · 标准色 · 图标色彩体系 · 中英文全称与组合规范 · 名片工牌 · 画册折页 · 户外广告 · 展厅",
+        "es": "Logotipo y construcción · Color · Iconografía · Normativa de composición · Tarjetas · Publicaciones · Valla publicitaria · Showroom",
+        "en": "Logo and construction · Colour · Icon system · Lock-up guidelines · Cards · Publications · Billboard · Showroom"
+      },
+      "blurb": {
+        "zh": "深圳市心智心理测量技术研究所有限公司的视觉形象识别系统第三版（2017.04）：青绿主视觉与同心圆标志贯穿基础规范与全部应用触点——名片、工牌、画册、折页、网站、户外广告与展厅。此处精选 12 页重新编排展示。",
+        "es": "Tercera edición (2017.04) del sistema de identidad visual del Instituto Xinzhi de Psicometría: el verde azulado y la marca concéntrica guían la normativa base y todas las aplicaciones —tarjetas, publicaciones, web, vallas y showroom—. 12 páginas seleccionadas recompuertas aquí.",
+        "en": "The 3rd edition (2017.04) visual identity system for Shenzhen Xinzhi Institute of Psychometrics: the teal visual and concentric-ring logo run through base guidelines and every touchpoint — cards, badges, publications, website, billboard and showroom. 12 selected pages recomposed here."
+      }
+    },
+    {
+      "id": "logo-liuxin",
+      "category": "graphic",
+      "year": "—",
+      "cover": "assets/works/logo-liuxin/cover.png",
+      "gallery": [
+        "assets/works/logo-liuxin/01.png",
+        "assets/works/logo-liuxin/02.png",
+        "assets/works/logo-liuxin/03.png",
+        "assets/works/logo-liuxin/04.png",
+        "assets/works/logo-liuxin/05.png"
+      ],
+      "title": {
+        "zh": "榴心社工 · 标志升级设计",
+        "es": "Liuxin · Rediseño de logotipo",
+        "en": "Liuxin · Logo redesign"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌标志 · 标志升级",
+        "es": "Diseño gráfico / Logotipo · Rediseño",
+        "en": "Graphic design / Logo · Redesign"
+      },
+      "scope": {
+        "zh": "石榴 × 心 × 手 · 栅栏式字体 · 标准组合 · 红黄渐变 · 多色延展",
+        "es": "Granada × corazón × mano · Tipografía · Composición · Degradado rojo-amarillo",
+        "en": "Pomegranate × heart × hand · Custom type · Lock-ups · Red-yellow gradient"
+      },
+      "blurb": {
+        "zh": "为榴心社工服务中心做的标志升级：将具象石榴简化，以「掰开的石榴露出心」的形式切分图形，双手托心呼应「众人齐心助留守」的寓意；字体取「栅栏」思路，粗横竖组合寓意呵护成长，红黄渐变流露石榴的青涩与社工团队的朝气。",
+        "es": "Rediseño del logotipo del Centro de Trabajo Social Liuxin: la granada se simplifica y se parte para revelar un corazón sostenido por manos, con tipografía de «vallas» y un degradado rojo-amarillo que transmite frescura y juventud.",
+        "en": "A logo redesign for Liuxia Social Work Center: the pomegranate is simplified and split to reveal a heart held by hands, with fence-inspired custom type and a red-yellow gradient conveying freshness and the team’s youthful energy."
       }
     },
     {
@@ -323,38 +435,6 @@
       }
     },
     {
-      "id": "vis-xinzhi",
-      "category": "graphic",
-      "year": "2017",
-      "cover": "assets/works/vis-xinzhi/cover.png",
-      "gallery": [
-        "assets/works/vis-xinzhi/01.png",
-        "assets/works/vis-xinzhi/02.png",
-        "assets/works/vis-xinzhi/03.png",
-        "assets/works/vis-xinzhi/04.png"
-      ],
-      "title": {
-        "zh": "深圳心智 · 视觉形象识别系统（第三版）",
-        "es": "Xinzhi · Sistema de identidad visual (3.ª edición)",
-        "en": "Xinzhi · Visual identity system (3rd edition)"
-      },
-      "type": {
-        "zh": "平面设计 / 品牌 VIS · 第三版 · 46 页手册",
-        "es": "Diseño gráfico / VIS de marca · 3.ª edición · 46 páginas",
-        "en": "Graphic design / Brand VIS · 3rd edition · 46-page manual"
-      },
-      "scope": {
-        "zh": "标志演绎与制图 · 标准色 · 图标色彩体系 · 中英文全称与组合规范 · 名片工牌 · 画册折页 · 户外广告 · 展厅",
-        "es": "Logotipo y construcción · Color · Iconografía · Normativa de composición · Tarjetas · Publicaciones · Valla publicitaria · Showroom",
-        "en": "Logo and construction · Colour · Icon system · Lock-up guidelines · Cards · Publications · Billboard · Showroom"
-      },
-      "blurb": {
-        "zh": "深圳市心智心理测量技术研究所有限公司的视觉形象识别系统第三版（2017.04）：青绿主视觉与同心圆标志贯穿基础规范与全部应用触点——名片、工牌、画册、折页、网站、户外广告与展厅。此处精选 12 页重新编排展示。",
-        "es": "Tercera edición (2017.04) del sistema de identidad visual del Instituto Xinzhi de Psicometría: el verde azulado y la marca concéntrica guían la normativa base y todas las aplicaciones —tarjetas, publicaciones, web, vallas y showroom—. 12 páginas seleccionadas recompuertas aquí.",
-        "en": "The 3rd edition (2017.04) visual identity system for Shenzhen Xinzhi Institute of Psychometrics: the teal visual and concentric-ring logo run through base guidelines and every touchpoint — cards, badges, publications, website, billboard and showroom. 12 selected pages recomposed here."
-      }
-    },
-    {
       "id": "logo-weixiaoxin",
       "category": "graphic",
       "year": "—",
@@ -384,39 +464,6 @@
         "zh": "为「卫小新」品牌设计的标志规范：以盾牌与人的组合图形为核心，规定标准与完整标志的横竖组合、反白与灰度应用及图形制图；色彩部分界定标志标准色（红 / 黄）、灰阶标准与标准背景色的可用与禁用示例。",
         "es": "Normativa de logotipo para la marca Weixiaoxin: sobre un escudo con figuras humanas, define composiciones horizontales y verticales, usos en negativo y gris, y construcción; la parte cromática cubre rojo/amarillo, escala de grises y fondos permitidos o prohibidos.",
         "en": "Logo guidelines for the Weixiaoxin brand: built on a shield-and-figures emblem, covering horizontal/vertical lock-ups, reverse and greyscale uses and construction; the colour part defines red/yellow standards, greyscale and allowed/prohibited backgrounds."
-      }
-    },
-    {
-      "id": "logo-liuxin",
-      "category": "graphic",
-      "year": "—",
-      "cover": "assets/works/logo-liuxin/cover.png",
-      "gallery": [
-        "assets/works/logo-liuxin/01.png",
-        "assets/works/logo-liuxin/02.png",
-        "assets/works/logo-liuxin/03.png",
-        "assets/works/logo-liuxin/04.png",
-        "assets/works/logo-liuxin/05.png"
-      ],
-      "title": {
-        "zh": "榴心社工 · 标志升级设计",
-        "es": "Liuxin · Rediseño de logotipo",
-        "en": "Liuxin · Logo redesign"
-      },
-      "type": {
-        "zh": "平面设计 / 品牌标志 · 标志升级",
-        "es": "Diseño gráfico / Logotipo · Rediseño",
-        "en": "Graphic design / Logo · Redesign"
-      },
-      "scope": {
-        "zh": "石榴 × 心 × 手 · 栅栏式字体 · 标准组合 · 红黄渐变 · 多色延展",
-        "es": "Granada × corazón × mano · Tipografía · Composición · Degradado rojo-amarillo",
-        "en": "Pomegranate × heart × hand · Custom type · Lock-ups · Red-yellow gradient"
-      },
-      "blurb": {
-        "zh": "为榴心社工服务中心做的标志升级：将具象石榴简化，以「掰开的石榴露出心」的形式切分图形，双手托心呼应「众人齐心助留守」的寓意；字体取「栅栏」思路，粗横竖组合寓意呵护成长，红黄渐变流露石榴的青涩与社工团队的朝气。",
-        "es": "Rediseño del logotipo del Centro de Trabajo Social Liuxin: la granada se simplifica y se parte para revelar un corazón sostenido por manos, con tipografía de «vallas» y un degradado rojo-amarillo que transmite frescura y juventud.",
-        "en": "A logo redesign for Liuxia Social Work Center: the pomegranate is simplified and split to reveal a heart held by hands, with fence-inspired custom type and a red-yellow gradient conveying freshness and the team’s youthful energy."
       }
     },
     {
@@ -1244,53 +1291,6 @@
         "es": "IP \"Shiliu Mei Mengmeng\" creada para el proyecto solidario de niños de zonas rurales de \"Liuxin Social Work\". El personaje combina tres elementos —los niños que quedan atrás, la granada y el pañuelo rojo— que corresponden al proyecto, la región y el equipo. El gorro, inspirado en el cáliz y los gajos de la granada, simboliza manos entrelazadas que protegen unidos; el pañuelo rojo representa el acompañamiento de los voluntarios y transmite crecimiento, aprendizaje, alegría y luz. Las cejas y las manos abiertas expresan el anhelo de cuidado y protección; las mejillas sonrosadas evocan el frío del invierno en la montaña y la boca firme revela un carácter fuerte pese a la falta de afecto. La chaqueta azul con flores blancas y el pantalón arremangado retratan la ropa sencilla de los niños de montaña, y las zapatillas grandes conservan la memoria de una época. Incluye diseño de personaje, tres vistas, stickers de WeChat, carteles benéficos y aplicaciones ilustradas.",
         "en": "Shiliu Mei Mengmeng, a charity IP created for \"Liuxin Social Work\"'s rural left-behind children programme. The character combines three elements — left-behind children, the pomegranate and the red scarf — mapping to the project, the region and the implementing team. The hat draws on the pomegranate's calyx and segment shapes, symbolising hands joined in protection; the red scarf stands for the company of social-work volunteers, conveying growth, learning, joy and sunshine. The slanted brows and open little hands express a child's longing for care and protection; rosy cheeks echo winter's cold in the mountains, and the determined mouth reveals inner strength despite the lack of affection. The blue jacket with white flowers and the slightly rolled-up trousers capture the simple clothing of mountain children, while oversized canvas shoes keep a mark of the era. The work covers character design, three views, WeChat sticker packs, charity posters and illustrated applications."
       }
-    },
-    {
-      "id": "app-shortcut-key",
-      "category": "digital",
-      "year": "2018",
-      "cover": "assets/works/app-shortcut-key/cover.png",
-      "gallery": [
-        "assets/works/app-shortcut-key/01.jpg",
-        "assets/works/app-shortcut-key/02.gif",
-        "assets/works/app-shortcut-key/03.jpg",
-        "assets/works/app-shortcut-key/04.jpg",
-        "assets/works/app-shortcut-key/05.jpg",
-        "assets/works/app-shortcut-key/06.gif",
-        "assets/works/app-shortcut-key/07.jpg",
-        "assets/works/app-shortcut-key/08.jpg",
-        "assets/works/app-shortcut-key/09.gif",
-        "assets/works/app-shortcut-key/10.jpg",
-        "assets/works/app-shortcut-key/11.jpg",
-        "assets/works/app-shortcut-key/12.gif",
-        "assets/works/app-shortcut-key/13.jpg",
-        "assets/works/app-shortcut-key/14.gif",
-        "assets/works/app-shortcut-key/15.jpg",
-        "assets/works/app-shortcut-key/16.jpg",
-        "assets/works/app-shortcut-key/17.jpg",
-        "assets/works/app-shortcut-key/18.gif"
-      ],
-      "title": {
-        "zh": "Shortcut Key · 快捷键 App 概念设计",
-        "es": "Shortcut Key · App de atajos, diseño conceptual",
-        "en": "Shortcut Key · Shortcut-key app concept design"
-      },
-      "type": {
-        "zh": "数字界面 / 移动应用概念设计",
-        "es": "Interfaz digital / Concepto de app móvil",
-        "en": "Digital interface / Mobile app concept"
-      },
-      "scope": {
-        "zh": "标志设计 · 首页 · 引导页 · 核心功能 · 动效演示 · 整体视觉",
-        "es": "Logotipo · Inicio · Onboarding · Funciones clave · Animaciones · Sistema visual",
-        "en": "Logo · Home · Onboarding · Core features · Motion · Visual system"
-      },
-      "blurb": {
-        "zh": "「Shortcut Key」是一款以提高软件使用效率为目标的 App 概念设计（Circle Creative Studio，2018）。\n\n设计初衷：在多年的工作过程中我们发现，团队成员的软件使用能力很大程度上影响着工作的质量与效率，而这类能力却始终没有一个可以量化的评价标准；同时，工作中遇到软件使用问题时，查询与学习都非常不方便，极大的影响了个人能力的提升。出于对这些问题的考虑，我们希望做出一款帮助人们提高软件使用效率的 App —— 而不论是评价一个人的软件使用能力，还是提高他的工作效率，都有一个共同的切入点，那就是软件的「快捷键」。于是我们决定从「快捷键」这一个点出发：一方面帮助用户便捷地搜索快捷键并有效地将其掌握，另一方面帮助用户系统地学习新的软件，同时建立起可靠的软件能力评价体系。\n\n视觉上，标志由「Key」与键盘形态提炼，圆角键帽与彩色立体方块构成核心识别；页面覆盖引导页、首页、搜索、学习、测评、夜间模式等完整链路，并配以动效演示，呈现从概念到交互的完整体验。",
-        "es": "\"Shortcut Key\" es un diseño conceptual de app móvil orientado a mejorar la eficiencia en el uso del software (Circle Creative Studio, 2018).\n\nMotivación: a lo largo de años de trabajo observamos que la capacidad de manejo de software de los miembros del equipo influye en gran medida en la calidad y la eficiencia del trabajo, y sin embargo esa capacidad nunca ha contado con un estándar de evaluación cuantificable; además, ante un problema de uso de software, consultar y aprender resulta muy poco práctico, lo que limita seriamente la mejora personal. Partiendo de estas cuestiones, quisimos crear una app que ayude a las personas a mejorar su eficiencia con el software; y tanto para evaluar la capacidad de uso como para elevar la eficiencia existe un punto de entrada común: los atajos de teclado. Decidimos pues partir de ese único punto: por un lado, ayudar al usuario a buscar atajos con facilidad y a dominarlos de forma efectiva; por otro, ayudarle a aprender sistemáticamente nuevos programas, estableciendo al mismo tiempo un sistema fiable de evaluación de competencias.\n\nEn lo visual, el logotipo se extrae de la \"Key\" y de la forma del teclado, con teclas redondeadas y cubos tridimensionales de color como núcleo de identidad; la obra cubre onboarding, inicio, búsqueda, aprendizaje, evaluación y modo nocturno, acompañada de demostraciones en movimiento que presentan la experiencia completa del concepto a la interacción.",
-        "en": "\"Shortcut Key\" is a mobile app concept design aimed at improving software efficiency (Circle Creative Studio, 2018).\n\nMotivation: over years of work we found that team members' software proficiency strongly affects the quality and efficiency of their work, yet there has never been a quantifiable standard for evaluating that ability; and when software problems arise, looking things up and learning are both very inconvenient, which seriously holds back personal growth. With these issues in mind, we wanted to build an app that helps people work more efficiently with software — and whether it is assessing someone's software proficiency or raising their working efficiency, there is one shared entry point: software shortcuts. So we decided to start from that single point: on one hand, help users search shortcuts conveniently and truly master them; on the other, help them learn new software systematically, while establishing a reliable system for evaluating software proficiency.\n\nVisually, the logo is distilled from \"Key\" and the keyboard form, with rounded keycaps and colourful 3D cubes as the core identity; the work covers onboarding, home, search, learning, assessment and night mode, with motion demos presenting the full concept-to-interaction experience."
-      },
-      "single": true
     }
   ];
 })();
