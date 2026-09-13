@@ -1541,7 +1541,7 @@
       "id": "pingyuan-calendar-2019",
       "category": "graphic",
       "year": "2019",
-      "cover": "assets/works/pingyuan-calendar-2019/cover.jpg",
+      "cover": "assets/works/pingyuan-calendar-2019/mockup-hero.jpg",
       "gallery": [
         "assets/works/pingyuan-calendar-2019/mockup-hero.jpg",
         "assets/works/pingyuan-calendar-2019/mockup-spread.jpg",
@@ -1600,7 +1600,7 @@
       "id": "pingyuan-calendar-2020",
       "category": "graphic",
       "year": "2020",
-      "cover": "assets/works/pingyuan-calendar-2020/cover.jpg",
+      "cover": "assets/works/pingyuan-calendar-2020/mockup-hero.jpg",
       "gallery": [
         "assets/works/pingyuan-calendar-2020/mockup-hero.jpg",
         "assets/works/pingyuan-calendar-2020/mockup-spread.jpg",
@@ -1659,7 +1659,7 @@
       "id": "pingyuan-calendar-2021",
       "category": "graphic",
       "year": "2021",
-      "cover": "assets/works/pingyuan-calendar-2021/cover.jpg",
+      "cover": "assets/works/pingyuan-calendar-2021/mockup-hero.jpg",
       "gallery": [
         "assets/works/pingyuan-calendar-2021/mockup-hero.jpg",
         "assets/works/pingyuan-calendar-2021/mockup-spread.jpg",
@@ -1718,7 +1718,7 @@
       "id": "pingyuan-calendar-2022",
       "category": "graphic",
       "year": "2022",
-      "cover": "assets/works/pingyuan-calendar-2022/cover.jpg",
+      "cover": "assets/works/pingyuan-calendar-2022/mockup-hero.jpg",
       "gallery": [
         "assets/works/pingyuan-calendar-2022/mockup-hero.jpg",
         "assets/works/pingyuan-calendar-2022/mockup-spread.jpg",
@@ -1777,7 +1777,7 @@
       "id": "pingyuan-calendar-2023",
       "category": "graphic",
       "year": "2023",
-      "cover": "assets/works/pingyuan-calendar-2023/cover.jpg",
+      "cover": "assets/works/pingyuan-calendar-2023/mockup-hero.jpg",
       "gallery": [
         "assets/works/pingyuan-calendar-2023/mockup-hero.jpg",
         "assets/works/pingyuan-calendar-2023/mockup-spread.jpg",
@@ -1831,6 +1831,120 @@
         "en": "This is the 2023 annual calendar made for Pingyuan Mall. The cover opens in festive Year-of-the-Rabbit mood — a white rabbit in a flower crown rides a deer while the apple mascot Pingping turns flying apsara, playing flute and pipa and dancing — surrounded by sky lanterns, koi and auspicious clouds on a tender pink backdrop.\n\nThe opening pages innovate with the double \"Pingping Bookmarks\" spread: eight cut-along-the-line bookmarks — Peace, Great Luck, Wishes Granted and the Rabbit New Year series — with traditional eave lanterns and lion-hat Pingping, \"reading with you every day\". Each month a floor-themed illustration: Pingping tours the mall — from the seven-brand gold & jewellery plaza to the 2F shoe store's dragon dance, from the 3F menswear café to 4F quality womenswear, from the 66th-anniversary construction celebration to the new building's 23rd — drawing the mall's tenant map and brand story across the whole year."
       },
       "href": "work-pingyuan2023-calendar.html"
+    },
+    {
+      "id": "pingyuan-calendar-2024",
+      "category": "graphic",
+      "year": "2024",
+      "cover": "assets/works/pingyuan-calendar-2024/mockup-hero.jpg",
+      "gallery": [
+        "assets/works/pingyuan-calendar-2024/mockup-hero.jpg",
+        "assets/works/pingyuan-calendar-2024/mockup-spread.jpg",
+        "assets/works/pingyuan-calendar-2024/cover.jpg",
+        "assets/works/pingyuan-calendar-2024/backcover.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-01.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-02.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-03.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-04.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-05.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-06.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-07.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-08.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-09.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-10.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-11.jpg",
+        "assets/works/pingyuan-calendar-2024/ill-12.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-01.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-02.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-03.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-04.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-05.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-06.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-07.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-08.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-09.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-10.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-11.jpg",
+        "assets/works/pingyuan-calendar-2024/cal-12.jpg"
+      ],
+      "title": {
+        "zh": "平原商场 · 2024 甲辰龙年台历设计 — JUN",
+        "es": "Pingyuan Mall · Calendario anual 2024 — JUN",
+        "en": "Pingyuan Mall · 2024 Annual Calendar — JUN"
+      },
+      "type": {
+        "zh": "年度台历 · 平面设计",
+        "es": "Calendario anual · Diseño gráfico",
+        "en": "Annual calendar · Graphic design"
+      },
+      "scope": {
+        "zh": "2024 甲辰龙年主视觉封面 · 时间管理页与商场全家福双扉页 · 楼层主题插画 12 幅 · 功能日历与节气节日 · 建店 67 周年与新大楼 24 周年庆 · 印刷工艺落地",
+        "es": "Portada del Año del Dragón · dobles aperturas de gestión del tiempo y retrato familiar · 12 ilustraciones de plantas · calendario funcional con festividades · 67º y 24º aniversarios · producción impresa",
+        "en": "Dragon-year key-visual cover · time-management & family-portrait opening pages · 12 floor-themed illustrations · functional calendar with festivals · 67th & 24th anniversaries · print production"
+      },
+      "blurb": {
+        "zh": "为平原商场设计的 2024 甲辰龙年台历。封面红金放射背景上绿色巨龙腾跃，苹果吉祥物「平平」化作小女孩举着「大吉大利」卷轴；扉页设置时间管理页与商场全家福双页。\\n\\n每月一幅楼层主题插画，从 1F 黄金珠宝广场到负 1F 八方电器，从建店 67 周年到新大楼开业 24 周年，日历页标注公历、农历、节气与节日，顶部印「抬头见囍」等品牌语，让台历既是时间工具，也是商场全年的品牌画卷。",
+        "es": "Calendario anual 2024 (Año del Dragón) para Pingyuan Mall. En la portada un dragón verde se eleva sobre fondo radiante rojo y oro mientras la manzana «Pingping» sostiene un pergamino de «gran fortuna»; las aperturas son la página de gestión del tiempo y el retrato familiar.\\n\\nCada mes una ilustración de planta recorre el centro —de la plaza de oro y joyas del 1F a los electrodomésticos del −1F, del 67º aniversario al 24º del nuevo edificio— con calendario gregoriano, lunar, términos solares y festividades, y lemas de marca: un retrato de marca de todo el año.",
+        "en": "A 2024 Year-of-the-Dragon annual calendar for Pingyuan Mall. On the cover a green dragon soars over a red-and-gold radiating backdrop while the apple mascot Pingping, as a little girl, holds a \"great fortune\" scroll; the openings pair a Time Management page with the Mall Family Portrait.\\n\\nEach month a floor illustration tours the mall — from the 1F gold-and-jewellery plaza to B1F appliances, from the 67th anniversary to the new building's 24th — with solar, lunar and festival dates and brand taglines: a year-round brand portrait."
+      },
+      "href": "work-pingyuan2024-calendar.html"
+    },
+    {
+      "id": "pingyuan-calendar-2025",
+      "category": "graphic",
+      "year": "2025",
+      "cover": "assets/works/pingyuan-calendar-2025/mockup-hero.jpg",
+      "gallery": [
+        "assets/works/pingyuan-calendar-2025/mockup-hero.jpg",
+        "assets/works/pingyuan-calendar-2025/mockup-spread.jpg",
+        "assets/works/pingyuan-calendar-2025/cover.jpg",
+        "assets/works/pingyuan-calendar-2025/backcover.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-01.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-02.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-03.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-04.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-05.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-06.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-07.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-08.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-09.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-10.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-11.jpg",
+        "assets/works/pingyuan-calendar-2025/ill-12.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-01.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-02.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-03.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-04.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-05.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-06.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-07.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-08.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-09.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-10.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-11.jpg",
+        "assets/works/pingyuan-calendar-2025/cal-12.jpg"
+      ],
+      "title": {
+        "zh": "平原商场 · 2025 乙巳蛇年台历设计 — JUN",
+        "es": "Pingyuan Mall · Calendario anual 2025 — JUN",
+        "en": "Pingyuan Mall · 2025 Annual Calendar — JUN"
+      },
+      "type": {
+        "zh": "年度台历 · 平面设计",
+        "es": "Calendario anual · Diseño gráfico",
+        "en": "Annual calendar · Graphic design"
+      },
+      "scope": {
+        "zh": "敦煌飞天蛇年主视觉封面 · 金蛇送福与蛇行大运双扉页 · 古风国潮纸纹风格 · 平平化身 7+ 古风角色 · 楼层主题插画 12 幅 · 功能日历与节气节日",
+        "es": "Portada de hada serpiente estilo Dunhuang · aperturas de la serpiente dorada y la suerte · estética guochao en papel de arroz · Pingping como más de 7 personajes · 12 ilustraciones de plantas · calendario funcional",
+        "en": "Dunhuang-style snake-lady cover · Golden Snake & Slithering Luck openings · guochao rice-paper styling · Pingping as 7+ characters · 12 floor-themed illustrations · functional calendar"
+      },
+      "blurb": {
+        "zh": "为平原商场设计的 2025 乙巳蛇年台历，全面升级为古风国潮纸纹风格。封面以敦煌飞天风格开场，蛇身女子翩翩起舞；扉页设置金蛇送福与蛇行大运双页。\\n\\n苹果吉祥物「平平」化身平小宝、平小履、平小酷、平小靓、平小乐、平小羽、平小美等古风角色，每月对应一个商场楼层或业态；从建店 68 周年到新大楼开业 25 周年，米色宣纸纹理配彩色页眉，把商场的业态地图和品牌故事用古风画卷讲了一整年。",
+        "es": "Calendario anual 2025 (Año de la Serpiente) para Pingyuan Mall, renovado al estilo guochao sobre papel de arroz. La portada abre al estilo feitian de Dunhuang con una dama serpiente danzando; las aperturas son «Serpiente dorada trae fortuna» y «Suerte serpenteante».\\n\\nLa manzana «Pingping» se convierte en Pingxiaobao, Pingxiaolü, Pingxiaoku y más personajes antiguos, cada mes en una planta o negocio; del 68º aniversario al 25º del nuevo edificio, un pergamino antiguo que narra el centro durante todo el año.",
+        "en": "A 2025 Year-of-the-Snake annual calendar for Pingyuan Mall, fully upgraded to guochao rice-paper styling. The cover opens in Dunhuang feitian style with a dancing snake lady; the openings pair \"Golden Snake Brings Fortune\" with \"Slithering Luck\".\\n\\nThe apple mascot Pingping becomes Pingxiaobao, Pingxiaolü, Pingxiaoku and more ancient characters, one floor or business per month; from the 68th anniversary to the new building's 25th — an antique scroll telling the mall's story all year long."
+      },
+      "href": "work-pingyuan2025-calendar.html"
     }
   ];
 })();

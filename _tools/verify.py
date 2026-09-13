@@ -33,6 +33,8 @@ PAGES = [
     ("work-pingyuan2021-calendar.html", "09-pingyuan2021"),
     ("work-pingyuan2022-calendar.html", "09-pingyuan2022"),
     ("work-pingyuan2023-calendar.html", "09-pingyuan2023"),
+    ("work-pingyuan2024-calendar.html", "09-pingyuan2024"),
+    ("work-pingyuan2025-calendar.html", "09-pingyuan2025"),
 ]
 LANGS = ["zh", "es", "en"]
 
@@ -238,13 +240,15 @@ with sync_playwright() as p:
     pg.click('.lang-switch__opt[data-lang="zh"]')
     pg.wait_for_timeout(400)
 
-    # 平原商场 2019/2020/2021/2022/2023 台历：定制专题页
+    # 平原商场 2019-2025 台历：定制专题页
     for cal_path, cal_year in (
         ("work-pingyuan2019-calendar.html", "2019"),
         ("work-pingyuan2020-calendar.html", "2020"),
         ("work-pingyuan2021-calendar.html", "2021"),
         ("work-pingyuan2022-calendar.html", "2022"),
         ("work-pingyuan2023-calendar.html", "2023"),
+        ("work-pingyuan2024-calendar.html", "2024"),
+        ("work-pingyuan2025-calendar.html", "2025"),
     ):
         pg.goto(f"{BASE}/{cal_path}", wait_until="networkidle")
         scroll_all(pg)
