@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""把 2020/2021 台历源图按语义命名 + 统一压到 1600 宽 q82 JPEG。
+"""把 2020/2021/2022/2023 台历源图按语义命名 + 统一压到 1600 宽 q82 JPEG。
 
 用法：
   python3 _tools/convert_pingyuan_assets.py 2020
   python3 _tools/convert_pingyuan_assets.py 2021
+  python3 _tools/convert_pingyuan_assets.py 2022
+  python3 _tools/convert_pingyuan_assets.py 2023
 """
 import os
 import sys
@@ -30,8 +32,22 @@ elif YEAR == "2021":
     COVER_PAGE = 1
     BACK_PAGE = 28
     OPENING = {2: "newspaper", 3: "postcard"}
+elif YEAR == "2022":
+    SRC = os.path.join(BASE, "pingyuan-calendar-2022-portfolio/assets")
+    DST = os.path.join(ROOT, "assets/works/pingyuan-calendar-2022")
+    PAGE0 = 1          # 1 基
+    COVER_PAGE = 1
+    BACK_PAGE = 28
+    OPENING = {2: "voucher1", 3: "voucher2"}
+elif YEAR == "2023":
+    SRC = os.path.join(BASE, "pingyuan-calendar-2023-portfolio/assets")
+    DST = os.path.join(ROOT, "assets/works/pingyuan-calendar-2023")
+    PAGE0 = 1          # 1 基
+    COVER_PAGE = 1
+    BACK_PAGE = 28
+    OPENING = {2: "bookmark1", 3: "bookmark2"}
 else:
-    raise SystemExit("year must be 2020 or 2021")
+    raise SystemExit("year must be 2020 / 2021 / 2022 / 2023")
 
 os.makedirs(DST, exist_ok=True)
 

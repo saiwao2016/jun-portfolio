@@ -362,7 +362,7 @@ try:
         n_exp_i = pg.locator('#pane [data-act="r-exp-del"]').count()
         check(n_exp_i == 3, f"简历面板应有 3 段经历，实际 {n_exp_i}")
         n_edu_i = pg.locator('#pane [data-act="r-edu-del"]').count()
-        check(n_edu_i == 1, f"简历面板应有 1 条教育经历，实际 {n_edu_i}")
+        check(n_edu_i == 0, f"简历面板教育经历应为 0（已按要求隐藏），实际 {n_edu_i}")
         n_list = pg.locator('#pane [data-rlist]').count()
         check(n_list == 6, f"技能 / 认证文本框应为 6 个（2 区块 × 3 语言），实际 {n_list}")
         n_lines = pg.locator('#pane [data-rlines]').count()
@@ -374,7 +374,7 @@ try:
         rjs2 = (ROOT / "assets/js/resume-data.js").read_text(encoding="utf-8")
         check("E2E 界面写入的简介段落" in rjs2, "后台界面保存未写入 resume-data.js")
         pg.screenshot(path=str(ROOT / "_tools/screens/20-admin-resume.png"), full_page=True)
-        print(f"  · 简历面板通过 · PDF {n_pdf} 行 · 经历 {n_exp_i} 段 · 教育 {n_edu_i} 条 · 界面保存生效")
+        print(f"  · 简历面板通过 · PDF {n_pdf} 行 · 经历 {n_exp_i} 段 · 教育 {n_edu_i} 条（已隐藏）· 界面保存生效")
 
         # 9.6 后台「页面文案」面板（关于我 / 服务范围 / 技能体系 …）
         pg.click("#btnPages")

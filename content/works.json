@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-13T12:24:46.644Z",
+  "updatedAt": "2026-09-13T13:09:57.184Z",
   "works": [
     {
       "id": "asq-system",
@@ -3459,6 +3459,378 @@
         "zh": "这是为平原商场打造的 2021 年度台历。封面以辛丑牛年喜庆氛围开场，金色大牛与苹果吉祥物「平平」家族同框，红色囍字建筑、烟花灯笼、铜钱烘托新年气氛。\n\n扉页创新设置「平原商场报」报纸风格页与「平原邮政」明信片页，前者以头条新闻形式传递品牌理念，后者以邮票和邮戳增添收藏趣味。每月一幅楼层主题插画，平平带着家人朋友逛遍商场各楼层——从周大福珠宝到 2F 女鞋箱包，从 3F 运动休闲到 6 楼儿童卖场，从建店 64 周年庆典到新大楼开业 21 周年，把商场的业态地图和品牌故事画进了一整年。",
         "es": "Es el calendario anual 2021 creado para Pingyuan Mall. La cubierta abre con el ambiente festivo del Año del Buey: un gran buey dorado comparte escena con la familia de la manzana «Pingping», y un edificio con el carácter 囍, fuegos artificiales, faroles y monedas de bronce realzan el aire de Año Nuevo.\n\nLas páginas de apertura innovan con «Pingyuan Mall News», una página estilo periódico, y «Pingyuan Post», una postal: la primera transmite la filosofía de marca en forma de titular, la segunda añade sellos y matasellos para coleccionar. Cada mes, una ilustración temática de planta: Pingping recorre el centro con familia y amigos —de las joyas Chow Tai Fook a zapatos y bolsos en 2F, del deporte en 3F a la zona infantil en 6F, del 64º aniversario de la tienda a los 21 años del nuevo edificio— dibujando el mapa comercial y la historia de marca del centro a lo largo de todo el año.",
         "en": "This is the 2021 annual calendar made for Pingyuan Mall. The cover opens in festive Year-of-the-Ox mood — a golden ox shares the frame with the Pingping apple family, while a 囍-character building, fireworks, lanterns and bronze coins set the New Year tone.\n\nThe opening pages innovate with \"Pingyuan Mall News\" — a newspaper-style page — and \"Pingyuan Post\" — a postcard: the first delivers the brand philosophy as a headline, the second adds stamps and postmarks for collecting. Each month a floor-themed illustration: Pingping tours the mall with family and friends — from Chow Tai Fook jewellery to 2F shoes and bags, from 3F sports to the 6F kids' zone, from the 64th store anniversary to the new building's 21st — drawing the mall's tenant map and brand story across the whole year."
+      }
+    },
+    {
+      "id": "pingyuan-calendar-2022",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 50,
+      "year": "2022",
+      "mediaType": "image",
+      "cover": "assets/works/pingyuan-calendar-2022/cover.jpg",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "href": "work-pingyuan2022-calendar.html",
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/mockup-hero.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/mockup-spread.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cover.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/backcover.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/voucher1.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/voucher2.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-01.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-02.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-03.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-04.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-05.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-06.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-07.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-08.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-09.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-10.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-11.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/ill-12.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-01.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-02.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-03.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-04.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-05.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-06.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-07.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-08.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-09.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-10.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-11.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2022/cal-12.jpg",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "平原商场 · 2022 壬寅虎年台历设计 — JUN",
+        "es": "Pingyuan Mall · Calendario anual 2022 — JUN",
+        "en": "Pingyuan Mall · 2022 Annual Calendar — JUN"
+      },
+      "type": {
+        "zh": "年度台历 · 平面设计",
+        "es": "Calendario anual · Diseño gráfico",
+        "en": "Annual calendar · Graphic design"
+      },
+      "scope": {
+        "zh": "苹果吉祥物「平平」贯穿全年 · 抵用券双扉页 · 30 张优惠券 · 每月对应一个商场楼层/业态 · 七月建店65周年 · 十月新大楼22周年",
+        "es": "La manzana «Pingping» recorre el año · Doble página de cupones · 30 descuentos · Cada mes, una planta o negocio · Julio: 65º aniversario · Octubre: 22 años del nuevo edificio",
+        "en": "The apple mascot runs through the year · Double voucher spread · 30 coupons · Each month a mall floor or business · July: 65th anniversary · October: new building's 22nd"
+      },
+      "blurb": {
+        "zh": "这是为平原商场打造的 2022 年度台历。封面以壬寅虎年喜庆氛围开场，金色大老虎（额头王字）与苹果吉祥物「平平」家族穿古装同框——嫦娥弹琵琶、虎帽舞狮者——橙红色放射背景、祥云山峦烘托新年气势。\n\n扉页创新设置「平原商场抵用券」双页，共 30 张优惠券覆盖 1F 至 9F 各楼层品牌，兼具实用与收藏价值。每月一幅楼层主题插画，平平带着家人朋友逛遍商场各楼层——从珠宝城求婚到 SHOES 鞋包店，从三楼运动馆到四楼女装扮靓新乡，从建店 65 周年庆典到新大楼开业 22 周年，把商场的业态地图和品牌故事画进了一整年。",
+        "es": "Es el calendario anual 2022 creado para Pingyuan Mall. La cubierta abre con el ambiente festivo del Año del Tigre: un gran tigre dorado con el carácter 王 en la frente comparte escena con la familia de la manzana «Pingping» vestida de época — una Chang'e con pipa y un danzante de león con gorro de tigre — sobre un fondo radial naranja rojizo con nubes auspiciosas y montañas.\n\nLas páginas de apertura innovan con la doble página de «Cupones Pingyuan»: treinta cupones cubren las marcas del 1F al 9F, prácticas y coleccionables. Cada mes, una ilustración temática de planta: Pingping recorre el centro con familia y amigos —de la propuesta en la joyería a la zapatería SHOES, del pabellón deportivo del 3º a la moda femenina del 4º, del 65º aniversario de la fundación a los 22 años del nuevo edificio— dibujando el mapa comercial y la historia de marca del centro a lo largo de todo el año.",
+        "en": "This is the 2022 annual calendar made for Pingyuan Mall. The cover opens in festive Year-of-the-Tiger mood — a golden tiger (with the 王 mark on its forehead) shares the frame with the Pingping apple family in period costume: a pipa-playing Chang'e and a lion dancer in a tiger hat — against an orange-red radial backdrop of auspicious clouds and mountains.\n\nThe opening pages innovate with the double \"Pingyuan Vouchers\" spread: thirty coupons cover brands from 1F to 9F, practical and collectible. Each month a floor-themed illustration: Pingping tours the mall with family and friends — from the jewellery-city proposal to the SHOES store, from the 3F sports hall to 4F womenswear, from the 65th-anniversary celebration to the new building's 22nd — drawing the mall's tenant map and brand story across the whole year."
+      }
+    },
+    {
+      "id": "pingyuan-calendar-2023",
+      "category": "graphic",
+      "status": "published",
+      "sortOrder": 51,
+      "year": "2023",
+      "mediaType": "image",
+      "cover": "assets/works/pingyuan-calendar-2023/cover.jpg",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "href": "work-pingyuan2023-calendar.html",
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/mockup-hero.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/mockup-spread.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cover.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/backcover.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/bookmark1.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/bookmark2.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-01.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-02.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-03.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-04.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-05.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-06.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-07.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-08.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-09.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-10.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-11.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/ill-12.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-01.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-02.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-03.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-04.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-05.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-06.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-07.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-08.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-09.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-10.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-11.jpg",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/pingyuan-calendar-2023/cal-12.jpg",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "平原商场 · 2023 癸卯兔年台历设计 — JUN",
+        "es": "Pingyuan Mall · Calendario anual 2023 — JUN",
+        "en": "Pingyuan Mall · 2023 Annual Calendar — JUN"
+      },
+      "type": {
+        "zh": "年度台历 · 平面设计",
+        "es": "Calendario anual · Diseño gráfico",
+        "en": "Annual calendar · Graphic design"
+      },
+      "scope": {
+        "zh": "苹果吉祥物「平平」贯穿全年 · 平平书签双扉页 · 8 枚可剪下 · 每月对应一个商场楼层/业态 · 七月建店66周年 · 十月新大楼23周年",
+        "es": "La manzana «Pingping» recorre el año · Doble página de marcapáginas · 8 recortables · Cada mes, una planta o negocio · Julio: 66º aniversario · Octubre: 23 años del nuevo edificio",
+        "en": "The apple mascot runs through the year · Double bookmark spread · 8 cut-outs · Each month a mall floor or business · July: 66th anniversary · October: new building's 23rd"
+      },
+      "blurb": {
+        "zh": "这是为平原商场打造的 2023 年度台历。封面以癸卯兔年喜庆氛围开场，白兔戴花冠骑鹿，苹果吉祥物「平平」化作飞天造型——吹笛、弹琵琶、翩翩起舞——天灯、锦鲤、祥云环绕，粉色背景温柔浪漫。\n\n扉页创新设置「平平书签」双页，共 8 枚可剪下的书签：平安、大吉、如意、事成与兔年大吉系列，传统屋檐灯笼配舞狮帽平平，「伴您阅读每一天」。每月一幅楼层主题插画，平平带着家人朋友逛遍商场各楼层——从黄金珠宝广场七大品牌到二楼鞋履舞龙，从三楼男装咖啡馆到四楼品质女装，从建店 66 周年施工庆典到新大楼开业 23 周年，把商场的业态地图和品牌故事画进了一整年。",
+        "es": "Es el calendario anual 2023 creado para Pingyuan Mall. La cubierta abre con el ambiente festivo del Año del Conejo: un conejo blanco con corona floral a lomos de un ciervo, y la manzana «Pingping» convertida en apsara — tocando la flauta, la pipa, danzando — rodeada de faroles flotantes, carpas y nubes auspiciosas sobre un fondo rosa tierno y romántico.\n\nLas páginas de apertura innovan con la doble página de «Marcapáginas Pingping»: ocho marcapáginas recortables — Paz, Gran Fortuna, Deseos cumplidos y serie de Año Nuevo del Conejo — con faroles de alero tradicional y Pingping de danzante, «acompañándote cada día». Cada mes, una ilustración temática de planta: Pingping recorre el centro —de la plaza de joyería con siete marcas a la zapatería con danza del dragón del 2º, del bizcocho de moda masculina del 3º a la moda de calidad del 4º, del 66º aniversario de la fundación a los 23 años del nuevo edificio— dibujando el mapa comercial y la historia de marca del centro a lo largo de todo el año.",
+        "en": "This is the 2023 annual calendar made for Pingyuan Mall. The cover opens in festive Year-of-the-Rabbit mood — a white rabbit in a flower crown rides a deer while the apple mascot Pingping turns flying apsara, playing flute and pipa and dancing — surrounded by sky lanterns, koi and auspicious clouds on a tender pink backdrop.\n\nThe opening pages innovate with the double \"Pingping Bookmarks\" spread: eight cut-along-the-line bookmarks — Peace, Great Luck, Wishes Granted and the Rabbit New Year series — with traditional eave lanterns and lion-hat Pingping, \"reading with you every day\". Each month a floor-themed illustration: Pingping tours the mall — from the seven-brand gold & jewellery plaza to the 2F shoe store's dragon dance, from the 3F menswear café to 4F quality womenswear, from the 66th-anniversary construction celebration to the new building's 23rd — drawing the mall's tenant map and brand story across the whole year."
       }
     }
   ]

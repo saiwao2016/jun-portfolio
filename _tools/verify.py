@@ -31,6 +31,8 @@ PAGES = [
     ("work-pingyuan2019-calendar.html", "09-pingyuan2019"),
     ("work-pingyuan2020-calendar.html", "09-pingyuan2020"),
     ("work-pingyuan2021-calendar.html", "09-pingyuan2021"),
+    ("work-pingyuan2022-calendar.html", "09-pingyuan2022"),
+    ("work-pingyuan2023-calendar.html", "09-pingyuan2023"),
 ]
 LANGS = ["zh", "es", "en"]
 
@@ -236,11 +238,13 @@ with sync_playwright() as p:
     pg.click('.lang-switch__opt[data-lang="zh"]')
     pg.wait_for_timeout(400)
 
-    # 平原商场 2019/2020/2021 台历：定制专题页
+    # 平原商场 2019/2020/2021/2022/2023 台历：定制专题页
     for cal_path, cal_year in (
         ("work-pingyuan2019-calendar.html", "2019"),
         ("work-pingyuan2020-calendar.html", "2020"),
         ("work-pingyuan2021-calendar.html", "2021"),
+        ("work-pingyuan2022-calendar.html", "2022"),
+        ("work-pingyuan2023-calendar.html", "2023"),
     ):
         pg.goto(f"{BASE}/{cal_path}", wait_until="networkidle")
         scroll_all(pg)
@@ -322,11 +326,11 @@ with sync_playwright() as p:
         check(rz["exp"] == 3 and rz["pdfs"] == 3 and rz["skills"] == 6,
               f"简历数据形状异常：{rz}")
     cards = pg.locator("#resumeBody .resume-card").count()
-    check(cards == 7, f"简历卡片应为 7（简介1+经历3+教育1+技能1+认证1），实际 {cards}")
+    check(cards == 5, f"简历卡片应为 5（简介1+经历3+技能1），实际 {cards}")
     hblocks = pg.locator("#resumeBody .h-block").count()
-    check(hblocks == 4, f"简历区块标题应为 4（经历/教育/技能/认证），实际 {hblocks}")
+    check(hblocks == 2, f"简历区块标题应为 2（经历/技能），实际 {hblocks}")
     lis = pg.locator("#resumeBody .resume-card ul li").count()
-    check(lis == 19, f"简历列表条目应为 19（经历12+技能6+认证1），实际 {lis}")
+    check(lis == 18, f"简历列表条目应为 18（经历12+技能6），实际 {lis}")
     leftover = pg.evaluate("()=>document.querySelectorAll('#resumeBody [data-i18n]').length")
     check(leftover == 0, f"JS 接管后不应残留 data-i18n 节点，实际 {leftover}")
     rp = pg.locator("#resumeBody .resume-body p").count()
@@ -342,7 +346,7 @@ with sync_playwright() as p:
     es_cards = pg.locator("#resumeBody .resume-card").count()
     check("CV" in es_title or "curr" in es_title.lower(), f"西语简历主标题异常：「{es_title}」")
     check(es_first != zh_first and len(es_first) > 2, f"西语简历未重绘：「{es_first[:30]}」")
-    check(es_cards == 7, f"切换语言后卡片数应仍为 7，实际 {es_cards}")
+    check(es_cards == 5, f"切换语言后卡片数应仍为 5，实际 {es_cards}")
     pg.click('.lang-switch__opt[data-lang="zh"]')
     pg.wait_for_timeout(500)
     zh_title = pg.locator("#resumeBody h1").first.inner_text()
@@ -452,12 +456,12 @@ with sync_playwright() as p:
     check(nums[:1] == ["01"] and nums[-1:] == ["06"], f"板块序号异常：{nums}")
     print(f"  ✓ 服务范围：{cards} 个板块，序号 {nums[0]}–{nums[-1]}")
 
-    # 技能体系：9 条能力 + 7 个工具
+    # 技能体系：9 条能力 + 10 个工具
     pg.goto(f"{BASE}/skills.html", wait_until="networkidle")
     pro = pg.locator(".skill-list li").count()
     tools = pg.locator(".tool-pill").count()
     check(pro == 9, f"专业能力应有 9 条，实际 {pro}")
-    check(tools == 7, f"工具栈应有 7 个，实际 {tools}")
+    check(tools == 10, f"工具栈应有 10 个，实际 {tools}")
     print(f"  ✓ 技能体系：能力 {pro} 条 · 工具 {tools} 个")
 
     # 联系方式：7 个合作类型选项
