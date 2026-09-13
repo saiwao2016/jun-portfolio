@@ -1536,6 +1536,65 @@
         "en": "A 2018 desk calendar for Pingyuan Mall, led by \"Pingping\" — an anthropomorphic red apple running through the whole year: the hero of the cover, and the \"0\" inside the 2018 wordmark, reappearing from the annual plan to the December summary as the whole set's signature.\n\nTwelve original illustrations, one per month, alternate with twelve functional calendar pages — public holidays, solar terms and the Chinese lunar calendar, with coupons from the mall's brands built into each month. Chinese festive motifs share the page with international landmarks, warm without losing polish."
       },
       "href": "work-pingyuan-calendar.html"
+    },
+    {
+      "id": "pingyuan-calendar-2019",
+      "category": "graphic",
+      "year": "2019",
+      "cover": "assets/works/pingyuan-calendar-2019/cover.jpg",
+      "gallery": [
+        "assets/works/pingyuan-calendar-2019/mockup-hero.jpg",
+        "assets/works/pingyuan-calendar-2019/mockup-spread.jpg",
+        "assets/works/pingyuan-calendar-2019/cover.jpg",
+        "assets/works/pingyuan-calendar-2019/backcover.jpg",
+        "assets/works/pingyuan-calendar-2019/plan.jpg",
+        "assets/works/pingyuan-calendar-2019/summary.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-01.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-02.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-03.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-04.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-05.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-06.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-07.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-08.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-09.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-10.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-11.jpg",
+        "assets/works/pingyuan-calendar-2019/ill-12.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-01.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-02.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-03.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-04.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-05.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-06.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-07.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-08.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-09.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-10.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-11.jpg",
+        "assets/works/pingyuan-calendar-2019/cal-12.jpg"
+      ],
+      "title": {
+        "zh": "平原商场 · 2019 己亥年台历设计 — JUN",
+        "es": "Pingyuan Mall · Calendario anual 2019 — JUN",
+        "en": "Pingyuan Mall · 2019 Annual Calendar — JUN"
+      },
+      "type": {
+        "zh": "平面设计 / 年度台历 · 插画与印刷",
+        "es": "Diseño gráfico / Calendario anual · Ilustración e impresión",
+        "en": "Graphic design / Annual calendar · Illustration & print"
+      },
+      "scope": {
+        "zh": "全年品牌主题插画 12 幅 · 粉色小鹿「平平」吉祥物设定 · 功能日历与品牌街景版面 · 扉页 60 年历史时间轴 · 封面封底与年度计划页 · 印刷工艺落地",
+        "es": "12 ilustraciones temáticas de marca · mascota «Pingping» (cierva rosa) · páginas de calendario y calle de marcas · línea de tiempo de 60 años en la portada · portada, contraportada y plan anual · producción impresa",
+        "en": "12 brand-themed illustrations · \"Pingping\" pink deer mascot · calendar pages with brand street scene · 60-year history timeline on the opening page · cover, back cover and annual plan · print production"
+      },
+      "blurb": {
+        "zh": "为平原商场设计的 2019 己亥年台历，主题为「时光旅历」。扉页以「出彩的足迹」时间轴回顾商场 1957—2018 年的发展历程，再以「贰零壹玖用心体会，只做咱老百姓的商场」开启新一年。\n\n每月一幅品牌主题插画，将商场各楼层与入驻品牌（羽绒服、美妆、男装、女鞋、儿童娱乐城、内衣、名表、黄金珠宝等）融入粉色小鹿吉祥物的生活场景；配套日历页标注公历、农历、节气与节日，底部绘制品牌街景，让台历既是时间工具，也是商场全年的品牌画卷。",
+        "es": "Calendario anual 2019 para Pingyuan Mall, bajo el tema «Viaje en el tiempo». La página de apertura repasa con la línea de tiempo «Huellas brillantes» la historia del centro de 1957 a 2018, y el lema «2019 con atención, el centro del pueblo» abre el nuevo año.\n\nCada mes una ilustración temática de marca integra las plantas y marcas del centro (abrigos, maquillaje, ropa de hombre, zapatos, zona infantil, ropa interior, relojes, oro y joyas…) en la vida de la cierva rosa; la página de calendario anota fechas gregorianas y lunares, términos solares y festividades, y dibuja la calle de marcas al pie: un cuadro de marca de todo el año.",
+        "en": "A 2019 annual calendar for Pingyuan Mall, themed \"Journey Through Time\". The opening page reviews the mall's history from 1957 to 2018 with the \"Brilliant Footprints\" timeline, then the motto \"2019 with care — the mall of the people\" opens the new year.\n\nEach month a brand-themed illustration weaves the mall's floors and stores (down jackets, beauty, menswear, women's shoes, kids' play city, lingerie, watches, gold and jewelry…) into the pink deer's daily life; the calendar page marks Gregorian and lunar dates, solar terms and festivals, and draws a brand street scene along the bottom — a year-round brand portrait as much as a time tool."
+      },
+      "href": "work-pingyuan2019-calendar.html"
     }
   ];
 })();

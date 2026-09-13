@@ -105,7 +105,7 @@
 }
 
 .pc-hero__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--fs-2xl);
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -117,7 +117,7 @@
 .pc-hero__sub {
   display: block;
   margin-top: var(--sp-3);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--fs-lg);
   letter-spacing: 0.04em;
   color: var(--ink-2);
@@ -204,7 +204,7 @@
 }
 
 .pc-head__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--fs-2xl);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -321,7 +321,7 @@
 
 .pc-feature h3 {
   margin-bottom: var(--sp-2);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--fs-lg);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -384,7 +384,7 @@
 }
 
 .pc-flat__sub h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--fs-md);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -447,7 +447,7 @@
 
 .pc-plate__cap b {
   flex: none;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 400;
   font-size: var(--fs-sm);
   color: var(--accent-deep);
@@ -476,7 +476,7 @@
 }
 
 .pc-month__name {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--fs-xl);
   font-weight: 400;
   letter-spacing: 0.04em;
