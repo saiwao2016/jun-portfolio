@@ -188,7 +188,7 @@ window.SITE_DATA = {
       },
       {
         "id": "xhs",
-        "url": "",
+        "url": "https://xhslink.cn/o/yrStu6vOZW",
         "label": {
           "zh": "小红书",
           "es": "Xiaohongshu",

@@ -402,6 +402,38 @@
       }
     },
     {
+      "id": "logo-weixiaoxin",
+      "category": "graphic",
+      "year": "—",
+      "cover": "assets/works/logo-weixiaoxin/cover.png",
+      "gallery": [
+        "assets/works/logo-weixiaoxin/01.png",
+        "assets/works/logo-weixiaoxin/02.png",
+        "assets/works/logo-weixiaoxin/03.png",
+        "assets/works/logo-weixiaoxin/04.png"
+      ],
+      "title": {
+        "zh": "卫小新 · 品牌标志规范",
+        "es": "Weixiaoxin · Normativa de logotipo de marca",
+        "en": "Weixiaoxin · Brand logo guidelines"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌标志 VI 规范",
+        "es": "Diseño gráfico / Normativa VI de logotipo",
+        "en": "Graphic design / Brand logo VI guidelines"
+      },
+      "scope": {
+        "zh": "标准品牌标志 · 完整标志组合形式 · 竖式组合与反白 · 图形规范制图 · 标准色红黄 · 灰阶标准 · 背景色可用与禁用",
+        "es": "Logotipo estándar · Composiciones · Versión vertical y usos · Construcción · Colores rojo/amarillo · Escala de grises · Fondos",
+        "en": "Standard emblem · Lock-ups · Vertical & reverse uses · Construction · Red/yellow colours · Greyscale · Background usage"
+      },
+      "blurb": {
+        "zh": "为「卫小新」品牌设计的标志规范：以盾牌与人的组合图形为核心，规定标准与完整标志的横竖组合、反白与灰度应用及图形制图；色彩部分界定标志标准色（红 / 黄）、灰阶标准与标准背景色的可用与禁用示例。",
+        "es": "Normativa de logotipo para la marca Weixiaoxin: sobre un escudo con figuras humanas, define composiciones horizontales y verticales, usos en negativo y gris, y construcción; la parte cromática cubre rojo/amarillo, escala de grises y fondos permitidos o prohibidos.",
+        "en": "Logo guidelines for the Weixiaoxin brand: built on a shield-and-figures emblem, covering horizontal/vertical lock-ups, reverse and greyscale uses and construction; the colour part defines red/yellow standards, greyscale and allowed/prohibited backgrounds."
+      }
+    },
+    {
       "id": "vis-guonin",
       "category": "graphic",
       "year": "—",
@@ -435,35 +467,127 @@
       }
     },
     {
-      "id": "logo-weixiaoxin",
+      "id": "logo-hexiang",
       "category": "graphic",
       "year": "—",
-      "cover": "assets/works/logo-weixiaoxin/cover.png",
+      "cover": "assets/works/logo-hexiang/cover.png",
       "gallery": [
-        "assets/works/logo-weixiaoxin/01.png",
-        "assets/works/logo-weixiaoxin/02.png",
-        "assets/works/logo-weixiaoxin/03.png",
-        "assets/works/logo-weixiaoxin/04.png"
+        "assets/works/logo-hexiang/01.png",
+        "assets/works/logo-hexiang/02.png"
       ],
       "title": {
-        "zh": "卫小新 · 品牌标志规范",
-        "es": "Weixiaoxin · Normativa de logotipo de marca",
-        "en": "Weixiaoxin · Brand logo guidelines"
+        "zh": "和美乡村 · 人居环境改造标志",
+        "es": "Aldea Hermosa · Logotipo",
+        "en": "Beautiful Village · Project logo"
       },
       "type": {
-        "zh": "平面设计 / 品牌标志 VI 规范",
-        "es": "Diseño gráfico / Normativa VI de logotipo",
-        "en": "Graphic design / Brand logo VI guidelines"
+        "zh": "平面设计 / 公益项目标志",
+        "es": "Diseño gráfico / Logotipo de proyecto social",
+        "en": "Graphic design / Social project logo"
       },
       "scope": {
-        "zh": "标准品牌标志 · 完整标志组合形式 · 竖式组合与反白 · 图形规范制图 · 标准色红黄 · 灰阶标准 · 背景色可用与禁用",
-        "es": "Logotipo estándar · Composiciones · Versión vertical y usos · Construcción · Colores rojo/amarillo · Escala de grises · Fondos",
-        "en": "Standard emblem · Lock-ups · Vertical & reverse uses · Construction · Red/yellow colours · Greyscale · Background usage"
+        "zh": "手托人与房子 · 道路弧线 · 树苗向上 · 红橙绿",
+        "es": "Mano sosteniendo casa y persona · Arco de camino · Brote · Rojo-naranja-verde",
+        "en": "Hand holding house & person · Road curve · Sprouting figure · Warm green"
       },
       "blurb": {
-        "zh": "为「卫小新」品牌设计的标志规范：以盾牌与人的组合图形为核心，规定标准与完整标志的横竖组合、反白与灰度应用及图形制图；色彩部分界定标志标准色（红 / 黄）、灰阶标准与标准背景色的可用与禁用示例。",
-        "es": "Normativa de logotipo para la marca Weixiaoxin: sobre un escudo con figuras humanas, define composiciones horizontales y verticales, usos en negativo y gris, y construcción; la parte cromática cubre rojo/amarillo, escala de grises y fondos permitidos o prohibidos.",
-        "en": "Logo guidelines for the Weixiaoxin brand: built on a shield-and-figures emblem, covering horizontal/vertical lock-ups, reverse and greyscale uses and construction; the colour part defines red/yellow standards, greyscale and allowed/prohibited backgrounds."
+        "zh": "乡村人居环境改造项目标志：手的形象代表关怀与支持，抱住人和房子，手臂的弧度像道路一样把房子和人稳稳托起；人以树苗的形式向上伸展，象征对美好生活的向往与生机希望，手与房子上下呼应，表达乡村环境与人的和谐共生。",
+        "es": "Logotipo del proyecto de renovación rural: una mano sostiene la casa y la persona como un camino, mientras la figura brota como un árbol — armonía entre el entorno rural y sus habitantes.",
+        "en": "A logo for the rural renovation project: a hand holds house and person like a steady road, while the figure sprouts upward like a sapling — harmony between village environment and its people."
+      }
+    },
+    {
+      "id": "logo-zhuhai-orchestra",
+      "category": "graphic",
+      "year": "2020 — 2021",
+      "cover": "assets/works/logo-zhuhai-orchestra/cover.png",
+      "gallery": [
+        "assets/works/logo-zhuhai-orchestra/01.png",
+        "assets/works/logo-zhuhai-orchestra/02.png",
+        "assets/works/logo-zhuhai-orchestra/03.png",
+        "assets/works/logo-zhuhai-orchestra/04.png"
+      ],
+      "title": {
+        "zh": "珠海少年管弦乐团 · 标志设计",
+        "es": "ZhuHai Youth Orchestra · Diseño de logotipo",
+        "en": "ZhuHai Youth Orchestra · Logo design"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌标志 · 文化团体",
+        "es": "Diseño gráfico / Logotipo de marca · Agrupación cultural",
+        "en": "Graphic design / Brand logo · Cultural ensemble"
+      },
+      "scope": {
+        "zh": "标志图形 · 标准组合 · 辅助图形 · 杯子 / 帽子 / T恤 / 车体 / 户外广告",
+        "es": "Símbolo · Composición estándar · Gráfica auxiliar · Taza / gorra / camiseta / vehículo / valla",
+        "en": "Emblem · Standard lock-up · Auxiliary graphic · Cup / cap / T-shirt / vehicle / billboard"
+      },
+      "blurb": {
+        "zh": "为珠海少年管弦乐团设计的品牌标志：以音符与水滴融合为图形主体，橙色水滴轮廓包裹跳动的音符，象征少年乐手如活水般的朝气；规范涵盖标准组合、辅助图形与周边应用。",
+        "es": "Logotipo para la Orquesta Juvenil de Zhuhai: una nota musical envuelta en una gota naranja, símbolo de la energía juvenil; el sistema cubre composición estándar, gráfica auxiliar y aplicaciones.",
+        "en": "A brand logo for Zhuhai Youth Orchestra: a musical note wrapped in an orange water drop, symbolising youthful energy; the system covers standard lock-up, auxiliary graphics and applications."
+      }
+    },
+    {
+      "id": "logo-shiguang",
+      "category": "graphic",
+      "year": "—",
+      "cover": "assets/works/logo-shiguang/cover.png",
+      "gallery": [
+        "assets/works/logo-shiguang/01.png",
+        "assets/works/logo-shiguang/02.png"
+      ],
+      "title": {
+        "zh": "幸福食光 · 老人助餐标志",
+        "es": "Comida Feliz · Logotipo",
+        "en": "Happy Meal Time · Project logo"
+      },
+      "type": {
+        "zh": "平面设计 / 公益项目标志",
+        "es": "Diseño gráfico / Logotipo de proyecto social",
+        "en": "Graphic design / Social project logo"
+      },
+      "scope": {
+        "zh": "老人 · 米饭 · 碗 · 房子 · 金黄渐变",
+        "es": "Anciano · Arroz · Cuenco · Casa · Degradado dorado",
+        "en": "Elder · Rice · Bowl · House · Golden gradient"
+      },
+      "blurb": {
+        "zh": "农村留守老年人供餐项目标志：融合老人、米饭、碗和房子四个元素——老人是服务对象，米饭强调供餐的重要性，碗体现供餐的意义，房子寓意稳定的供餐场所与安全感，金黄的暖色调传达项目的温暖与关怀。",
+        "es": "Logotipo del comedor para mayores: anciano, arroz, cuenco y casa en tonos dorados, transmitiendo calidez y la seguridad de un lugar estable para comer.",
+        "en": "A logo for the senior meal program: elder, rice, bowl and house merged in warm golden tones, conveying care and the security of a stable dining place."
+      }
+    },
+    {
+      "id": "logo-pingyuan",
+      "category": "graphic",
+      "year": "—",
+      "cover": "assets/works/logo-pingyuan/cover.png",
+      "gallery": [
+        "assets/works/logo-pingyuan/01.png",
+        "assets/works/logo-pingyuan/02.png",
+        "assets/works/logo-pingyuan/03.png",
+        "assets/works/logo-pingyuan/04.png"
+      ],
+      "title": {
+        "zh": "平原来喜 · 品牌标志升级",
+        "es": "Pingyuanlaixi · Rediseño de marca",
+        "en": "Pingyuanlaixi · Brand logo upgrade"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌标志 · 全案应用",
+        "es": "Diseño gráfico / Marca · Aplicaciones",
+        "en": "Graphic design / Brand logo · Full applications"
+      },
+      "scope": {
+        "zh": "P × Y 组合 · 圆与方 · 宋体神韵 · 名片包装吊牌杯贴门头",
+        "es": "Combinación P × Y · Círculo y cuadrado · Songti · Tarjetas y packaging",
+        "en": "P × Y combination · Circle & square · Songti spirit · Cards, packaging, signage"
+      },
+      "blurb": {
+        "zh": "餐饮品牌标志升级：原标志沿用 60 年、认知已深入人心，故延续标志性图形并优化简化——字母 P 与 Y 圆钝组合、以圆与方为思路，中文以宋体「神韵」保留年代感又做干练处理；标志落到名片、包装盒、吊牌、杯贴与门店门头，标志红贯穿全部触点。",
+        "es": "Actualización de la marca gastronómica Pingyuanlaixi: se conserva el símbolo con 60 años de reconocimiento, simplificado con la combinación P × Y y el espíritu Songti, aplicado a tarjetas, packaging, etiquetas y rótulos.",
+        "en": "A restaurant brand upgrade: keeping a 60-year-recognised symbol, simplified through the rounded P × Y combination and Songti spirit, applied across cards, boxes, tags, cup sleeves and storefront signage."
       }
     },
     {
@@ -529,98 +653,6 @@
         "zh": "为流动儿童保护项目设计的标志：用盾牌表达「保护」，结合「伞」这一基本视觉元素；红、蓝、绿三色渐变分别体现警示与安全、理性与教育、生命力与健康；图形与文字均采用圆润转角，简洁中带着童趣，贴合「流动儿童」的服务人群。",
         "es": "Logotipo para un proyecto de protección de niños migrantes: escudo y paraguas con un degradado rojo-azul-verde (seguridad, educación, salud) y esquinas redondeadas que aportan ternura e inocencia.",
         "en": "A logo for a migrant-children protection project: a shield expressing protection combined with an umbrella, in a red-blue-green gradient (safety, education, vitality) with rounded corners full of childlike warmth."
-      }
-    },
-    {
-      "id": "logo-hexiang",
-      "category": "graphic",
-      "year": "—",
-      "cover": "assets/works/logo-hexiang/cover.png",
-      "gallery": [
-        "assets/works/logo-hexiang/01.png",
-        "assets/works/logo-hexiang/02.png"
-      ],
-      "title": {
-        "zh": "和美乡村 · 人居环境改造标志",
-        "es": "Aldea Hermosa · Logotipo",
-        "en": "Beautiful Village · Project logo"
-      },
-      "type": {
-        "zh": "平面设计 / 公益项目标志",
-        "es": "Diseño gráfico / Logotipo de proyecto social",
-        "en": "Graphic design / Social project logo"
-      },
-      "scope": {
-        "zh": "手托人与房子 · 道路弧线 · 树苗向上 · 红橙绿",
-        "es": "Mano sosteniendo casa y persona · Arco de camino · Brote · Rojo-naranja-verde",
-        "en": "Hand holding house & person · Road curve · Sprouting figure · Warm green"
-      },
-      "blurb": {
-        "zh": "乡村人居环境改造项目标志：手的形象代表关怀与支持，抱住人和房子，手臂的弧度像道路一样把房子和人稳稳托起；人以树苗的形式向上伸展，象征对美好生活的向往与生机希望，手与房子上下呼应，表达乡村环境与人的和谐共生。",
-        "es": "Logotipo del proyecto de renovación rural: una mano sostiene la casa y la persona como un camino, mientras la figura brota como un árbol — armonía entre el entorno rural y sus habitantes.",
-        "en": "A logo for the rural renovation project: a hand holds house and person like a steady road, while the figure sprouts upward like a sapling — harmony between village environment and its people."
-      }
-    },
-    {
-      "id": "logo-shiguang",
-      "category": "graphic",
-      "year": "—",
-      "cover": "assets/works/logo-shiguang/cover.png",
-      "gallery": [
-        "assets/works/logo-shiguang/01.png",
-        "assets/works/logo-shiguang/02.png"
-      ],
-      "title": {
-        "zh": "幸福食光 · 老人助餐标志",
-        "es": "Comida Feliz · Logotipo",
-        "en": "Happy Meal Time · Project logo"
-      },
-      "type": {
-        "zh": "平面设计 / 公益项目标志",
-        "es": "Diseño gráfico / Logotipo de proyecto social",
-        "en": "Graphic design / Social project logo"
-      },
-      "scope": {
-        "zh": "老人 · 米饭 · 碗 · 房子 · 金黄渐变",
-        "es": "Anciano · Arroz · Cuenco · Casa · Degradado dorado",
-        "en": "Elder · Rice · Bowl · House · Golden gradient"
-      },
-      "blurb": {
-        "zh": "农村留守老年人供餐项目标志：融合老人、米饭、碗和房子四个元素——老人是服务对象，米饭强调供餐的重要性，碗体现供餐的意义，房子寓意稳定的供餐场所与安全感，金黄的暖色调传达项目的温暖与关怀。",
-        "es": "Logotipo del comedor para mayores: anciano, arroz, cuenco y casa en tonos dorados, transmitiendo calidez y la seguridad de un lugar estable para comer.",
-        "en": "A logo for the senior meal program: elder, rice, bowl and house merged in warm golden tones, conveying care and the security of a stable dining place."
-      }
-    },
-    {
-      "id": "logo-pingyuan",
-      "category": "graphic",
-      "year": "—",
-      "cover": "assets/works/logo-pingyuan/cover.png",
-      "gallery": [
-        "assets/works/logo-pingyuan/01.png",
-        "assets/works/logo-pingyuan/02.png",
-        "assets/works/logo-pingyuan/03.png",
-        "assets/works/logo-pingyuan/04.png"
-      ],
-      "title": {
-        "zh": "平原来喜 · 品牌标志升级",
-        "es": "Pingyuanlaixi · Rediseño de marca",
-        "en": "Pingyuanlaixi · Brand logo upgrade"
-      },
-      "type": {
-        "zh": "平面设计 / 品牌标志 · 全案应用",
-        "es": "Diseño gráfico / Marca · Aplicaciones",
-        "en": "Graphic design / Brand logo · Full applications"
-      },
-      "scope": {
-        "zh": "P × Y 组合 · 圆与方 · 宋体神韵 · 名片包装吊牌杯贴门头",
-        "es": "Combinación P × Y · Círculo y cuadrado · Songti · Tarjetas y packaging",
-        "en": "P × Y combination · Circle & square · Songti spirit · Cards, packaging, signage"
-      },
-      "blurb": {
-        "zh": "餐饮品牌标志升级：原标志沿用 60 年、认知已深入人心，故延续标志性图形并优化简化——字母 P 与 Y 圆钝组合、以圆与方为思路，中文以宋体「神韵」保留年代感又做干练处理；标志落到名片、包装盒、吊牌、杯贴与门店门头，标志红贯穿全部触点。",
-        "es": "Actualización de la marca gastronómica Pingyuanlaixi: se conserva el símbolo con 60 años de reconocimiento, simplificado con la combinación P × Y y el espíritu Songti, aplicado a tarjetas, packaging, etiquetas y rótulos.",
-        "en": "A restaurant brand upgrade: keeping a 60-year-recognised symbol, simplified through the rounded P × Y combination and Songti spirit, applied across cards, boxes, tags, cup sleeves and storefront signage."
       }
     },
     {
@@ -723,38 +755,6 @@
         "zh": "为北京建筑北方集团设计的企业画册：以「人文 · 创新 · 科技 · 建筑」为主线，深蓝与金构建沉稳而有分量的国企气质；金色辅助线取自建筑结构，贯穿封面、章节页与版式网格，总部建筑与项目影像配合克制留白，呈现大型建筑企业的专业与可靠。",
         "es": "Catálogo corporativo para Beijing Construction Northern Group: azul profundo y dorado construyen una imagen sólida; las líneas doradas, tomadas de la estructura arquitectónica, recorren portada, capítulos y retícula, con fotografía de la sede y espacios blancos contenidos.",
         "en": "A corporate brochure for Beijing Construction Northern Group: deep blue and gold convey institutional solidity; gold lines drawn from building structure run through cover, chapters and grid, paired with restrained white space and headquarters photography."
-      }
-    },
-    {
-      "id": "logo-zhuhai-orchestra",
-      "category": "graphic",
-      "year": "2020 — 2021",
-      "cover": "assets/works/logo-zhuhai-orchestra/cover.png",
-      "gallery": [
-        "assets/works/logo-zhuhai-orchestra/01.png",
-        "assets/works/logo-zhuhai-orchestra/02.png",
-        "assets/works/logo-zhuhai-orchestra/03.png",
-        "assets/works/logo-zhuhai-orchestra/04.png"
-      ],
-      "title": {
-        "zh": "珠海少年管弦乐团 · 标志设计",
-        "es": "ZhuHai Youth Orchestra · Diseño de logotipo",
-        "en": "ZhuHai Youth Orchestra · Logo design"
-      },
-      "type": {
-        "zh": "平面设计 / 品牌标志 · 文化团体",
-        "es": "Diseño gráfico / Logotipo de marca · Agrupación cultural",
-        "en": "Graphic design / Brand logo · Cultural ensemble"
-      },
-      "scope": {
-        "zh": "标志图形 · 标准组合 · 辅助图形 · 杯子 / 帽子 / T恤 / 车体 / 户外广告",
-        "es": "Símbolo · Composición estándar · Gráfica auxiliar · Taza / gorra / camiseta / vehículo / valla",
-        "en": "Emblem · Standard lock-up · Auxiliary graphic · Cup / cap / T-shirt / vehicle / billboard"
-      },
-      "blurb": {
-        "zh": "为珠海少年管弦乐团设计的品牌标志：以音符与水滴融合为图形主体，橙色水滴轮廓包裹跳动的音符，象征少年乐手如活水般的朝气；规范涵盖标准组合、辅助图形与周边应用。",
-        "es": "Logotipo para la Orquesta Juvenil de Zhuhai: una nota musical envuelta en una gota naranja, símbolo de la energía juvenil; el sistema cubre composición estándar, gráfica auxiliar y aplicaciones.",
-        "en": "A brand logo for Zhuhai Youth Orchestra: a musical note wrapped in an orange water drop, symbolising youthful energy; the system covers standard lock-up, auxiliary graphics and applications."
       }
     },
     {
