@@ -1595,6 +1595,124 @@
         "en": "A 2019 annual calendar for Pingyuan Mall, themed \"Journey Through Time\". The opening page reviews the mall's history from 1957 to 2018 with the \"Brilliant Footprints\" timeline, then the motto \"2019 with care — the mall of the people\" opens the new year.\n\nEach month a brand-themed illustration weaves the mall's floors and stores (down jackets, beauty, menswear, women's shoes, kids' play city, lingerie, watches, gold and jewelry…) into the apple mascot's daily life; the calendar page marks Gregorian and lunar dates, solar terms and festivals, and draws a brand street scene along the bottom — a year-round brand portrait as much as a time tool."
       },
       "href": "work-pingyuan2019-calendar.html"
+    },
+    {
+      "id": "pingyuan-calendar-2020",
+      "category": "graphic",
+      "year": "2020",
+      "cover": "assets/works/pingyuan-calendar-2020/cover.jpg",
+      "gallery": [
+        "assets/works/pingyuan-calendar-2020/mockup-hero.jpg",
+        "assets/works/pingyuan-calendar-2020/mockup-spread.jpg",
+        "assets/works/pingyuan-calendar-2020/cover.jpg",
+        "assets/works/pingyuan-calendar-2020/backcover.jpg",
+        "assets/works/pingyuan-calendar-2020/honours.jpg",
+        "assets/works/pingyuan-calendar-2020/culture.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-01.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-02.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-03.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-04.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-05.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-06.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-07.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-08.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-09.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-10.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-11.jpg",
+        "assets/works/pingyuan-calendar-2020/ill-12.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-01.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-02.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-03.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-04.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-05.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-06.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-07.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-08.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-09.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-10.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-11.jpg",
+        "assets/works/pingyuan-calendar-2020/cal-12.jpg"
+      ],
+      "title": {
+        "zh": "平原商场 · 2020 庚子鼠年台历设计 — JUN",
+        "es": "Pingyuan Mall · Calendario anual 2020 — JUN",
+        "en": "Pingyuan Mall · 2020 Annual Calendar — JUN"
+      },
+      "type": {
+        "zh": "年度台历 · 平面设计",
+        "es": "Calendario anual · Diseño gráfico",
+        "en": "Annual calendar · Graphic design"
+      },
+      "scope": {
+        "zh": "苹果吉祥物「平平」贯穿全年 · 荣誉历程 + 企业文化双扉页 · 每月对应一个商场楼层/业态 · 十月特别企划：商场 20 周年庆典",
+        "es": "La manzana «Pingping» recorre el año · Dos aperturas: honores y cultura · Cada mes, una planta o negocio · Octubre: 20º aniversario del centro",
+        "en": "The apple mascot runs through the year · Two opening pages: honours & culture · Each month a mall floor or business · October: mall's 20th-anniversary event"
+      },
+      "blurb": {
+        "zh": "这是为平原商场打造的 2020 年度台历。封面以庚子鼠年喜庆氛围开场，苹果吉祥物「平平」与老鼠形象同框，红色囍字建筑、烟花灯笼烘托新年气氛。\n\n扉页设置「荣誉历程」与「企业文化」两个品牌页面，展示商场历年荣誉与经营理念。每月一幅楼层主题插画，平平带着家人朋友逛遍商场各楼层——从 1 楼名表化妆品到 7 楼羽绒服卖场，从童装特卖到家电清洗，把商场的业态地图画进了一整年。",
+        "es": "Es el calendario anual 2020 creado para Pingyuan Mall. La cubierta abre con el ambiente festivo del Año de la Rata: la manzana «Pingping» comparte escena con ratones, y un edificio con el carácter 囍, fuegos artificiales y faroles realzan el aire de Año Nuevo.\n\nLas páginas de apertura presentan «Honours 荣誉历程» y «Culture 企业文化», dos páginas de marca que muestran los galardones del centro y su filosofía. Cada mes, una ilustración temática de planta: Pingping recorre el centro con familia y amigos —del 1º piso de relojes y cosmética al 7º de abrigos, de las rebajas infantiles a la limpieza de electrodomésticos— dibujando el mapa comercial del centro a lo largo de todo el año.",
+        "en": "This is the 2020 annual calendar made for Pingyuan Mall. The cover opens in festive Year-of-the-Rat mood — the apple mascot Pingping shares the frame with mice, while a 囍-character building, fireworks and lanterns set the New Year tone.\n\nThe opening pages present \"Honours\" and \"Culture\" — two brand pages showing the mall's awards and philosophy. Each month a floor-themed illustration: Pingping tours the mall with family and friends — from the 1st-floor watches and cosmetics to the 7th-floor down jackets, from kids' sales to appliance cleaning — drawing the mall's tenant map across the whole year."
+      },
+      "href": "work-pingyuan2020-calendar.html"
+    },
+    {
+      "id": "pingyuan-calendar-2021",
+      "category": "graphic",
+      "year": "2021",
+      "cover": "assets/works/pingyuan-calendar-2021/cover.jpg",
+      "gallery": [
+        "assets/works/pingyuan-calendar-2021/mockup-hero.jpg",
+        "assets/works/pingyuan-calendar-2021/mockup-spread.jpg",
+        "assets/works/pingyuan-calendar-2021/cover.jpg",
+        "assets/works/pingyuan-calendar-2021/backcover.jpg",
+        "assets/works/pingyuan-calendar-2021/newspaper.jpg",
+        "assets/works/pingyuan-calendar-2021/postcard.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-01.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-02.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-03.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-04.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-05.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-06.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-07.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-08.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-09.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-10.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-11.jpg",
+        "assets/works/pingyuan-calendar-2021/ill-12.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-01.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-02.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-03.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-04.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-05.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-06.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-07.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-08.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-09.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-10.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-11.jpg",
+        "assets/works/pingyuan-calendar-2021/cal-12.jpg"
+      ],
+      "title": {
+        "zh": "平原商场 · 2021 辛丑牛年台历设计 — JUN",
+        "es": "Pingyuan Mall · Calendario anual 2021 — JUN",
+        "en": "Pingyuan Mall · 2021 Annual Calendar — JUN"
+      },
+      "type": {
+        "zh": "年度台历 · 平面设计",
+        "es": "Calendario anual · Diseño gráfico",
+        "en": "Annual calendar · Graphic design"
+      },
+      "scope": {
+        "zh": "苹果吉祥物「平平」贯穿全年 · 报纸扉页 + 明信片双特别页 · 每月对应一个商场楼层/业态 · 七月建店64周年 · 十月新大楼21周年",
+        "es": "La manzana «Pingping» recorre el año · Periódico + postal especiales · Cada mes, una planta o negocio · Julio: 64º aniversario · Oct: 21º del edificio",
+        "en": "The apple mascot runs through the year · Newspaper + postcard special pages · Each month a mall floor or business · July: 64th store anniversary · Oct: 21st of new building"
+      },
+      "blurb": {
+        "zh": "这是为平原商场打造的 2021 年度台历。封面以辛丑牛年喜庆氛围开场，金色大牛与苹果吉祥物「平平」家族同框，红色囍字建筑、烟花灯笼、铜钱烘托新年气氛。\n\n扉页创新设置「平原商场报」报纸风格页与「平原邮政」明信片页，前者以头条新闻形式传递品牌理念，后者以邮票和邮戳增添收藏趣味。每月一幅楼层主题插画，平平带着家人朋友逛遍商场各楼层——从周大福珠宝到 2F 女鞋箱包，从 3F 运动休闲到 6 楼儿童卖场，从建店 64 周年庆典到新大楼开业 21 周年，把商场的业态地图和品牌故事画进了一整年。",
+        "es": "Es el calendario anual 2021 creado para Pingyuan Mall. La cubierta abre con el ambiente festivo del Año del Buey: un gran buey dorado comparte escena con la familia de la manzana «Pingping», y un edificio con el carácter 囍, fuegos artificiales, faroles y monedas de bronce realzan el aire de Año Nuevo.\n\nLas páginas de apertura innovan con «Pingyuan Mall News», una página estilo periódico, y «Pingyuan Post», una postal: la primera transmite la filosofía de marca en forma de titular, la segunda añade sellos y matasellos para coleccionar. Cada mes, una ilustración temática de planta: Pingping recorre el centro con familia y amigos —de las joyas Chow Tai Fook a zapatos y bolsos en 2F, del deporte en 3F a la zona infantil en 6F, del 64º aniversario de la tienda a los 21 años del nuevo edificio— dibujando el mapa comercial y la historia de marca del centro a lo largo de todo el año.",
+        "en": "This is the 2021 annual calendar made for Pingyuan Mall. The cover opens in festive Year-of-the-Ox mood — a golden ox shares the frame with the Pingping apple family, while a 囍-character building, fireworks, lanterns and bronze coins set the New Year tone.\n\nThe opening pages innovate with \"Pingyuan Mall News\" — a newspaper-style page — and \"Pingyuan Post\" — a postcard: the first delivers the brand philosophy as a headline, the second adds stamps and postmarks for collecting. Each month a floor-themed illustration: Pingping tours the mall with family and friends — from Chow Tai Fook jewellery to 2F shoes and bags, from 3F sports to the 6F kids' zone, from the 64th store anniversary to the new building's 21st — drawing the mall's tenant map and brand story across the whole year."
+      },
+      "href": "work-pingyuan2021-calendar.html"
     }
   ];
 })();

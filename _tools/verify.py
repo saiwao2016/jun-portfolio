@@ -29,6 +29,8 @@ PAGES = [
     ("work-detail.html?id=asq-system", "08-detail-asq"),
     ("work-pingyuan-calendar.html", "09-pingyuan"),
     ("work-pingyuan2019-calendar.html", "09-pingyuan2019"),
+    ("work-pingyuan2020-calendar.html", "09-pingyuan2020"),
+    ("work-pingyuan2021-calendar.html", "09-pingyuan2021"),
 ]
 LANGS = ["zh", "es", "en"]
 
@@ -234,40 +236,45 @@ with sync_playwright() as p:
     pg.click('.lang-switch__opt[data-lang="zh"]')
     pg.wait_for_timeout(400)
 
-    # 平原商场 2019 台历：定制专题页（work-pingyuan2019-calendar.html）
-    pg.goto(f"{BASE}/work-pingyuan2019-calendar.html", wait_until="networkidle")
-    scroll_all(pg)
-    p19_sec = pg.locator(".pc-section").count()
-    p19_mon = pg.locator(".pc-month").count()
-    p19_plate = pg.locator("[data-pc-plate]").count()
-    p19_bro = pg.evaluate("()=>[...document.querySelectorAll('.pc img')].filter(i=>!i.complete||i.naturalWidth===0).length")
-    check(p19_sec == 6, f"2019 台历专题页区块数应为 6，实际 {p19_sec}")
-    check(p19_mon == 12, f"2019 台历专题页逐月应为 12，实际 {p19_mon}")
-    check(p19_bro == 0, f"2019 台历专题页图集未加载 {p19_bro} 张（共 {p19_plate} 张底板图）")
-    print(f"  ✓ 2019 台历专题页：区块 {p19_sec} · 逐月 {p19_mon} · 底板图 {p19_plate} 张全载")
+    # 平原商场 2019/2020/2021 台历：定制专题页
+    for cal_path, cal_year in (
+        ("work-pingyuan2019-calendar.html", "2019"),
+        ("work-pingyuan2020-calendar.html", "2020"),
+        ("work-pingyuan2021-calendar.html", "2021"),
+    ):
+        pg.goto(f"{BASE}/{cal_path}", wait_until="networkidle")
+        scroll_all(pg)
+        pxx_sec = pg.locator(".pc-section").count()
+        pxx_mon = pg.locator(".pc-month").count()
+        pxx_plate = pg.locator("[data-pc-plate]").count()
+        pxx_bro = pg.evaluate("()=>[...document.querySelectorAll('.pc img')].filter(i=>!i.complete||i.naturalWidth===0).length")
+        check(pxx_sec == 6, f"{cal_year} 台历专题页区块数应为 6，实际 {pxx_sec}")
+        check(pxx_mon == 12, f"{cal_year} 台历专题页逐月应为 12，实际 {pxx_mon}")
+        check(pxx_bro == 0, f"{cal_year} 台历专题页图集未加载 {pxx_bro} 张（共 {pxx_plate} 张底板图）")
+        print(f"  ✓ {cal_year} 台历专题页：区块 {pxx_sec} · 逐月 {pxx_mon} · 底板图 {pxx_plate} 张全载")
 
-    # 灯箱：按 src 去重后应为 28 项（30 张图集中 2 张样机图 mockup-hero/mockup-spread 为展示样机，不入灯箱）
-    pg.locator("[data-pc-plate]").first.click()
-    pg.wait_for_timeout(450)
-    lb19_on = pg.evaluate("document.getElementById('lb')?.classList.contains('is-on')")
-    lb19_cap = pg.evaluate("document.querySelector('#lb .lb__cap')?.textContent || ''")
-    check(lb19_on, "2019 台历专题页灯箱未打开")
-    check(bool(re.search(r"/\s*28\b", lb19_cap or "")), f"2019 台历灯箱去重后应为 28 项，caption={lb19_cap!r}")
-    print(f"  ✓ 2019 台历灯箱打开：{lb19_cap}")
-    pg.keyboard.press("Escape")
-    pg.wait_for_timeout(300)
-    check(not pg.evaluate("document.getElementById('lb')?.classList.contains('is-on')"), "Esc 未关闭 2019 台历灯箱")
-    print(f"  ✓ 2019 台历灯箱 Esc 关闭")
+        # 灯箱：按 src 去重后应为 28 项（30 张图集中 2 张样机图 mockup-hero/mockup-spread 为展示样机，不入灯箱）
+        pg.locator("[data-pc-plate]").first.click()
+        pg.wait_for_timeout(450)
+        lbxx_on = pg.evaluate("document.getElementById('lb')?.classList.contains('is-on')")
+        lbxx_cap = pg.evaluate("document.querySelector('#lb .lb__cap')?.textContent || ''")
+        check(lbxx_on, f"{cal_year} 台历专题页灯箱未打开")
+        check(bool(re.search(r"/\s*28\b", lbxx_cap or "")), f"{cal_year} 台历灯箱去重后应为 28 项，caption={lbxx_cap!r}")
+        print(f"  ✓ {cal_year} 台历灯箱打开：{lbxx_cap}")
+        pg.keyboard.press("Escape")
+        pg.wait_for_timeout(300)
+        check(not pg.evaluate("document.getElementById('lb')?.classList.contains('is-on')"), f"Esc 未关闭 {cal_year} 台历灯箱")
+        print(f"  ✓ {cal_year} 台历灯箱 Esc 关闭")
 
-    # 语言切换：专题页整体重绘
-    for lg in ("es", "en"):
-        pg.click(f'.lang-switch__opt[data-lang="{lg}"]')
-        pg.wait_for_timeout(500)
-        h1 = pg.locator("h1").first.inner_text()
-        check(len(h1.strip()) > 2, f"2019 台历专题页 {lg} 标题异常：{h1!r}")
-        print(f"    · {lg}: 「{h1[:24]}」")
-    pg.click('.lang-switch__opt[data-lang="zh"]')
-    pg.wait_for_timeout(400)
+        # 语言切换：专题页整体重绘
+        for lg in ("es", "en"):
+            pg.click(f'.lang-switch__opt[data-lang="{lg}"]')
+            pg.wait_for_timeout(500)
+            h1 = pg.locator("h1").first.inner_text()
+            check(len(h1.strip()) > 2, f"{cal_year} 台历专题页 {lg} 标题异常：{h1!r}")
+            print(f"    · {lg}: 「{h1[:24]}」")
+        pg.click('.lang-switch__opt[data-lang="zh"]')
+        pg.wait_for_timeout(400)
 
     pg.goto(f"{BASE}/work-detail.html?id=asq-system", wait_until="networkidle")
     scroll_all(pg)
@@ -445,11 +452,11 @@ with sync_playwright() as p:
     check(nums[:1] == ["01"] and nums[-1:] == ["06"], f"板块序号异常：{nums}")
     print(f"  ✓ 服务范围：{cards} 个板块，序号 {nums[0]}–{nums[-1]}")
 
-    # 技能体系：8 条能力 + 7 个工具
+    # 技能体系：9 条能力 + 7 个工具
     pg.goto(f"{BASE}/skills.html", wait_until="networkidle")
     pro = pg.locator(".skill-list li").count()
     tools = pg.locator(".tool-pill").count()
-    check(pro == 8, f"专业能力应有 8 条，实际 {pro}")
+    check(pro == 9, f"专业能力应有 9 条，实际 {pro}")
     check(tools == 7, f"工具栈应有 7 个，实际 {tools}")
     print(f"  ✓ 技能体系：能力 {pro} 条 · 工具 {tools} 个")
 
