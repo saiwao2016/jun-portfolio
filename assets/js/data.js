@@ -1477,6 +1477,64 @@
         "es": "Publicado en la tienda de stickers de WeChat con 24 emoticonos.\n\nUn tigre rechoncho: pelaje naranja con rayas negras, cabeza grande y cuerpo corto, en clave tierna y bonachona.\n\nLas 24 acciones giran en torno a la ternura: cara entre las manos, abrazar la cola, dormir boca abajo, mordisquearse la garra, timidez, bostezos y sustos hasta el llanto, todas bajo la misma luz cálida.",
         "en": "Published on the WeChat Sticker Store with 24 emoticons.\n\nA chubby little tiger: orange coat with black stripes, oversized head, short body — soft and good-humoured.\n\nThe 24 actions all orbit cuteness: face in hands, hugging its tail, sleeping on its belly, chewing a paw, shyness, yawns and being startled to tears, held together by the same warm light."
       }
+    },
+    {
+      "id": "pingyuan-calendar",
+      "category": "graphic",
+      "year": "2018",
+      "cover": "assets/works/pingyuan-calendar/cover.png",
+      "gallery": [
+        "assets/works/pingyuan-calendar/01.jpg",
+        "assets/works/pingyuan-calendar/02.jpg",
+        "assets/works/pingyuan-calendar/03.jpg",
+        "assets/works/pingyuan-calendar/04.jpg",
+        "assets/works/pingyuan-calendar/05.jpg",
+        "assets/works/pingyuan-calendar/06.jpg",
+        "assets/works/pingyuan-calendar/07.jpg",
+        "assets/works/pingyuan-calendar/08.jpg",
+        "assets/works/pingyuan-calendar/09.jpg",
+        "assets/works/pingyuan-calendar/10.jpg",
+        "assets/works/pingyuan-calendar/11.jpg",
+        "assets/works/pingyuan-calendar/12.jpg",
+        "assets/works/pingyuan-calendar/13.jpg",
+        "assets/works/pingyuan-calendar/14.jpg",
+        "assets/works/pingyuan-calendar/15.jpg",
+        "assets/works/pingyuan-calendar/16.jpg",
+        "assets/works/pingyuan-calendar/17.jpg",
+        "assets/works/pingyuan-calendar/18.jpg",
+        "assets/works/pingyuan-calendar/19.jpg",
+        "assets/works/pingyuan-calendar/20.jpg",
+        "assets/works/pingyuan-calendar/21.jpg",
+        "assets/works/pingyuan-calendar/22.jpg",
+        "assets/works/pingyuan-calendar/23.jpg",
+        "assets/works/pingyuan-calendar/24.jpg",
+        "assets/works/pingyuan-calendar/25.jpg",
+        "assets/works/pingyuan-calendar/26.jpg",
+        "assets/works/pingyuan-calendar/27.jpg",
+        "assets/works/pingyuan-calendar/28.jpg",
+        "assets/works/pingyuan-calendar/29.jpg",
+        "assets/works/pingyuan-calendar/30.jpg"
+      ],
+      "title": {
+        "zh": "平原商场 · 2018 戊戌年台历设计",
+        "es": "Pingyuan Mall · Calendario 2018, año del Perro",
+        "en": "Pingyuan Mall · 2018 calendar, Year of the Dog"
+      },
+      "type": {
+        "zh": "平面设计 / 台历 · 插画与印刷",
+        "es": "Diseño gráfico / Calendario · Ilustración e impresión",
+        "en": "Graphic design / Calendar · Illustration & print"
+      },
+      "scope": {
+        "zh": "全年主题插画 12 幅 · 苹果「平平」吉祥物设定 · 功能日历与品牌优惠券版面 · 封面封底与年度计划页 · 印刷工艺落地",
+        "es": "12 ilustraciones temáticas · mascota «Pingping» · páginas de calendario y cupones de marca · portada, contraportada y plan anual · producción impresa",
+        "en": "12 monthly illustrations · \"Pingping\" apple mascot · calendar pages with brand coupons · cover, back cover and annual plan · print production"
+      },
+      "blurb": {
+        "zh": "为平原商场设计的 2018 戊戌年台历，以一只拟人化的红苹果「平平」贯穿全年：它既是封面主视觉的主角，又化身「2018」字形里的数字 0，从年度计划页到年终总结页反复出现，成为整套设计最鲜明的记忆点。\n\n12 个月对应 12 幅原创主题插画（舞狮新春、浪漫情人节、植树护绿、雨天市集、荷塘消夏、农场丰收……），与 12 页功能日历交替呈现。日历页标注公历、农历、节气与传统节日，右侧嵌入商场各楼层品牌优惠券，把日常翻页的动线变成线下引流入口。中式红金喜庆与自由女神像、埃菲尔铁塔等世界地标同框，喜庆而不失国际化。",
+        "es": "Calendario de sobremesa 2018 para Pingyuan Mall, protagonizado por «Pingping», una manzana roja antropomórfica que recorre todo el año: es la imagen principal de la portada y a la vez el 0 de «2018», y reaparece del plan anual al resumen de diciembre como seña de identidad del conjunto.\n\nDoce ilustraciones originales, una por mes, alternan con doce páginas funcionales de calendario: fiestas, términos solares y calendario lunar chino, con cupones de las marcas del centro comercial integrados en cada mes. Los motivos festivos chinos conviven con iconos internacionales, con un tono cercano sin perder elegancia.",
+        "en": "A 2018 desk calendar for Pingyuan Mall, led by \"Pingping\" — an anthropomorphic red apple running through the whole year: the hero of the cover, and the \"0\" inside the 2018 wordmark, reappearing from the annual plan to the December summary as the whole set's signature.\n\nTwelve original illustrations, one per month, alternate with twelve functional calendar pages — public holidays, solar terms and the Chinese lunar calendar, with coupons from the mall's brands built into each month. Chinese festive motifs share the page with international landmarks, warm without losing polish."
+      }
     }
   ];
 })();

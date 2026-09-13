@@ -156,6 +156,10 @@ WORKS = [
  dict(id='ip-emoji-huahua',   cat=CAT_IP,  kind='brand', accent='#E8892F',
       img=['ip-emoji-huahua/shots/cover_src.png'],
       title='虎阿虎阿 · 微信表情包', year=''),
+ # — 平原商场 2018 台历（2026-09-13）—
+ dict(id='pingyuan-calendar', cat=CAT_GRA, kind='mockup', accent='#B02626',
+      img=['pingyuan-calendar/shots/closed.jpg'],
+      title='平原商场 · 戊戌年台历设计', year='2018'),
 ]
 
 TEMPLATE = """<!DOCTYPE html>
@@ -195,7 +199,7 @@ TEMPLATE = """<!DOCTYPE html>
   .year { font-size:15px; letter-spacing:.14em; color:#9a9a9a; font-variant-numeric:tabular-nums; flex:none; }
 </style></head>
 <body><div class="stage">
-  <div class="top"><div class="cat">__CAT__</div><div class="num"><b>__NO__</b> / 44</div></div>
+  <div class="top"><div class="cat">__CAT__</div><div class="num"><b>__NO__</b> / 45</div></div>
   <div class="frame">__FRAME__</div>
   <div class="bottom">
     <div class="t-wrap"><div class="bar"></div><div class="title">__TITLE__</div></div>

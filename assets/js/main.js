@@ -11,7 +11,7 @@
   const FALLBACK_LANG = 'zh';
 
   /* 资源版本号：每次发布若有同名文件被覆盖，需递增，避免 CDN/浏览器缓存旧资源 */
-  const ASSET_V = 'v20260913';
+  const ASSET_V = 'v20260914';
   function vUrl(u) {
     if (!u) return u;
     return u + (u.indexOf('?') >= 0 ? '&' : '?') + ASSET_V;
@@ -393,7 +393,7 @@
 
       const card = document.createElement('a');
       card.className = 'work-card reveal';
-      card.href = `work-detail.html?id=${encodeURIComponent(w.id)}&v20260913`;
+      card.href = `work-detail.html?id=${encodeURIComponent(w.id)}&v20260914`;
       card.dataset.category = w.category;
 
       card.innerHTML = `
@@ -589,9 +589,9 @@
         </div>
 
         <nav class="work-nav">
-          <a href="work-detail.html?id=${encodeURIComponent(prevW.id)}&v20260913">← ${escapeHtml(prevW.title[lang])}</a>
-          <a href="works.html?v20260913">${escapeHtml(D['work.nav.back'])}</a>
-          <a href="work-detail.html?id=${encodeURIComponent(nextW.id)}&v20260913">${escapeHtml(nextW.title[lang])} →</a>
+          <a href="work-detail.html?id=${encodeURIComponent(prevW.id)}&v20260914">← ${escapeHtml(prevW.title[lang])}</a>
+          <a href="works.html?v20260914">${escapeHtml(D['work.nav.back'])}</a>
+          <a href="work-detail.html?id=${encodeURIComponent(nextW.id)}&v20260914">${escapeHtml(nextW.title[lang])} →</a>
         </nav>
       </div>
     `;

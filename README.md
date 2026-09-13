@@ -165,6 +165,37 @@ python3 _tools/gen_covers.py
 贴纸按 LANCZOS 预放大到 960px 再交给浏览器等比缩，**避免浏览器放大发虚**；
 二维码用 `NEAREST` 整数倍放大，保证可扫。
 
+### 外部设计稿素材导入（参考 `pingyuan-calendar`）
+
+外部交付的印刷稿常常是 **CMYK JPEG**（带 `Generic CMYK Profile`）。浏览器按 sRGB 直读 CMYK 数据会
+**明显偏暗偏浊**，所以入库前必须做真正的色彩转换：
+
+```python
+from PIL import Image, ImageCms
+import io
+src = ImageCms.ImageCmsProfile(io.BytesIO(im.info['icc_profile']))   # 源：CMYK
+dst = ImageCms.createProfile('sRGB')
+tr  = ImageCms.buildTransform(src, dst, 'CMYK', 'RGB',
+                              renderingIntent=ImageCms.Intent.PERCEPTUAL)
+out = ImageCms.applyTransform(im, tr)      # → 正确的 sRGB
+```
+
+⚠️ 直接 `im.convert('RGB')` 只是丢通道、不做色彩管理，同样偏色。
+
+入库流程：
+
+```bash
+# 1) 转 sRGB + 压到 1600 宽 / JPEG q82 → assets/works/<id>/01..NN.jpg（按阅读顺序编号）
+# 2) 封面源放 work-pages/<id>/shots/closed.jpg（kind=mockup 用）
+# 3) gen_covers.py 的 WORKS 末尾追加一行 + 模板分母 +1，再全量重生成
+python3 _tools/gen_covers.py
+# 4) 写 content/works.json（category / sortOrder / 三语 title·type·scope·blurb）
+# 5) POST /api/sync 重建 data.js
+```
+
+案例总数变化时，要同步三处否则 `verify.py` 会报漂移：
+`i18n.js` 的 `works.lead` 与 `meta.desc.works`（三语）、**以及 `works.html` 里对应的静态兜底**。
+
 ---
 
 ## 六、修改三语文案
