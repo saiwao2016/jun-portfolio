@@ -222,7 +222,7 @@ try:
     code, site = req("GET", "/api/site", token=TOKEN)
     old_sub = site["copy"].get("home.subtitle", {}).get("zh", "")
     site["copy"]["home.subtitle"]["zh"] = "【E2E】后台主页文案覆盖测试"
-    site["social"][0]["url"] = "https://e2e.example.com/behance"
+    site["social"][1]["url"] = "https://e2e.example.com/xhs"
     code, r = req("PUT", "/api/site", site, token=TOKEN)
     check(code == 200, f"保存站点设置失败：{r}")
     site_js = (ROOT / "assets/js/site-data.js").read_text(encoding="utf-8")
@@ -302,9 +302,9 @@ try:
         pg.wait_for_timeout(800)
         sub = pg.evaluate("()=>document.querySelector('[data-i18n=\"home.subtitle\"]')?.textContent||''")
         check("【E2E】" in sub, f"首页副标题应显示后台覆盖文案，实际「{sub[:40]}」")
-        href = pg.evaluate("()=>document.querySelector('[data-social=\"behance\"]')?.getAttribute('href')")
-        check(href == "https://e2e.example.com/behance", f"社交链接未注入，实际 {href}")
-        print(f"  · 首页覆盖通过 · 副标题「{sub[:22]}…」· behance={href}")
+        href = pg.evaluate("()=>document.querySelector('[data-social=\"xhs\"]')?.getAttribute('href')")
+        check(href == "https://e2e.example.com/xhs", f"社交链接未注入，实际 {href}")
+        print(f"  · 首页覆盖通过 · 副标题「{sub[:22]}…」· xhs={href}")
 
         check(not errs, f"浏览器 JS 错误：{errs[:2]}")
         browser.close()

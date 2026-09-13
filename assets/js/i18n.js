@@ -236,7 +236,11 @@ window.I18N = {
     // —— 页脚 ——
     'footer.copy':         '© 2026 周骏 JUN · 视觉设计师',
     'footer.note':         '品牌系统 · 信息设计 · 原创 IP · 马德里',
-    'footer.link.behance':'Behance',
+    'footer.link.wechat':'微信',
+    'contact.wechat.l':'微信',
+    'contact.wechat.v':'点击查看二维码 · 扫码加好友',
+    'qr.hint':'手机长按二维码识别 · 扫码加微信好友',
+    'qr.open':'在浏览器中打开图片',
     'footer.link.xhs':    '小红书',
     'footer.link.email':  '邮箱',
 
@@ -483,7 +487,11 @@ window.I18N = {
 
     'footer.copy':         '© 2026 Jun Zhou (JUN) · Diseñador visual',
     'footer.note':         'Marca · Información · IP original · Madrid',
-    'footer.link.behance':'Behance',
+    'footer.link.wechat':'WeChat',
+    'contact.wechat.l':'WeChat',
+    'contact.wechat.v':'Ver el código QR · escanéalo para añadirme',
+    'qr.hint':'Mantén pulsado el código QR para añadirme en WeChat',
+    'qr.open':'Abrir la imagen en el navegador',
     'footer.link.xhs':    'Xiaohongshu',
     'footer.link.email':  'Correo',
 
@@ -728,7 +736,11 @@ window.I18N = {
 
     'footer.copy':         '© 2026 Jun Zhou (JUN) · Visual designer',
     'footer.note':         'Brand · Information · Original IP · Madrid',
-    'footer.link.behance':'Behance',
+    'footer.link.wechat':'WeChat',
+    'contact.wechat.l':'WeChat',
+    'contact.wechat.v':'View QR code · scan to add me',
+    'qr.hint':'Long-press the QR code to add me on WeChat',
+    'qr.open':'Open image in browser',
     'footer.link.xhs':    'Xiaohongshu',
     'footer.link.email':  'Email',
 

@@ -315,6 +315,22 @@ content/site.json  ──┘                    assets/js/site-data.js （主页
 - 上传的素材落在 `assets/works/<作品id>/`，站点级素材落在 `assets/uploads/`、`assets/site/`。
 - 作品改名会自动迁移素材目录，并改写所有指向旧目录的媒体路径。
 
+### 社交入口的两种点击行为
+
+站点设置 → 社交入口里，每个入口可选**点击行为**：
+
+| 类型 | 表现 | 字段 |
+|---|---|---|
+| `link`（跳转 URL） | 新窗口打开该 URL，支持 `mailto:` | 链接 URL |
+| `qr`（展示二维码图片） | 点开全屏弹层展示二维码，手机可**长按识别**扫码加好友；`Esc` / 点遮罩关闭 | 二维码图片（可上传） |
+
+二维码图片存在 `assets/site/`，由后台上传（`data-act="up-social-qr"`）。
+站点侧的弹层在 `main.js` 的 `openQr()`，样式在 `main.css` 的 `.qr-overlay`；
+弹层里的图片**不设 `user-select:none`**，否则 iOS / 微信的长按识别会被屏蔽。
+
+主页导航、页脚与联系方式页的入口都靠 `data-social="<入口 id>"` 关联，
+当前 id 为 `wechat`（二维码）/ `xhs`（链接）/ `email`（mailto）。
+
 ### 数据源与兜底（第 9 条）
 
 站点加载顺序是 **远端数据源（Sanity / 自建 API）→ 失败或未配置 → 本地 `data.js`**。

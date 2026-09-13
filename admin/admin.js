@@ -61,7 +61,7 @@
     'home.social.title': '标题',
     'footer.copy': '版权行',
     'footer.note': '版权行 · 补充',
-    'footer.link.behance': '链接 · Behance',
+    'footer.link.wechat': '链接 · 微信',
     'footer.link.xhs': '链接 · 小红书',
     'footer.link.email': '链接 · 邮箱',
   };
@@ -605,18 +605,43 @@
       <div class="section">
         <h4 class="section__title">社交入口（主页 + 页脚）</h4>
         <div id="socialList">
-          ${(s.social || []).map((item, i) => `
+          ${(s.social || []).map((item, i) => {
+            const asQr = item.kind === 'qr';
+            return `
             <div class="rowcard" data-si="${i}">
               <div class="rowcard__head">
                 <span class="badge">${esc(item.id)}</span>
-                <span class="field__hint">${esc(item.i18nKey || '自定义')}</span>
+                <span class="field__hint">${asQr ? '二维码图片' : esc(item.i18nKey || '自定义')}</span>
                 <span class="rowcard__spacer"></span>
                 <button class="btn btn--sm btn--danger" data-act="del-social" data-si="${i}">删除</button>
               </div>
-              <div class="field" style="margin-bottom:8px">
-                <label class="field__label">链接 URL</label>
-                <input class="input input--mono" data-social-url="${i}" value="${esc(item.url)}" placeholder="https://... 或 mailto:...">
+              <div class="grid2">
+                <div class="field" style="margin-bottom:8px">
+                  <label class="field__label">点击行为</label>
+                  <select class="input" data-social-kind="${i}">
+                    <option value="link"${asQr ? '' : ' selected'}>跳转 URL（新窗口打开）</option>
+                    <option value="qr"${asQr ? ' selected' : ''}>展示二维码图片（弹层 · 可长按识别）</option>
+                  </select>
+                </div>
+                <div class="field" style="margin-bottom:8px">
+                  <label class="field__label">链接 URL（二维码类型可留空）</label>
+                  <input class="input input--mono" data-social-url="${i}" value="${esc(item.url)}" placeholder="https://... 或 mailto:...">
+                </div>
               </div>
+              ${asQr ? `
+              <div class="field" style="margin-bottom:8px">
+                <label class="field__label">二维码图片</label>
+                <div class="qrpick">
+                  <div class="qrpick__preview">${item.qr
+                    ? `<img src="/${esc(item.qr)}?t=${Date.now()}" alt="">`
+                    : '<span class="field__hint">未设置</span>'}</div>
+                  <div class="qrpick__ops">
+                    <button class="btn btn--sm" data-act="up-social-qr" data-si="${i}">上传二维码</button>
+                    ${item.qr ? `<button class="btn btn--sm btn--danger" data-act="clear-social-qr" data-si="${i}">清除</button>` : ''}
+                    <span class="field__hint">${esc(item.qr || '建议正方形 PNG / JPG，边长 ≥ 400px')}</span>
+                  </div>
+                </div>
+              </div>` : ''}
               <div class="grid3">
                 ${LANGS.map(([l, ln]) => `
                   <div class="field">
@@ -624,7 +649,8 @@
                     <input class="input" data-social-label="${i}" data-lang="${l}" value="${esc((item.label || {})[l] || '')}">
                   </div>`).join('')}
               </div>
-            </div>`).join('')}
+            </div>`;
+          }).join('')}
         </div>
         <button class="btn btn--sm" data-act="add-social">+ 新增社交入口</button>
       </div>
@@ -810,6 +836,7 @@
     }
     // 站点设置
     if (t.dataset.copy) { setCopy(t.dataset.copy, t.dataset.lang, t.value); return; }
+    if (t.dataset.socialKind !== undefined) { S.site.social[Number(t.dataset.socialKind)].kind = t.value; renderPane(); return; }
     if (t.dataset.socialUrl !== undefined) { S.site.social[Number(t.dataset.socialUrl)].url = t.value; return; }
     if (t.dataset.socialLabel !== undefined) { S.site.social[Number(t.dataset.socialLabel)].label[t.dataset.lang] = t.value; return; }
     if (t.dataset.source) { setSource(t.dataset.source, t.value); return; }
@@ -962,6 +989,22 @@
         case 'clear-bgm': w.bgm = ''; S.dirty = true; renderPane(); return;
 
         /* 站点设置 */
+        case 'up-social-qr': {
+          const si = Number(btn.dataset.si);
+          const [f] = await pickFiles('image/*');
+          if (!f) return;
+          btn.disabled = true; btn.textContent = '上传中…';
+          const up = await upload(f, 'site');
+          S.site.social[si].qr = up.path;
+          renderPane();
+          toast('二维码已上传，记得保存站点设置');
+          return;
+        }
+        case 'clear-social-qr': {
+          S.site.social[Number(btn.dataset.si)].qr = '';
+          renderPane();
+          return;
+        }
         case 'save-site': {
           const r = await api('PUT', '/api/site', S.site);
           S.site = r.site;
@@ -971,7 +1014,7 @@
         }
         case 'add-social': {
           S.site.social = S.site.social || [];
-          S.site.social.push({ id: 'custom' + (S.site.social.length + 1), url: '', label: { zh: '', es: '', en: '' }, i18nKey: '' });
+          S.site.social.push({ id: 'custom' + (S.site.social.length + 1), kind: 'link', url: '', qr: '', label: { zh: '', es: '', en: '' }, i18nKey: '' });
           renderPane();
           return;
         }

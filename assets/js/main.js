@@ -33,7 +33,69 @@
     });
   }
 
-  /** 社交入口：把后台配置的链接与文案写到带 data-social 的锚点上 */
+  /* ---------- 二维码弹层：社交入口可选「链接」或「二维码图片」 ---------- */
+
+  let qrEl = null;
+
+  function ensureQr() {
+    if (qrEl) return qrEl;
+    const el = document.createElement('div');
+    el.className = 'qr-overlay';
+    el.id = 'qrOverlay';
+    el.setAttribute('role', 'dialog');
+    el.setAttribute('aria-modal', 'true');
+    el.innerHTML =
+      '<div class="qr-overlay__box">' +
+        '<button class="qr-overlay__close" type="button" aria-label="关闭">&times;</button>' +
+        '<img class="qr-overlay__img" id="qrImg" alt="QR code" decoding="async">' +
+        '<p class="qr-overlay__label" id="qrLabel"></p>' +
+        '<p class="qr-overlay__hint" id="qrHint"></p>' +
+        '<a class="qr-overlay__open" id="qrOpen" href="#" target="_blank" rel="noopener"></a>' +
+      '</div>';
+    document.body.appendChild(el);
+    el.addEventListener('click', (e) => {
+      if (e.target === el || e.target.closest('.qr-overlay__close')) closeQr();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && el.classList.contains('is-on')) closeQr();
+    });
+    qrEl = el;
+    return el;
+  }
+
+  function t18n(key, fallback) {
+    const dict = window.I18N && window.I18N[getLang()];
+    return (dict && dict[key]) || fallback || '';
+  }
+
+  function openQr(item) {
+    const el = ensureQr();
+    const lang = getLang();
+    el.querySelector('#qrImg').src = vUrl(item.qr);
+    el.querySelector('#qrLabel').textContent = (item.label && item.label[lang]) || '';
+    el.querySelector('#qrHint').textContent = t18n('qr.hint', '长按二维码识别，扫码添加好友');
+    const openA = el.querySelector('#qrOpen');
+    if (item.url && /^https?:/i.test(item.url)) {
+      openA.href = item.url;
+      openA.textContent = t18n('qr.open', '在浏览器中打开图片');
+      openA.style.display = '';
+    } else {
+      openA.removeAttribute('href');
+      openA.style.display = 'none';
+    }
+    el.classList.add('is-on');
+    document.body.classList.add('is-qr-open');
+    const btn = el.querySelector('.qr-overlay__close');
+    if (btn) btn.focus();
+  }
+
+  function closeQr() {
+    if (!qrEl) return;
+    qrEl.classList.remove('is-on');
+    document.body.classList.remove('is-qr-open');
+  }
+
+  /** 社交入口：把后台配置的链接 / 二维码与文案写到带 data-social 的锚点上 */
   function applySocial() {
     const social = Array.isArray(SITE.social) ? SITE.social : [];
     if (!social.length) return;
@@ -45,7 +107,22 @@
       document.querySelectorAll('[data-social]').forEach((a) => {
         const it = byId[a.getAttribute('data-social')];
         if (!it) return;
-        if (it.url) a.setAttribute('href', it.url);
+        const asQr = it.kind === 'qr' && !!it.qr;
+        if (asQr) {
+          a.setAttribute('href', '#');
+          a.setAttribute('role', 'button');
+          a.setAttribute('aria-haspopup', 'dialog');
+          a.setAttribute('data-qr', it.qr);
+          a.classList.add('has-qr');
+          const label = (it.label && it.label[lang]) || '';
+          if (label) a.setAttribute('aria-label', label + ' · QR');
+          if (!a.dataset.qrBound) {
+            a.dataset.qrBound = '1';
+            a.addEventListener('click', (ev) => { ev.preventDefault(); openQr(it); });
+          }
+        } else if (it.url) {
+          a.setAttribute('href', it.url);
+        }
         // 带 data-i18n 的锚点文字由 i18n（已被 copy 覆盖）负责，其余在此写入
         if (!a.hasAttribute('data-i18n')) {
           const label = it.label && it.label[lang];

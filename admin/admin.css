@@ -285,3 +285,12 @@ html, body {
   .side { width: 240px; flex-basis: 240px; }
   .grid2, .grid3, .grid--side { grid-template-columns: 1fr; }
 }
+
+.qrpick { display: flex; gap: 12px; align-items: flex-start; }
+.qrpick__preview {
+  width: 96px; height: 96px; flex: 0 0 96px;
+  border: 1px solid var(--line); border-radius: var(--radius-sm, 2px);
+  background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.qrpick__preview img { width: 100%; height: 100%; object-fit: contain; }
+.qrpick__ops { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding-top: 2px; }

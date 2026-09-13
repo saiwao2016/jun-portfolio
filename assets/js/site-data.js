@@ -159,11 +159,6 @@ window.SITE_DATA = {
         "es": "Marca · Información · IP original · Madrid",
         "en": "Brand · Information · Original IP · Madrid"
       },
-      "footer.link.behance": {
-        "zh": "微信",
-        "es": "Wechat",
-        "en": "Wechat"
-      },
       "footer.link.xhs": {
         "zh": "小红书",
         "es": "Xiaohongshu",
@@ -173,18 +168,25 @@ window.SITE_DATA = {
         "zh": "邮箱",
         "es": "Correo",
         "en": "Email"
+      },
+      "footer.link.wechat": {
+        "zh": "微信",
+        "es": "Wechat",
+        "en": "Wechat"
       }
     },
     "social": [
       {
-        "id": "behance",
-        "url": "saiwao",
+        "id": "wechat",
+        "url": "",
         "label": {
           "zh": "微信",
-          "es": "Wechat",
-          "en": "Wechat"
+          "es": "WeChat",
+          "en": "WeChat"
         },
-        "i18nKey": ""
+        "i18nKey": "footer.link.wechat",
+        "kind": "qr",
+        "qr": "assets/site/wechat-qr.png"
       },
       {
         "id": "xhs",

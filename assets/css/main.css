@@ -1154,3 +1154,73 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 640px) {
   .bgm-btn { left: 12px; bottom: 12px; height: 32px; padding: 0 12px; }
 }
+
+
+/* ---------- 二维码弹层（社交入口 kind=qr） ---------- */
+a.has-qr { border-bottom: 1px dotted currentColor; cursor: pointer; }
+
+.qr-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(17, 17, 17, 0.72);
+}
+.qr-overlay.is-on { display: flex; }
+.qr-overlay__box {
+  position: relative;
+  width: 100%;
+  max-width: min(92vw, 400px);
+  padding: 30px 28px 24px;
+  background-color: var(--bg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+.qr-overlay__close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  padding: 4px 6px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+.qr-overlay__img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 4px auto 0;
+  border-radius: var(--radius);
+  /* 保证手机长按能呼出「识别图中二维码」 */
+  -webkit-user-select: auto;
+  user-select: auto;
+  -webkit-touch-callout: default;
+  touch-action: manipulation;
+}
+.qr-overlay__label {
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.qr-overlay__hint {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.qr-overlay__open {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: underline;
+}
+body.is-qr-open { overflow: hidden; }
