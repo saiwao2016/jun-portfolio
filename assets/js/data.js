@@ -58,6 +58,40 @@
       "single": true
     },
     {
+      "id": "mind-platform",
+      "category": "digital",
+      "year": "2016 — 至今",
+      "cover": "assets/works/mind-platform/cover.png",
+      "gallery": [
+        "assets/works/mind-platform/01.png",
+        "assets/works/mind-platform/02.png",
+        "assets/works/mind-platform/03.png",
+        "assets/works/mind-platform/04.png",
+        "assets/works/mind-platform/05.png",
+        "assets/works/mind-platform/06.png"
+      ],
+      "title": {
+        "zh": "心智 · 测评机构中台管理系统",
+        "es": "Xinzhi · Panel de gestión para centros de evaluación",
+        "en": "Xinzhi · Management console for assessment centres"
+      },
+      "type": {
+        "zh": "数字产品 / B 端中台 · 桌面端",
+        "es": "Producto digital / Panel B2B · Escritorio",
+        "en": "Digital product / B2B console · Desktop"
+      },
+      "scope": {
+        "zh": "信息架构 · 工作台 · 档案明细 · 测评流程 · 数据统计 · 组件规范（含 6 量表标识色）",
+        "es": "Arquitectura de información · Área de trabajo · Detalle de expedientes · Flujo de evaluación · Estadísticas · Componentes (6 colores de escala)",
+        "en": "Information architecture · Workspace · Record details · Assessment flow · Statistics · Component system (6 scale colours)"
+      },
+      "blurb": {
+        "zh": "面向测评机构的 B 端中台：从登录、工作台、儿童档案明细到施测流程与数据统计的完整后台，六套量表各配专属标识色，组件规范覆盖 40 余件控件。",
+        "es": "Panel B2B para centros de evaluación: desde el acceso y el área de trabajo hasta los expedientes infantiles, el flujo de aplicación y las estadísticas; seis escalas con color propio y una librería de más de 40 componentes.",
+        "en": "A B2B console for assessment centres: from sign-in and workspace to child records, assessment flow and statistics — six scales each with an identity colour and a library of 40+ components."
+      }
+    },
+    {
       "id": "asq-system",
       "category": "digital",
       "year": "2016 — 至今",
@@ -108,40 +142,6 @@
         "zh": "面向 0–6 岁儿童的发育筛查评估平台：机构端在控制台创建报告、发放量表、查询与归档结果，家长在手机端完成 ASQ-3 / ASQ:SE 问卷。桌面端 22 屏 + 移动端 6 屏，共用一套组件规范。",
         "es": "Plataforma de cribado del desarrollo para niños de 0 a 6 años: el centro crea informes, asigna escalas, consulta y archiva resultados desde la consola, y las familias responden los cuestionarios ASQ-3 / ASQ:SE en el móvil. 22 pantallas de escritorio y 6 móviles sobre un mismo sistema de componentes.",
         "en": "A developmental screening platform for children aged 0–6: institutions create reports, issue scales, search and archive results from the console, while parents complete ASQ-3 / ASQ:SE questionnaires on mobile. 22 desktop screens and 6 mobile screens sharing one component system."
-      }
-    },
-    {
-      "id": "mind-platform",
-      "category": "digital",
-      "year": "2016 — 至今",
-      "cover": "assets/works/mind-platform/cover.png",
-      "gallery": [
-        "assets/works/mind-platform/01.png",
-        "assets/works/mind-platform/02.png",
-        "assets/works/mind-platform/03.png",
-        "assets/works/mind-platform/04.png",
-        "assets/works/mind-platform/05.png",
-        "assets/works/mind-platform/06.png"
-      ],
-      "title": {
-        "zh": "心智 · 测评机构中台管理系统",
-        "es": "Xinzhi · Panel de gestión para centros de evaluación",
-        "en": "Xinzhi · Management console for assessment centres"
-      },
-      "type": {
-        "zh": "数字产品 / B 端中台 · 桌面端",
-        "es": "Producto digital / Panel B2B · Escritorio",
-        "en": "Digital product / B2B console · Desktop"
-      },
-      "scope": {
-        "zh": "信息架构 · 工作台 · 档案明细 · 测评流程 · 数据统计 · 组件规范（含 6 量表标识色）",
-        "es": "Arquitectura de información · Área de trabajo · Detalle de expedientes · Flujo de evaluación · Estadísticas · Componentes (6 colores de escala)",
-        "en": "Information architecture · Workspace · Record details · Assessment flow · Statistics · Component system (6 scale colours)"
-      },
-      "blurb": {
-        "zh": "面向测评机构的 B 端中台：从登录、工作台、儿童档案明细到施测流程与数据统计的完整后台，六套量表各配专属标识色，组件规范覆盖 40 余件控件。",
-        "es": "Panel B2B para centros de evaluación: desde el acceso y el área de trabajo hasta los expedientes infantiles, el flujo de aplicación y las estadísticas; seis escalas con color propio y una librería de más de 40 componentes.",
-        "en": "A B2B console for assessment centres: from sign-in and workspace to child records, assessment flow and statistics — six scales each with an identity colour and a library of 40+ components."
       }
     },
     {

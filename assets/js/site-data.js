@@ -25,12 +25,12 @@ window.SITE_DATA = {
         "en": "information ·"
       },
       "home.title.line3": {
-        "zh": "视觉设计",
+        "zh": "全域设计",
         "es": "diseño visual",
         "en": "visual design"
       },
       "home.subtitle": {
-        "zh": "十余年视觉设计经验，覆盖品牌识别系统、心理测量报告与信息设计、原创 IP 形象开发、画册出版、包装与空间视觉 —— 从规范搭建到成品交付，独立完成闭环。",
+        "zh": "十余年全域设计经验，覆盖品牌识别系统、心理测量报告与信息设计、原创 IP 形象开发、画册出版、包装与空间视觉 —— 从规范搭建到成品交付，独立完成闭环。",
         "es": "Más de diez años de diseño visual abarcando sistemas de identidad de marca, informes de evaluación psicológica y diseño de información, desarrollo de IP original, publicaciones editoriales, packaging y gráfica espacial.",
         "en": "Over ten years of visual design across brand identity systems, psychological assessment reports and information design, original IP character development, editorial publishing, packaging and spatial graphics."
       },
@@ -150,7 +150,7 @@ window.SITE_DATA = {
         "en": "Stay in touch"
       },
       "footer.copy": {
-        "zh": "© 2026 JUN · 视觉设计师",
+        "zh": "© 2026 JUN · 全域设计师",
         "es": "© 2026 JUN · Diseñador visual",
         "en": "© 2026 JUN · Visual designer"
       },
