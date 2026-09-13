@@ -1,0 +1,275 @@
+/* =========================================================
+   JUN Portfolio — Résumé content（自动生成）
+   数据源：content/resume.json · 由后台 /admin 保存时重写，请勿手改本文件。
+   window.RESUME 供 resume.html 渲染网页版简历；
+   若本文件缺失，简历页回落到 HTML 里的静态文案。
+   ========================================================= */
+
+window.RESUME = {
+    "head": {
+      "eyebrow": {
+        "zh": "简历",
+        "es": "Currículum",
+        "en": "Résumé"
+      },
+      "title": {
+        "zh": "网页版简历",
+        "es": "CV en línea",
+        "en": "Online résumé"
+      },
+      "lead": {
+        "zh": "完整简历展示于此，并提供中文 / Español / English 三版 PDF 下载。",
+        "es": "Currículum completo, con descarga en PDF en chino, español e inglés.",
+        "en": "The full résumé, with PDF downloads in Chinese, Spanish and English."
+      }
+    },
+    "pdfs": [
+      {
+        "id": "zh",
+        "file": "assets/docs/JUN-CV-ZH.pdf",
+        "enabled": true,
+        "label": {
+          "zh": "中文 PDF",
+          "es": "PDF en chino",
+          "en": "Chinese PDF"
+        }
+      },
+      {
+        "id": "es",
+        "file": "assets/docs/JUN-CV-ES.pdf",
+        "enabled": true,
+        "label": {
+          "zh": "Español PDF",
+          "es": "PDF en español",
+          "en": "Spanish PDF"
+        }
+      },
+      {
+        "id": "en",
+        "file": "assets/docs/JUN-CV-EN.pdf",
+        "enabled": true,
+        "label": {
+          "zh": "English PDF",
+          "es": "PDF en inglés",
+          "en": "English PDF"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "zh": "个人简介",
+        "es": "Perfil",
+        "en": "Summary"
+      },
+      "body": {
+        "zh": "视觉设计师，十余年品牌与信息设计经验。擅长把复杂内容整理成可复用的视觉系统：206 份心理量表报告共用一套模板体系，44 页品牌识别手册从标志制图规范到办公物料完整落地。具备品牌、出版、界面、IP、包装、空间六类交付能力，熟悉印刷工艺与制作流程。现居西班牙马德里。",
+        "es": "Diseñador visual con más de diez años de experiencia en marca y diseño de información. Especializado en convertir contenido complejo en sistemas visuales reutilizables: 206 informes de escalas psicológicas comparten una misma plantilla y un manual de identidad de 44 páginas cubre del logotipo a la papelería. Seis áreas de entrega: marca, editorial, interfaz, IP, packaging y espacio, con dominio de artes gráficas. Residente en Madrid.",
+        "en": "Visual designer with over ten years in brand and information design. I turn complex content into reusable visual systems: 206 psychological assessment reports share a single template, and a 44-page identity manual runs from logo construction to stationery. Six delivery areas — brand, editorial, interface, IP, packaging and space — with strong print-production fluency. Based in Madrid."
+      }
+    },
+    "exp": {
+      "title": {
+        "zh": "工作经历",
+        "es": "Experiencia",
+        "en": "Experience"
+      },
+      "items": [
+        {
+          "title": {
+            "zh": "视觉设计师",
+            "es": "Diseñador visual",
+            "en": "Visual designer"
+          },
+          "org": {
+            "zh": "睿智云（广东省睿智云智慧科技）· 心理与儿童健康测评",
+            "es": "Ruizhi Cloud Intelligent Technology (Guangdong) · evaluación psicológica e infantil",
+            "en": "Ruizhi Cloud Intelligent Technology (Guangdong) · psychological & child health assessment"
+          },
+          "date": {
+            "zh": "2019 — 至今",
+            "es": "2019 — Actualidad",
+            "en": "2019 — Present"
+          },
+          "bullets": [
+            {
+              "zh": "建立量表报告版式体系，206 份报告共用一套模板，覆盖基本信息、结果图表、解读与建议全流程",
+              "es": "Creación del sistema de maquetación de informes: 206 informes con una sola plantilla, de los datos básicos a los gráficos, la interpretación y las recomendaciones",
+              "en": "Built the report layout system: 206 reports on a single template, covering basic data, result charts, interpretation and recommendations"
+            },
+            {
+              "zh": "主导品牌识别系统（VIS 手册 44 页）：标志标准制图、色彩与字体规范、办公物料与场景应用",
+              "es": "Dirección del sistema de identidad de marca (manual VIS de 44 páginas): construcción del logotipo, color, tipografía, papelería y aplicaciones",
+              "en": "Led the brand identity system (44-page VIS manual): logo construction, colour, typography, stationery and applications"
+            },
+            {
+              "zh": "完成 34 页产品手册、企业画册、解决方案演示文档的编排与印刷交付",
+              "es": "Maquetación y producción impresa de un manual de producto de 34 páginas, catálogo corporativo y documentos de solución",
+              "en": "Layout and print delivery of a 34-page product manual, corporate brochure and solution decks"
+            },
+            {
+              "zh": "设计证书体系（ASQ / CDI / CHTIC / M-CHAT / Timp）与周边物料",
+              "es": "Diseño del sistema de certificados (ASQ / CDI / CHTIC / M-CHAT / Timp) y material promocional",
+              "en": "Designed the certificate system (ASQ / CDI / CHTIC / M-CHAT / Timp) and merchandise"
+            }
+          ]
+        },
+        {
+          "title": {
+            "zh": "视觉设计师",
+            "es": "Diseñador visual",
+            "en": "Visual designer"
+          },
+          "org": {
+            "zh": "深圳市心智心理测量技术研究所有限公司 · 珠海市海扬教育有限公司",
+            "es": "Instituto de Medición Psicológica de Shenzhen · Haiyang Education (Zhuhai)",
+            "en": "Shenzhen Institute of Psychological Measurement Technology · Zhuhai Haiyang Education"
+          },
+          "date": {
+            "zh": "2016.06 — 至今",
+            "es": "06.2016 — Actualidad",
+            "en": "06.2016 — Present"
+          },
+          "bullets": [
+            {
+              "zh": "完成新公司整体 VIS 设计",
+              "es": "VIS corporativo completo para la nueva empresa",
+              "en": "Complete corporate VIS for the new company"
+            },
+            {
+              "zh": "负责 WEB 页面视觉设计、UI 设计与交互流程梳理",
+              "es": "Diseño visual web, diseño de interfaz y definición de flujos de interacción",
+              "en": "Web visual design, UI design and interaction flow definition"
+            },
+            {
+              "zh": "负责 ASQ 儿童发育筛查系统与 M-CHAT 测评系统的结构梳理与原型绘制",
+              "es": "Estructuración y prototipado de los sistemas de evaluación ASQ y M-CHAT",
+              "en": "Structuring and prototyping of the ASQ and M-CHAT assessment systems"
+            },
+            {
+              "zh": "设计 M-CHAT 系统测量动画，绘制分镜头并制作上线",
+              "es": "Diseño de animaciones del sistema M-CHAT, storyboards y puesta en producción",
+              "en": "Designed M-CHAT measurement animations, storyboards and production rollout"
+            }
+          ]
+        },
+        {
+          "title": {
+            "zh": "平面设计师",
+            "es": "Diseñador gráfico",
+            "en": "Graphic designer"
+          },
+          "org": {
+            "zh": "新乡市志愿者联合会 · 红领巾志愿服务中心",
+            "es": "Federación de Voluntarios de Xinxiang · Centro Honglingjin",
+            "en": "Xinxiang Volunteer Federation · Honglingjin Service Centre"
+          },
+          "date": {
+            "zh": "2013.09 — 2016.06",
+            "es": "09.2013 — 06.2016",
+            "en": "09.2013 — 06.2016"
+          },
+          "bullets": [
+            {
+              "zh": "负责公益活动全套宣传物料：海报、展板、易拉宝、宣传页、募捐箱",
+              "es": "Materiales completos de campañas: carteles, paneles, roll-ups, folletos y huchas",
+              "en": "Full campaign collateral: posters, panels, roll-ups, leaflets, donation boxes"
+            },
+            {
+              "zh": "运营维护团队微博及微信平台，制作配套视觉物料",
+              "es": "Gestión de las cuentas de Weibo y WeChat y de su material gráfico",
+              "en": "Ran Weibo and WeChat channels and their visual material"
+            },
+            {
+              "zh": "设计志愿者项目吉祥物与微信表情包，建立卡通 IP「石榴妹」",
+              "es": "Diseño de la mascota del programa de voluntariado y stickers de WeChat; creación de la IP «Shiliu Mei»",
+              "en": "Designed the volunteer programme mascot and WeChat stickers; created the IP “Shiliu Mei”"
+            },
+            {
+              "zh": "核心项目获 2015 年中国青年志愿服务项目大赛奖项",
+              "es": "El proyecto principal obtuvo el premio del Concurso Nacional de Proyectos de Voluntariado Juvenil 2015",
+              "en": "Core project won the 2015 China Youth Volunteer Service Project Competition"
+            }
+          ]
+        }
+      ]
+    },
+    "edu": {
+      "title": {
+        "zh": "教育背景",
+        "es": "Formación",
+        "en": "Education"
+      },
+      "items": [
+        {
+          "title": {
+            "zh": "环境艺术设计",
+            "es": "Diseño de Arte Ambiental",
+            "en": "Environmental Art Design"
+          },
+          "org": {
+            "zh": "天津滨海职业技术学院",
+            "es": "Tianjin Binhai Vocational Technical College",
+            "en": "Tianjin Binhai Vocational Technical College"
+          },
+          "date": {
+            "zh": "",
+            "es": "",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "skills": {
+      "title": {
+        "zh": "核心技能",
+        "es": "Competencias clave",
+        "en": "Core skills"
+      },
+      "items": [
+        {
+          "zh": "品牌 CIS / VIS 系统搭建与规范手册",
+          "es": "Sistemas CIS / VIS y manuales de marca",
+          "en": "CIS / VIS systems and brand manuals"
+        },
+        {
+          "zh": "量表报告 / 表单 / 信息可视化版式系统",
+          "es": "Informes de escalas, formularios y sistemas de maquetación",
+          "en": "Assessment reports, forms and layout systems"
+        },
+        {
+          "zh": "画册 / 手册 / 书籍装帧与印刷工艺",
+          "es": "Catálogos, manuales, encuadernación y artes gráficas",
+          "en": "Brochures, manuals, bookbinding and print production"
+        },
+        {
+          "zh": "原创 IP 形象 / 表情包 / 周边衍生",
+          "es": "Personajes IP, stickers y merchandising",
+          "en": "Original IP characters, stickers and merchandise"
+        },
+        {
+          "zh": "网页与移动端界面设计",
+          "es": "Interfaces web y móviles",
+          "en": "Web and mobile interface design"
+        },
+        {
+          "zh": "包装结构 / 展陈物料 / 空间图形",
+          "es": "Packaging, material expositivo y gráfica espacial",
+          "en": "Packaging, exhibition material and spatial graphics"
+        }
+      ]
+    },
+    "certs": {
+      "title": {
+        "zh": "资质认证",
+        "es": "Certificaciones",
+        "en": "Certification"
+      },
+      "items": [
+        {
+          "zh": "ACAA 中国认证设计师",
+          "es": "ACAA Certified Designer (China)",
+          "en": "ACAA Certified Designer (China)"
+        }
+      ]
+    }
+  };

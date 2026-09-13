@@ -225,6 +225,46 @@ with sync_playwright() as p:
     check(len(pdfs) == 3, f"简历页应有 3 个 PDF，实际 {len(pdfs)}: {pdfs}")
     print(f"  ✓ 简历页 PDF 下载：{pdfs}")
 
+    # 简历页：window.RESUME 数据驱动（内容可在后台编辑）
+    # 注意：上面「详情页语言切换」把语言留在了 es，这里必须先切回 zh 再断言
+    pg.click('.lang-switch__opt[data-lang="zh"]')
+    pg.wait_for_timeout(450)
+    rz = pg.evaluate(
+        "()=>window.RESUME?{exp:((window.RESUME.exp||{}).items||[]).length,"
+        "pdfs:(window.RESUME.pdfs||[]).length,"
+        "skills:((window.RESUME.skills||{}).items||[]).length}:null")
+    check(rz is not None, "resume-data.js 未加载（简历内容无从后台编辑）")
+    if rz:
+        check(rz["exp"] == 3 and rz["pdfs"] == 3 and rz["skills"] == 6,
+              f"简历数据形状异常：{rz}")
+    cards = pg.locator("#resumeBody .resume-card").count()
+    check(cards == 7, f"简历卡片应为 7（简介1+经历3+教育1+技能1+认证1），实际 {cards}")
+    hblocks = pg.locator("#resumeBody .h-block").count()
+    check(hblocks == 4, f"简历区块标题应为 4（经历/教育/技能/认证），实际 {hblocks}")
+    lis = pg.locator("#resumeBody .resume-card ul li").count()
+    check(lis == 19, f"简历列表条目应为 19（经历12+技能6+认证1），实际 {lis}")
+    leftover = pg.evaluate("()=>document.querySelectorAll('#resumeBody [data-i18n]').length")
+    check(leftover == 0, f"JS 接管后不应残留 data-i18n 节点，实际 {leftover}")
+    rp = pg.locator("#resumeBody .resume-body p").count()
+    check(rp >= 1, f"简介正文应有段落，实际 {rp}")
+    print(f"  ✓ 简历页数据驱动：卡片 {cards} · 区块 {hblocks} · 列表 {lis} · 简介 {rp} 段")
+
+    # 简历页随语言切换整体重绘
+    zh_first = pg.locator("#resumeBody .resume-card ul li").first.inner_text()
+    pg.click('.lang-switch__opt[data-lang="es"]')
+    pg.wait_for_timeout(500)
+    es_title = pg.locator("#resumeBody h1").first.inner_text()
+    es_first = pg.locator("#resumeBody .resume-card ul li").first.inner_text()
+    es_cards = pg.locator("#resumeBody .resume-card").count()
+    check("CV" in es_title or "curr" in es_title.lower(), f"西语简历主标题异常：「{es_title}」")
+    check(es_first != zh_first and len(es_first) > 2, f"西语简历未重绘：「{es_first[:30]}」")
+    check(es_cards == 7, f"切换语言后卡片数应仍为 7，实际 {es_cards}")
+    pg.click('.lang-switch__opt[data-lang="zh"]')
+    pg.wait_for_timeout(500)
+    zh_title = pg.locator("#resumeBody h1").first.inner_text()
+    check(zh_title == "网页版简历", f"切回中文标题异常：「{zh_title}」")
+    print(f"  ✓ 简历页语言切换重绘 → ES「{es_title}」/ ZH「{zh_title}」")
+
     # ---- 后台配套：站点设置注入 / 数据源兜底 / 背景音乐 ----
     pg.goto(f"{BASE}/index.html", wait_until="networkidle")
     sd = pg.evaluate(

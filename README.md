@@ -168,6 +168,17 @@ python3 _tools/gen_cv_pdf.py
 
 要改内容就编辑 `_tools/gen_cv_pdf.py` 里的 `build()` 函数。
 
+### 网页版简历内容（`content/resume.json`）
+
+简历页 `resume.html` 的**正文**（页面标题、个人简介、工作经历、教育背景、核心技能、
+资质认证、PDF 下载项）来自 `content/resume.json`，可在后台「个人简历」面板里改，
+保存后重写 `assets/js/resume-data.js`（`window.RESUME`）。
+
+- 三语各自独立；某个语种留空时**自动回落到中文**。
+- 个人简介正文支持**空行分段**（`\n\n`）；工作要点、技能、认证都是**每行一条**。
+- `resume.html` 里保留了一份静态兜底文案：`window.RESUME` 不存在时页面照常显示，
+  不会空白（`main.js` 的 `renderResume()` 检测不到数据就直接 return）。
+
 > **字体坑**：脚本用的是 `~/Library/Fonts/HarmonyOS_Sans_SC_*.ttf`。
 > 必须是 **TTF** —— 这台机器上渲染含中文的矢量 PDF 时，CFF/OTF 字体**会丢字形**。
 > 换字体前先确认是 TTF，生成后务必渲染出来看一眼。
@@ -193,7 +204,8 @@ python3 _tools/verify.py
 - 无横向溢出
 - 功能专项：首页精选 1 个、作品集 1 个、筛选各返回正确数量、图集 25 张、
   空提示默认隐藏（防 i18n 注入把 `display:none` 清掉）、
-  灯箱打开/翻页/关闭、详情页语言切换重绘、简历页 3 个 PDF
+  灯箱打开/翻页/关闭、详情页语言切换重绘、
+  简历页数据驱动（卡片 7 / 区块 4 / 列表 19 / 3 个 PDF / 无残留 data-i18n / 语言切换重绘）
 - 移动端 390px 无横向溢出
 
 截图输出到 `_tools/screens/`。
@@ -208,7 +220,7 @@ portfolio-site/
 ├── about.html / services.html / skills.html / contact.html / resume.html
 ├── server.js                 # 内容后台服务（静态托管 + /api，零依赖）
 ├── admin/                    # 后台界面（原生 JS）
-├── content/                  # ← 内容数据源（works.json / site.json / auth.json）
+├── content/                  # ← 内容数据源（works.json / site.json / resume.json / auth.json）
 ├── assets/
 │   ├── css/main.css          # 设计系统（:root 变量）
 │   ├── js/
@@ -221,7 +233,7 @@ portfolio-site/
 │   └── images/               # favicon / logo
 ├── _tools/
 │   ├── gen_cv_pdf.py         # 生成三语简历 PDF
-│   ├── build_content.js      # content/*.json → data.js / site-data.js
+│   ├── build_content.js      # content/*.json → data.js / site-data.js / resume-data.js
 │   ├── migrate_content.mjs   # 一次性迁移（从旧 data.js / i18n.js 提取）
 │   ├── verify.py             # 三语全站回归验证
 │   ├── verify_admin.py       # 后台端到端验证
@@ -301,18 +313,21 @@ ADMIN_PASSWORD=自定义密码 node server.js
 | 8 | 可选背景音乐 | 每个作品一个「背景音乐」，另有站点级音乐（站点设置） |
 | 9 | 远端数据源 + 本地兜底 | 站点设置 → 数据源与兜底 |
 | 10 | 主页文案与社交链接 | 站点设置 → 主页 / 页脚文案、社交入口 |
+| 11 | 网页版简历内容 | 左侧「个人简历 · 网页版内容」→ 标题 / 简介 / 经历 / 教育 / 技能 / 认证 / PDF |
 
 ### 数据流
 
 ```
-content/works.json ──┐
-                     ├─ 保存时自动重写 ─→ assets/js/data.js       （站点作品数据）
-content/site.json  ──┘                    assets/js/site-data.js （主页文案/社交/音乐/数据源）
+content/works.json  ──┐
+                      ├─ 保存时自动重写 ─→ assets/js/data.js        （站点作品数据）
+content/site.json   ──┤                    assets/js/site-data.js  （主页文案/社交/音乐/数据源）
+content/resume.json ──┘                    assets/js/resume-data.js（网页版简历内容）
 ```
 
-- 保存即生效，无需构建。页面里 `data.js?h=…`、`site-data.js?h=…` 的查询串按**内容哈希**刷新，
+- 保存即生效，无需构建。页面里 `data.js?h=…`、`site-data.js?h=…`、`resume-data.js?h=…` 的查询串按**内容哈希**刷新，
   用来绕过 CDN 的同名文件缓存；与 `bump_version.py` 的 `ASSET_V` 互不干扰。
-- 上传的素材落在 `assets/works/<作品id>/`，站点级素材落在 `assets/uploads/`、`assets/site/`。
+- 上传的素材落在 `assets/works/<作品id>/`，站点级素材落在 `assets/uploads/`、`assets/site/`，
+  简历 PDF 落在 `assets/docs/`。
 - 作品改名会自动迁移素材目录，并改写所有指向旧目录的媒体路径。
 
 ### 社交入口的两种点击行为
@@ -330,6 +345,22 @@ content/site.json  ──┘                    assets/js/site-data.js （主页
 
 主页导航、页脚与联系方式页的入口都靠 `data-social="<入口 id>"` 关联，
 当前 id 为 `wechat`（二维码）/ `xhs`（链接）/ `email`（mailto）。
+
+### 个人简历（第 11 条）
+
+后台左侧底部的**「个人简历 · 网页版内容」**面板，编辑的是 `content/resume.json`：
+
+| 区块 | 可编辑内容 |
+|---|---|
+| 页面标题 | 小标题 / 主标题 / 导语（三语） |
+| PDF 下载 | 每项的按钮文字（三语）+ 文件路径（可上传到 `assets/docs/`）+ 是否在页面上显示 |
+| 个人简介 | 标题 + 正文（**空行分段**） |
+| 工作经历 | 区块标题 + N 段经历（职位 / 公司 / 时间 + 要点每行一条），可增删与 ▲▼ 排序 |
+| 教育背景 | 区块标题 + N 条（学校 / 专业 / 时间） |
+| 核心技能 / 资质认证 | 区块标题 + 条目（每行一条） |
+
+保存走 `PUT /api/resume` → 写 `content/resume.json` → 重写 `assets/js/resume-data.js`
+并刷新哈希。文件上传复用 `POST /api/upload`，`x-target: docs` 落到 `assets/docs/`。
 
 ### 数据源与兜底（第 9 条）
 

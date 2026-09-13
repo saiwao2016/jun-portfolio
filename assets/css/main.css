@@ -1054,6 +1054,9 @@ h1, h2, h3, h4, h5, h6 {
 .resume-card__org  { color: var(--muted); font-size: var(--fs-sm); }
 .resume-card__date { color: var(--muted); font-size: var(--fs-xs); letter-spacing: 0.08em; font-family: var(--font-mono); }
 
+.resume-body { margin-top: var(--sp-5); font-size: 16px; line-height: 1.8; }
+.resume-body p + p { margin-top: 0.9em; }
+
 .resume-card ul { margin-top: var(--sp-3); padding-left: var(--sp-4); }
 .resume-card ul li { list-style: disc; color: var(--muted); font-size: var(--fs-sm); line-height: 1.7; margin-bottom: 4px; }
 

@@ -8,5 +8,6 @@ content/auth.json
 
 # 依赖与系统文件
 node_modules/
+__pycache__/
 .DS_Store
 Thumbs.db

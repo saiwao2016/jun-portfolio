@@ -5,6 +5,7 @@
 以真实服务方式启动 `node server.js`，覆盖：
   鉴权 · 作品 CRUD · 上传 · 视频/海报字段 · 图集视频项 · 草稿与发布 ·
   sortOrder 重排 · 作品改名（素材目录迁移）· 站点文案 / 社交链接 ·
+  网页版简历（API 改写 / PDF 上传 docs）·
   数据源兜底 · 后台界面可用性 · 站点侧渲染（视频首屏 / 图集视频 / 背景音乐）
 
 用法：
@@ -121,6 +122,8 @@ if not wait_health():
 PASSWORD = os.environ.get("ADMIN_PASSWORD") or \
     json.loads((ROOT / "content/auth.json").read_text(encoding="utf-8"))["password"]
 
+resume_backup = (ROOT / "content/resume.json").read_text(encoding="utf-8")
+
 print("=" * 62)
 print("  后台管理系统端到端校验")
 print("=" * 62)
@@ -230,6 +233,44 @@ try:
     check("e2e.example.com" in site_js, "site-data.js 未写入社交链接")
     print("  · 站点设置通过 · site-data.js 已重写")
 
+    # ---------- 7.5 个人简历内容 ----------
+    code, res0 = req("GET", "/api/resume", token=TOKEN)
+    check(code == 200 and isinstance(res0, dict) and res0.get("exp"), f"读取简历失败：{code}")
+    n_exp = len(res0["exp"]["items"])
+    check(n_exp == 3, f"简历应有 3 段经历，实际 {n_exp}")
+    n_pdf0 = len(res0.get("pdfs") or [])
+    check(n_pdf0 == 3, f"简历应有 3 个 PDF，实际 {n_pdf0}")
+
+    res0["head"]["lead"]["zh"] = "【E2E】简历导语覆盖测试"
+    res0["skills"]["items"] = res0["skills"]["items"] + [{"zh": "【E2E】新增技能", "es": "", "en": ""}]
+    code, r = req("PUT", "/api/resume", res0, token=TOKEN)
+    check(code == 200, f"保存简历失败：{r}")
+    rjs = (ROOT / "assets/js/resume-data.js").read_text(encoding="utf-8")
+    check("【E2E】简历导语覆盖测试" in rjs, "resume-data.js 未写入新导语")
+    check("【E2E】新增技能" in rjs, "resume-data.js 未写入新增技能")
+
+    # PDF 上传到 assets/docs
+    pdf_file = tmp / "_e2e.pdf"
+    pdf_file.write_bytes(b"%PDF-1.4\n% E2E test\n%%EOF\n")
+    code, up3 = req("POST", "/api/upload", token=TOKEN, raw=pdf_file.read_bytes(),
+                    headers={"x-filename": "_e2e.pdf", "x-target": "docs",
+                             "Content-Type": "application/octet-stream"})
+    check(code == 200 and up3.get("kind") == "doc", f"PDF 上传失败：{up3}")
+    check(str(up3.get("path", "")).startswith("assets/docs/"),
+          f"PDF 应落到 assets/docs/，实际 {up3.get('path')}")
+    check((ROOT / up3["path"]).exists(), "上传的 PDF 未落盘")
+    created_uploads.append(up3["path"])
+
+    code, _ = req("POST", "/api/media/delete", {"path": up3["path"]}, token=TOKEN)
+    check(code == 200, "删除 docs 下的文件失败（media/delete 未放行 assets/docs）")
+
+    # 还原简历内容
+    (ROOT / "content/resume.json").write_text(resume_backup, encoding="utf-8")
+    code, _ = req("POST", "/api/sync", token=TOKEN)
+    rjs = (ROOT / "assets/js/resume-data.js").read_text(encoding="utf-8")
+    check("【E2E】" not in rjs, "还原后 resume-data.js 不应残留测试内容")
+    print("  · 简历内容通过 · API 改写 → resume-data.js · PDF 上传 docs · 还原")
+
     # ---------- 8. 数据源兜底（不可达 API）----------
     site = json.loads((ROOT / "content/site.json").read_text(encoding="utf-8"))
     site["source"] = {"mode": "api", "apiBase": "http://127.0.0.1:1/definitely-down",
@@ -306,6 +347,33 @@ try:
         check(href == "https://e2e.example.com/xhs", f"社交链接未注入，实际 {href}")
         print(f"  · 首页覆盖通过 · 副标题「{sub[:22]}…」· xhs={href}")
 
+        # 9.5 后台「个人简历」面板（需先回到后台页）
+        pg.goto(f"{BASE}/admin", wait_until="networkidle")
+        pg.wait_for_timeout(1400)
+        check(pg.locator("#app").is_visible(), "重新进入后台应保持登录态")
+        pg.click("#btnResume")
+        pg.wait_for_timeout(700)
+        rtitle = pg.locator("#pane .pane__title").first.inner_text().strip()
+        check(rtitle == "个人简历", f"应打开个人简历面板，实际「{rtitle}」")
+        n_pdf = pg.locator('#pane [data-rpdf-file]').count()
+        check(n_pdf == 3, f"简历面板应有 3 个 PDF 行，实际 {n_pdf}")
+        n_exp_i = pg.locator('#pane [data-act="r-exp-del"]').count()
+        check(n_exp_i == 3, f"简历面板应有 3 段经历，实际 {n_exp_i}")
+        n_edu_i = pg.locator('#pane [data-act="r-edu-del"]').count()
+        check(n_edu_i == 1, f"简历面板应有 1 条教育经历，实际 {n_edu_i}")
+        n_list = pg.locator('#pane [data-rlist]').count()
+        check(n_list == 6, f"技能 / 认证文本框应为 6 个（2 区块 × 3 语言），实际 {n_list}")
+        n_lines = pg.locator('#pane [data-rlines]').count()
+        check(n_lines == 9, f"经历要点文本框应为 9 个（3 段 × 3 语言），实际 {n_lines}")
+        pg.fill('#pane [data-rset="summary.body"][data-lang="zh"]', "E2E 界面写入的简介段落。")
+        pg.wait_for_timeout(250)
+        pg.click('#pane [data-act="save-resume"]')
+        pg.wait_for_timeout(1500)
+        rjs2 = (ROOT / "assets/js/resume-data.js").read_text(encoding="utf-8")
+        check("E2E 界面写入的简介段落" in rjs2, "后台界面保存未写入 resume-data.js")
+        pg.screenshot(path=str(ROOT / "_tools/screens/20-admin-resume.png"), full_page=True)
+        print(f"  · 简历面板通过 · PDF {n_pdf} 行 · 经历 {n_exp_i} 段 · 教育 {n_edu_i} 条 · 界面保存生效")
+
         check(not errs, f"浏览器 JS 错误：{errs[:2]}")
         browser.close()
 
@@ -320,6 +388,11 @@ finally:
         pass
     try:
         (ROOT / "content/site.json").write_text(site_backup, encoding="utf-8")
+        req("POST", "/api/sync", token=TOKEN)
+    except Exception:
+        pass
+    try:
+        (ROOT / "content/resume.json").write_text(resume_backup, encoding="utf-8")
         req("POST", "/api/sync", token=TOKEN)
     except Exception:
         pass
@@ -349,4 +422,4 @@ if fails:
     for f in fails:
         print("     ·", f)
     sys.exit(1)
-print("  ✓ 后台管理系统全部通过 —— 鉴权 / CRUD / 上传 / 视频 / 排序 / 改名 / 站点设置 / 兜底 / 界面")
+print("  ✓ 后台管理系统全部通过 —— 鉴权 / CRUD / 上传 / 视频 / 排序 / 改名 / 站点设置 / 简历 / 兜底 / 界面")

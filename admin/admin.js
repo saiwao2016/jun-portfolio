@@ -96,7 +96,8 @@
     site: null,
     sel: null,
     origId: null,      // 当前作品在服务端的 id（改 id 时用它发请求）
-    view: 'work',      // work | site
+    view: 'work',      // work | site | resume
+    resume: null,
     tab: 'basic',      // basic | media | gallery | music
     query: '',
     filter: 'all',
@@ -223,6 +224,13 @@
       const st = await api('GET', '/api/state');
       S.works = st.works || [];
       S.site = st.site || {};
+      S.resume = st.resume || {};
+      ['head', 'summary'].forEach((k) => { S.resume[k] = S.resume[k] || {}; });
+      ['exp', 'edu', 'skills', 'certs'].forEach((k) => {
+        S.resume[k] = S.resume[k] || { title: {}, items: [] };
+        if (!Array.isArray(S.resume[k].items)) S.resume[k].items = [];
+      });
+      if (!Array.isArray(S.resume.pdfs)) S.resume.pdfs = [];
       S.pwGenerated = S.pwGenerated || st.passwordIsGenerated;
       $('#login').classList.add('is-hidden');
       $('#app').classList.remove('is-hidden');
@@ -316,6 +324,7 @@
   function renderPane() {
     const pane = $('#pane');
     if (S.view === 'site') { pane.innerHTML = sitePaneHtml(); return; }
+    if (S.view === 'resume') { pane.innerHTML = resumePaneHtml(); return; }
     const w = work();
     if (!w) {
       pane.innerHTML = `<div class="empty">左侧选择或新建一个作品<br><br>
@@ -730,6 +739,177 @@
     `;
   }
 
+  /* ---------------- 渲染：个人简历面板 ---------------- */
+
+  /** 解析点路径，返回父容器与末级键 */
+  function rParent(path) {
+    const segs = String(path).split('.');
+    let o = S.resume;
+    for (let i = 0; i < segs.length - 1; i++) {
+      const k = /^\d+$/.test(segs[i]) ? Number(segs[i]) : segs[i];
+      if (o[k] === undefined || o[k] === null) o[k] = /^\d+$/.test(segs[i + 1]) ? [] : {};
+      o = o[k];
+    }
+    return { parent: o, key: segs[segs.length - 1] };
+  }
+
+  /** 取/建某路径上的对象（asArray=true 时保证是数组） */
+  function rObj(path, asArray) {
+    const { parent, key } = rParent(path);
+    const k = /^\d+$/.test(key) ? Number(key) : key;
+    if (asArray) { if (!Array.isArray(parent[k])) parent[k] = []; }
+    else if (!parent[k] || typeof parent[k] !== 'object') parent[k] = {};
+    return parent[k];
+  }
+
+  function rset(path, val, lang) {
+    const { parent, key } = rParent(path);
+    const k = /^\d+$/.test(key) ? Number(key) : key;
+    if (!parent[k] || typeof parent[k] !== 'object') parent[k] = { zh: '', es: '', en: '' };
+    parent[k][lang] = val;
+    S.dirty = true;
+  }
+
+  /** 每行一条（三语各自独立，按行序对齐） */
+  function rSetLines(arr, lang, text) {
+    const lines = String(text || '').split('\n').map((s) => s.trim()).filter(Boolean);
+    while (arr.length < lines.length) arr.push({ zh: '', es: '', en: '' });
+    arr.length = lines.length;
+    lines.forEach((s, i) => {
+      if (!arr[i] || typeof arr[i] !== 'object') arr[i] = { zh: '', es: '', en: '' };
+      arr[i][lang] = s;
+    });
+    S.dirty = true;
+  }
+
+  function resumeTri(label, path, obj, opts) {
+    const o = opts || {};
+    const hint = o.hint ? ` <span class="field__hint">${esc(o.hint)}</span>` : '';
+    const rows = o.rows || 0;
+    const attr = o.attr || `data-rset="${path}"`;
+    const body = LANGS.map(([l, ln]) => {
+      const val = Array.isArray(obj) ? (obj.map((b) => (b || {})[l] || '').join('\n')) : ((obj || {})[l] || '');
+      const ctl = rows
+        ? `<textarea class="input" rows="${rows}" ${attr} data-lang="${l}">${esc(val)}</textarea>`
+        : `<input class="input" ${attr} data-lang="${l}" value="${esc(val)}">`;
+      return `<div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:6px">
+        <span style="flex:0 0 46px;font-size:11px;color:var(--muted);padding-top:8px">${ln}</span>
+        <div style="flex:1">${ctl}</div>
+      </div>`;
+    }).join('');
+    return `<div class="field" style="margin-bottom:10px">
+      <label class="field__label">${esc(label)}${hint}</label>${body}</div>`;
+  }
+
+  function resumePaneHtml() {
+    const r = S.resume || {};
+    const head = r.head || {}, sum = r.summary || {};
+    const exp = r.exp || {}, edu = r.edu || {};
+    const sk = r.skills || {}, ce = r.certs || {};
+
+    const people = (sec, kind) => (sec.items || []).map((it, i) => `
+      <div class="rowcard">
+        <div class="rowcard__head">
+          <span class="badge">${kind === 'exp' ? '经历' : '教育'} ${i + 1}</span>
+          <span class="field__hint">${esc((it.title || {}).zh || '')}</span>
+          <span class="rowcard__spacer"></span>
+          <button class="btn btn--sm" data-act="r-${kind}-up" data-i="${i}" title="上移">▲</button>
+          <button class="btn btn--sm" data-act="r-${kind}-down" data-i="${i}" title="下移">▼</button>
+          <button class="btn btn--sm btn--danger" data-act="r-${kind}-del" data-i="${i}">删除</button>
+        </div>
+        ${resumeTri('职位 / 角色', `${kind}.items.${i}.title`, it.title)}
+        ${resumeTri(kind === 'exp' ? '公司 / 组织' : '学校 / 机构', `${kind}.items.${i}.org`, it.org)}
+        ${resumeTri('时间', `${kind}.items.${i}.date`, it.date, { hint: '留空则整块隐藏' })}
+        ${kind === 'exp'
+          ? resumeTri('工作要点', `exp.items.${i}`, it.bullets || [], { attr: `data-rlines="exp.items.${i}"`, rows: Math.max(4, (it.bullets || []).length + 1), hint: '每行一条' })
+          : ''}
+      </div>`).join('');
+
+    const pdfs = (r.pdfs || []).map((p, i) => `
+      <div class="rowcard">
+        <div class="rowcard__head">
+          <span class="badge">${esc(p.id || ('pdf' + (i + 1)))}</span>
+          <label class="field__hint" style="display:flex;gap:6px;align-items:center">
+            <input type="checkbox" data-rpdf-en="${i}"${p.enabled === false ? '' : ' checked'}> 在简历页显示
+          </label>
+          <span class="rowcard__spacer"></span>
+          <button class="btn btn--sm btn--danger" data-act="r-pdf-del" data-i="${i}">删除</button>
+        </div>
+        <div class="field" style="margin-bottom:8px">
+          <label class="field__label">文件</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <input class="input input--mono" style="flex:1;min-width:220px" data-rpdf-file="${i}" value="${esc(p.file || '')}" placeholder="assets/docs/xxx.pdf">
+            <button class="btn btn--sm" data-act="r-pdf-up" data-i="${i}">上传 PDF</button>
+            ${p.file ? `<a class="btn btn--sm" href="/${esc(p.file)}" target="_blank" rel="noopener">预览 ↗</a>` : ''}
+          </div>
+        </div>
+        ${resumeTri('按钮文字', `pdfs.${i}.label`, p.label)}
+      </div>`).join('');
+
+    return `
+      <header class="pane__head">
+        <div>
+          <h2 class="pane__title">个人简历</h2>
+          <div class="pane__sub">网页版简历内容 · 标题 / 简介 / 经历 / 教育 / 技能 / 认证 / PDF</div>
+        </div>
+        <div class="pane__actions">
+          <a class="btn" href="/resume.html" target="_blank" rel="noopener">预览简历页 ↗</a>
+          <button class="btn btn--primary" data-act="save-resume">保存简历内容</button>
+        </div>
+      </header>
+
+      <div class="note">
+        保存后重写 <b>assets/js/resume-data.js</b>，简历页立即按此内容渲染。
+        三语各自独立，<b>留空的语种自动回落到中文</b>；简介用<b>空行分段</b>，要点<b>每行一条</b>。
+      </div>
+
+      <div class="section">
+        <h4 class="section__title">页面标题</h4>
+        ${resumeTri('小标题（Eyebrow）', 'head.eyebrow', head.eyebrow)}
+        ${resumeTri('主标题', 'head.title', head.title)}
+        ${resumeTri('导语', 'head.lead', head.lead, { rows: 2 })}
+      </div>
+
+      <div class="section">
+        <h4 class="section__title">PDF 下载 <span class="field__hint">${(r.pdfs || []).length} 个</span></h4>
+        ${pdfs || '<div class="empty">暂无 PDF 下载项</div>'}
+        <button class="btn btn--sm" data-act="r-pdf-add">+ 新增 PDF 下载</button>
+      </div>
+
+      <div class="section">
+        <h4 class="section__title">个人简介</h4>
+        ${resumeTri('标题', 'summary.title', sum.title)}
+        ${resumeTri('正文', 'summary.body', sum.body, { rows: 6, hint: '空行分段' })}
+      </div>
+
+      <div class="section">
+        <h4 class="section__title">工作经历 <span class="field__hint">${(exp.items || []).length} 段</span></h4>
+        ${resumeTri('区块标题', 'exp.title', exp.title)}
+        ${people(exp, 'exp') || '<div class="empty">暂无经历</div>'}
+        <button class="btn btn--sm" data-act="r-exp-add">+ 新增一段经历</button>
+      </div>
+
+      <div class="section">
+        <h4 class="section__title">教育背景 <span class="field__hint">${(edu.items || []).length} 条</span></h4>
+        ${resumeTri('区块标题', 'edu.title', edu.title)}
+        ${people(edu, 'edu') || '<div class="empty">暂无教育经历</div>'}
+        <button class="btn btn--sm" data-act="r-edu-add">+ 新增教育经历</button>
+      </div>
+
+      <div class="section">
+        <h4 class="section__title">核心技能 <span class="field__hint">${(sk.items || []).length} 条</span></h4>
+        ${resumeTri('区块标题', 'skills.title', sk.title)}
+        ${resumeTri('技能条目', 'skills.items', sk.items || [], { attr: 'data-rlist="skills.items"', rows: Math.max(5, (sk.items || []).length + 1), hint: '每行一条' })}
+      </div>
+
+      <div class="section">
+        <h4 class="section__title">资质认证 <span class="field__hint">${(ce.items || []).length} 条</span></h4>
+        ${resumeTri('区块标题', 'certs.title', ce.title)}
+        ${resumeTri('认证条目', 'certs.items', ce.items || [], { attr: 'data-rlist="certs.items"', rows: Math.max(4, (ce.items || []).length + 1), hint: '每行一条' })}
+      </div>
+    `;
+  }
+
   /* ---------------- 交互：侧栏 ---------------- */
 
   $('#list').addEventListener('click', async (e) => {
@@ -856,6 +1036,25 @@
     if (t.dataset && t.dataset.source && t.tagName === 'INPUT') setSource(t.dataset.source, t.value);
     if (t.dataset && t.dataset.bgmTitle && t.tagName === 'INPUT') S.site.bgm.title[t.dataset.bgmTitle] = t.value;
     if (t.dataset && t.dataset.bgm && t.tagName === 'INPUT') S.site.bgm[t.dataset.bgm] = t.value;
+  });
+
+  /* ---------------- 个人简历：输入实时写入内存 ---------------- */
+
+  document.addEventListener('input', (e) => {
+    if (S.view !== 'resume') return;
+    const t = e.target;
+    const d = t.dataset || {};
+    if (d.rset !== undefined) { rset(d.rset, t.value, d.lang); return; }
+    if (d.rlines !== undefined) { rSetLines(rObj(d.rlines, false).bullets || (rObj(d.rlines, false).bullets = []), d.lang, t.value); return; }
+    if (d.rlist !== undefined) { rSetLines(rObj(d.rlist, true), d.lang, t.value); return; }
+    if (d.rpdfFile !== undefined) { S.resume.pdfs[Number(d.rpdfFile)].file = t.value; S.dirty = true; }
+  });
+
+  document.addEventListener('change', (e) => {
+    if (S.view !== 'resume') return;
+    const t = e.target;
+    const d = t.dataset || {};
+    if (d.rpdfEn !== undefined) { S.resume.pdfs[Number(d.rpdfEn)].enabled = t.checked; S.dirty = true; }
   });
 
   function setCopy(key, lang, val) {
@@ -1022,6 +1221,78 @@
           const i = Number(ev.target.dataset.si);
           S.site.social.splice(i, 1);
           renderPane();
+          return;
+        }
+        /* 简历 */
+        case 'save-resume': {
+          const r = await api('PUT', '/api/resume', S.resume);
+          S.resume = r.resume;
+          S.dirty = false;
+          renderPane();
+          toast('简历内容已保存 · resume-data.js 已重写');
+          return;
+        }
+        case 'r-exp-add':
+        case 'r-edu-add': {
+          const sec = act === 'r-exp-add' ? 'exp' : 'edu';
+          const box = S.resume[sec] || (S.resume[sec] = { title: {}, items: [] });
+          if (!Array.isArray(box.items)) box.items = [];
+          box.items.push({
+            title: { zh: '', es: '', en: '' },
+            org: { zh: '', es: '', en: '' },
+            date: { zh: '', es: '', en: '' },
+            bullets: sec === 'exp' ? [{ zh: '', es: '', en: '' }] : [],
+          });
+          S.dirty = true;
+          renderPane();
+          return;
+        }
+        case 'r-exp-del':
+        case 'r-edu-del': {
+          const sec = act === 'r-exp-del' ? 'exp' : 'edu';
+          S.resume[sec].items.splice(Number(btn.dataset.i), 1);
+          S.dirty = true;
+          renderPane();
+          return;
+        }
+        case 'r-exp-up':
+        case 'r-exp-down':
+        case 'r-edu-up':
+        case 'r-edu-down': {
+          const sec = act.indexOf('exp') > -1 ? 'exp' : 'edu';
+          const dir = act.slice(-2) === 'up' ? -1 : 1;
+          const arr = S.resume[sec].items || [];
+          const a = Number(btn.dataset.i), b = a + dir;
+          if (b >= 0 && b < arr.length) {
+            const tmp = arr[a]; arr[a] = arr[b]; arr[b] = tmp;
+            S.dirty = true;
+            renderPane();
+          }
+          return;
+        }
+        case 'r-pdf-add': {
+          S.resume.pdfs = S.resume.pdfs || [];
+          S.resume.pdfs.push({ id: 'pdf' + (S.resume.pdfs.length + 1), file: '', enabled: true, label: { zh: '', es: '', en: '' } });
+          S.dirty = true;
+          renderPane();
+          return;
+        }
+        case 'r-pdf-del': {
+          S.resume.pdfs.splice(Number(btn.dataset.i), 1);
+          S.dirty = true;
+          renderPane();
+          return;
+        }
+        case 'r-pdf-up': {
+          const i = Number(btn.dataset.i);
+          const [f] = await pickFiles('application/pdf');
+          if (!f) return;
+          btn.disabled = true; btn.textContent = '上传中…';
+          const up = await upload(f, 'docs');
+          S.resume.pdfs[i].file = up.path;
+          S.dirty = true;
+          renderPane();
+          toast('PDF 已上传，记得保存简历内容');
           return;
         }
         default:
@@ -1251,6 +1522,12 @@
     if (S.dirty && !confirm('当前修改尚未保存，确定离开？')) return;
     S.dirty = false;
     S.view = 'site';
+    renderAll();
+  });
+  $('#btnResume').addEventListener('click', () => {
+    if (S.dirty && !confirm('当前修改尚未保存，确定离开？')) return;
+    S.dirty = false;
+    S.view = 'resume';
     renderAll();
   });
   $('#btnLogout').addEventListener('click', () => logout(false));

@@ -17,6 +17,14 @@ const HEADER =
   '   { type:"video", src, poster }（视频）。\n' +
   '   ========================================================= */\n\n';
 
+const RESUME_HEADER =
+  '/* =========================================================\n' +
+  '   JUN Portfolio — Résumé content（自动生成）\n' +
+  '   数据源：content/resume.json · 由后台 /admin 保存时重写，请勿手改本文件。\n' +
+  '   window.RESUME 供 resume.html 渲染网页版简历；\n' +
+  '   若本文件缺失，简历页回落到 HTML 里的静态文案。\n' +
+  '   ========================================================= */\n\n';
+
 const SITE_HEADER =
   '/* =========================================================\n' +
   '   JUN Portfolio — Site settings（自动生成）\n' +
@@ -105,17 +113,38 @@ function buildSiteJs(site) {
   return SITE_HEADER + 'window.SITE_DATA = ' + body.trimStart() + ';\n';
 }
 
+/** 生成 assets/js/resume-data.js 文本 */
+function buildResumeJs(resume) {
+  const r = resume && typeof resume === 'object' ? resume : {};
+  const payload = {
+    head: r.head || {},
+    pdfs: Array.isArray(r.pdfs) ? r.pdfs.filter((p) => p && p.file) : [],
+    summary: r.summary || {},
+    exp: r.exp || { items: [] },
+    edu: r.edu || { items: [] },
+    skills: r.skills || { items: [] },
+    certs: r.certs || { items: [] },
+  };
+  const body = JSON.stringify(payload, null, 2)
+    .split('\n')
+    .map((line) => (line ? '  ' + line : line))
+    .join('\n');
+  return RESUME_HEADER + 'window.RESUME = ' + body.trimStart() + ';\n';
+}
+
 /** 读取 content/*.json 并写回站点脚本，返回统计信息 */
 function syncAll(root) {
   const contentDir = path.join(root, 'content');
   const worksDoc = readJson(path.join(contentDir, 'works.json'));
   const siteDoc = readJson(path.join(contentDir, 'site.json'));
+  const resumeDoc = readJson(path.join(contentDir, 'resume.json'), {});
   const works = Array.isArray(worksDoc) ? worksDoc : worksDoc.works || [];
 
   const dataPath = path.join(root, 'assets/js/data.js');
   const sitePath = path.join(root, 'assets/js/site-data.js');
   fs.writeFileSync(dataPath, buildDataJs(works));
   fs.writeFileSync(sitePath, buildSiteJs(siteDoc));
+  fs.writeFileSync(path.join(root, 'assets/js/resume-data.js'), buildResumeJs(resumeDoc));
 
   const published = sortWorks(works).length;
   return {
@@ -128,11 +157,12 @@ function syncAll(root) {
   };
 }
 
-module.exports = { buildDataJs, buildSiteJs, syncAll, sortWorks, normalizeWork };
+module.exports = { buildDataJs, buildSiteJs, buildResumeJs, syncAll, sortWorks, normalizeWork };
 
 if (require.main === module) {
   const root = path.resolve(__dirname, '..');
   const r = syncAll(root);
   console.log(`data.js  ←  ${r.published} 个已发布案例（草稿 ${r.draft} 个，共 ${r.total}）  ${(r.bytes / 1024).toFixed(1)} KB`);
   console.log('site-data.js  ←  content/site.json');
+  console.log('resume-data.js  ←  content/resume.json');
 }

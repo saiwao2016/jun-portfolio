@@ -658,6 +658,97 @@
     };
   }
 
+  /* ---------- Résumé page（数据驱动，内容来自 content/resume.json） ---------- */
+
+  function resumeParas(text) {
+    return String(text || '').split(/\n{2,}/).map((s) => s.trim()).filter(Boolean);
+  }
+
+  function renderResume() {
+    const host = document.getElementById('resumeBody');
+    const R = window.RESUME;
+    if (!host || !R || typeof R !== 'object') return;  // 无数据 → 保留 HTML 静态兜底
+    const lang = getLang();
+    const L = (o) => String((o && (o[lang] || o.zh || o.en)) || '');
+    const head = R.head || {};
+    const h = [];
+
+    // 页面标题
+    if (L(head.eyebrow)) h.push(`<span class="eyebrow reveal">${escapeHtml(L(head.eyebrow))}</span>`);
+    if (L(head.title)) h.push(`<h1 class="h-section reveal">${escapeHtml(L(head.title))}</h1>`);
+    if (L(head.lead)) h.push(`<p class="lead reveal mt-5">${escapeHtml(L(head.lead))}</p>`);
+
+    // PDF 下载
+    const pdfs = (R.pdfs || []).filter((p) => p && p.file && p.enabled !== false);
+    if (pdfs.length) {
+      h.push('<div class="btn-row reveal">' + pdfs.map((p, i) => `
+          <a href="${escapeHtml(p.file)}" download class="btn${i === 0 ? '' : ' btn--ghost'}">
+            <span>${escapeHtml(L(p.label) || p.id || 'PDF')}</span>
+            <span class="btn__arrow">↓</span>
+          </a>`).join('') + '</div>');
+    }
+
+    // 个人简介（空行分段）
+    const sum = R.summary || {};
+    if (L(sum.body)) {
+      const body = resumeParas(L(sum.body)).map((p) => `<p>${escapeHtml(p)}</p>`).join('');
+      h.push(`<article class="resume-card mt-9 reveal">
+        <h2 class="resume-card__title">${escapeHtml(L(sum.title))}</h2>
+        <div class="resume-body muted">${body}</div>
+      </article>`);
+    }
+
+    // 工作经历
+    const exp = R.exp || {};
+    const expItems = (exp.items || []).filter((it) => it && L(it.title));
+    if (expItems.length) {
+      h.push(`<h2 class="h-block reveal" style="margin-top:64px">${escapeHtml(L(exp.title))}</h2>`);
+      expItems.forEach((it) => {
+        const bl = (it.bullets || []).filter((b) => L(b));
+        h.push(`<article class="resume-card reveal">
+        <div class="resume-card__head">
+          <div>
+            <div class="resume-card__title">${escapeHtml(L(it.title))}</div>
+            <div class="resume-card__org">${escapeHtml(L(it.org))}</div>
+          </div>
+          <div class="resume-card__date">${escapeHtml(L(it.date))}</div>
+        </div>
+        ${bl.length ? '<ul>' + bl.map((b) => `<li>${escapeHtml(L(b))}</li>`).join('') + '</ul>' : ''}
+      </article>`);
+      });
+    }
+
+    // 教育背景（条目对象：职位/学校 + 时间）
+    const eduItems = ((R.edu || {}).items || []).filter((it) => it && L(it.title));
+    if (eduItems.length) {
+      h.push(`<h2 class="h-block reveal" style="margin-top:64px">${escapeHtml(L((R.edu || {}).title))}</h2>`);
+      eduItems.forEach((it) => {
+        h.push(`<article class="resume-card reveal">
+        <div class="resume-card__head">
+          <div>
+            <div class="resume-card__title">${escapeHtml(L(it.title))}</div>
+            <div class="resume-card__org">${escapeHtml(L(it.org))}</div>
+          </div>
+          <div class="resume-card__date">${escapeHtml(L(it.date))}</div>
+        </div>
+      </article>`);
+      });
+    }
+
+    // 核心技能 / 资质认证（纯词条列表）
+    [R.skills, R.certs].forEach((sec) => {
+      if (!sec) return;
+      const items = (sec.items || []).filter((b) => b && L(b));
+      if (!items.length) return;
+      h.push(`<h2 class="h-block reveal" style="margin-top:64px">${escapeHtml(L(sec.title))}</h2>`);
+      h.push(`<article class="resume-card reveal"><ul>${items
+        .map((b) => `<li>${escapeHtml(L(b))}</li>`).join('')}</ul></article>`);
+    });
+
+    host.innerHTML = h.join('\n');
+    bindReveal(host);
+  }
+
   /* ---------- Boot ---------- */
   document.addEventListener('DOMContentLoaded', async () => {
     applySiteCopy();      // 后台主页 / 页脚文案覆盖 i18n
@@ -678,6 +769,7 @@
     bindBgm();
     bindReveal();
 
-    setLang(getLang());   // 最后一步，触发注入
+    onLangChange(renderResume);   // 简历页：数据驱动，随语言切换重绘
+    setLang(getLang());           // 最后一步，触发注入（同时首次渲染简历）
   });
 })();

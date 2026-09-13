@@ -9,8 +9,9 @@
      ADMIN_PASSWORD=xxxx node server.js
 
    数据源：content/works.json（作品）· content/site.json（站点设置）
-   每次保存都会重写 assets/js/data.js 与 assets/js/site-data.js，
-   并刷新两个文件在 HTML 中的内容哈希查询串（绕过 CDN 同名缓存）。
+           content/resume.json（网页版简历）
+   每次保存都会重写 assets/js/data.js / site-data.js / resume-data.js，
+   并刷新这些文件在 HTML 中的内容哈希查询串（绕过 CDN 同名缓存）。
    ========================================================= */
 'use strict';
 
@@ -26,6 +27,7 @@ const CONTENT_DIR = path.join(ROOT, 'content');
 const WORKS_FILE = path.join(CONTENT_DIR, 'works.json');
 const SITE_FILE = path.join(CONTENT_DIR, 'site.json');
 const AUTH_FILE = path.join(CONTENT_DIR, 'auth.json');
+const RESUME_FILE = path.join(CONTENT_DIR, 'resume.json');
 
 const PORT = Number(process.env.PORT) || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
@@ -55,6 +57,7 @@ const MIME = {
 const IMAGE_EXT = ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.avif', '.svg'];
 const VIDEO_EXT = ['.mp4', '.webm', '.mov', '.m4v'];
 const AUDIO_EXT = ['.mp3', '.m4a', '.wav', '.ogg', '.aac'];
+const DOC_EXT = ['.pdf'];
 
 function json(res, code, data) {
   const body = JSON.stringify(data);
@@ -127,6 +130,7 @@ function kindOf(ext) {
   if (IMAGE_EXT.includes(ext)) return 'image';
   if (VIDEO_EXT.includes(ext)) return 'video';
   if (AUDIO_EXT.includes(ext)) return 'audio';
+  if (DOC_EXT.includes(ext)) return 'doc';
   return 'file';
 }
 
@@ -192,11 +196,37 @@ function saveSite(site) {
   return stats;
 }
 
-/** 为 data.js / site-data.js 刷新 HTML 里的内容哈希查询串 */
+const DEFAULT_RESUME = {
+  version: 1,
+  head: { eyebrow: {}, title: {}, lead: {} },
+  pdfs: [],
+  summary: { title: {}, body: {} },
+  exp: { title: {}, items: [] },
+  edu: { title: {}, items: [] },
+  skills: { title: {}, items: [] },
+  certs: { title: {}, items: [] },
+};
+
+function loadResume() {
+  const doc = readJsonFile(RESUME_FILE, null);
+  return doc && typeof doc === 'object' ? doc : JSON.parse(JSON.stringify(DEFAULT_RESUME));
+}
+
+function saveResume(doc) {
+  doc.version = 1;
+  doc.updatedAt = new Date().toISOString();
+  writeJsonFile(RESUME_FILE, doc);
+  const stats = syncAll(ROOT);
+  stats.hash = refreshAssetHashes();
+  return stats;
+}
+
+/** 为 data.js / site-data.js / resume-data.js 刷新 HTML 里的内容哈希查询串 */
 function refreshAssetHashes() {
   const targets = [
     ['assets/js/data.js', 'assets/js/data.js'],
     ['assets/js/site-data.js', 'assets/js/site-data.js'],
+    ['assets/js/resume-data.js', 'assets/js/resume-data.js'],
   ];
   const hashes = {};
   targets.forEach(([rel]) => {
@@ -414,6 +444,7 @@ async function handleApi(req, res, seg, query) {
     return json(res, 200, {
       works: loadWorksDoc().works,
       site: loadSite(),
+      resume: loadResume(),
       passwordIsGenerated: AUTH.generated,
     });
   }
@@ -510,7 +541,9 @@ async function handleApi(req, res, seg, query) {
 
     const relDir = target === 'site'
       ? 'assets/site'
-      : (target === 'uploads' ? 'assets/uploads' : `assets/works/${target}`);
+      : (target === 'docs'
+        ? 'assets/docs'
+        : (target === 'uploads' ? 'assets/uploads' : `assets/works/${target}`));
     const absDir = path.join(ROOT, relDir);
     ensureDir(absDir);
 
@@ -531,8 +564,8 @@ async function handleApi(req, res, seg, query) {
   /* --- 媒体删除 --- */
   if (route === 'media/delete' && method === 'POST') {
     const { path: rel } = await readJsonBody(req);
-    if (!rel || !/^assets\/(works|uploads|site)\//.test(rel)) {
-      return json(res, 400, { error: '只能删除 assets/works|uploads|site 下的文件' });
+    if (!rel || !/^assets\/(works|uploads|site|docs)\//.test(rel)) {
+      return json(res, 400, { error: '只能删除 assets/works|uploads|site|docs 下的文件' });
     }
     const abs = path.join(ROOT, rel);
     if (!abs.startsWith(ROOT) || !fs.existsSync(abs)) return json(res, 404, { error: '文件不存在' });
@@ -550,12 +583,24 @@ async function handleApi(req, res, seg, query) {
     }
   }
 
+  /* --- 网页版简历内容 --- */
+  if (route === 'resume') {
+    if (method === 'GET') return json(res, 200, loadResume());
+    if (method === 'PUT') {
+      const body = await readJsonBody(req);
+      const doc = { ...loadResume(), ...body, version: 1 };
+      return json(res, 200, { resume: doc, stats: saveResume(doc) });
+    }
+  }
+
   /* --- 媒体文件列表（供后台选择已有素材） --- */
   if (route === 'media' && method === 'GET') {
     const target = query.get('target') || '';
     const relDir = target === 'site'
       ? 'assets/site'
-      : (target === 'uploads' || !target ? 'assets/uploads' : `assets/works/${slugify(target, 'uploads')}`);
+      : (target === 'docs'
+        ? 'assets/docs'
+        : (target === 'uploads' || !target ? 'assets/uploads' : `assets/works/${slugify(target, 'uploads')}`));
     const absDir = path.join(ROOT, relDir);
     let files = [];
     try {
