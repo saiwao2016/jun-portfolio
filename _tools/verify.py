@@ -27,6 +27,7 @@ PAGES = [
     ("contact.html", "06-contact"),
     ("resume.html", "07-resume"),
     ("work-detail.html?id=asq-system", "08-detail-asq"),
+    ("work-pingyuan-calendar.html", "09-pingyuan"),
 ]
 LANGS = ["zh", "es", "en"]
 
@@ -187,8 +188,7 @@ with sync_playwright() as p:
                       ("ip-shiliu", 8), ("app-shortcut-key", 18),
                       ("ip-emoji-shiliu", 3), ("ip-emoji-shishizi", 3),
                       ("ip-emoji-niuniuzi", 3), ("ip-emoji-tutuzi", 3),
-                      ("ip-emoji-pilitu", 3), ("ip-emoji-huahua", 3),
-                      ("pingyuan-calendar", 30)]:
+                      ("ip-emoji-pilitu", 3), ("ip-emoji-huahua", 3)]:
         pg.goto(f"{BASE}/work-detail.html?id={wid}", wait_until="networkidle")
         scroll_all(pg)
         h1 = pg.locator("h1").first.inner_text().strip()
@@ -197,6 +197,41 @@ with sync_playwright() as p:
         check(bool(h1) and gimg == nimg and bro == 0,
               f"{wid} 详情页异常：h1=「{h1}」 图 {gimg}/{nimg} 裂图 {bro}")
         print(f"  ✓ {wid:14s} 「{h1[:24]}」图集 {gimg} 张全载")
+
+    # 平原商场台历：定制专题页（work-pingyuan-calendar.html）
+    pg.goto(f"{BASE}/work-pingyuan-calendar.html", wait_until="networkidle")
+    scroll_all(pg)
+    p_sec = pg.locator(".pc-section").count()
+    p_mon = pg.locator(".pc-month").count()
+    p_plate = pg.locator("[data-pc-plate]").count()
+    p_bro = pg.evaluate("()=>[...document.querySelectorAll('.pc img')].filter(i=>!i.complete||i.naturalWidth===0).length")
+    check(p_sec == 6, f"台历专题页区块数应为 6，实际 {p_sec}")
+    check(p_mon == 12, f"台历专题页逐月应为 12，实际 {p_mon}")
+    check(p_bro == 0, f"台历专题页图集未加载 {p_bro} 张（共 {p_plate} 张底板图）")
+    print(f"  ✓ 台历专题页：区块 {p_sec} · 逐月 {p_mon} · 底板图 {p_plate} 张全载")
+
+    # 灯箱：按 src 去重后应为 28 项（30 张图集中 2 张样机图 mockup-hero/mockup-spread 为展示样机，不入灯箱）
+    pg.locator("[data-pc-plate]").first.click()
+    pg.wait_for_timeout(450)
+    lb_on = pg.evaluate("document.getElementById('lb')?.classList.contains('is-on')")
+    lb_cap = pg.evaluate("document.querySelector('#lb .lb__cap')?.textContent || ''")
+    check(lb_on, "台历专题页灯箱未打开")
+    check(bool(re.search(r"/\s*28\b", lb_cap or "")), f"台历灯箱去重后应为 28 项，caption={lb_cap!r}")
+    print(f"  ✓ 台历灯箱打开：{lb_cap}")
+    pg.keyboard.press("Escape")
+    pg.wait_for_timeout(300)
+    check(not pg.evaluate("document.getElementById('lb')?.classList.contains('is-on')"), "Esc 未关闭台历灯箱")
+    print(f"  ✓ 台历灯箱 Esc 关闭")
+
+    # 语言切换：专题页整体重绘
+    for lg in ("es", "en"):
+        pg.click(f'.lang-switch__opt[data-lang="{lg}"]')
+        pg.wait_for_timeout(500)
+        h1 = pg.locator("h1").first.inner_text()
+        check(len(h1.strip()) > 2, f"台历专题页 {lg} 标题异常：{h1!r}")
+        print(f"    · {lg}: 「{h1[:24]}」")
+    pg.click('.lang-switch__opt[data-lang="zh"]')
+    pg.wait_for_timeout(400)
 
     pg.goto(f"{BASE}/work-detail.html?id=asq-system", wait_until="networkidle")
     scroll_all(pg)
@@ -434,4 +469,4 @@ if fails:
     for f in fails:
         print("     ·", f)
     sys.exit(1)
-print("  ✓ 全部通过 —— 10 页 × 3 语言 + 功能专项 + 三语一致性 + 移动端，零失败")
+print(f"  ✓ 全部通过 —— {len(PAGES)} 页 × 3 语言 + 功能专项 + 三语一致性 + 移动端，零失败")

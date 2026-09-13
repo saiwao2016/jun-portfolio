@@ -1,0 +1,576 @@
+/* =========================================================
+   JUN Portfolio — 作品专题页（平原商场 · 2018 台历）
+   ---------------------------------------------------------
+   排版结构沿用该作品的原始设计稿（Hero + 数据 / 编号区块 /
+   双列概览 / 亮点网格 / 样机 / 平铺图 / 逐月叙事 / 封底），
+   但**字体、色彩、圆角、间距全部改用站点设计令牌**，
+   与站点其余页面同一套语言：极简黑白灰 + 低饱和暖棕。
+
+   仅 work-pingyuan-calendar.html 引用本文件。
+   ========================================================= */
+
+/* ---------- 页面骨架 ---------- */
+.pc {
+  /* 顶部固定导航高 72px，子导航要贴在它下面 */
+  padding-top: 72px;
+}
+
+.pc-section {
+  padding: var(--sp-9) 0;
+  border-bottom: 1px solid var(--border);
+  /* 页内锚点跳转要避开「固定导航 72px + 吸顶子导航 52px」 */
+  scroll-margin-top: 132px;
+}
+
+.pc-section:last-of-type {
+  border-bottom: none;
+}
+
+/* ---------- 子导航（页内锚点） ---------- */
+.pc-subnav {
+  position: sticky;
+  top: 72px;
+  z-index: 90;
+  background: rgba(250, 250, 248, 0.92);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.pc-subnav__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+  height: 52px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.pc-subnav__inner::-webkit-scrollbar { display: none; }
+
+.pc-subnav__link {
+  flex: none;
+  position: relative;
+  padding: 4px 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.pc-subnav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background: var(--accent);
+  transition: width var(--dur) var(--ease);
+}
+
+.pc-subnav__link:hover { color: var(--ink); }
+.pc-subnav__link:hover::after { width: 100%; }
+
+.pc-subnav__spacer { flex: 1 1 auto; }
+
+.pc-subnav__back {
+  flex: none;
+  margin-left: auto;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  white-space: nowrap;
+}
+
+.pc-subnav__back:hover { color: var(--ink); }
+
+/* ---------- Hero ---------- */
+.pc-hero {
+  padding: var(--sp-9) 0 var(--sp-8);
+  border-bottom: 1px solid var(--border);
+}
+
+.pc-hero__grid {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: var(--sp-8);
+  align-items: center;
+}
+
+.pc-hero__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-2xl);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.12;
+  color: var(--ink);
+  margin-top: var(--sp-2);
+}
+
+.pc-hero__sub {
+  display: block;
+  margin-top: var(--sp-3);
+  font-family: var(--font-serif);
+  font-size: var(--fs-lg);
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
+}
+
+.pc-hero__desc {
+  margin-top: var(--sp-5);
+  max-width: 46ch;
+  font-size: var(--fs-base);
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+/* Hero 数据条 */
+.pc-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-4);
+  margin-top: var(--sp-7);
+  padding-top: var(--sp-5);
+  border-top: 1px solid var(--border);
+}
+
+.pc-stat b {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--accent-deep);
+  font-variant-numeric: tabular-nums;
+}
+
+.pc-stat span {
+  display: block;
+  margin-top: 4px;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.pc-hero__figure { position: relative; }
+
+/* 装饰细框：偏移在图片外，作为版式呼吸 */
+.pc-hero__figure::before {
+  content: "";
+  position: absolute;
+  inset: auto -14px -14px auto;
+  width: 76%;
+  height: 76%;
+  border: 1px solid var(--accent-soft);
+  z-index: 0;
+}
+
+.pc-hero__figure img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px -22px rgba(17, 17, 17, 0.28);
+}
+
+.pc-hero__figure figcaption {
+  position: relative;
+  z-index: 1;
+  margin-top: var(--sp-3);
+  text-align: right;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+/* ---------- 区块头（编号 + 标题 + 英文标签） ---------- */
+.pc-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-5);
+  padding-bottom: var(--sp-4);
+  margin-bottom: var(--sp-7);
+  border-bottom: 1px solid var(--border-2);
+}
+
+.pc-head__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-2xl);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.pc-head__num {
+  margin-right: var(--sp-4);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+.pc-head__tag {
+  flex: none;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- 01 项目概览 ---------- */
+.pc-overview {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: var(--sp-8);
+}
+
+.pc-info { border-top: 1px solid var(--border); }
+
+.pc-info__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-4) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.pc-info__row dt {
+  flex: none;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.pc-info__row dd {
+  text-align: right;
+  font-size: var(--fs-base);
+  font-weight: 500;
+}
+
+.pc-overview__copy p {
+  margin-bottom: var(--sp-4);
+  max-width: 60ch;
+  line-height: 1.8;
+  color: var(--ink-2);
+}
+
+.pc-overview__copy p strong { font-weight: 500; color: var(--ink); }
+
+.pc-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4) var(--sp-6);
+  margin-top: var(--sp-6);
+}
+
+.pc-points li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.pc-points li::before {
+  content: "";
+  flex: none;
+  width: 6px;
+  height: 6px;
+  margin-top: 7px;
+  background: var(--accent);
+}
+
+/* ---------- 02 设计亮点 ---------- */
+.pc-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.pc-feature {
+  padding: var(--sp-6) var(--sp-5);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  transition: background-color var(--dur) var(--ease);
+}
+
+.pc-feature:hover { background: var(--surface-2); }
+
+.pc-feature__no {
+  display: block;
+  margin-bottom: var(--sp-4);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+.pc-feature h3 {
+  margin-bottom: var(--sp-2);
+  font-family: var(--font-serif);
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.pc-feature p {
+  font-size: var(--fs-sm);
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+/* ---------- 03 样机展示 ---------- */
+.pc-mockups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-5);
+  align-items: start;
+}
+
+.pc-mockup {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.pc-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--dur-slow) var(--ease);
+}
+
+.pc-mockup:hover img { transform: scale(1.02); }
+
+.pc-mockup figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 34px var(--sp-4) var(--sp-3);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  color: #fff;
+  /* 图片上的压暗渐隐，不是暗色面板 */
+  background: linear-gradient(180deg, transparent, rgba(17, 17, 17, 0.78));
+}
+
+/* ---------- 04 平铺图 / 通用图卡 ---------- */
+.pc-flat__group + .pc-flat__group { margin-top: var(--sp-8); }
+
+.pc-flat__sub {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.pc-flat__sub h3 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-md);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.pc-flat__sub span {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.pc-plate {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease);
+}
+
+.pc-plate:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px -18px rgba(17, 17, 17, 0.32);
+}
+
+.pc-plate__frame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.pc-plate__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  cursor: zoom-in;
+}
+
+.pc-plate__cap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  padding: 9px var(--sp-3);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.pc-plate__cap b {
+  flex: none;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--fs-sm);
+  color: var(--accent-deep);
+}
+
+/* ---------- 05 逐月叙事 ---------- */
+.pc-month {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--sp-6);
+  padding: var(--sp-7) 0;
+}
+
+/* 用相邻兄弟选线：区块头也是 .container 的子元素，
+   写 :first-child 会被它抢走，导致首块多出一条线 */
+.pc-month + .pc-month { border-top: 1px solid var(--border); }
+.pc-month:last-child { padding-bottom: 0; }
+
+.pc-month__no {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.16em;
+  color: var(--accent);
+}
+
+.pc-month__name {
+  font-family: var(--font-serif);
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.pc-month__en {
+  margin-top: 4px;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pc-month__desc {
+  margin-top: var(--sp-4);
+  max-width: 32ch;
+  font-size: var(--fs-sm);
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.pc-month__pages {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--sp-4);
+  align-items: stretch;
+}
+
+/* ---------- 06 封底 · 尾声 ---------- */
+.pc-closing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-5);
+}
+
+/* ---------- 页脚说明与返回顶部 ---------- */
+.pc-outer {
+  padding: var(--sp-8) 0 var(--sp-9);
+  text-align: center;
+}
+
+.pc-outer p {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+
+.pc-backtop {
+  display: inline-block;
+  margin-top: var(--sp-4);
+  padding: 8px 22px;
+  border: 1px solid var(--border-2);
+  border-radius: 999px;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  cursor: pointer;
+  transition: background-color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              color var(--dur) var(--ease);
+}
+
+.pc-backtop:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 1024px) {
+  .pc-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .pc-hero__grid,
+  .pc-overview { grid-template-columns: 1fr; gap: var(--sp-7); }
+  .pc-hero__figure::before { display: none; }
+  .pc-month { grid-template-columns: 1fr; gap: var(--sp-5); }
+  .pc-month__desc { max-width: 52ch; }
+  .pc-mockups { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .pc-head { flex-direction: column; align-items: flex-start; gap: var(--sp-2); }
+  .pc-stats { grid-template-columns: repeat(2, 1fr); gap: var(--sp-5) var(--sp-4); }
+  .pc-grid { grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); }
+  .pc-features { grid-template-columns: 1fr; }
+  .pc-points { grid-template-columns: 1fr; }
+  .pc-closing,
+  .pc-month__pages { grid-template-columns: 1fr; }
+  .pc-section { padding: var(--sp-8) 0; }
+  .pc-hero { padding: var(--sp-7) 0 var(--sp-7); }
+  .pc-plate__cap { flex-direction: column; gap: 2px; }
+}

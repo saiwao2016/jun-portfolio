@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-13T08:38:22.437Z",
+  "updatedAt": "2026-09-13T09:37:53.732Z",
   "works": [
     {
       "id": "asq-system",
@@ -2729,155 +2729,156 @@
       "videoPoster": "",
       "bgm": "",
       "single": false,
+      "href": "work-pingyuan-calendar.html",
       "gallery": [
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/01.jpg",
+          "src": "assets/works/pingyuan-calendar/mockup-hero.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/02.jpg",
+          "src": "assets/works/pingyuan-calendar/mockup-spread.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/03.jpg",
+          "src": "assets/works/pingyuan-calendar/cover.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/04.jpg",
+          "src": "assets/works/pingyuan-calendar/backcover.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/05.jpg",
+          "src": "assets/works/pingyuan-calendar/plan.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/06.jpg",
+          "src": "assets/works/pingyuan-calendar/summary.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/07.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-01.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/08.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-02.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/09.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-03.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/10.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-04.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/11.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-05.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/12.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-06.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/13.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-07.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/14.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-08.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/15.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-09.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/16.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-10.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/17.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-11.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/18.jpg",
+          "src": "assets/works/pingyuan-calendar/ill-12.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/19.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-01.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/20.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-02.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/21.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-03.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/22.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-04.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/23.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-05.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/24.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-06.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/25.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-07.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/26.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-08.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/27.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-09.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/28.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-10.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/29.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-11.jpg",
           "poster": ""
         },
         {
           "type": "image",
-          "src": "assets/works/pingyuan-calendar/30.jpg",
+          "src": "assets/works/pingyuan-calendar/cal-12.jpg",
           "poster": ""
         }
       ],

@@ -66,6 +66,8 @@ function normalizeWork(w, index) {
   };
   // 可选字段只在有值时输出，保持 data.js 干净
   if (w.single) out.single = true;
+  // 定制专题页（如台历 work-pingyuan-calendar.html）：卡片与跳转都指向它
+  if (w.href && typeof w.href === 'string') out.href = w.href;
   if (w.mediaType === 'video' && w.video) {
     out.mediaType = 'video';
     out.video = w.video;

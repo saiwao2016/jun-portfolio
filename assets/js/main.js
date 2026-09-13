@@ -11,10 +11,17 @@
   const FALLBACK_LANG = 'zh';
 
   /* 资源版本号：每次发布若有同名文件被覆盖，需递增，避免 CDN/浏览器缓存旧资源 */
-  const ASSET_V = 'v20260914';
+  const ASSET_V = 'v20260915';
   function vUrl(u) {
     if (!u) return u;
     return u + (u.indexOf('?') >= 0 ? '&' : '?') + ASSET_V;
+  }
+
+  /** 作品链接：作品可自带 href（定制专题页，如 work-pingyuan-calendar.html），
+      否则走通用详情页 work-detail.html?id=… */
+  function workHref(w) {
+    if (w && w.href) return w.href + '?' + ASSET_V;
+    return 'work-detail.html?id=' + encodeURIComponent(w.id) + '&' + ASSET_V;
   }
 
   /* ---------- 站点设置（assets/js/site-data.js，由后台 /admin 生成） ---------- */
@@ -290,9 +297,14 @@
       // 空值代表该项不适用（如未提供的年份）—— 整块隐藏，不留空行
       el.style.display = val === '' ? 'none' : '';
       if (val === '') return;
-      // 多行内容：保留 \n
+      // 支持极简强调 **粗体**；多行内容保留 \n。
+      // 先整串转义，再把 **x** 放行成 <strong>，避免注入。
+      const esc = escapeHtml(val);
+      const rich = esc.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
       if (val.indexOf('\n') !== -1) {
-        el.innerHTML = val.split('\n').map(escapeHtml).join('<br>');
+        el.innerHTML = rich.split('\n').join('<br>');
+      } else if (rich !== esc) {
+        el.innerHTML = rich;
       } else {
         el.textContent = val;
       }
@@ -302,6 +314,13 @@
       const key = el.getAttribute('data-i18n-placeholder');
       const val = dict[key];
       if (val !== undefined) el.setAttribute('placeholder', val);
+    });
+
+    // <img data-i18n-alt="…">：图片替代文本随语言切换
+    document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-alt');
+      const val = dict[key];
+      if (val !== undefined) el.setAttribute('alt', val);
     });
 
     // <meta name="description" data-i18n-content="…"> 之类的属性型注入
@@ -393,7 +412,7 @@
 
       const card = document.createElement('a');
       card.className = 'work-card reveal';
-      card.href = `work-detail.html?id=${encodeURIComponent(w.id)}&v20260914`;
+      card.href = workHref(w);
       card.dataset.category = w.category;
 
       card.innerHTML = `
@@ -514,6 +533,9 @@
     const nextW = window.WORKS[(idx + 1) % window.WORKS.length];
     const prevW = window.WORKS[(idx - 1 + window.WORKS.length) % window.WORKS.length];
 
+    // 该作品有定制专题页时（如台历），旧链接直接送过去，避免同一作品两套详情并存
+    if (w.href) { location.replace(workHref(w)); return; }
+
     // data.js 里写了的段落用真实内容，没写的用 i18n 模板兜底
     const real = {};
     (w.body || []).forEach((s) => { real[s.k] = s.p; });
@@ -589,9 +611,9 @@
         </div>
 
         <nav class="work-nav">
-          <a href="work-detail.html?id=${encodeURIComponent(prevW.id)}&v20260914">← ${escapeHtml(prevW.title[lang])}</a>
-          <a href="works.html?v20260914">${escapeHtml(D['work.nav.back'])}</a>
-          <a href="work-detail.html?id=${encodeURIComponent(nextW.id)}&v20260914">${escapeHtml(nextW.title[lang])} →</a>
+          <a href="${workHref(prevW)}">← ${escapeHtml(prevW.title[lang])}</a>
+          <a href="works.html?${ASSET_V}">${escapeHtml(D['work.nav.back'])}</a>
+          <a href="${workHref(nextW)}">${escapeHtml(nextW.title[lang])} →</a>
         </nav>
       </div>
     `;
@@ -604,8 +626,9 @@
   }
 
   /* ---------- Gallery lightbox（图片 + 视频） ---------- */
-  function bindLightbox(list) {
-    const nodes = Array.from(document.querySelectorAll('.work-gallery [data-lb]'));
+  function bindLightbox(list, scope) {
+    // 通用详情页的图集在 .work-gallery 内；定制专题页直接传整个文档
+    const nodes = Array.from((scope || document).querySelectorAll('[data-lb]'));
     const items = (list || []).map((it) => (typeof it === 'string'
       ? { type: isVideoPath(it) ? 'video' : 'image', src: it, poster: '' }
       : it));
@@ -647,7 +670,12 @@
         lbVid.removeAttribute('src');
         lbImg.src = vUrl(it.src);
       }
-      lbCap.textContent = (cur + 1) + ' / ' + items.length;
+      // 说明文字取点击时的可见标题文本 —— 语言切换后自动是当前语言
+      const capEl = it.capEl;
+      const capTxt = capEl
+        ? String(capEl.innerText || capEl.textContent || '').replace(/\s+/g, ' ').trim()
+        : String(it.cap || '');
+      lbCap.textContent = (cur + 1) + ' / ' + items.length + (capTxt ? ' · ' + capTxt : '');
     }
 
     nodes.forEach((im) => {
@@ -663,6 +691,73 @@
       if (e.key === 'ArrowLeft') show(cur - 1);
       if (e.key === 'ArrowRight') show(cur + 1);
     };
+  }
+
+  /* ---------- 作品专题页（定制排版）----------
+     部分作品有自己的专题页（如台历：可交互的分区块长页）。
+     页面由 _tools/gen_pingyuan_page.py 生成，这里只接三件事：
+     页内锚点 / 返回顶部 / 图集灯箱（同一张图在「平铺图」与「逐月」
+     两个区块重复出现，必须按 src 去重，否则灯箱里会看到重复项）。 */
+  function bindCustomWorkPage(host) {
+    // 页内锚点
+    host.querySelectorAll('[data-pc-scroll]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const t = document.getElementById(btn.getAttribute('data-pc-scroll'));
+        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    const top = host.querySelector('[data-pc-backtop]');
+    if (top) top.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // 图集灯箱
+    const imgs = Array.from(host.querySelectorAll('[data-pc-plate]'));
+    if (imgs.length) {
+      const items = [];
+      const seen = Object.create(null);
+      const capOf = (im) => {
+        const card = im.closest('[data-pc-card]');
+        return card && card.querySelector('[data-pc-cap]');
+      };
+      imgs.forEach((im) => {
+        const src = im.getAttribute('src');
+        if (!(src in seen)) {
+          seen[src] = items.length;
+          items.push({ type: 'image', src, capEl: capOf(im) });
+        }
+        im.setAttribute('data-lb', String(seen[src]));
+      });
+      bindLightbox(items);
+
+      // 图片 alt 跟随当前语言（取图上标题文本，随切换器一起更新）
+      const syncAlt = () => {
+        imgs.forEach((im) => {
+          const cap = capOf(im);
+          if (cap) im.setAttribute('alt', String(cap.innerText || '').replace(/\s+/g, ' ').trim());
+        });
+      };
+      syncAlt();
+      onLangChange(syncAlt);
+    }
+
+    // 上一件 / 下一件
+    const navWrap = document.querySelector('[data-pc-worknav]');
+    const id = host.getAttribute('data-work-id');
+    if (navWrap && id && window.WORKS && window.WORKS.length) {
+      const i = window.WORKS.findIndex((w) => w.id === id);
+      if (i >= 0) {
+        const prev = window.WORKS[(i - 1 + window.WORKS.length) % window.WORKS.length];
+        const next = window.WORKS[(i + 1) % window.WORKS.length];
+        const pa = navWrap.querySelector('[data-pc-prev]');
+        const na = navWrap.querySelector('[data-pc-next]');
+        const drawNav = (lang) => {
+          if (pa) { pa.textContent = '← ' + prev.title[lang]; pa.href = workHref(prev); }
+          if (na) { na.textContent = next.title[lang] + ' →'; na.href = workHref(next); }
+        };
+        drawNav(getLang());
+        onLangChange(drawNav);
+      }
+    }
   }
 
   /* ---------- Résumé page（数据驱动，内容来自 content/resume.json） ---------- */
@@ -773,6 +868,8 @@
     // 否则 JS 生成的卡片不会被 IntersectionObserver 观察到而永远 opacity:0
     renderWorks();
     renderWorkDetail();
+    const customPage = document.querySelector('.pc[data-work-id]');
+    if (customPage) bindCustomWorkPage(customPage);
     bindBgm();
     bindReveal();
 
