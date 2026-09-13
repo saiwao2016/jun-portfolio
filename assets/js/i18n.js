@@ -55,7 +55,7 @@ window.I18N = {
     // —— 作品集 ——
     'works.eyebrow':        '作品集 / Works',
     'works.title': '作品案例',
-    'works.lead': '作品集收录 38 个案例 —— 数字界面 9 个、原创 IP 11 个、平面设计 18 件（品牌 VIS、标志与画册印刷设计），均覆盖从概念到落地的完整交付。',
+    'works.lead': '作品集收录 44 个案例 —— 数字界面 9 个、原创 IP 17 个、平面设计 18 件（品牌 VIS、标志与画册印刷设计），均覆盖从概念到落地的完整交付。',
     'works.filter.all':     '全部',
     'works.filter.brand':   '品牌系统',
     'works.filter.report':  '报告与信息设计',
@@ -312,7 +312,7 @@ window.I18N = {
 
     'works.eyebrow':        'Proyectos / Works',
     'works.title': 'Casos',
-    'works.lead': 'La colección reúne 38 casos: 9 interfaces digitales, 11 IP originales y 18 trabajos de diseño gráfico (manuales VIS, logotipos y publicaciones), todos con entrega completa de arquitectura a componentes.',
+    'works.lead': 'La colección reúne 44 casos: 9 interfaces digitales, 17 IP originales y 18 trabajos de diseño gráfico (manuales VIS, logotipos y publicaciones), todos con entrega completa de arquitectura a componentes.',
     'works.filter.all':     'Todos',
     'works.filter.brand':   'Sistemas de marca',
     'works.filter.report':  'Informes e información',
@@ -561,7 +561,7 @@ window.I18N = {
 
     'works.eyebrow':        'Works',
     'works.title': 'Case studies',
-    'works.lead': 'The collection gathers 38 cases: 9 digital interfaces, 11 original IPs and 18 graphic design works (VIS manuals, logos and print publications) — each delivered end to end from information architecture to components.',
+    'works.lead': 'The collection gathers 44 cases: 9 digital interfaces, 17 original IPs and 18 graphic design works (VIS manuals, logos and print publications) — each delivered end to end from information architecture to components.',
     'works.filter.all':     'All',
     'works.filter.brand':   'Brand systems',
     'works.filter.report':  'Reports & information',

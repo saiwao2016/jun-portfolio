@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-13T07:05:45.243Z",
+  "updatedAt": "2026-09-13T07:17:46.697Z",
   "works": [
     {
       "id": "asq-system",
       "category": "digital",
       "status": "published",
-      "sortOrder": 2,
+      "sortOrder": 3,
       "year": "2016 — 至今",
       "mediaType": "image",
       "cover": "assets/works/asq-system/cover.png",
@@ -166,7 +166,7 @@
       "id": "mind-web",
       "category": "digital",
       "status": "published",
-      "sortOrder": 4,
+      "sortOrder": 5,
       "year": "2016 — 至今",
       "mediaType": "image",
       "cover": "assets/works/mind-web/cover.png",
@@ -231,7 +231,7 @@
       "id": "mind-platform",
       "category": "digital",
       "status": "published",
-      "sortOrder": 3,
+      "sortOrder": 4,
       "year": "2016 — 至今",
       "mediaType": "image",
       "cover": "assets/works/mind-platform/cover.png",
@@ -296,7 +296,7 @@
       "id": "ruizhi-cloud",
       "category": "digital",
       "status": "published",
-      "sortOrder": 5,
+      "sortOrder": 6,
       "year": "2019 — 至今",
       "mediaType": "image",
       "cover": "assets/works/ruizhi-cloud/cover.png",
@@ -361,7 +361,7 @@
       "id": "parent-app",
       "category": "digital",
       "status": "published",
-      "sortOrder": 6,
+      "sortOrder": 7,
       "year": "2016 — 至今",
       "mediaType": "image",
       "cover": "assets/works/parent-app/cover.png",
@@ -416,7 +416,7 @@
       "id": "tuoyou",
       "category": "digital",
       "status": "published",
-      "sortOrder": 8,
+      "sortOrder": 9,
       "year": "2025 — 至今",
       "mediaType": "image",
       "cover": "assets/works/tuoyou/cover.png",
@@ -471,7 +471,7 @@
       "id": "xiaoe-course",
       "category": "digital",
       "status": "published",
-      "sortOrder": 7,
+      "sortOrder": 8,
       "year": "2025 — 至今",
       "mediaType": "image",
       "cover": "assets/works/xiaoe-course/cover.png",
@@ -516,7 +516,7 @@
       "id": "ui-showcase",
       "category": "digital",
       "status": "published",
-      "sortOrder": 9,
+      "sortOrder": 10,
       "year": "2019",
       "mediaType": "image",
       "cover": "assets/works/ui-showcase/cover.png",
@@ -561,7 +561,7 @@
       "id": "vis-guonin",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 13,
+      "sortOrder": 14,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/vis-guonin/cover.png",
@@ -621,7 +621,7 @@
       "id": "vis-xinzhi",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 11,
+      "sortOrder": 12,
       "year": "2017",
       "mediaType": "image",
       "cover": "assets/works/vis-xinzhi/cover.png",
@@ -676,7 +676,7 @@
       "id": "logo-weixiaoxin",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 12,
+      "sortOrder": 13,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/logo-weixiaoxin/cover.png",
@@ -731,7 +731,7 @@
       "id": "logo-liuxin",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 10,
+      "sortOrder": 11,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/logo-liuxin/cover.png",
@@ -791,7 +791,7 @@
       "id": "logo-yan",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 18,
+      "sortOrder": 19,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/logo-yan/cover.png",
@@ -846,7 +846,7 @@
       "id": "logo-umbrella",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 19,
+      "sortOrder": 20,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/logo-umbrella/cover.png",
@@ -906,7 +906,7 @@
       "id": "logo-hexiang",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 14,
+      "sortOrder": 15,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/logo-hexiang/cover.png",
@@ -951,7 +951,7 @@
       "id": "logo-shiguang",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 16,
+      "sortOrder": 17,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/logo-shiguang/cover.png",
@@ -996,7 +996,7 @@
       "id": "logo-pingyuan",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 17,
+      "sortOrder": 18,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/logo-pingyuan/cover.png",
@@ -1051,7 +1051,7 @@
       "id": "logo-aline",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 20,
+      "sortOrder": 21,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/logo-aline/cover.png",
@@ -1126,7 +1126,7 @@
       "id": "liuxin-book",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 21,
+      "sortOrder": 22,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/liuxin-book/cover.png",
@@ -1186,7 +1186,7 @@
       "id": "bjjz-book",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 22,
+      "sortOrder": 23,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/bjjz-book/cover.png",
@@ -1246,7 +1246,7 @@
       "id": "logo-zhuhai-orchestra",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 15,
+      "sortOrder": 16,
       "year": "2020 — 2021",
       "mediaType": "image",
       "cover": "assets/works/logo-zhuhai-orchestra/cover.png",
@@ -1301,7 +1301,7 @@
       "id": "liangbiao-book",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 23,
+      "sortOrder": 24,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/liangbiao-book/cover.png",
@@ -1361,7 +1361,7 @@
       "id": "timp-32p",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 24,
+      "sortOrder": 25,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/timp-32p/cover.png",
@@ -1421,7 +1421,7 @@
       "id": "timp-84p",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 25,
+      "sortOrder": 26,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/timp-84p/cover.png",
@@ -1481,7 +1481,7 @@
       "id": "yuangong-book",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 26,
+      "sortOrder": 27,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/yuangong-book/cover.png",
@@ -1541,7 +1541,7 @@
       "id": "ruizhi-book",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 27,
+      "sortOrder": 28,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ruizhi-book/cover.png",
@@ -1601,7 +1601,7 @@
       "id": "ip-nino",
       "category": "ip",
       "status": "published",
-      "sortOrder": 28,
+      "sortOrder": 29,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-nino/cover.png",
@@ -1656,7 +1656,7 @@
       "id": "ip-pingyuan-v1",
       "category": "ip",
       "status": "published",
-      "sortOrder": 29,
+      "sortOrder": 30,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-pingyuan-v1/cover.png",
@@ -1721,7 +1721,7 @@
       "id": "ip-pingyuan-v2",
       "category": "ip",
       "status": "published",
-      "sortOrder": 30,
+      "sortOrder": 31,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-pingyuan-v2/cover.png",
@@ -1781,7 +1781,7 @@
       "id": "ip-pingyuan-v3",
       "category": "ip",
       "status": "published",
-      "sortOrder": 31,
+      "sortOrder": 32,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-pingyuan-v3/cover.png",
@@ -1851,7 +1851,7 @@
       "id": "ip-mengjiacun-1",
       "category": "ip",
       "status": "published",
-      "sortOrder": 32,
+      "sortOrder": 33,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-mengjiacun-1/cover.png",
@@ -1916,7 +1916,7 @@
       "id": "ip-mengjiacun-2",
       "category": "ip",
       "status": "published",
-      "sortOrder": 33,
+      "sortOrder": 34,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-mengjiacun-2/cover.png",
@@ -1981,7 +1981,7 @@
       "id": "ip-mengjiacun-3",
       "category": "ip",
       "status": "published",
-      "sortOrder": 34,
+      "sortOrder": 35,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-mengjiacun-3/cover.png",
@@ -2046,7 +2046,7 @@
       "id": "ip-mengjiacun-4",
       "category": "ip",
       "status": "published",
-      "sortOrder": 35,
+      "sortOrder": 36,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-mengjiacun-4/cover.png",
@@ -2111,7 +2111,7 @@
       "id": "ip-mengjiacun-5",
       "category": "ip",
       "status": "published",
-      "sortOrder": 36,
+      "sortOrder": 37,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-mengjiacun-5/cover.png",
@@ -2176,7 +2176,7 @@
       "id": "ip-houcang",
       "category": "ip",
       "status": "published",
-      "sortOrder": 37,
+      "sortOrder": 38,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-houcang/cover.png",
@@ -2221,7 +2221,7 @@
       "id": "ip-shiliu",
       "category": "ip",
       "status": "published",
-      "sortOrder": 38,
+      "sortOrder": 39,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/ip-shiliu/cover.png",
@@ -2296,7 +2296,7 @@
       "id": "app-shortcut-key",
       "category": "digital",
       "status": "published",
-      "sortOrder": 1,
+      "sortOrder": 2,
       "year": "2018",
       "mediaType": "image",
       "cover": "assets/works/app-shortcut-key/cover.png",
@@ -2415,6 +2415,306 @@
         "zh": "「Shortcut Key」是一款以提高软件使用效率为目标的 App 概念设计（Circle Creative Studio，2018）。\n\n设计初衷：在多年的工作过程中我们发现，团队成员的软件使用能力很大程度上影响着工作的质量与效率，而这类能力却始终没有一个可以量化的评价标准；同时，工作中遇到软件使用问题时，查询与学习都非常不方便，极大的影响了个人能力的提升。出于对这些问题的考虑，我们希望做出一款帮助人们提高软件使用效率的 App —— 而不论是评价一个人的软件使用能力，还是提高他的工作效率，都有一个共同的切入点，那就是软件的「快捷键」。于是我们决定从「快捷键」这一个点出发：一方面帮助用户便捷地搜索快捷键并有效地将其掌握，另一方面帮助用户系统地学习新的软件，同时建立起可靠的软件能力评价体系。\n\n视觉上，标志由「Key」与键盘形态提炼，圆角键帽与彩色立体方块构成核心识别；页面覆盖引导页、首页、搜索、学习、测评、夜间模式等完整链路，并配以动效演示，呈现从概念到交互的完整体验。",
         "es": "\"Shortcut Key\" es un diseño conceptual de app móvil orientado a mejorar la eficiencia en el uso del software (Circle Creative Studio, 2018).\n\nMotivación: a lo largo de años de trabajo observamos que la capacidad de manejo de software de los miembros del equipo influye en gran medida en la calidad y la eficiencia del trabajo, y sin embargo esa capacidad nunca ha contado con un estándar de evaluación cuantificable; además, ante un problema de uso de software, consultar y aprender resulta muy poco práctico, lo que limita seriamente la mejora personal. Partiendo de estas cuestiones, quisimos crear una app que ayude a las personas a mejorar su eficiencia con el software; y tanto para evaluar la capacidad de uso como para elevar la eficiencia existe un punto de entrada común: los atajos de teclado. Decidimos pues partir de ese único punto: por un lado, ayudar al usuario a buscar atajos con facilidad y a dominarlos de forma efectiva; por otro, ayudarle a aprender sistemáticamente nuevos programas, estableciendo al mismo tiempo un sistema fiable de evaluación de competencias.\n\nEn lo visual, el logotipo se extrae de la \"Key\" y de la forma del teclado, con teclas redondeadas y cubos tridimensionales de color como núcleo de identidad; la obra cubre onboarding, inicio, búsqueda, aprendizaje, evaluación y modo nocturno, acompañada de demostraciones en movimiento que presentan la experiencia completa del concepto a la interacción.",
         "en": "\"Shortcut Key\" is a mobile app concept design aimed at improving software efficiency (Circle Creative Studio, 2018).\n\nMotivation: over years of work we found that team members' software proficiency strongly affects the quality and efficiency of their work, yet there has never been a quantifiable standard for evaluating that ability; and when software problems arise, looking things up and learning are both very inconvenient, which seriously holds back personal growth. With these issues in mind, we wanted to build an app that helps people work more efficiently with software — and whether it is assessing someone's software proficiency or raising their working efficiency, there is one shared entry point: software shortcuts. So we decided to start from that single point: on one hand, help users search shortcuts conveniently and truly master them; on the other, help them learn new software systematically, while establishing a reliable system for evaluating software proficiency.\n\nVisually, the logo is distilled from \"Key\" and the keyboard form, with rounded keycaps and colourful 3D cubes as the core identity; the work covers onboarding, home, search, learning, assessment and night mode, with motion demos presenting the full concept-to-interaction experience."
+      }
+    },
+    {
+      "id": "ip-emoji-shiliu",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 40,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-emoji-shiliu/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-shiliu/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-shiliu/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-shiliu/03.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "石榴妹萌萌 · 微信表情包",
+        "es": "Shiliu Mei Mengmeng · Stickers para WeChat",
+        "en": "Shiliu Mei Mengmeng · WeChat Sticker Pack"
+      },
+      "type": {
+        "zh": "原创 IP / 微信表情包上架",
+        "es": "IP original / Stickers para WeChat",
+        "en": "Original IP / WeChat sticker pack"
+      },
+      "scope": {
+        "zh": "角色设定 · 表情设计 · 微信表情商店上架",
+        "es": "Diseño de personaje · Emoticonos · Publicado en la tienda de WeChat",
+        "en": "Character design · Sticker design · Published on the WeChat Sticker Store"
+      },
+      "blurb": {
+        "zh": "微信表情商店上架作品，收录 16 个表情。\n\n角色沿用「榴心社工」公益 IP 石榴妹萌萌：头顶石榴帽、身披碎花蓝、胸戴红领巾，把石榴、留守儿童与志愿者三重线索收进同一个形象。\n\n表情包按聊天里的高频场景展开——早安、晚安、比心、抱抱、害羞、生气、大哭，还有一句「厉害了我的萌」。扁平矢量配上红色帽子与蓝色碎花衣的强对比，缩到聊天框里也一眼能认出来。",
+        "es": "Colección publicada en la tienda de stickers de WeChat, con 16 emoticonos.\n\nEl personaje retoma la IP solidaria «Shiliu Mei Mengmeng» del proyecto Liuxin: gorro de granada, chaqueta azul de flores y pañuelo rojo, reuniendo en una sola figura la granada, los niños del proyecto y los voluntarios.\n\nLos emoticonos siguen las situaciones más frecuentes del chat — buenos días, buenas noches, corazón, abrazo, vergüenza, enfado o llanto, más un «qué crack eres». El vector plano y el fuerte contraste entre el rojo y el azul mantienen la lectura incluso en el tamaño mínimo del chat.",
+        "en": "A sticker pack published on the WeChat Sticker Store, with 16 emoticons.\n\nThe character carries over the charity IP “Shiliu Mei Mengmeng” from the Liuxin social-work project — pomegranate hat, floral blue jacket, red neckerchief — folding the pomegranate, the left-behind children and the volunteers into one figure.\n\nThe set follows everyday chat rhythms: good morning, good night, heart, hug, shyness, anger and crying, plus a “you’re amazing” stamp. Flat vector shapes and the hard red-and-blue contrast keep it legible even at chat-box size."
+      }
+    },
+    {
+      "id": "ip-emoji-shishizi",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 41,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-emoji-shishizi/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-shishizi/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-shishizi/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-shishizi/03.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "狮狮子 · 微信表情包",
+        "es": "Shi Shi Zi · Stickers para WeChat",
+        "en": "Shi Shi Zi · WeChat Sticker Pack"
+      },
+      "type": {
+        "zh": "原创 IP / 微信表情包上架",
+        "es": "IP original / Stickers para WeChat",
+        "en": "Original IP / WeChat sticker pack"
+      },
+      "scope": {
+        "zh": "角色设定 · 表情设计 · 微信表情商店上架",
+        "es": "Diseño de personaje · Emoticonos · Publicado en la tienda de WeChat",
+        "en": "Character design · Sticker design · Published on the WeChat Sticker Store"
+      },
+      "blurb": {
+        "zh": "「Youknow design」系列第一号，微信表情商店上架，收录 16 个表情。\n\n主角是一头鬃毛蓬松的狮子：棕色鬃毛压住橘色身体，圆耳、短尾、腮红，整体走厚实憨态的路子。\n\n表情从大笑、指点、哼、喵，到「辛苦啦」和 bye，覆盖日常语气；粗描边配低饱和橘棕，让它在表情栏的小尺寸下依然清晰。",
+        "es": "Primer número de la serie «Youknow design», publicado en la tienda de stickers de WeChat con 16 emoticonos.\n\nEl protagonista es un león de melena frondosa: melena marrón sobre cuerpo naranja, orejas redondas, cola corta y mejillas sonrosadas, con un aire macizo y bonachón.\n\nLas expresiones van de la risa al gesto de señalar, del resoplido al «maullido» y del «buen trabajo» al bye, cubriendo el tono diario; el contorno grueso y el naranja terroso se leen bien a tamaño pequeño.",
+        "en": "First entry in the “Youknow design” series, published on the WeChat Sticker Store with 16 emoticons.\n\nThe lead is a lion with a heavy mane: brown mane over an orange body, round ears, a stub tail and pink cheeks — sturdy and good-natured.\n\nExpressions run from a belly laugh and a pointing finger to a huff, a “meow”, a “nice work” and a bye; thick outlines and muted orange-brown stay readable at small size."
+      }
+    },
+    {
+      "id": "ip-emoji-niuniuzi",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 42,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-emoji-niuniuzi/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-niuniuzi/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-niuniuzi/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-niuniuzi/03.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "牛牛子 · 微信表情包",
+        "es": "Niu Niu Zi · Stickers para WeChat",
+        "en": "Niu Niu Zi · WeChat Sticker Pack"
+      },
+      "type": {
+        "zh": "原创 IP / 微信表情包上架",
+        "es": "IP original / Stickers para WeChat",
+        "en": "Original IP / WeChat sticker pack"
+      },
+      "scope": {
+        "zh": "角色设定 · 表情设计 · 微信表情商店上架",
+        "es": "Diseño de personaje · Emoticonos · Publicado en la tienda de WeChat",
+        "en": "Character design · Sticker design · Published on the WeChat Sticker Store"
+      },
+      "blurb": {
+        "zh": "「Youknow design」系列第二号，微信表情商店上架，收录 24 个表情。\n\n主角是一对牛：棕黄牛与戴粉色蝴蝶结的黑白花牛，两种配色轮换出场，把「对 / 好吧 / 收到 / 在吗 / 晚安 / 加油」这类沟通高频词做成了动作。\n\n24 个表情的体量让语义覆盖更完整——从比心、献花、闪亮，到无语、喷水、哈哈哈，情绪跨度拉得比较开。",
+        "es": "Segundo número de la serie «Youknow design», publicado en la tienda de stickers de WeChat con 24 emoticonos.\n\nDos vacas: una parda y otra blanquinegra con lazo rosa, que se alternan para dar forma a las palabras más usadas del chat — «vale», «recibido», «¿estás?», «buenas noches», «ánimo».\n\nCon 24 piezas la cobertura semántica es más amplia: del corazón, las flores y el brillo al sin palabras, el chorro de agua o el jajaja.",
+        "en": "Second entry in the “Youknow design” series, published on the WeChat Sticker Store with 24 emoticons.\n\nTwo cows — one tawny, one black-and-white with a pink bow — alternate to carry the workhorses of chat: “sure”, “received”, “you there?”, “good night”, “you can do it”.\n\nAt 24 pieces the semantic range is wider: from hearts, flowers and sparkles to speechlessness, a water spout and a laugh-out-loud."
+      }
+    },
+    {
+      "id": "ip-emoji-tutuzi",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 43,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-emoji-tutuzi/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-tutuzi/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-tutuzi/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-tutuzi/03.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "一只兔兔子 · 微信表情包",
+        "es": "Yi Zhi Tu Tu Zi · Stickers para WeChat",
+        "en": "Tu Tu Zi · WeChat Sticker Pack"
+      },
+      "type": {
+        "zh": "原创 IP / 微信表情包上架",
+        "es": "IP original / Stickers para WeChat",
+        "en": "Original IP / WeChat sticker pack"
+      },
+      "scope": {
+        "zh": "角色设定 · 表情设计 · 微信表情商店上架",
+        "es": "Diseño de personaje · Emoticonos · Publicado en la tienda de WeChat",
+        "en": "Character design · Sticker design · Published on the WeChat Sticker Store"
+      },
+      "blurb": {
+        "zh": "「Youknow design」系列第三号（署名 Xzzz），微信表情商店上架，收录 16 个表情。\n\n一只极简线条兔：细黑描边、白色身体，只留黄、蓝、橙三种小衣服，画面里大量留白，还有一根贯穿好几格的桌线。\n\n内容多是生活切片——冲浪、唱歌、喝咖啡、遛狗、吐彩虹、打坐发光、趴在桌上发呆——弱化语言，靠动作和留白说话。",
+        "es": "Tercer número de la serie «Youknow design» (firmado Xzzz), publicado en la tienda de stickers de WeChat con 16 emoticonos.\n\nUn conejo de línea mínima: contorno negro fino, cuerpo blanco y solo tres colores de ropa —amarillo, azul y naranja—, con mucho aire y una línea de mesa que atraviesa varias escenas.\n\nEl contenido son pequeños fragmentos de vida: surf, cantar, café, pasear al perro, vomitar un arcoíris, meditar o quedarse mirando la nada sobre la mesa.",
+        "en": "Third entry in the “Youknow design” series (credited Xzzz), published on the WeChat Sticker Store with 16 emoticons.\n\nA minimum-line rabbit: thin black outline, white body and only three garment colours — yellow, blue and orange — with generous empty space and a table line running through several scenes.\n\nThe subjects are small slices of life: surfing, singing, coffee, walking the dog, throwing up a rainbow, meditating, or blankly staring across a desk."
+      }
+    },
+    {
+      "id": "ip-emoji-pilitu",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 44,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-emoji-pilitu/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-pilitu/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-pilitu/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-pilitu/03.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "一只霹雳兔 · 微信表情包",
+        "es": "Yi Zhi Pi Li Tu · Stickers para WeChat",
+        "en": "Pi Li Tu · WeChat Sticker Pack"
+      },
+      "type": {
+        "zh": "原创 IP / 微信表情包上架",
+        "es": "IP original / Stickers para WeChat",
+        "en": "Original IP / WeChat sticker pack"
+      },
+      "scope": {
+        "zh": "角色设定 · 表情设计 · 微信表情商店上架",
+        "es": "Diseño de personaje · Emoticonos · Publicado en la tienda de WeChat",
+        "en": "Character design · Sticker design · Published on the WeChat Sticker Store"
+      },
+      "blurb": {
+        "zh": "微信表情商店上架作品，收录 16 个表情。\n\n一只系红领巾、戴红色贝雷帽的兔子，表情夸张到变形：翻白眼、张望、哭到喷水、满脸嫌弃，还有挥手指着屏幕的「退!!!」。\n\n用最少的结构画最大的情绪是这个包的核心——线条简单、五官放大，追求一眼就能读出来的表情张力。",
+        "es": "Publicado en la tienda de stickers de WeChat con 16 emoticonos.\n\nUn conejo con pañuelo rojo y boina a juego, con expresiones llevadas hasta la deformación: ojos en blanco, cara de asco, llanto con chorro de agua y un «¡¡¡atrás!!!» señalando con el dedo.\n\nSacar la máxima emoción con la mínima estructura es el eje del paquete: línea sencilla, rasgos agrandados, lectura inmediata.",
+        "en": "Published on the WeChat Sticker Store with 16 emoticons.\n\nA rabbit in a red neckerchief and matching beret, with expressions pushed to the point of distortion: rolled eyes, a look of disgust, a crying fit with a water spout, and a finger-pointing “back off!!!”.\n\nGetting maximum emotion out of minimum structure is the point of the pack: simple lines, enlarged features, instantly readable."
+      }
+    },
+    {
+      "id": "ip-emoji-huahua",
+      "category": "ip",
+      "status": "published",
+      "sortOrder": 45,
+      "year": "—",
+      "mediaType": "image",
+      "cover": "assets/works/ip-emoji-huahua/cover.png",
+      "video": "",
+      "videoPoster": "",
+      "bgm": "",
+      "single": false,
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-huahua/01.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-huahua/02.png",
+          "poster": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ip-emoji-huahua/03.png",
+          "poster": ""
+        }
+      ],
+      "title": {
+        "zh": "虎阿虎阿 · 微信表情包",
+        "es": "Hu A Hu A · Stickers para WeChat",
+        "en": "Hu A Hu A · WeChat Sticker Pack"
+      },
+      "type": {
+        "zh": "原创 IP / 微信表情包上架",
+        "es": "IP original / Stickers para WeChat",
+        "en": "Original IP / WeChat sticker pack"
+      },
+      "scope": {
+        "zh": "角色设定 · 表情设计 · 微信表情商店上架",
+        "es": "Diseño de personaje · Emoticonos · Publicado en la tienda de WeChat",
+        "en": "Character design · Sticker design · Published on the WeChat Sticker Store"
+      },
+      "blurb": {
+        "zh": "微信表情商店上架作品，收录 24 个表情。\n\n一只圆滚滚的小老虎：橘色皮毛配黑色条纹，脑袋大、身子短，走软萌憨态路线。\n\n24 个动作全都围绕「可爱」展开——捧脸、抱尾、趴着睡、啃爪子、害羞、打哈欠，还有被吓到掉眼泪；整套保持统一的暖调柔光，摆在一起像一组小剧场。",
+        "es": "Publicado en la tienda de stickers de WeChat con 24 emoticonos.\n\nUn tigre rechoncho: pelaje naranja con rayas negras, cabeza grande y cuerpo corto, en clave tierna y bonachona.\n\nLas 24 acciones giran en torno a la ternura: cara entre las manos, abrazar la cola, dormir boca abajo, mordisquearse la garra, timidez, bostezos y sustos hasta el llanto, todas bajo la misma luz cálida.",
+        "en": "Published on the WeChat Sticker Store with 24 emoticons.\n\nA chubby little tiger: orange coat with black stripes, oversized head, short body — soft and good-humoured.\n\nThe 24 actions all orbit cuteness: face in hands, hugging its tail, sleeping on its belly, chewing a paw, shyness, yawns and being startled to tears, held together by the same warm light."
       }
     }
   ]

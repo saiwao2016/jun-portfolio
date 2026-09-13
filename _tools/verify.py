@@ -137,14 +137,14 @@ with sync_playwright() as p:
     pg.goto(f"{BASE}/works.html", wait_until="networkidle")
     pg.wait_for_timeout(500)
     total = pg.locator(".work-card").count()
-    check(total == 38, f"作品集应有 38 个案例，实际 {total}")
+    check(total == 44, f"作品集应有 44 个案例，实际 {total}")
     print(f"  ✓ 作品集共 {total} 个案例")
     for f in ("digital", "ip", "graphic", "all"):
         pg.click(f'.filter-btn[data-filter="{f}"]')
         pg.wait_for_timeout(220)
         vis = pg.evaluate(
             "()=>[...document.querySelectorAll('.work-card')].filter(c=>c.style.display!=='none').length")
-        exp = 38 if f == "all" else pg.evaluate(
+        exp = 44 if f == "all" else pg.evaluate(
             f"()=>window.WORKS.filter(w=>w.category==='{f}').length")
         check(vis == exp, f"筛选 {f}: 显示 {vis}，应为 {exp}")
         print(f"     筛选 {f:8s} → {vis} 个")
@@ -182,7 +182,10 @@ with sync_playwright() as p:
                       ("ip-mengjiacun-1", 6), ("ip-mengjiacun-2", 6),
                       ("ip-mengjiacun-3", 6), ("ip-mengjiacun-4", 6),
                       ("ip-mengjiacun-5", 6), ("ip-houcang", 2),
-                      ("ip-shiliu", 8), ("app-shortcut-key", 18)]:
+                      ("ip-shiliu", 8), ("app-shortcut-key", 18),
+                      ("ip-emoji-shiliu", 3), ("ip-emoji-shishizi", 3),
+                      ("ip-emoji-niuniuzi", 3), ("ip-emoji-tutuzi", 3),
+                      ("ip-emoji-pilitu", 3), ("ip-emoji-huahua", 3)]:
         pg.goto(f"{BASE}/work-detail.html?id={wid}", wait_until="networkidle")
         scroll_all(pg)
         h1 = pg.locator("h1").first.inner_text().strip()

@@ -79,7 +79,7 @@ def prepare(pack, work):
     big = TMP / pack['id']
     if big.exists():
         shutil.rmtree(big)
-    big.mkdir(parents=True)
+    ensure(big)
     out = []
     for f in files:
         d = big / f.name
@@ -122,7 +122,7 @@ def sheet_qr(pack, work, qr, width, height, out):
     html = (HTML.replace('__W__', str(width)).replace('__H__', str(height))
             .replace('__INK__', INK).replace('__SUB__', SUB).replace('__TILE__', TILE)
             .replace('__EYEBROW__', '微信表情商店 · WECHAT STICKER STORE')
-            .replace('__RIGHT__', f'<b>{len(str(pack.get("n","")))}</b>'.replace('<b></b>', '') or '')
+            .replace('__RIGHT__', '')
             .replace('__BODY__', body))
     hp = TMP / f'{work}-{out.stem}.html'
     hp.write_text(html, encoding='utf-8')

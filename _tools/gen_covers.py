@@ -137,6 +137,25 @@ WORKS = [
  dict(id='app-shortcut-key',   cat=CAT_DIG, kind='desktop', accent='#EF7979',
       img=['app-shortcut-key/shots/cover_src.jpg'],
       title='Shortcut Key · 快捷键 App 概念设计', year='2018'),
+ # — 微信表情包（2026-09-13）—
+ dict(id='ip-emoji-shiliu',   cat=CAT_IP,  kind='brand', accent='#CC1204',
+      img=['ip-emoji-shiliu/shots/cover_src.png'],
+      title='石榴妹萌萌 · 微信表情包', year=''),
+ dict(id='ip-emoji-shishizi', cat=CAT_IP,  kind='brand', accent='#C8843A',
+      img=['ip-emoji-shishizi/shots/cover_src.png'],
+      title='狮狮子 · 微信表情包', year=''),
+ dict(id='ip-emoji-niuniuzi', cat=CAT_IP,  kind='brand', accent='#A9713F',
+      img=['ip-emoji-niuniuzi/shots/cover_src.png'],
+      title='牛牛子 · 微信表情包', year=''),
+ dict(id='ip-emoji-tutuzi',   cat=CAT_IP,  kind='brand', accent='#E9B93E',
+      img=['ip-emoji-tutuzi/shots/cover_src.png'],
+      title='一只兔兔子 · 微信表情包', year=''),
+ dict(id='ip-emoji-pilitu',   cat=CAT_IP,  kind='brand', accent='#D93A2B',
+      img=['ip-emoji-pilitu/shots/cover_src.png'],
+      title='一只霹雳兔 · 微信表情包', year=''),
+ dict(id='ip-emoji-huahua',   cat=CAT_IP,  kind='brand', accent='#E8892F',
+      img=['ip-emoji-huahua/shots/cover_src.png'],
+      title='虎阿虎阿 · 微信表情包', year=''),
 ]
 
 TEMPLATE = """<!DOCTYPE html>
@@ -176,7 +195,7 @@ TEMPLATE = """<!DOCTYPE html>
   .year { font-size:15px; letter-spacing:.14em; color:#9a9a9a; font-variant-numeric:tabular-nums; flex:none; }
 </style></head>
 <body><div class="stage">
-  <div class="top"><div class="cat">__CAT__</div><div class="num"><b>__NO__</b> / 38</div></div>
+  <div class="top"><div class="cat">__CAT__</div><div class="num"><b>__NO__</b> / 44</div></div>
   <div class="frame">__FRAME__</div>
   <div class="bottom">
     <div class="t-wrap"><div class="bar"></div><div class="title">__TITLE__</div></div>

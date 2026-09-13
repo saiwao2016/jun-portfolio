@@ -135,6 +135,36 @@ ST=/Applications/Sketch.app/Contents/MacOS/sketchtool
 拿到 PNG 后按上面的规格压到 1600px 宽 + 256 色量化即可（`asq-system/` 就是这么来的）。
 `--items` 不传会导出全部页面（含几百个组件画板），务必只传需要的 ID。
 
+### 从微信表情商店收录表情包作品
+
+微信表情商店的作品详情页是**服务端渲染**的，直接抓 HTML 就能拿到全部贴纸原图地址：
+
+```
+https://sticker.weixin.qq.com/cgi-bin/mmemoticon-bin/emoticonview?oper=single&t=shop/detail&productid=<ID>
+```
+
+页面里 `class="stiker_content_ele"` 的 `<img>` 就是整套贴纸（原图 120×120 RGBA PNG），
+`stiker_head_qr_img` 是「微信扫一扫，查看表情」二维码。注意：
+1. 部分贴纸走 `wxapp.tc.qq.com/…&amp;filekey=…` 的 COS 临时地址，**必须先 `html.unescape()`
+   把 `&amp;` 还原成 `&`**，否则一律 400。
+2. 贴纸只有 `…/0` 一种尺寸后缀（120×120），换 `/640`、`/200` 都是同一张或 400，别指望拿高清原图。
+
+收录流程（参考 `ip-emoji-*` 6 个作品）：
+
+```bash
+# 1) 素材落到 work-pages/<id>/shots/stickers/（01.png…NN.png + qr.png + avatar.png）
+# 2) 生成展示图：01 全套总览 / 02 细节放大 / 03 商店二维码卡 + cover_src.png
+python3 _tools/gen_emoji_packs.py            # 可跟 id 只重跑某几个
+# 3) 写数据
+python3 _tools/seed_emoji_works.py           # 追加进 content/works.json
+# 4) 封面：先更新 gen_covers.py 的 WORKS（分母 + 新增行），再全量重生成
+python3 _tools/gen_covers.py
+```
+
+`gen_emoji_packs.py` 用 Playwright 排版（字体交给浏览器，和 `gen_covers.py` 同一套办法），
+贴纸按 LANCZOS 预放大到 960px 再交给浏览器等比缩，**避免浏览器放大发虚**；
+二维码用 `NEAREST` 整数倍放大，保证可扫。
+
 ---
 
 ## 六、修改三语文案
