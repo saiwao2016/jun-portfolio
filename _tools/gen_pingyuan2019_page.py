@@ -57,9 +57,9 @@ K("pc19.meta.title", "平原商场 · 2019 己亥年台历设计 — JUN",
   "Pingyuan Mall · Calendario anual 2019 — JUN",
   "Pingyuan Mall · 2019 Annual Calendar — JUN")
 K("pc19.meta.desc",
-  "平原商场 2019 己亥年台历设计：以粉色小鹿「平平」为品牌吉祥物，12 个月品牌主题插画、12 页功能日历，每月对应一个商场楼层与入驻品牌。平面设计作品，周骏（JUN）设计。",
-  "Calendario anual 2019 del centro comercial Pingyuan: la cierva rosa «Pingping» como mascota de marca, 12 ilustraciones temáticas de marcas y 12 páginas de calendario funcional, un mes por cada planta y marca del centro. Diseño gráfico de JUN (Zhou Jun).",
-  "The 2019 annual calendar for Pingyuan Mall: the pink deer mascot \"Pingping\", 12 brand-themed illustrations and 12 functional calendar pages, each month paired with a mall floor and its stores. Graphic design by JUN (Zhou Jun).")
+  "平原商场 2019 己亥年台历设计：以苹果「平平」为品牌吉祥物，12 个月品牌主题插画、12 页功能日历，每月对应一个商场楼层与入驻品牌。平面设计作品，周骏（JUN）设计。",
+  "Calendario anual 2019 del centro comercial Pingyuan: la manzana «Pingping» como mascota de marca, 12 ilustraciones temáticas de marcas y 12 páginas de calendario funcional, un mes por cada planta y marca del centro. Diseño gráfico de JUN (Zhou Jun).",
+  "The 2019 annual calendar for Pingyuan Mall: the apple mascot \"Pingping\", 12 brand-themed illustrations and 12 functional calendar pages, each month paired with a mall floor and its stores. Graphic design by JUN (Zhou Jun).")
 
 # ---- 页内子导航 ----
 K("pc19.nav.overview", "项目概览", "Resumen", "Overview")
@@ -76,9 +76,9 @@ K("pc19.hero.sub", "2019 己亥年台历设计",
   "Calendario anual 2019 · Año del Cerdo",
   "2019 Annual Calendar · Year of the Pig")
 K("pc19.hero.desc",
-  "一套以粉色小鹿「平平」为品牌吉祥物的年度台历：12 个月份主题插画、12 页功能日历，将商场各楼层与入驻品牌融入吉祥物的生活场景，既是时间工具，也是商场全年的品牌画卷。",
-  "Un calendario anual con la cierva rosa «Pingping» como mascota de marca: 12 ilustraciones temáticas y 12 páginas de calendario funcional, donde cada planta y marca del centro se funde en la vida cotidiana de la mascota. Sirve como calendario y como retrato de marca del año entero.",
-  "An annual calendar built around the pink deer mascot \"Pingping\": 12 themed illustrations and 12 functional calendar pages, weaving the mall's floors and stores into the mascot's everyday life — both a date tool and a year-long brand portrait.")
+  "一套以苹果「平平」为品牌吉祥物的年度台历：12 个月份主题插画、12 页功能日历，将商场各楼层与入驻品牌融入吉祥物的生活场景，既是时间工具，也是商场全年的品牌画卷。",
+  "Un calendario anual con la manzana «Pingping» como mascota de marca: 12 ilustraciones temáticas y 12 páginas de calendario funcional, donde cada planta y marca del centro se funde en la vida cotidiana de la mascota. Sirve como calendario y como retrato de marca del año entero.",
+  "An annual calendar built around the apple mascot \"Pingping\": 12 themed illustrations and 12 functional calendar pages, weaving the mall's floors and stores into the mascot's everyday life — both a date tool and a year-long brand portrait.")
 K("pc19.hero.figcap", "封面样机 · 桌面展示",
   "Maqueta de cubierta · Escritorio", "Cover mockup · Desktop")
 K("pc19.stat.pages", "个版面", "láminas", "plates")
@@ -116,11 +116,11 @@ K("pc19.ov.p1",
   "Es el calendario anual 2019 creado para **Pingyuan Mall**. Su tema es **«Viaje en el tiempo»**: una página de apertura con la línea de tiempo «Huellas brillantes» repasa la historia del centro de 1957 a 2018, y el lema «2019 con atención, el centro del pueblo» abre el nuevo año.",
   "This is the 2019 annual calendar made for **Pingyuan Mall**, themed **\"Time Journey\"**. An opening page with the \"Brilliant Footprints\" timeline reviews the mall's history from 1957 to 2018, then the line \"2019 with care — the people's mall\" opens the new year.")
 K("pc19.ov.p2",
-  "每月一幅**品牌主题插画**，将商场各楼层与入驻品牌（羽绒服、美妆、男装、女鞋、儿童娱乐城、内衣、名表、黄金珠宝等）融入粉色小鹿吉祥物的生活场景；配套日历页标注公历、农历、节气与节日，底部绘制品牌街景，让台历既是时间工具，也是商场全年的品牌画卷。",
-  "Cada mes una **ilustración temática de marca** integra las plantas y marcas del centro (abrigos, maquillaje, ropa de hombre, zapatos, zona infantil, ropa interior, relojes, oro y joyas…) en la vida cotidiana de la cierva rosa. La página de calendario anota fechas gregorianas y lunares, términos solares y festividades, y dibuja la calle de marcas al pie: un cuadro de marca de todo el año.",
-  "Each month a **brand-themed illustration** folds the mall's floors and stores (down jackets, makeup, menswear, shoes, kids' zone, lingerie, watches, gold and jewellery…) into the pink deer's everyday scene; the paired calendar page marks solar and lunar dates, solar terms and festivals, and draws a brand street at the bottom — making the calendar both a date tool and a year-long brand canvas.")
-K("pc19.ov.point1", "粉色小鹿吉祥物贯穿 12 个月",
-  "La cierva rosa recorre los 12 meses", "The pink deer runs through all 12 months")
+  "每月一幅**品牌主题插画**，将商场各楼层与入驻品牌（羽绒服、美妆、男装、女鞋、儿童娱乐城、内衣、名表、黄金珠宝等）融入苹果吉祥物「平平」的生活场景；配套日历页标注公历、农历、节气与节日，底部绘制品牌街景，让台历既是时间工具，也是商场全年的品牌画卷。",
+  "Cada mes una **ilustración temática de marca** integra las plantas y marcas del centro (abrigos, maquillaje, ropa de hombre, zapatos, zona infantil, ropa interior, relojes, oro y joyas…) en la vida cotidiana de la manzana «Pingping». La página de calendario anota fechas gregorianas y lunares, términos solares y festividades, y dibuja la calle de marcas al pie: un cuadro de marca de todo el año.",
+  "Each month a **brand-themed illustration** folds the mall's floors and stores (down jackets, makeup, menswear, shoes, kids' zone, lingerie, watches, gold and jewellery…) into the apple mascot Pingping's everyday scene; the paired calendar page marks solar and lunar dates, solar terms and festivals, and draws a brand street at the bottom — making the calendar both a date tool and a year-long brand canvas.")
+K("pc19.ov.point1", "苹果吉祥物「平平」贯穿 12 个月",
+  "La manzana «Pingping» recorre los 12 meses", "The apple mascot runs through all 12 months")
 K("pc19.ov.point2", "扉页含商场 60 年历史时间轴",
   "La apertura incluye 60 años de historia", "Opening holds a 60-year history timeline")
 K("pc19.ov.point3", "每月对应一个商场品牌/楼层主题",
@@ -135,11 +135,11 @@ FEATURES = [
      "封面以猪年喜庆氛围开场，「出彩的足迹」时间轴串联 1957 年开业至 2018 年蝶变升级的十个关键节点，再由「时光旅历」标题页承上启下，把品牌历史写进新年。",
      "La cubierta abre con el ambiente festivo del Año del Cerdo; la línea de tiempo «Huellas brillantes» enlaza diez hitos del centro desde su apertura en 1957 hasta su transformación en 2018, y la página título «Viaje en el tiempo» sirve de puente para escribir la historia de marca en el nuevo año.",
      "The cover opens in festive Year-of-the-Pig mood; the \"Brilliant Footprints\" timeline links ten milestones from the 1957 opening to the 2018 upgrade, and the \"Time Journey\" title page bridges them, writing the brand's history into the new year."),
-    ("02 — 粉色小鹿吉祥物", "02 — Mascota: cierva rosa", "02 — Mascot: pink deer",
-     "一只鹿逛遍整座商场", "Una cierva recorre el centro", "One deer roams the whole mall",
-     "拟人化的粉色小鹿是全年主角，它试羽绒服、买美妆、逛男装、挑女鞋、带娃去娱乐城、选黄金珠宝……以顾客视角把商场各楼层串成一条温暖的生活动线。",
-     "La cierva rosa antropomórfica es la protagonista del año: prueba abrigos, compra maquillaje, recorre la ropa de hombre, elige zapatos, lleva a los niños a la zona infantil y escoge oro y joyas… Desde la mirada del cliente, enlaza las plantas del centro en una cálida línea de vida.",
-     "The anthropomorphic pink deer is the year's lead — trying on down jackets, buying makeup, browsing menswear, picking shoes, taking the kids to the play zone, choosing gold and jewellery… seen through the customer's eyes, it strings the mall's floors into one warm daily thread."),
+    ("02 — 苹果吉祥物「平平」", "02 — Mascota: manzana «Pingping»", "02 — Mascot: apple",
+     "平平逛遍整座商场", "Una manzana «Pingping» recorre el centro", "The apple mascot roams the whole mall",
+     "拟人化的苹果形象「平平」是全年主角，它试羽绒服、买美妆、逛男装、挑女鞋、带娃去娱乐城、选黄金珠宝……以顾客视角把商场各楼层串成一条温暖的生活动线。",
+     "La manzana «Pingping» antropomórfica es la protagonista del año: prueba abrigos, compra maquillaje, recorre la ropa de hombre, elige zapatos, lleva a los niños a la zona infantil y escoge oro y joyas… Desde la mirada del cliente, enlaza las plantas del centro en una cálida línea de vida.",
+     "The anthropomorphic apple mascot is the year's lead — trying on down jackets, buying makeup, browsing menswear, picking shoes, taking the kids to the play zone, choosing gold and jewellery… seen through the customer's eyes, it strings the mall's floors into one warm daily thread."),
     ("03 — 月度品牌插画", "03 — Ilustración de marca", "03 — Monthly brand illustration",
      "12 个月 12 个品牌场景", "12 meses, 12 escenas de marca", "12 months, 12 brand scenes",
      "每月一幅原创插画对应一个入驻品牌或楼层：强人鞋、花花公子、曼卡璐、猫人内衣、九鹿王、老庙黄金、老凤祥……插画底部配品牌 slogan，商业信息自然融入叙事。",
@@ -228,46 +228,46 @@ TERMS_EN = ["New Year's Day · Minor Cold · Major Cold · Laba",
             "Major Snow · Winter Solstice · Christmas Eve · Christmas"]
 
 DESC_ZH = [
-    "深冬羽绒服季，小鹿在试衣间里换上新装，「天冷了，买羽绒服就到平原商场 7 楼」。",
-    "春节回家团圆，小鹿提着强人鞋的购物袋与家人围坐，「新强人，新产品，新服务」。",
+    "深冬羽绒服季，平平在试衣间里换上新装，「天冷了，买羽绒服就到平原商场 7 楼」。",
+    "春节回家团圆，平平提着强人鞋的购物袋与家人围坐，「新强人，新产品，新服务」。",
     "梳妆台前口红、眼影、化妆刷一字排开，「平原美妆，靓丽新乡」，春日焕新颜。",
-    "花花公子男装新品发布会，戴墨镜的小鹿在闪光灯下登场，「最愉快，最有价值的生活」。",
-    "曼卡璐女鞋化作花丛中的高跟鞋，长着翅膀的小鹿探出头，「不迈平庸步，只走非凡路」。",
-    "六楼儿童用品娱乐城，泰迪熊、街机、篮球架一应俱全，小鹿牵着孩子的手走进彩虹门。",
-    "猫人内衣的聚光灯橱窗里，小鹿认真挑选，「最合适的，才是真正最好的」。",
-    "平原名表柜台前，小鹿隔着玻璃欣赏腕表，领结一戴，时光也变得讲究起来。",
-    "九鹿王男装户外广告拍摄现场，小鹿与真鹿同框，「逐生活之悦」，秋日型格上线。",
-    "仕乐内衣的星空下，两只小鹿躺在云朵上安睡，「更懂你的舒适，不薄不厚刚刚好」。",
-    "老庙黄金门店前，「11 月会员感恩月」的立牌醒目，小鹿推门而入，暖意融融。",
-    "老凤祥百年老店前，小鹿撑伞赴约，西装领结与旗袍项链，一年的故事在珠宝光泽里收官。",
+    "花花公子男装新品发布会，戴墨镜的平平在闪光灯下登场，「最愉快，最有价值的生活」。",
+    "曼卡璐女鞋化作花丛中的高跟鞋，长着翅膀的平平探出头，「不迈平庸步，只走非凡路」。",
+    "六楼儿童用品娱乐城，泰迪熊、街机、篮球架一应俱全，平平牵着孩子的手走进彩虹门。",
+    "猫人内衣的聚光灯橱窗里，平平认真挑选，「最合适的，才是真正最好的」。",
+    "平原名表柜台前，平平隔着玻璃欣赏腕表，领结一戴，时光也变得讲究起来。",
+    "九鹿王男装户外广告拍摄现场，平平与真鹿同框，「逐生活之悦」，秋日型格上线。",
+    "仕乐内衣的星空下，平平躺在云朵上安睡，「更懂你的舒适，不薄不厚刚刚好」。",
+    "老庙黄金门店前，「11 月会员感恩月」的立牌醒目，平平推门而入，暖意融融。",
+    "老凤祥百年老店前，平平撑伞赴约，西装领结与旗袍项链，一年的故事在珠宝光泽里收官。",
 ]
 DESC_ES = [
-    "En pleno invierno de abrigos, la cierva se prueba ropa nueva en el probador: «Hace frío, los abrigos se compran en el 7º piso de Pingyuan».",
-    "Reunión familiar por el Año Nuevo; la cierva lleva la bolsa de Qiangren y se sienta con la familia: «Nuevo Qiangren, nuevo producto, nuevo servicio».",
+    "En pleno invierno de abrigos, la manzana «Pingping» se prueba ropa nueva en el probador: «Hace frío, los abrigos se compran en el 7º piso de Pingyuan».",
+    "Reunión familiar por el Año Nuevo; la manzana «Pingping» lleva la bolsa de Qiangren y se sienta con la familia: «Nuevo Qiangren, nuevo producto, nuevo servicio».",
     "Ante el tocador, pintalabios, sombras y brochas alineados: «Maquillaje Pingyuan, hermosa Xinxiang», un rostro renovado en primavera.",
-    "Desfile de nueva colección de Playboy; la cierva con gafas de sol deslumbra bajo las luces: «La vida más alegre y valiosa».",
-    "Los tacones Manka Road florecen entre las flores; la cierva alada asoma: «Ni un paso mediocre, solo un camino extraordinario».",
-    "En la zona infantil del 6º piso hay osos de peluche, máquinas arcade y canastas; la cierva entra por la puerta del arcoíris de la mano del niño.",
-    "En el escaparate iluminado de Miao Ren, la cierva elige con cuidado: «Lo más adecuado es lo verdaderamente mejor».",
-    "Ante el mostrador de relojes Pingyuan, la cierva admira los relojes tras el cristal; con la pajarita, el tiempo se vuelve elegante.",
-    "En el rodaje exterior de Jiuluwang, la cierva comparte plano con un ciervo real: «Siguiendo la alegría de vivir», el estilo otoñal llega.",
-    "Bajo el cielo estrellado de Shile, dos ciervas duermen en las nubes: «Más cómodo para ti, ni fino ni grueso, justo lo justo».",
-    "Frente a la tienda de Oro Laomiao, el cartel «Noviembre, mes de gratitud a socios» destaca; la cierva entra, llena de calidez.",
-    "Ante la centenaria Lao Feng Xiang, la cierva acude con paraguas y pajarita; junto al cheongsam y el collar, la historia del año cierra con el brillo de las joyas.",
+    "Desfile de nueva colección de Playboy; la manzana «Pingping» con gafas de sol deslumbra bajo las luces: «La vida más alegre y valiosa».",
+    "Los tacones Manka Road florecen entre las flores; la manzana «Pingping» alada asoma: «Ni un paso mediocre, solo un camino extraordinario».",
+    "En la zona infantil del 6º piso hay osos de peluche, máquinas arcade y canastas; la manzana «Pingping» entra por la puerta del arcoíris de la mano del niño.",
+    "En el escaparate iluminado de Miao Ren, la manzana «Pingping» elige con cuidado: «Lo más adecuado es lo verdaderamente mejor».",
+    "Ante el mostrador de relojes Pingyuan, la manzana «Pingping» admira los relojes tras el cristal; con la pajarita, el tiempo se vuelve elegante.",
+    "En el rodaje exterior de Jiuluwang, la manzana «Pingping» comparte plano con un ciervo real: «Siguiendo la alegría de vivir», el estilo otoñal llega.",
+    "Bajo el cielo estrellado de Shile, la manzana «Pingping» duerme en las nubes: «Más cómodo para ti, ni fino ni grueso, justo lo justo».",
+    "Frente a la tienda de Oro Laomiao, el cartel «Noviembre, mes de gratitud a socios» destaca; la manzana «Pingping» entra, llena de calidez.",
+    "Ante la centenaria Lao Feng Xiang, la manzana «Pingping» acude con paraguas y pajarita; junto al cheongsam y el collar, la historia del año cierra con el brillo de las joyas.",
 ]
 DESC_EN = [
-    "Deep winter, down-jacket season: the deer tries on new clothes in the fitting room — \"When it's cold, buy down jackets on the 7th floor of Pingyuan Mall.\"",
-    "Spring Festival reunion: the deer carries a Qiangren shoe bag and sits with family — \"New Qiangren, new product, new service.\"",
+    "Deep winter, down-jacket season: Pingping tries on new clothes in the fitting room — \"When it's cold, buy down jackets on the 7th floor of Pingyuan Mall.\"",
+    "Spring Festival reunion: Pingping carries a Qiangren shoe bag and sits with family — \"New Qiangren, new product, new service.\"",
     "At the dressing table, lipstick, eyeshadow and brushes lined up — \"Pingyuan makeup, beautiful Xinxiang,\" a fresh face for spring.",
-    "A Playboy menswear launch; the deer in sunglasses steps into the flash — \"The happiest, most worthwhile life.\"",
-    "Manka Road heels bloom among the flowers; a winged deer peeks out — \"No mediocre step, only an extraordinary path.\"",
-    "On the 6th-floor kids' zone, teddy bears, arcade machines and hoops are all there; the deer walks through the rainbow gate hand in hand with the child.",
-    "In Cat Man's spotlight window, the deer picks carefully — \"The most suitable is truly the best.\"",
-    "At the Pingyuan watch counter, the deer admires the watches through the glass; with the bow tie, time turns refined.",
-    "On the Jiuluwang menswear outdoor shoot, the deer shares the frame with a real deer — \"Chasing the joy of living,\" autumn style arrives.",
-    "Under Shile's starry sky, two deer doze on the clouds — \"Comfort that knows you: not thin, not thick, just right.\"",
-    "In front of Laomiao Gold, the \"November Member Gratitude Month\" stand stands out; the deer steps in, warm inside.",
-    "Before century-old Lao Feng Xiang, the deer keeps the date with umbrella and bow tie; with the cheongsam and necklace, the year's story closes in the glow of jewellery.",
+    "A Playboy menswear launch; Pingping in sunglasses steps into the flash — \"The happiest, most worthwhile life.\"",
+    "Manka Road heels bloom among the flowers; a winged Pingping peeks out — \"No mediocre step, only an extraordinary path.\"",
+    "On the 6th-floor kids' zone, teddy bears, arcade machines and hoops are all there; Pingping walks through the rainbow gate hand in hand with the child.",
+    "In Cat Man's spotlight window, Pingping picks carefully — \"The most suitable is truly the best.\"",
+    "At the Pingyuan watch counter, Pingping admires the watches through the glass; with the bow tie, time turns refined.",
+    "On the Jiuluwang menswear outdoor shoot, Pingping shares the frame with a real deer — \"Chasing the joy of living,\" autumn style arrives.",
+    "Under Shile's starry sky, Pingping dozes on the clouds — \"Comfort that knows you: not thin, not thick, just right.\"",
+    "In front of Laomiao Gold, the \"November Member Gratitude Month\" stand stands out; Pingping steps in, warm inside.",
+    "Before century-old Lao Feng Xiang, Pingping keeps the date with umbrella and bow tie; with the cheongsam and necklace, the year's story closes in the glow of jewellery.",
 ]
 
 for i in range(12):
