@@ -199,25 +199,7 @@ window.RESUME = {
         "es": "Formación",
         "en": "Education"
       },
-      "items": [
-        {
-          "title": {
-            "zh": "环境艺术设计",
-            "es": "Diseño de Arte Ambiental",
-            "en": "Environmental Art Design"
-          },
-          "org": {
-            "zh": "天津滨海职业技术学院",
-            "es": "Tianjin Binhai Vocational Technical College",
-            "en": "Tianjin Binhai Vocational Technical College"
-          },
-          "date": {
-            "zh": "",
-            "es": "",
-            "en": ""
-          }
-        }
-      ]
+      "items": []
     },
     "skills": {
       "title": {

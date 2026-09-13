@@ -111,40 +111,6 @@
       }
     },
     {
-      "id": "mind-web",
-      "category": "digital",
-      "year": "2016 — 至今",
-      "cover": "assets/works/mind-web/cover.png",
-      "gallery": [
-        "assets/works/mind-web/01.png",
-        "assets/works/mind-web/02.png",
-        "assets/works/mind-web/03.png",
-        "assets/works/mind-web/04.png",
-        "assets/works/mind-web/05.png",
-        "assets/works/mind-web/06.png"
-      ],
-      "title": {
-        "zh": "心智心理测量 · 品牌官网与心智网校",
-        "es": "Xinzhi Psicometría · Web corporativa y campus online",
-        "en": "Xinzhi Psychometrics · Corporate site and online campus"
-      },
-      "type": {
-        "zh": "数字产品 / 响应式官网 + 在线课堂",
-        "es": "Producto digital / Web responsive + aula online",
-        "en": "Digital product / Responsive site + online classroom"
-      },
-      "scope": {
-        "zh": "信息架构 · 桌面端 4 大板块 · 移动端 6 屏 · 设计系统",
-        "es": "Arquitectura de información · 4 secciones de escritorio · 6 pantallas móviles · Sistema de diseño",
-        "en": "Information architecture · 4 desktop sections · 6 mobile screens · Design system"
-      },
-      "blurb": {
-        "zh": "深圳心智心理测量技术研究所的品牌官网：首页、产品中心（孤独症量表系列）、心智网校在线考试与个人中心四大板块，配套移动端适配与一套青绿主色的设计系统。",
-        "es": "La web corporativa del Instituto de Psicometría Xinzhi: inicio, centro de productos (escalas de autismo), examen online del campus y área personal, con adaptación móvil y un sistema de diseño en verde azulado.",
-        "en": "The corporate site of Xinzhi Psychometrics Institute: Home, Product centre (autism scale series), online exams on the campus and personal area, with mobile adaptation and a teal-based design system."
-      }
-    },
-    {
       "id": "mind-platform",
       "category": "digital",
       "year": "2016 — 至今",
@@ -176,6 +142,40 @@
         "zh": "面向测评机构的 B 端中台：从登录、工作台、儿童档案明细到施测流程与数据统计的完整后台，六套量表各配专属标识色，组件规范覆盖 40 余件控件。",
         "es": "Panel B2B para centros de evaluación: desde el acceso y el área de trabajo hasta los expedientes infantiles, el flujo de aplicación y las estadísticas; seis escalas con color propio y una librería de más de 40 componentes.",
         "en": "A B2B console for assessment centres: from sign-in and workspace to child records, assessment flow and statistics — six scales each with an identity colour and a library of 40+ components."
+      }
+    },
+    {
+      "id": "mind-web",
+      "category": "digital",
+      "year": "2016 — 至今",
+      "cover": "assets/works/mind-web/cover.png",
+      "gallery": [
+        "assets/works/mind-web/01.png",
+        "assets/works/mind-web/02.png",
+        "assets/works/mind-web/03.png",
+        "assets/works/mind-web/04.png",
+        "assets/works/mind-web/05.png",
+        "assets/works/mind-web/06.png"
+      ],
+      "title": {
+        "zh": "心智心理测量 · 品牌官网与心智网校",
+        "es": "Xinzhi Psicometría · Web corporativa y campus online",
+        "en": "Xinzhi Psychometrics · Corporate site and online campus"
+      },
+      "type": {
+        "zh": "数字产品 / 响应式官网 + 在线课堂",
+        "es": "Producto digital / Web responsive + aula online",
+        "en": "Digital product / Responsive site + online classroom"
+      },
+      "scope": {
+        "zh": "信息架构 · 桌面端 4 大板块 · 移动端 6 屏 · 设计系统",
+        "es": "Arquitectura de información · 4 secciones de escritorio · 6 pantallas móviles · Sistema de diseño",
+        "en": "Information architecture · 4 desktop sections · 6 mobile screens · Design system"
+      },
+      "blurb": {
+        "zh": "深圳心智心理测量技术研究所的品牌官网：首页、产品中心（孤独症量表系列）、心智网校在线考试与个人中心四大板块，配套移动端适配与一套青绿主色的设计系统。",
+        "es": "La web corporativa del Instituto de Psicometría Xinzhi: inicio, centro de productos (escalas de autismo), examen online del campus y área personal, con adaptación móvil y un sistema de diseño en verde azulado.",
+        "en": "The corporate site of Xinzhi Psychometrics Institute: Home, Product centre (autism scale series), online exams on the campus and personal area, with mobile adaptation and a teal-based design system."
       }
     },
     {

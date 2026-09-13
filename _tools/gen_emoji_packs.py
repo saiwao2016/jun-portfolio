@@ -139,7 +139,7 @@ def main(only=None):
         stickers, qr = prepare(pack, work)
         n = len(stickers)
         dest = OUT / work
-        dest.mkdir(parents=True, exist_ok=True)
+        ensure(dest)
         width = 1420
         # 01 全套总览（4 列）
         jobs.append((pack, sheet_grid(
