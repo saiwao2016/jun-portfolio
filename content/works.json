@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-12T23:01:24.216Z",
+  "updatedAt": "2026-09-13T06:04:46.748Z",
   "works": [
     {
       "id": "asq-system",
@@ -621,7 +621,7 @@
       "id": "vis-xinzhi",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 10,
+      "sortOrder": 11,
       "year": "2017",
       "mediaType": "image",
       "cover": "assets/works/vis-xinzhi/cover.png",
@@ -731,7 +731,7 @@
       "id": "logo-liuxin",
       "category": "graphic",
       "status": "published",
-      "sortOrder": 11,
+      "sortOrder": 10,
       "year": "—",
       "mediaType": "image",
       "cover": "assets/works/logo-liuxin/cover.png",

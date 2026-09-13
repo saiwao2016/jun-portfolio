@@ -337,38 +337,6 @@
       }
     },
     {
-      "id": "vis-xinzhi",
-      "category": "graphic",
-      "year": "2017",
-      "cover": "assets/works/vis-xinzhi/cover.png",
-      "gallery": [
-        "assets/works/vis-xinzhi/01.png",
-        "assets/works/vis-xinzhi/02.png",
-        "assets/works/vis-xinzhi/03.png",
-        "assets/works/vis-xinzhi/04.png"
-      ],
-      "title": {
-        "zh": "深圳心智 · 视觉形象识别系统（第三版）",
-        "es": "Xinzhi · Sistema de identidad visual (3.ª edición)",
-        "en": "Xinzhi · Visual identity system (3rd edition)"
-      },
-      "type": {
-        "zh": "平面设计 / 品牌 VIS · 第三版 · 46 页手册",
-        "es": "Diseño gráfico / VIS de marca · 3.ª edición · 46 páginas",
-        "en": "Graphic design / Brand VIS · 3rd edition · 46-page manual"
-      },
-      "scope": {
-        "zh": "标志演绎与制图 · 标准色 · 图标色彩体系 · 中英文全称与组合规范 · 名片工牌 · 画册折页 · 户外广告 · 展厅",
-        "es": "Logotipo y construcción · Color · Iconografía · Normativa de composición · Tarjetas · Publicaciones · Valla publicitaria · Showroom",
-        "en": "Logo and construction · Colour · Icon system · Lock-up guidelines · Cards · Publications · Billboard · Showroom"
-      },
-      "blurb": {
-        "zh": "深圳市心智心理测量技术研究所有限公司的视觉形象识别系统第三版（2017.04）：青绿主视觉与同心圆标志贯穿基础规范与全部应用触点——名片、工牌、画册、折页、网站、户外广告与展厅。此处精选 12 页重新编排展示。",
-        "es": "Tercera edición (2017.04) del sistema de identidad visual del Instituto Xinzhi de Psicometría: el verde azulado y la marca concéntrica guían la normativa base y todas las aplicaciones —tarjetas, publicaciones, web, vallas y showroom—. 12 páginas seleccionadas recompuertas aquí.",
-        "en": "The 3rd edition (2017.04) visual identity system for Shenzhen Xinzhi Institute of Psychometrics: the teal visual and concentric-ring logo run through base guidelines and every touchpoint — cards, badges, publications, website, billboard and showroom. 12 selected pages recomposed here."
-      }
-    },
-    {
       "id": "logo-liuxin",
       "category": "graphic",
       "year": "—",
@@ -399,6 +367,38 @@
         "zh": "为榴心社工服务中心做的标志升级：将具象石榴简化，以「掰开的石榴露出心」的形式切分图形，双手托心呼应「众人齐心助留守」的寓意；字体取「栅栏」思路，粗横竖组合寓意呵护成长，红黄渐变流露石榴的青涩与社工团队的朝气。",
         "es": "Rediseño del logotipo del Centro de Trabajo Social Liuxin: la granada se simplifica y se parte para revelar un corazón sostenido por manos, con tipografía de «vallas» y un degradado rojo-amarillo que transmite frescura y juventud.",
         "en": "A logo redesign for Liuxia Social Work Center: the pomegranate is simplified and split to reveal a heart held by hands, with fence-inspired custom type and a red-yellow gradient conveying freshness and the team’s youthful energy."
+      }
+    },
+    {
+      "id": "vis-xinzhi",
+      "category": "graphic",
+      "year": "2017",
+      "cover": "assets/works/vis-xinzhi/cover.png",
+      "gallery": [
+        "assets/works/vis-xinzhi/01.png",
+        "assets/works/vis-xinzhi/02.png",
+        "assets/works/vis-xinzhi/03.png",
+        "assets/works/vis-xinzhi/04.png"
+      ],
+      "title": {
+        "zh": "深圳心智 · 视觉形象识别系统（第三版）",
+        "es": "Xinzhi · Sistema de identidad visual (3.ª edición)",
+        "en": "Xinzhi · Visual identity system (3rd edition)"
+      },
+      "type": {
+        "zh": "平面设计 / 品牌 VIS · 第三版 · 46 页手册",
+        "es": "Diseño gráfico / VIS de marca · 3.ª edición · 46 páginas",
+        "en": "Graphic design / Brand VIS · 3rd edition · 46-page manual"
+      },
+      "scope": {
+        "zh": "标志演绎与制图 · 标准色 · 图标色彩体系 · 中英文全称与组合规范 · 名片工牌 · 画册折页 · 户外广告 · 展厅",
+        "es": "Logotipo y construcción · Color · Iconografía · Normativa de composición · Tarjetas · Publicaciones · Valla publicitaria · Showroom",
+        "en": "Logo and construction · Colour · Icon system · Lock-up guidelines · Cards · Publications · Billboard · Showroom"
+      },
+      "blurb": {
+        "zh": "深圳市心智心理测量技术研究所有限公司的视觉形象识别系统第三版（2017.04）：青绿主视觉与同心圆标志贯穿基础规范与全部应用触点——名片、工牌、画册、折页、网站、户外广告与展厅。此处精选 12 页重新编排展示。",
+        "es": "Tercera edición (2017.04) del sistema de identidad visual del Instituto Xinzhi de Psicometría: el verde azulado y la marca concéntrica guían la normativa base y todas las aplicaciones —tarjetas, publicaciones, web, vallas y showroom—. 12 páginas seleccionadas recompuertas aquí.",
+        "en": "The 3rd edition (2017.04) visual identity system for Shenzhen Xinzhi Institute of Psychometrics: the teal visual and concentric-ring logo run through base guidelines and every touchpoint — cards, badges, publications, website, billboard and showroom. 12 selected pages recomposed here."
       }
     },
     {

@@ -150,9 +150,9 @@ window.SITE_DATA = {
         "en": "Stay in touch"
       },
       "footer.copy": {
-        "zh": "© 2026 周骏 JUN · 视觉设计师",
-        "es": "© 2026 Jun Zhou (JUN) · Diseñador visual",
-        "en": "© 2026 Jun Zhou (JUN) · Visual designer"
+        "zh": "© 2026 JUN · 视觉设计师",
+        "es": "© 2026 JUN · Diseñador visual",
+        "en": "© 2026 JUN · Visual designer"
       },
       "footer.note": {
         "zh": "品牌系统 · 信息设计 · 原创 IP · 马德里",
@@ -160,9 +160,9 @@ window.SITE_DATA = {
         "en": "Brand · Information · Original IP · Madrid"
       },
       "footer.link.behance": {
-        "zh": "Behance",
-        "es": "Behance",
-        "en": "Behance"
+        "zh": "微信",
+        "es": "Wechat",
+        "en": "Wechat"
       },
       "footer.link.xhs": {
         "zh": "小红书",
@@ -178,11 +178,11 @@ window.SITE_DATA = {
     "social": [
       {
         "id": "behance",
-        "url": "",
+        "url": "saiwao",
         "label": {
-          "zh": "Behance",
-          "es": "Behance",
-          "en": "Behance"
+          "zh": "微信",
+          "es": "Wechat",
+          "en": "Wechat"
         },
         "i18nKey": ""
       },
