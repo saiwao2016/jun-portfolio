@@ -142,7 +142,9 @@ try:
 
     code, st = req("GET", "/api/state", token=TOKEN)
     n0 = len(st.get("works", []))
-    check(code == 200 and n0 == 38, f"应读到 38 个案例，实际 {n0}")
+    # 期望值取自 data.js（已发布案例数），避免每加一个作品就要改校验脚本
+    exp_n = (ROOT / "assets/js/data.js").read_text(encoding="utf-8").count('"id": "')
+    check(code == 200 and n0 >= exp_n, f"应读到 ≥{exp_n} 个案例，实际 {n0}")
     print(f"  · 鉴权通过 · 现有案例 {n0} 个")
 
     # ---------- 2. 上传 ----------
@@ -373,6 +375,65 @@ try:
         check("E2E 界面写入的简介段落" in rjs2, "后台界面保存未写入 resume-data.js")
         pg.screenshot(path=str(ROOT / "_tools/screens/20-admin-resume.png"), full_page=True)
         print(f"  · 简历面板通过 · PDF {n_pdf} 行 · 经历 {n_exp_i} 段 · 教育 {n_edu_i} 条 · 界面保存生效")
+
+        # 9.6 后台「页面文案」面板（关于我 / 服务范围 / 技能体系 …）
+        pg.click("#btnPages")
+        pg.wait_for_timeout(700)
+        ptitle = pg.locator("#pane .pane__title").first.inner_text().strip()
+        check(ptitle == "页面文案", f"应打开页面文案面板，实际「{ptitle}」")
+        n_tabs = pg.locator("#pane .ptab").count()
+        check(n_tabs == 8, f"页面文案应有 8 个页签，实际 {n_tabs}")
+        tab_names = [pg.locator("#pane .ptab").nth(i).inner_text().split("\n")[0].strip()
+                     for i in range(n_tabs)]
+        for want in ("关于我", "服务范围", "技能体系", "联系方式"):
+            check(want in tab_names, f"缺少页签「{want}」：{tab_names}")
+
+        # 未覆盖的键应显示 i18n 默认值（而不是空白）
+        n_about = pg.locator('#pane input[data-copy]').count()
+        check(n_about == 78, f"关于我页签应有 78 个输入框（26 键 × 3 语），实际 {n_about}")
+        dflt = pg.input_value('#pane input[data-copy="about.title"][data-lang="zh"]')
+        check(dflt == "把事情做完整，比把事情做漂亮更难",
+              f"未覆盖的键应显示 i18n 默认值，实际「{dflt}」")
+        over0 = pg.locator('#pane .copyrow .badge').count()
+        check(over0 == 0, f"初始不应有「已改」徽标，实际 {over0}")
+
+        # 页签切换
+        pg.locator('#pane .ptab', has_text="技能体系").click()
+        pg.wait_for_timeout(400)
+        n_skills = pg.locator('#pane input[data-copy]').count()
+        check(n_skills == 63, f"技能体系页签应有 63 个输入框（21 键 × 3 语），实际 {n_skills}")
+        pg.locator('#pane .ptab', has_text="页面标题与描述").click()
+        pg.wait_for_timeout(400)
+        n_meta = pg.locator('#pane input[data-copy]').count()
+        check(n_meta == 48, f"标题与描述页签应有 48 个输入框（16 键 × 3 语），实际 {n_meta}")
+
+        # 改一条 → 保存 → 落盘
+        pg.locator('#pane .ptab', has_text="关于我").click()
+        pg.wait_for_timeout(400)
+        pg.fill('#pane input[data-copy="about.advantages.l5"][data-lang="es"]', "E2E · Zona horaria CET")
+        pg.wait_for_timeout(250)
+        pg.click('#pane button[data-act="save-site"]')
+        pg.wait_for_timeout(1600)
+        pj = json.loads((ROOT / "content/site.json").read_text(encoding="utf-8"))
+        check(pj.get("copy", {}).get("about.advantages.l5", {}).get("es") == "E2E · Zona horaria CET",
+              "后台保存未写入 site.json 的 copy")
+        sjs = (ROOT / "assets/js/site-data.js").read_text(encoding="utf-8")
+        check("E2E · Zona horaria CET" in sjs, "后台保存未写入 site-data.js")
+        over1 = pg.locator('#pane .copyrow .badge').count()
+        check(over1 >= 1, f"改过的行应出现「已改」徽标，实际 {over1}")
+        pg.screenshot(path=str(ROOT / "_tools/screens/27-admin-pages.png"), full_page=False)
+
+        # 重置 → 回到 i18n 默认值
+        pg.locator('#pane button[data-act="reset-copy"]').first.click()
+        pg.wait_for_timeout(400)
+        pg.click('#pane button[data-act="save-site"]')
+        pg.wait_for_timeout(1600)
+        pj2 = json.loads((ROOT / "content/site.json").read_text(encoding="utf-8"))
+        check("about.advantages.l5" not in pj2.get("copy", {}), "重置后 site.json 仍残留覆盖值")
+        back = pg.input_value('#pane input[data-copy="about.advantages.l5"][data-lang="es"]')
+        check("E2E" not in back, f"重置后应恢复 i18n 默认值，实际「{back[:40]}」")
+        print(f"  · 页面文案面板通过 · 页签 {n_tabs} 个（{'/'.join(tab_names[:4])}…）"
+              f" · 关于我 {n_about} 项 · 保存与重置生效")
 
         check(not errs, f"浏览器 JS 错误：{errs[:2]}")
         browser.close()

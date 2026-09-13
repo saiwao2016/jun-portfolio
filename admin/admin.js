@@ -30,6 +30,216 @@
     { title: '页脚', prefix: 'footer.' },
   ];
 
+  // 「页面文案」面板：按页签分组，键来自 i18n.js（未被 site.json 覆盖时用 i18n 默认值）
+  const PAGE_TABS = [
+    { id: 'about', title: '关于我', groups: [
+      { title: '页面头部', keys: ['about.eyebrow', 'about.title', 'about.lead'] },
+      { title: '设计原则', keys: ['about.principle.title', 'about.principle.1', 'about.principle.2', 'about.principle.3', 'about.principle.4'] },
+      { title: '时间线 · 区块标题', keys: ['about.timeline.eyebrow', 'about.timeline.title'] },
+      { title: '时间线 · 第 1 段', keys: ['about.timeline.1.year', 'about.timeline.1.t', 'about.timeline.1.d'] },
+      { title: '时间线 · 第 2 段', keys: ['about.timeline.2.year', 'about.timeline.2.t', 'about.timeline.2.d'] },
+      { title: '时间线 · 第 3 段', keys: ['about.timeline.3.year', 'about.timeline.3.t', 'about.timeline.3.d'] },
+      { title: '能力优势', keys: ['about.advantages.title', 'about.advantages.lead', 'about.advantages.l1', 'about.advantages.l2', 'about.advantages.l3', 'about.advantages.l4', 'about.advantages.l5'] },
+    ] },
+    { id: 'services', title: '服务范围', groups: [
+      { title: '页面头部', keys: ['services.eyebrow', 'services.title', 'services.lead'] },
+      { title: '服务板块 01–06', keys: ['services.1.num', 'services.1.title', 'services.1.desc', 'services.2.num', 'services.2.title', 'services.2.desc', 'services.3.num', 'services.3.title', 'services.3.desc', 'services.4.num', 'services.4.title', 'services.4.desc', 'services.5.num', 'services.5.title', 'services.5.desc', 'services.6.num', 'services.6.title', 'services.6.desc'] },
+      { title: '底部按钮', keys: ['services.cta'] },
+    ] },
+    { id: 'skills', title: '技能体系', groups: [
+      { title: '页面头部', keys: ['skills.eyebrow', 'skills.title', 'skills.lead'] },
+      { title: '专业设计能力', keys: ['skills.pro.title', 'skills.pro.l1', 'skills.pro.l2', 'skills.pro.l3', 'skills.pro.l4', 'skills.pro.l5', 'skills.pro.l6', 'skills.pro.l7', 'skills.pro.l8'] },
+      { title: '软件工具栈', keys: ['skills.tools.title', 'skills.tools.t1', 'skills.tools.t2', 'skills.tools.t3', 'skills.tools.t4', 'skills.tools.t5', 'skills.tools.t6', 'skills.tools.t7', 'skills.tools.note'] },
+    ] },
+    { id: 'contact', title: '联系方式', groups: [
+      { title: '页面头部', keys: ['contact.eyebrow', 'contact.title', 'contact.lead'] },
+      { title: '信息条', keys: ['contact.location.l', 'contact.location.v', 'contact.email.l', 'contact.email.v', 'contact.wechat.l', 'contact.wechat.v', 'contact.availability.l', 'contact.availability.v'] },
+      { title: '表单', keys: ['contact.form.name', 'contact.form.email', 'contact.form.type', 'contact.form.msg', 'contact.form.msg.ph', 'contact.form.submit'] },
+      { title: '合作类型选项', keys: ['contact.form.type.o1', 'contact.form.type.o2', 'contact.form.type.o3', 'contact.form.type.o4', 'contact.form.type.o5', 'contact.form.type.o6', 'contact.form.type.o7'] },
+      { title: '提交提示', keys: ['contact.form.success'] },
+    ] },
+    { id: 'works', title: '作品集列表', groups: [
+      { title: '页面头部', keys: ['works.eyebrow', 'works.title', 'works.lead', 'works.empty'] },
+      { title: '分类筛选按钮', keys: ['works.filter.all', 'works.filter.brand', 'works.filter.report', 'works.filter.print', 'works.filter.spatial', 'works.filter.digital', 'works.filter.graphic', 'works.filter.ip'] },
+      { title: '卡片分类标签', keys: ['works.tag.brand', 'works.tag.report', 'works.tag.print', 'works.tag.spatial', 'works.tag.digital', 'works.tag.graphic', 'works.tag.ip'] },
+    ] },
+    { id: 'work', title: '案例详情页', groups: [
+      { title: '区块标题', keys: ['work.section.bg', 'work.section.process', 'work.section.system', 'work.section.summary', 'work.section.gallery'] },
+      { title: '元信息', keys: ['work.meta.type', 'work.meta.year', 'work.meta.role', 'work.meta.role.v', 'work.meta.scope'] },
+      { title: '图集与导航', keys: ['work.gallery.note', 'work.nav.prev', 'work.nav.next', 'work.nav.back'] },
+      { title: '兜底正文（未填说明时显示）', keys: ['work.ph.bg2', 'work.ph.process', 'work.ph.system', 'work.ph.summary'] },
+    ] },
+    { id: 'meta', title: '页面标题与描述', groups: [
+      { title: '浏览器标签标题', keys: ['meta.title.home', 'meta.title.works', 'meta.title.about', 'meta.title.services', 'meta.title.skills', 'meta.title.contact', 'meta.title.resume', 'meta.title.work'] },
+      { title: '搜索 / 分享描述', keys: ['meta.desc.home', 'meta.desc.works', 'meta.desc.about', 'meta.desc.services', 'meta.desc.skills', 'meta.desc.contact', 'meta.desc.resume', 'meta.desc.work'] },
+    ] },
+    { id: 'nav', title: '导航与通用', groups: [
+      { title: '导航菜单（全站）', keys: ['nav.brand', 'nav.home', 'nav.works', 'nav.about', 'nav.services', 'nav.skills', 'nav.contact', 'nav.resume'] },
+      { title: '微信二维码弹层', keys: ['qr.hint', 'qr.open'] },
+    ] },
+  ];
+
+  // 页面文案面板的逐键中文标签
+  const PAGE_LABELS = {
+    'about.eyebrow': '眉标',
+    'about.title': '主标题',
+    'about.lead': '导语（空行分段）',
+    'about.principle.title': '区块标题',
+    'about.principle.1': '理念 · 主句（大号斜体）',
+    'about.principle.2': '理念 · 第 1 条',
+    'about.principle.3': '理念 · 第 2 条',
+    'about.principle.4': '理念 · 第 3 条',
+    'about.timeline.eyebrow': '眉标',
+    'about.timeline.title': '区块标题',
+    'about.timeline.1.year': '第 1 段 · 时间',
+    'about.timeline.1.t': '第 1 段 · 职位 / 单位',
+    'about.timeline.1.d': '第 1 段 · 描述',
+    'about.timeline.2.year': '第 2 段 · 时间',
+    'about.timeline.2.t': '第 2 段 · 职位 / 单位',
+    'about.timeline.2.d': '第 2 段 · 描述',
+    'about.timeline.3.year': '第 3 段 · 时间',
+    'about.timeline.3.t': '第 3 段 · 职位 / 单位',
+    'about.timeline.3.d': '第 3 段 · 描述',
+    'about.advantages.title': '眉标',
+    'about.advantages.lead': '标题',
+    'about.advantages.l1': '第 1 条优势',
+    'about.advantages.l2': '第 2 条优势',
+    'about.advantages.l3': '第 3 条优势',
+    'about.advantages.l4': '第 4 条优势',
+    'about.advantages.l5': '第 5 条优势',
+    'services.eyebrow': '眉标',
+    'services.title': '主标题',
+    'services.lead': '导语',
+    'services.1.num': '第 1 块 · 序号',
+    'services.1.title': '第 1 块 · 标题',
+    'services.1.desc': '第 1 块 · 描述',
+    'services.2.num': '第 2 块 · 序号',
+    'services.2.title': '第 2 块 · 标题',
+    'services.2.desc': '第 2 块 · 描述',
+    'services.3.num': '第 3 块 · 序号',
+    'services.3.title': '第 3 块 · 标题',
+    'services.3.desc': '第 3 块 · 描述',
+    'services.4.num': '第 4 块 · 序号',
+    'services.4.title': '第 4 块 · 标题',
+    'services.4.desc': '第 4 块 · 描述',
+    'services.5.num': '第 5 块 · 序号',
+    'services.5.title': '第 5 块 · 标题',
+    'services.5.desc': '第 5 块 · 描述',
+    'services.6.num': '第 6 块 · 序号',
+    'services.6.title': '第 6 块 · 标题',
+    'services.6.desc': '第 6 块 · 描述',
+    'services.cta': '底部按钮文字',
+    'skills.eyebrow': '眉标',
+    'skills.title': '主标题',
+    'skills.lead': '导语',
+    'skills.pro.title': '卡片标题',
+    'skills.pro.l1': '能力 · 第 1 条',
+    'skills.pro.l2': '能力 · 第 2 条',
+    'skills.pro.l3': '能力 · 第 3 条',
+    'skills.pro.l4': '能力 · 第 4 条',
+    'skills.pro.l5': '能力 · 第 5 条',
+    'skills.pro.l6': '能力 · 第 6 条',
+    'skills.pro.l7': '能力 · 第 7 条',
+    'skills.pro.l8': '能力 · 第 8 条',
+    'skills.tools.title': '卡片标题',
+    'skills.tools.t1': '工具 · 第 1 个',
+    'skills.tools.t2': '工具 · 第 2 个',
+    'skills.tools.t3': '工具 · 第 3 个',
+    'skills.tools.t4': '工具 · 第 4 个',
+    'skills.tools.t5': '工具 · 第 5 个',
+    'skills.tools.t6': '工具 · 第 6 个',
+    'skills.tools.t7': '工具 · 第 7 个',
+    'skills.tools.note': '补充说明',
+    'contact.eyebrow': '眉标',
+    'contact.title': '主标题',
+    'contact.lead': '导语（空行分段）',
+    'contact.location.l': '信息条 · 所在地（标签）',
+    'contact.location.v': '信息条 · 所在地（内容）',
+    'contact.email.l': '信息条 · 邮箱（标签）',
+    'contact.email.v': '信息条 · 邮箱（内容）',
+    'contact.wechat.l': '信息条 · 微信（标签）',
+    'contact.wechat.v': '信息条 · 微信（内容）',
+    'contact.availability.l': '信息条 · 合作方式（标签）',
+    'contact.availability.v': '信息条 · 合作方式（内容）',
+    'contact.form.name': '表单 · 称呼',
+    'contact.form.email': '表单 · 电子邮箱',
+    'contact.form.type': '表单 · 合作类型',
+    'contact.form.msg': '表单 · 留言内容',
+    'contact.form.msg.ph': '表单 · 留言占位提示',
+    'contact.form.submit': '表单 · 提交按钮',
+    'contact.form.type.o1': '合作类型选项 1',
+    'contact.form.type.o2': '合作类型选项 2',
+    'contact.form.type.o3': '合作类型选项 3',
+    'contact.form.type.o4': '合作类型选项 4',
+    'contact.form.type.o5': '合作类型选项 5',
+    'contact.form.type.o6': '合作类型选项 6',
+    'contact.form.type.o7': '合作类型选项 7',
+    'contact.form.success': '提交成功提示',
+    'works.eyebrow': '眉标',
+    'works.title': '主标题',
+    'works.lead': '导语',
+    'works.empty': '空状态文案',
+    'works.filter.all': '筛选 · 全部',
+    'works.filter.brand': '筛选 · 品牌系统',
+    'works.filter.report': '筛选 · 报告与信息设计',
+    'works.filter.print': '筛选 · 画册与出版',
+    'works.filter.spatial': '筛选 · 包装与空间',
+    'works.filter.digital': '筛选 · 数字界面',
+    'works.filter.graphic': '筛选 · 平面设计',
+    'works.filter.ip': '筛选 · 原创 IP',
+    'works.tag.brand': '卡片标签 · 品牌系统',
+    'works.tag.report': '卡片标签 · 报告与信息设计',
+    'works.tag.print': '卡片标签 · 画册与出版',
+    'works.tag.spatial': '卡片标签 · 包装与空间',
+    'works.tag.digital': '卡片标签 · 数字界面',
+    'works.tag.graphic': '卡片标签 · 平面设计',
+    'works.tag.ip': '卡片标签 · 原创 IP',
+    'work.section.bg': '区块标题 · 项目背景',
+    'work.section.process': '区块标题 · 工作过程',
+    'work.section.system': '区块标题 · 规范与体系',
+    'work.section.summary': '区块标题 · 项目结果',
+    'work.section.gallery': '区块标题 · 成果展示',
+    'work.meta.type': '元信息 · 项目类型',
+    'work.meta.year': '元信息 · 时间',
+    'work.meta.role': '元信息 · 承担职责',
+    'work.meta.role.v': '元信息 · 默认职责值',
+    'work.meta.scope': '元信息 · 交付内容',
+    'work.gallery.note': '图集计数（{n} = 图片数）',
+    'work.nav.prev': '导航 · 上一个案例',
+    'work.nav.next': '导航 · 下一个案例',
+    'work.nav.back': '导航 · 返回列表',
+    'work.ph.bg2': '兜底正文 · 项目背景（{title} = 案例名）',
+    'work.ph.process': '兜底正文 · 工作过程（{title} = 案例名）',
+    'work.ph.system': '兜底正文 · 规范与体系（{title} = 案例名）',
+    'work.ph.summary': '兜底正文 · 项目结果（{title} = 案例名）',
+    'meta.title.home': '标题 · 首页',
+    'meta.title.works': '标题 · 作品集',
+    'meta.title.about': '标题 · 关于我',
+    'meta.title.services': '标题 · 服务范围',
+    'meta.title.skills': '标题 · 技能体系',
+    'meta.title.contact': '标题 · 联系方式',
+    'meta.title.resume': '标题 · 简历',
+    'meta.title.work': '标题 · 案例详情',
+    'meta.desc.home': '描述 · 首页',
+    'meta.desc.works': '描述 · 作品集',
+    'meta.desc.about': '描述 · 关于我',
+    'meta.desc.services': '描述 · 服务范围',
+    'meta.desc.skills': '描述 · 技能体系',
+    'meta.desc.contact': '描述 · 联系方式',
+    'meta.desc.resume': '描述 · 简历',
+    'meta.desc.work': '描述 · 案例详情',
+    'nav.brand': '导航 · 品牌名',
+    'nav.home': '导航 · 首页',
+    'nav.works': '导航 · 作品集',
+    'nav.about': '导航 · 关于我',
+    'nav.services': '导航 · 服务范围',
+    'nav.skills': '导航 · 技能体系',
+    'nav.contact': '导航 · 联系方式',
+    'nav.resume': '导航 · 简历',
+    'qr.hint': '二维码弹层 · 提示语',
+    'qr.open': '二维码弹层 · 按钮',
+  };
+
   const COPY_LABELS = {
     'home.eyebrow': '眉标',
     'home.title.line1': '主标题 · 第 1 行',
@@ -96,7 +306,8 @@
     site: null,
     sel: null,
     origId: null,      // 当前作品在服务端的 id（改 id 时用它发请求）
-    view: 'work',      // work | site | resume
+    view: 'work',      // work | site | resume | pages
+    pageTab: 'about',  // pages 视图当前页签
     resume: null,
     tab: 'basic',      // basic | media | gallery | music
     query: '',
@@ -325,6 +536,7 @@
     const pane = $('#pane');
     if (S.view === 'site') { pane.innerHTML = sitePaneHtml(); return; }
     if (S.view === 'resume') { pane.innerHTML = resumePaneHtml(); return; }
+    if (S.view === 'pages') { pane.innerHTML = pagesPaneHtml(); return; }
     const w = work();
     if (!w) {
       pane.innerHTML = `<div class="empty">左侧选择或新建一个作品<br><br>
@@ -577,6 +789,75 @@
     `;
   }
 
+
+  /* ----- 文案键取值：site.json 覆盖优先，否则回落 i18n 默认值 ----- */
+
+  const I18N_DEF = (window.I18N && typeof window.I18N === 'object') ? window.I18N : {};
+
+  function hasCopy(key) {
+    return !!(S.site && S.site.copy && Object.prototype.hasOwnProperty.call(S.site.copy, key));
+  }
+  function copyValue(key, lang) {
+    const c = (S.site && S.site.copy && S.site.copy[key]) || null;
+    if (c && Object.prototype.hasOwnProperty.call(c, lang)) return c[lang];
+    return ((I18N_DEF[lang] || {})[key] || '');
+  }
+  /** 一组文案键 → 三语输入行（含「已改 / 重置」） */
+  function copyRowsHtml(keys, labels) {
+    return keys.map((k) => {
+      const over = hasCopy(k);
+      const name = (labels && labels[k]) || COPY_LABELS[k] || k;
+      return `
+        <div class="copyrow">
+          <div class="copyrow__key">
+            ${esc(name)} <span style="color:var(--muted-2)">${esc(k)}</span>
+            ${over ? '<span class="badge">已改</span>' : ''}
+            ${over ? `<button class="btn btn--sm btn--ghost" data-act="reset-copy" data-key="${esc(k)}" title="删掉覆盖值，恢复 i18n 默认文案">重置</button>` : ''}
+          </div>
+          ${LANGS.map(([l, ln]) => `
+            <div class="copyrow__lang">
+              <span class="copyrow__langlabel">${ln}</span>
+              <input class="input" data-copy="${esc(k)}" data-lang="${l}" value="${esc(copyValue(k, l))}">
+            </div>`).join('')}
+        </div>`;
+    }).join('');
+  }
+
+  /* ----- 页面文案（关于我 / 服务范围 / 技能体系 / 联系方式 / 作品集 / 案例页 / 标题描述 / 导航） ----- */
+
+  function pagesPaneHtml() {
+    const tab = PAGE_TABS.find((t) => t.id === S.pageTab) || PAGE_TABS[0];
+    const count = (ks) => ks.filter(hasCopy).length;
+    const totalAll = PAGE_TABS.reduce((n, t) => n + t.groups.reduce((m, g) => m + g.keys.length, 0), 0);
+    const totalOver = PAGE_TABS.reduce((n, t) => n + t.groups.reduce((m, g) => m + count(g.keys), 0), 0);
+
+    const tabs = PAGE_TABS.map((t) => {
+      const over = t.groups.reduce((m, g) => m + count(g.keys), 0);
+      return `<button class="ptab${t.id === tab.id ? ' is-active' : ''}" data-ptab="${esc(t.id)}">`
+        + `${esc(t.title)}${over ? `<span class="ptab__n">${over}</span>` : ''}</button>`;
+    }).join('');
+
+    const body = tab.groups.map((g) => `
+      <details class="card" style="margin-bottom:12px" open>
+        <summary style="cursor:pointer;font-size:13px;font-weight:500">${esc(g.title)} <span class="field__hint">${g.keys.length} 条</span></summary>
+        <div style="margin-top:12px">${copyRowsHtml(g.keys, PAGE_LABELS)}</div>
+      </details>`).join('');
+
+    return `
+      <header class="pane__head">
+        <div>
+          <h2 class="pane__title">页面文案</h2>
+          <div class="pane__sub">共 ${totalAll} 条 · 已改 ${totalOver} 条 · 未改动的沿用 i18n 默认文案</div>
+        </div>
+        <div class="pane__actions">
+          <button class="btn btn--primary" data-act="save-site">保存页面文案</button>
+        </div>
+      </header>
+
+      <div class="ptabs">${tabs}</div>
+      <div class="section">${body}</div>`;
+  }
+
   /* ----- 站点设置 ----- */
   function sitePaneHtml() {
     const s = S.site || {};
@@ -585,15 +866,7 @@
 
     const groups = COPY_GROUPS.map((grp) => {
       const keys = grp.keys || Object.keys(s.copy || {}).filter((k) => k.startsWith(grp.prefix));
-      const rows = keys.map((k) => `
-        <div class="copyrow">
-          <div class="copyrow__key">${esc(COPY_LABELS[k] || k)} <span style="color:var(--muted-2)">${esc(k)}</span></div>
-          ${LANGS.map(([l, ln]) => `
-            <div class="copyrow__lang">
-              <span class="copyrow__langlabel">${ln}</span>
-              <input class="input" data-copy="${esc(k)}" data-lang="${l}" value="${esc((s.copy?.[k] || {})[l] || '')}">
-            </div>`).join('')}
-        </div>`).join('');
+      const rows = copyRowsHtml(keys, null);
       return `<details class="card" style="margin-bottom:12px" open>
         <summary style="cursor:pointer;font-size:13px;font-weight:500">${esc(grp.title)} <span class="field__hint">${keys.length} 条</span></summary>
         <div style="margin-top:12px">${rows || '<div class="empty">无</div>'}</div>
@@ -960,6 +1233,8 @@
       renderPane();
       return;
     }
+    const ptab = e.target.closest('button[data-ptab]');
+    if (ptab) { S.pageTab = ptab.dataset.ptab; renderPane(); return; }
     const btn = e.target.closest('button[data-act]');
     if (btn) return handleAction(btn.dataset.act, btn, e);
     const gop = e.target.closest('button[data-gop]');
@@ -1205,10 +1480,18 @@
           return;
         }
         case 'save-site': {
+          const inPages = S.view === 'pages';
           const r = await api('PUT', '/api/site', S.site);
           S.site = r.site;
           renderPane();
-          toast('站点设置已保存 · site-data.js 已重写');
+          toast((inPages ? '页面文案已保存' : '站点设置已保存') + ' · site-data.js 已重写');
+          return;
+        }
+        case 'reset-copy': {
+          const k = ev.target.dataset.key;
+          if (S.site && S.site.copy) delete S.site.copy[k];
+          renderPane();
+          toast('已恢复 i18n 默认文案（记得保存）');
           return;
         }
         case 'add-social': {
@@ -1522,6 +1805,12 @@
     if (S.dirty && !confirm('当前修改尚未保存，确定离开？')) return;
     S.dirty = false;
     S.view = 'site';
+    renderAll();
+  });
+  $('#btnPages').addEventListener('click', () => {
+    if (S.dirty && !confirm('当前修改尚未保存，确定离开？')) return;
+    S.dirty = false;
+    S.view = 'pages';
     renderAll();
   });
   $('#btnResume').addEventListener('click', () => {

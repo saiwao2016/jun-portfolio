@@ -10,10 +10,11 @@
 - 断言失败要显式列出，不能静默通过。
 """
 
-import os, sys
+import io, os, re, sys
 from playwright.sync_api import sync_playwright
 
 BASE = "http://127.0.0.1:8766"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "screens")
 os.makedirs(OUT, exist_ok=True)
 
@@ -310,6 +311,103 @@ with sync_playwright() as p:
     check(bgm == 0, f"未配置背景音乐时不应出现播放按钮，实际 {bgm}")
     print("  ✓ 未配置背景音乐 → 无播放按钮")
 
+    # ---- 三语完整性 / 页面标题随语言切换 / 三页文案 / 静态兜底一致性 ----
+    pg.goto(f"{BASE}/about.html", wait_until="networkidle")
+    pg.click('.lang-switch__opt[data-lang="zh"]')
+    pg.wait_for_timeout(400)
+
+    audit = pg.evaluate("""() => {
+      const I = window.I18N, langs = ['zh','es','en'], all = new Set();
+      // 允许显式留空的键：空值本身就是「该字段不显示」的语义，不是漏翻译。
+      // resume.edu.date —— 就读起止年份未提供，页面渲染时该行自然为空。
+      const ALLOW_EMPTY = ['resume.edu.date'];
+      langs.forEach(l => Object.keys(I[l]||{}).forEach(k => all.add(k)));
+      const missing = [], empty = [];
+      all.forEach(k => langs.forEach(l => {
+        const v = (I[l]||{})[k];
+        if (v === undefined) missing.push(l + ':' + k);
+        else if (String(v).trim() === '' && ALLOW_EMPTY.indexOf(k) === -1) empty.push(l + ':' + k);
+      }));
+      return { total: all.size, missing: missing.slice(0, 8), nMissing: missing.length,
+               nEmpty: empty.length, empty: empty.slice(0, 8) };
+    }""")
+    check(audit["nMissing"] == 0, f"三语键不齐（缺 {audit['nMissing']}）：{audit['missing']}")
+    check(audit["nEmpty"] == 0, f"三语存在空值（{audit['nEmpty']}）：{audit['empty']}")
+    print(f"  ✓ 三语键完整性：{audit['total']} 键 × 3 语言，无缺键、无意外空值")
+
+    # 页面标题 / meta description 随语言切换
+    for lg in LANGS:
+        pg.click(f'.lang-switch__opt[data-lang="{lg}"]')
+        pg.wait_for_timeout(420)
+        title = pg.title()
+        desc = pg.evaluate("()=>document.querySelector('meta[name=description]')?.content||''")
+        want_t = pg.evaluate(f"()=>window.I18N['{lg}']['meta.title.about']")
+        want_d = pg.evaluate(f"()=>window.I18N['{lg}']['meta.desc.about']")
+        check(title == want_t, f"[{lg}] 标签页标题应为「{want_t}」，实际「{title}」")
+        check(desc == want_d, f"[{lg}] meta description 未随语言切换")
+        print(f"    · {lg}: title「{title}」")
+    pg.click('.lang-switch__opt[data-lang="zh"]')
+    pg.wait_for_timeout(400)
+
+    # 关于我：5 条优势（含 A5）/ 4 条原则 + 标题 / 3 段时间线 / 优势副标题
+    # 注意：选择器含单引号，走 locator / eval_on_selector_all，不要塞进 JS 字符串里转义
+    adv_keys = pg.eval_on_selector_all(
+        "[data-i18n^='about.advantages.l']",
+        "els=>els.map(e=>e.getAttribute('data-i18n'))")
+    adv = len([k for k in adv_keys if re.fullmatch(r"about\.advantages\.l\d+", k or "")])
+    check(adv == 5, f"关于我应有 5 条优势，实际 {adv}")
+    lead = pg.locator("[data-i18n='about.advantages.lead']").count()
+    check(lead == 1, "关于我「能力优势」副标题未接入 i18n（仍是硬编码）")
+    prin = pg.locator("[data-i18n^='about.principle.']").count()
+    check(prin == 5, f"设计原则应有 5 个 i18n 节点（1 标题 + 4 条），实际 {prin}")
+    tl = pg.locator(".timeline__item").count()
+    check(tl == 3, f"经历时间线应有 3 段，实际 {tl}")
+    print(f"  ✓ 关于我：优势 {adv} 条 · 原则 {prin} 节点 · 时间线 {tl} 段")
+
+    # 服务范围：6 个板块 + 序号
+    pg.goto(f"{BASE}/services.html", wait_until="networkidle")
+    cards = pg.locator(".service-card").count()
+    check(cards == 6, f"服务范围应有 6 个板块，实际 {cards}")
+    nums = pg.locator(".service-card__num").all_inner_texts()
+    check(nums[:1] == ["01"] and nums[-1:] == ["06"], f"板块序号异常：{nums}")
+    print(f"  ✓ 服务范围：{cards} 个板块，序号 {nums[0]}–{nums[-1]}")
+
+    # 技能体系：8 条能力 + 7 个工具
+    pg.goto(f"{BASE}/skills.html", wait_until="networkidle")
+    pro = pg.locator(".skill-list li").count()
+    tools = pg.locator(".tool-pill").count()
+    check(pro == 8, f"专业能力应有 8 条，实际 {pro}")
+    check(tools == 7, f"工具栈应有 7 个，实际 {tools}")
+    print(f"  ✓ 技能体系：能力 {pro} 条 · 工具 {tools} 个")
+
+    # 联系方式：7 个合作类型选项
+    pg.goto(f"{BASE}/contact.html", wait_until="networkidle")
+    opts = pg.locator("select#f-type option").count()
+    check(opts == 7, f"合作类型应有 7 个选项，实际 {opts}")
+    o7 = pg.locator("[data-i18n='contact.form.type.o7']").inner_text()
+    check(o7.strip() == "其他", f"第 7 个选项应为「其他」，实际「{o7}」")
+    print(f"  ✓ 联系方式：合作类型 {opts} 个选项（含「其他」）")
+
+    # 静态兜底文案与 i18n 一致（防止三层文案再次漂移）
+    zh = pg.evaluate("()=>window.I18N.zh")
+
+    def _esc(t):
+        return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    drift, n_checked = [], 0
+    for fn in [x[0].split("?")[0] for x in PAGES]:
+        src = io.open(os.path.join(ROOT, fn), encoding="utf-8").read()
+        for m in re.finditer(r'<([a-zA-Z][a-zA-Z0-9]*)\b((?:[^>]*?))data-i18n="([^"]+)"((?:[^>]*?))>([^<]*)</\1>', src):
+            key, inner = m.group(3), m.group(5)
+            if key not in zh or not inner.strip():
+                continue
+            n_checked += 1
+            want = "<br>".join(_esc(x) for x in str(zh[key]).split("\n"))
+            if inner.strip() != want:
+                drift.append(f"{fn}:{key}")
+    check(not drift, f"静态兜底与 i18n 漂移 {len(drift)} 处：{drift[:6]}")
+    print(f"  ✓ 静态兜底与 i18n 一致（校验 {n_checked} 个节点，零漂移）")
+
     # 移动端
     ctx.close()
     ctx = browser.new_context(viewport={"width": 390, "height": 844},
@@ -334,4 +432,4 @@ if fails:
     for f in fails:
         print("     ·", f)
     sys.exit(1)
-print("  ✓ 全部通过 —— 10 页 × 3 语言 + 功能专项 + 移动端，零失败")
+print("  ✓ 全部通过 —— 10 页 × 3 语言 + 功能专项 + 三语一致性 + 移动端，零失败")

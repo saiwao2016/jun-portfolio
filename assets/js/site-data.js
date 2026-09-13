@@ -20,19 +20,19 @@ window.SITE_DATA = {
         "en": "Brand &"
       },
       "home.title.line2": {
-        "zh": "IP 与出版",
+        "zh": "IP 与出版 ·",
         "es": "información ·",
         "en": "information ·"
       },
       "home.title.line3": {
         "zh": "全域设计",
-        "es": "diseño visual",
-        "en": "visual design"
+        "es": "diseño integral",
+        "en": "holistic design"
       },
       "home.subtitle": {
         "zh": "十余年全域设计经验，覆盖品牌识别系统、心理测量报告与信息设计、原创 IP 形象开发、画册出版、包装与空间视觉 —— 从规范搭建到成品交付，独立完成闭环。",
-        "es": "Más de diez años de diseño visual abarcando sistemas de identidad de marca, informes de evaluación psicológica y diseño de información, desarrollo de IP original, publicaciones editoriales, packaging y gráfica espacial.",
-        "en": "Over ten years of visual design across brand identity systems, psychological assessment reports and information design, original IP character development, editorial publishing, packaging and spatial graphics."
+        "es": "Más de diez años de diseño integral: sistemas de identidad de marca, informes de evaluación psicológica y diseño de información, desarrollo de personajes IP, publicaciones editoriales, packaging y gráfica espacial — del sistema a la entrega final, cerrando el ciclo en solitario.",
+        "en": "Over ten years of holistic design — brand identity systems, psychological assessment reports and information design, original IP characters, editorial publishing, packaging and spatial graphics: from building the system to the finished delivery, closed end to end."
       },
       "home.cta.works": {
         "zh": "浏览全部作品",
@@ -75,7 +75,7 @@ window.SITE_DATA = {
         "en": "Status"
       },
       "home.meta.status_v": {
-        "zh": "开放求职 · 可远程",
+        "zh": "求职中 · 可远程",
         "es": "Búsqueda activa · Remoto",
         "en": "Open to work · Remote"
       },
@@ -151,8 +151,8 @@ window.SITE_DATA = {
       },
       "footer.copy": {
         "zh": "© 2026 JUN · 全域设计师",
-        "es": "© 2026 JUN · Diseñador visual",
-        "en": "© 2026 JUN · Visual designer"
+        "es": "© 2026 JUN · Diseñador integral",
+        "en": "© 2026 JUN · Holistic designer"
       },
       "footer.note": {
         "zh": "品牌系统 · 信息设计 · 原创 IP · 马德里",
@@ -171,8 +171,8 @@ window.SITE_DATA = {
       },
       "footer.link.wechat": {
         "zh": "微信",
-        "es": "Wechat",
-        "en": "Wechat"
+        "es": "WeChat",
+        "en": "WeChat"
       }
     },
     "social": [
