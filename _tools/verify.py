@@ -437,13 +437,13 @@ with sync_playwright() as p:
     pg.click('.lang-switch__opt[data-lang="zh"]')
     pg.wait_for_timeout(400)
 
-    # 关于我：5 条优势（含 A5）/ 4 条原则 + 标题 / 3 段时间线 / 优势副标题
+    # 关于我：4 条优势（含 A4）/ 4 条原则 + 标题 / 3 段时间线 / 优势副标题
     # 注意：选择器含单引号，走 locator / eval_on_selector_all，不要塞进 JS 字符串里转义
     adv_keys = pg.eval_on_selector_all(
         "[data-i18n^='about.advantages.l']",
         "els=>els.map(e=>e.getAttribute('data-i18n'))")
     adv = len([k for k in adv_keys if re.fullmatch(r"about\.advantages\.l\d+", k or "")])
-    check(adv == 5, f"关于我应有 5 条优势，实际 {adv}")
+    check(adv == 4, f"关于我应有 4 条优势，实际 {adv}")
     lead = pg.locator("[data-i18n='about.advantages.lead']").count()
     check(lead == 1, "关于我「能力优势」副标题未接入 i18n（仍是硬编码）")
     prin = pg.locator("[data-i18n^='about.principle.']").count()

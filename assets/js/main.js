@@ -11,7 +11,7 @@
   const FALLBACK_LANG = 'zh';
 
   /* 资源版本号：每次发布若有同名文件被覆盖，需递增，避免 CDN/浏览器缓存旧资源 */
-  const ASSET_V = 'v20260914';
+  const ASSET_V = 'v20260915';
   function vUrl(u) {
     if (!u) return u;
     return u + (u.indexOf('?') >= 0 ? '&' : '?') + ASSET_V;
